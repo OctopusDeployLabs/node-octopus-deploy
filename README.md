@@ -1,6 +1,6 @@
 ## node-octopus-deploy
 
-This is a TypeScript/JavaScript API client for Octopus Deploy. Under the hood, it utilizes [axios](https://github.com/axios/axios).
+This is a Node.js API client for Octopus Deploy. Under the hood, it utilizes [axios](https://github.com/axios/axios).
 
 ### Building
 
@@ -11,7 +11,7 @@ npm install
 npm run build
 ```
 
-### Consuming
+### Consuming (Soon!)
 
 ```
 npm install node-octopus-deploy --save
