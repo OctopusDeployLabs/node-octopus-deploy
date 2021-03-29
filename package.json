@@ -1,0 +1,24 @@
+{
+  "name": "node-octopus-deploy",
+  "version": "2020.6.4722",
+  "description": "OpenAPI client for Octopus Deploy",
+  "author": "Octopus Deploy",
+  "keywords": [
+    "api client",
+    "node",
+    "octopus deploy"
+  ],
+  "license": "Apache-2.0",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc --outDir dist/",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.5",
+    "typescript": "^3.6.4"
+  }
+}
