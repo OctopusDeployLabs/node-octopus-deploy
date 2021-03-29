@@ -1,4 +1,4 @@
-## node-octopus-deploy@2020.6.4722
+## node-octopus-deploy
 
 This is a TypeScript/JavaScript API client for Octopus Deploy. Under the hood, it utilizes [axios](https://github.com/axios/axios).
 
@@ -14,5 +14,5 @@ npm run build
 ### Consuming
 
 ```
-npm install node-octopus-deploy@2020.6.4722 --save
+npm install node-octopus-deploy --save
 ```
