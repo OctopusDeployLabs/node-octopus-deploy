@@ -1,8 +1,8 @@
 # node-octopus-deploy
 
-This is a Node.js API client for Octopus Deploy. ✨🐙🚀✨
+This is a Node.js API client for [Octopus Deploy](https://octopus.com/). ✨🐙🚀✨
 
-This client leverages the OpenAPI specification of the Octopus REST API. It is expected that the source code underpinning this package will change frequently. For that reason, it is made available as-is.
+This client leverages the OpenAPI specification of the [Octopus REST API](https://octopus.com/docs/octopus-rest-api). It is expected that the source code underpinning this package will change frequently. For that reason, it is made available as-is.
 
 ## ✨ Install
 
