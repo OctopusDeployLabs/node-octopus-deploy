@@ -4,22 +4,13 @@ This is a Node.js API client for Octopus Deploy. ✨🐙🚀✨
 
 This client leverages the OpenAPI specification of the Octopus REST API. It is expected that the source code underpinning this package will change frequently. For that reason, it is made available as-is.
 
-### Building
-
-To build and compile the TypeScript sources to JavaScript use:
+### Install
 
 ```
-npm install
-npm run build
+npm install @octopusdeploy/octopus-deploy --save-dev
 ```
 
-### Consuming (Soon!)
-
-```
-npm install node-octopus-deploy --save
-```
-
-### Using
+### Use
 
 Under the hood, this client utilizes [axios](https://github.com/axios/axios). The usage patterns outlined here should be familiar for experienced users of this library.
 
@@ -43,4 +34,13 @@ octopusDeploy.FeedsApiFactory(configuration).listAllFeedsSpaces('Spaces-1').then
   (value) => { console.log(value.data) },
   (reason) => { console.error(reason) }
 )
+```
+
+### Build
+
+To build and compile the TypeScript sources to JavaScript use:
+
+```
+npm install
+npm run build
 ```
