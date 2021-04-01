@@ -15,10 +15,11 @@
   ],
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@octopusdeploy/node-octopus-deploy",
+  "name": "@octopusdeploy/octopusdeploy",
   "scripts": {
     "build": "tsc --outDir dist/",
     "prepublishOnly": "npm run build"
   },
+  "repository": "github:OctopusDeployLabs/node-octopus-deploy",
   "version": "2021.2.1290"
 }
