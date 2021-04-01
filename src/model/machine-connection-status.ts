@@ -1,65 +1,65 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { ActivityLogElement } from './activity-log-element';
+import { ActivityLogElement } from "./activity-log-element";
 
 /**
- * 
+ *
  * @export
  * @interface MachineConnectionStatus
  */
 export interface MachineConnectionStatus {
-    /**
-     * 
-     * @type {string}
-     * @memberof MachineConnectionStatus
-     */
-    CurrentTentacleVersion?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof MachineConnectionStatus
-     */
-    Id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof MachineConnectionStatus
-     */
-    LastChecked?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof MachineConnectionStatus
-     */
-    LastModifiedBy?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof MachineConnectionStatus
-     */
-    LastModifiedOn?: string;
-    /**
-     * 
-     * @type {{ [key: string]: string; }}
-     * @memberof MachineConnectionStatus
-     */
-    Links?: { [key: string]: string; };
-    /**
-     * 
-     * @type {Array<ActivityLogElement>}
-     * @memberof MachineConnectionStatus
-     */
-    Logs?: Array<ActivityLogElement>;
-    /**
-     * 
-     * @type {string}
-     * @memberof MachineConnectionStatus
-     */
-    MachineId?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof MachineConnectionStatus
-     */
-    Status?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MachineConnectionStatus
+   */
+  CurrentTentacleVersion?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MachineConnectionStatus
+   */
+  Id?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MachineConnectionStatus
+   */
+  LastChecked?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MachineConnectionStatus
+   */
+  LastModifiedBy?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MachineConnectionStatus
+   */
+  LastModifiedOn?: string;
+  /**
+   *
+   * @type {{ [key: string]: string; }}
+   * @memberof MachineConnectionStatus
+   */
+  Links?: { [key: string]: string };
+  /**
+   *
+   * @type {Array<ActivityLogElement>}
+   * @memberof MachineConnectionStatus
+   */
+  Logs?: Array<ActivityLogElement>;
+  /**
+   *
+   * @type {string}
+   * @memberof MachineConnectionStatus
+   */
+  MachineId?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MachineConnectionStatus
+   */
+  Status?: string;
 }

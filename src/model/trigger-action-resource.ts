@@ -1,41 +1,41 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { TriggerActionType } from './trigger-action-type';
+import { TriggerActionType } from "./trigger-action-type";
 
 /**
- * 
+ *
  * @export
  * @interface TriggerActionResource
  */
 export interface TriggerActionResource {
-    /**
-     * 
-     * @type {TriggerActionType}
-     * @memberof TriggerActionResource
-     */
-    ActionType?: TriggerActionType;
-    /**
-     * 
-     * @type {string}
-     * @memberof TriggerActionResource
-     */
-    Id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TriggerActionResource
-     */
-    LastModifiedBy?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TriggerActionResource
-     */
-    LastModifiedOn?: string;
-    /**
-     * 
-     * @type {{ [key: string]: string; }}
-     * @memberof TriggerActionResource
-     */
-    Links?: { [key: string]: string; };
+  /**
+   *
+   * @type {TriggerActionType}
+   * @memberof TriggerActionResource
+   */
+  ActionType?: TriggerActionType;
+  /**
+   *
+   * @type {string}
+   * @memberof TriggerActionResource
+   */
+  Id?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof TriggerActionResource
+   */
+  LastModifiedBy?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof TriggerActionResource
+   */
+  LastModifiedOn?: string;
+  /**
+   *
+   * @type {{ [key: string]: string; }}
+   * @memberof TriggerActionResource
+   */
+  Links?: { [key: string]: string };
 }

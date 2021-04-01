@@ -1,17 +1,17 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { ConnectivityCheckMessage } from './connectivity-check-message';
+import { ConnectivityCheckMessage } from "./connectivity-check-message";
 
 /**
- * 
+ *
  * @export
  * @interface ConnectivityCheckResponse
  */
 export interface ConnectivityCheckResponse {
-    /**
-     * 
-     * @type {Array<ConnectivityCheckMessage>}
-     * @memberof ConnectivityCheckResponse
-     */
-    Messages?: Array<ConnectivityCheckMessage>;
+  /**
+   *
+   * @type {Array<ConnectivityCheckMessage>}
+   * @memberof ConnectivityCheckResponse
+   */
+  Messages?: Array<ConnectivityCheckMessage>;
 }

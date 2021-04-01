@@ -1,71 +1,71 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { ApiKeyResource } from './api-key-resource';
+import { ApiKeyResource } from "./api-key-resource";
 
 /**
- * 
+ *
  * @export
  * @interface ApiKeyResourceCollection
  */
 export interface ApiKeyResourceCollection {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiKeyResourceCollection
-     */
-    Id?: string;
-    /**
-     * 
-     * @type {Array<ApiKeyResource>}
-     * @memberof ApiKeyResourceCollection
-     */
-    Items?: Array<ApiKeyResource>;
-    /**
-     * 
-     * @type {number}
-     * @memberof ApiKeyResourceCollection
-     */
-    ItemsPerPage?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiKeyResourceCollection
-     */
-    ItemType?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiKeyResourceCollection
-     */
-    LastModifiedBy?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiKeyResourceCollection
-     */
-    LastModifiedOn?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof ApiKeyResourceCollection
-     */
-    LastPageNumber?: number;
-    /**
-     * 
-     * @type {{ [key: string]: string; }}
-     * @memberof ApiKeyResourceCollection
-     */
-    Links?: { [key: string]: string; };
-    /**
-     * 
-     * @type {number}
-     * @memberof ApiKeyResourceCollection
-     */
-    NumberOfPages?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ApiKeyResourceCollection
-     */
-    TotalResults?: number;
+  /**
+   *
+   * @type {string}
+   * @memberof ApiKeyResourceCollection
+   */
+  Id?: string;
+  /**
+   *
+   * @type {Array<ApiKeyResource>}
+   * @memberof ApiKeyResourceCollection
+   */
+  Items?: Array<ApiKeyResource>;
+  /**
+   *
+   * @type {number}
+   * @memberof ApiKeyResourceCollection
+   */
+  ItemsPerPage?: number;
+  /**
+   *
+   * @type {string}
+   * @memberof ApiKeyResourceCollection
+   */
+  ItemType?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof ApiKeyResourceCollection
+   */
+  LastModifiedBy?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof ApiKeyResourceCollection
+   */
+  LastModifiedOn?: string;
+  /**
+   *
+   * @type {number}
+   * @memberof ApiKeyResourceCollection
+   */
+  LastPageNumber?: number;
+  /**
+   *
+   * @type {{ [key: string]: string; }}
+   * @memberof ApiKeyResourceCollection
+   */
+  Links?: { [key: string]: string };
+  /**
+   *
+   * @type {number}
+   * @memberof ApiKeyResourceCollection
+   */
+  NumberOfPages?: number;
+  /**
+   *
+   * @type {number}
+   * @memberof ApiKeyResourceCollection
+   */
+  TotalResults?: number;
 }

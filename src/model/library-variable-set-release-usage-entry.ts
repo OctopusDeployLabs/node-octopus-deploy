@@ -1,22 +1,21 @@
-// Octopus REST API v2020.6.4722
-
+// Octopus REST API v2021.2.1290
 
 /**
- * 
+ *
  * @export
  * @interface LibraryVariableSetReleaseUsageEntry
  */
 export interface LibraryVariableSetReleaseUsageEntry {
-    /**
-     * 
-     * @type {string}
-     * @memberof LibraryVariableSetReleaseUsageEntry
-     */
-    ReleaseId?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof LibraryVariableSetReleaseUsageEntry
-     */
-    ReleaseVersion?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof LibraryVariableSetReleaseUsageEntry
+   */
+  ReleaseId?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof LibraryVariableSetReleaseUsageEntry
+   */
+  ReleaseVersion?: string;
 }

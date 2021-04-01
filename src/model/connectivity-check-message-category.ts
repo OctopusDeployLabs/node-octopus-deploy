@@ -1,14 +1,12 @@
-// Octopus REST API v2020.6.4722
-
+// Octopus REST API v2021.2.1290
 
 /**
- * 
+ *
  * @export
  * @enum {string}
  */
 export enum ConnectivityCheckMessageCategory {
-    Info = 'Info',
-    Warning = 'Warning',
-    Error = 'Error'
+  Info = "Info",
+  Warning = "Warning",
+  Error = "Error",
 }
-

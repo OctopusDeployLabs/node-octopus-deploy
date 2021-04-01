@@ -1,21 +1,21 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
 import { Configuration } from "./configuration";
 // Some imports not used depending on template conditions
 // @ts-ignore
-import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
+import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 
-export const BASE_PATH = "http://bristowe.octopus.app/api".replace(/\/+$/, "");
+export const BASE_PATH = "http://localhost/api".replace(/\/+$/, "");
 
 /**
  *
  * @export
  */
 export const COLLECTION_FORMATS = {
-    csv: ",",
-    ssv: " ",
-    tsv: "\t",
-    pipes: "|",
+  csv: ",",
+  ssv: " ",
+  tsv: "\t",
+  pipes: "|",
 };
 
 /**
@@ -24,8 +24,8 @@ export const COLLECTION_FORMATS = {
  * @interface RequestArgs
  */
 export interface RequestArgs {
-    url: string;
-    options: any;
+  url: string;
+  options: any;
 }
 
 /**
@@ -34,15 +34,19 @@ export interface RequestArgs {
  * @class BaseAPI
  */
 export class BaseAPI {
-    protected configuration: Configuration | undefined;
+  protected configuration: Configuration | undefined;
 
-    constructor(configuration?: Configuration, protected basePath: string = BASE_PATH, protected axios: AxiosInstance = globalAxios) {
-        if (configuration) {
-            this.configuration = configuration;
-            this.basePath = configuration.basePath || this.basePath;
-        }
+  constructor(
+    configuration?: Configuration,
+    protected basePath: string = BASE_PATH,
+    protected axios: AxiosInstance = globalAxios
+  ) {
+    if (configuration) {
+      this.configuration = configuration;
+      this.basePath = configuration.basePath || this.basePath;
     }
-};
+  }
+}
 
 /**
  *
@@ -51,8 +55,8 @@ export class BaseAPI {
  * @extends {Error}
  */
 export class RequiredError extends Error {
-    name: "RequiredError" = "RequiredError";
-    constructor(public field: string, msg?: string) {
-        super(msg);
-    }
+  name: "RequiredError" = "RequiredError";
+  constructor(public field: string, msg?: string) {
+    super(msg);
+  }
 }

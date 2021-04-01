@@ -1,13 +1,11 @@
-// Octopus REST API v2020.6.4722
-
+// Octopus REST API v2021.2.1290
 
 /**
- * 
+ *
  * @export
  * @enum {string}
  */
 export enum DefectStatus {
-    Unresolved = 'Unresolved',
-    Resolved = 'Resolved'
+  Unresolved = "Unresolved",
+  Resolved = "Resolved",
 }
-

@@ -1,17 +1,17 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { DynamicExtensionsFeature } from './dynamic-extensions-feature';
+import { DynamicExtensionsFeature } from "./dynamic-extensions-feature";
 
 /**
- * 
+ *
  * @export
  * @interface DynamicExtensionsFeaturesMetadataResource
  */
 export interface DynamicExtensionsFeaturesMetadataResource {
-    /**
-     * 
-     * @type {Array<DynamicExtensionsFeature>}
-     * @memberof DynamicExtensionsFeaturesMetadataResource
-     */
-    Features?: Array<DynamicExtensionsFeature>;
+  /**
+   *
+   * @type {Array<DynamicExtensionsFeature>}
+   * @memberof DynamicExtensionsFeaturesMetadataResource
+   */
+  Features?: Array<DynamicExtensionsFeature>;
 }

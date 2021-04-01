@@ -1,17 +1,17 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { MachineConnectivityBehavior } from './machine-connectivity-behavior';
+import { MachineConnectivityBehavior } from "./machine-connectivity-behavior";
 
 /**
- * 
+ *
  * @export
  * @interface MachineConnectivityPolicy
  */
 export interface MachineConnectivityPolicy {
-    /**
-     * 
-     * @type {MachineConnectivityBehavior}
-     * @memberof MachineConnectivityPolicy
-     */
-    MachineConnectivityBehavior?: MachineConnectivityBehavior;
+  /**
+   *
+   * @type {MachineConnectivityBehavior}
+   * @memberof MachineConnectivityPolicy
+   */
+  MachineConnectivityBehavior?: MachineConnectivityBehavior;
 }

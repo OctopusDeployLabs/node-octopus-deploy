@@ -1,23 +1,23 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { PropertyMetadata } from './property-metadata';
+import { PropertyMetadata } from "./property-metadata";
 
 /**
- * 
+ *
  * @export
  * @interface TypeMetadata
  */
 export interface TypeMetadata {
-    /**
-     * 
-     * @type {string}
-     * @memberof TypeMetadata
-     */
-    Name?: string;
-    /**
-     * 
-     * @type {Array<PropertyMetadata>}
-     * @memberof TypeMetadata
-     */
-    Properties?: Array<PropertyMetadata>;
+  /**
+   *
+   * @type {string}
+   * @memberof TypeMetadata
+   */
+  Name?: string;
+  /**
+   *
+   * @type {Array<PropertyMetadata>}
+   * @memberof TypeMetadata
+   */
+  Properties?: Array<PropertyMetadata>;
 }

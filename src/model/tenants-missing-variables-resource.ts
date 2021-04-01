@@ -1,29 +1,29 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { MissingVariableResource } from './missing-variable-resource';
+import { MissingVariableResource } from "./missing-variable-resource";
 
 /**
- * 
+ *
  * @export
  * @interface TenantsMissingVariablesResource
  */
 export interface TenantsMissingVariablesResource {
-    /**
-     * 
-     * @type {{ [key: string]: string; }}
-     * @memberof TenantsMissingVariablesResource
-     */
-    Links?: { [key: string]: string; };
-    /**
-     * 
-     * @type {Array<MissingVariableResource>}
-     * @memberof TenantsMissingVariablesResource
-     */
-    MissingVariables?: Array<MissingVariableResource>;
-    /**
-     * 
-     * @type {string}
-     * @memberof TenantsMissingVariablesResource
-     */
-    TenantId?: string;
+  /**
+   *
+   * @type {{ [key: string]: string; }}
+   * @memberof TenantsMissingVariablesResource
+   */
+  Links?: { [key: string]: string };
+  /**
+   *
+   * @type {Array<MissingVariableResource>}
+   * @memberof TenantsMissingVariablesResource
+   */
+  MissingVariables?: Array<MissingVariableResource>;
+  /**
+   *
+   * @type {string}
+   * @memberof TenantsMissingVariablesResource
+   */
+  TenantId?: string;
 }

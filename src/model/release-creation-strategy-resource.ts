@@ -1,25 +1,25 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { DeploymentActionPackageResource } from './deployment-action-package-resource';
+import { DeploymentActionPackageResource } from "./deployment-action-package-resource";
 
 /**
- * 
+ *
  * @export
  * @interface ReleaseCreationStrategyResource
  */
 export interface ReleaseCreationStrategyResource {
-    [key: string]: object | any;
+  [key: string]: object | any;
 
-    /**
-     * 
-     * @type {string}
-     * @memberof ReleaseCreationStrategyResource
-     */
-    ChannelId?: string;
-    /**
-     * 
-     * @type {DeploymentActionPackageResource}
-     * @memberof ReleaseCreationStrategyResource
-     */
-    ReleaseCreationPackage?: DeploymentActionPackageResource;
+  /**
+   *
+   * @type {string}
+   * @memberof ReleaseCreationStrategyResource
+   */
+  ChannelId?: string;
+  /**
+   *
+   * @type {DeploymentActionPackageResource}
+   * @memberof ReleaseCreationStrategyResource
+   */
+  ReleaseCreationPackage?: DeploymentActionPackageResource;
 }

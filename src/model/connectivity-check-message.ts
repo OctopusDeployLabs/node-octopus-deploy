@@ -1,23 +1,23 @@
-// Octopus REST API v2020.6.4722
+// Octopus REST API v2021.2.1290
 
-import { ConnectivityCheckMessageCategory } from './connectivity-check-message-category';
+import { ConnectivityCheckMessageCategory } from "./connectivity-check-message-category";
 
 /**
- * 
+ *
  * @export
  * @interface ConnectivityCheckMessage
  */
 export interface ConnectivityCheckMessage {
-    /**
-     * 
-     * @type {ConnectivityCheckMessageCategory}
-     * @memberof ConnectivityCheckMessage
-     */
-    Category?: ConnectivityCheckMessageCategory;
-    /**
-     * 
-     * @type {string}
-     * @memberof ConnectivityCheckMessage
-     */
-    Message?: string;
+  /**
+   *
+   * @type {ConnectivityCheckMessageCategory}
+   * @memberof ConnectivityCheckMessage
+   */
+  Category?: ConnectivityCheckMessageCategory;
+  /**
+   *
+   * @type {string}
+   * @memberof ConnectivityCheckMessage
+   */
+  Message?: string;
 }

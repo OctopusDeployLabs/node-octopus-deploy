@@ -1,22 +1,21 @@
-// Octopus REST API v2020.6.4722
-
+// Octopus REST API v2021.2.1290
 
 /**
- * 
+ *
  * @export
  * @interface AzureResourceGroupResource
  */
 export interface AzureResourceGroupResource {
-    /**
-     * 
-     * @type {string}
-     * @memberof AzureResourceGroupResource
-     */
-    Id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AzureResourceGroupResource
-     */
-    Name?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AzureResourceGroupResource
+   */
+  Id?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AzureResourceGroupResource
+   */
+  Name?: string;
 }

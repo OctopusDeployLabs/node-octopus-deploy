@@ -1,16 +1,15 @@
-// Octopus REST API v2020.6.4722
-
+// Octopus REST API v2021.2.1290
 
 /**
- * 
+ *
  * @export
  * @interface DynamicExtensionsFeaturesValuesResource
  */
 export interface DynamicExtensionsFeaturesValuesResource {
-    /**
-     * 
-     * @type {{ [key: string]: string; }}
-     * @memberof DynamicExtensionsFeaturesValuesResource
-     */
-    Values?: { [key: string]: string; };
+  /**
+   *
+   * @type {{ [key: string]: string; }}
+   * @memberof DynamicExtensionsFeaturesValuesResource
+   */
+  Values?: { [key: string]: string };
 }
