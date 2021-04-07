@@ -109,4 +109,5 @@ src/.npmignore
 src/.gitignore
 src/git_push.sh
 src/README.md
+src/package.json
 src/tsconfig.json
