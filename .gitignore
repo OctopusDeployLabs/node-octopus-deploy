@@ -97,3 +97,9 @@ Thumbs.db
 # Ignore built ts files
 __tests__/runner/*
 lib/**/*
+
+# ignore distribution (for now)
+dist/
+
+# ignore generation files
+docs/.openapi*
