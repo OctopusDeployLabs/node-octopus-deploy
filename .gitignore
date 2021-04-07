@@ -103,3 +103,4 @@ dist/
 
 # ignore generation files
 docs/.openapi*
+openapi*
