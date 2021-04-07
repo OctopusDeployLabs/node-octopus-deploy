@@ -104,3 +104,9 @@ dist/
 # ignore generation files
 docs/.openapi*
 openapi*
+src/.openapi*
+src/.npmignore
+src/.gitignore
+src/git_push.sh
+src/README.md
+src/tsconfig.json
