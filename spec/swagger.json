@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Octopus Server API",
-    "version": "2021.2.1290"
+    "version": "2021.2.1387"
   },
   "host": "localhost",
   "basePath": "/api",
@@ -95,13 +95,13 @@
     "/accounts/all": {
       "get": {
         "tags": ["Accounts"],
-        "summary": "Get a list of AccountResources",
+        "summary": "Get a list of Accounts",
         "description": "Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.",
         "operationId": "listAllAccounts",
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Load all AccountResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -109,18 +109,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/accounts/azureenvironments": {
@@ -631,7 +620,7 @@
     "/{baseSpaceId}/accounts/all": {
       "get": {
         "tags": ["Accounts"],
-        "summary": "Get a list of AccountResources",
+        "summary": "Get a list of Accounts",
         "description": "Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.",
         "operationId": "listAllAccounts_Spaces",
         "produces": ["application/json"],
@@ -646,7 +635,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Load all AccountResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -654,18 +643,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/{baseSpaceId}/accounts/{id}": {
@@ -3861,13 +3839,24 @@
     "/certificates/all": {
       "get": {
         "tags": ["Certificates"],
-        "summary": "Get a list of CertificateResources",
-        "description": "Lists X.509 certificates managed by Octopus",
+        "summary": "Get a list of Certificates",
+        "description": "Lists X.509 certificates managed by Octopus.",
         "operationId": "listAllCertificates",
         "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ids",
+            "description": "A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Load all CertificateResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -3875,18 +3864,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/certificates/generate": {
@@ -4328,11 +4306,20 @@
     "/{baseSpaceId}/certificates/all": {
       "get": {
         "tags": ["Certificates"],
-        "summary": "Get a list of CertificateResources",
-        "description": "Lists X.509 certificates managed by Octopus",
+        "summary": "Get a list of Certificates",
+        "description": "Lists X.509 certificates managed by Octopus.",
         "operationId": "listAllCertificates_Spaces",
         "produces": ["application/json"],
         "parameters": [
+          {
+            "in": "query",
+            "name": "ids",
+            "description": "A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           {
             "in": "path",
             "name": "baseSpaceId",
@@ -4343,7 +4330,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Load all CertificateResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -4351,18 +4338,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/{baseSpaceId}/certificates/generate": {
@@ -4855,7 +4831,7 @@
     "/channels/all": {
       "get": {
         "tags": ["Channels"],
-        "summary": "Get a list of ChannelResources",
+        "summary": "Get a list of Channels",
         "description": "Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.",
         "operationId": "listAllChannels",
         "produces": ["application/json"],
@@ -5242,7 +5218,7 @@
     "/{baseSpaceId}/channels/all": {
       "get": {
         "tags": ["Channels"],
-        "summary": "Get a list of ChannelResources",
+        "summary": "Get a list of Channels",
         "description": "Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.",
         "operationId": "listAllChannels_Spaces",
         "produces": ["application/json"],
@@ -10819,13 +10795,13 @@
     "/lifecycles/all": {
       "get": {
         "tags": ["Lifecycles"],
-        "summary": "Get a list of LifecycleResources",
+        "summary": "Get a list of Lifecycles",
         "description": "Lists all the lifecycles in the supplied Octopus Deploy Space.",
         "operationId": "listAllLifecycles",
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Load all LifecycleResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -10833,18 +10809,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/lifecycles/{id}": {
@@ -11141,7 +11106,7 @@
     "/{baseSpaceId}/lifecycles/all": {
       "get": {
         "tags": ["Lifecycles"],
-        "summary": "Get a list of LifecycleResources",
+        "summary": "Get a list of Lifecycles",
         "description": "Lists all the lifecycles in the supplied Octopus Deploy Space.",
         "operationId": "listAllLifecycles_Spaces",
         "produces": ["application/json"],
@@ -11156,7 +11121,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Load all LifecycleResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -11164,18 +11129,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/{baseSpaceId}/lifecycles/{id}": {
@@ -11493,13 +11447,13 @@
     "/machinepolicies/all": {
       "get": {
         "tags": ["MachinePolicies"],
-        "summary": "Get a list of MachinePolicyResources",
-        "description": "Lists all the machine policies in the supplied Octopus Deploy Space.",
+        "summary": "Get a list of Machine Policies",
+        "description": "Lists all the Machine Policies in the supplied Octopus Deploy Space.",
         "operationId": "listAllMachinePolicies",
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Load all MachinePolicyResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -11507,18 +11461,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/machinepolicies/template": {
@@ -11858,8 +11801,8 @@
     "/{baseSpaceId}/machinepolicies/all": {
       "get": {
         "tags": ["MachinePolicies"],
-        "summary": "Get a list of MachinePolicyResources",
-        "description": "Lists all the machine policies in the supplied Octopus Deploy Space.",
+        "summary": "Get a list of Machine Policies",
+        "description": "Lists all the Machine Policies in the supplied Octopus Deploy Space.",
         "operationId": "listAllMachinePolicies_Spaces",
         "produces": ["application/json"],
         "parameters": [
@@ -11873,7 +11816,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Load all MachinePolicyResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -11881,18 +11824,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/{baseSpaceId}/machinepolicies/template": {
@@ -15490,13 +15422,13 @@
     "/projectgroups/all": {
       "get": {
         "tags": ["ProjectGroups"],
-        "summary": "Get a list of ProjectGroupResources",
-        "description": "Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.",
+        "summary": "Get a list of Project Group",
+        "description": "Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.",
         "operationId": "listAllProjectGroups",
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Load all ProjectGroupResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -15504,18 +15436,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/projectgroups/{id}": {
@@ -15780,8 +15701,8 @@
     "/{baseSpaceId}/projectgroups/all": {
       "get": {
         "tags": ["ProjectGroups"],
-        "summary": "Get a list of ProjectGroupResources",
-        "description": "Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.",
+        "summary": "Get a list of Project Group",
+        "description": "Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.",
         "operationId": "listAllProjectGroups_Spaces",
         "produces": ["application/json"],
         "parameters": [
@@ -15795,7 +15716,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Load all ProjectGroupResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -15803,18 +15724,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/{baseSpaceId}/projectgroups/{id}": {
@@ -17742,13 +17652,13 @@
     "/proxies/all": {
       "get": {
         "tags": ["Proxies"],
-        "summary": "Get a list of ProxyResources",
-        "description": "Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.",
+        "summary": "Get a list of Proxies",
+        "description": "Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.",
         "operationId": "listAllProxies",
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Load all ProxyResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -17756,18 +17666,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/proxies/{id}": {
@@ -17983,8 +17882,8 @@
     "/{baseSpaceId}/proxies/all": {
       "get": {
         "tags": ["Proxies"],
-        "summary": "Get a list of ProxyResources",
-        "description": "Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.",
+        "summary": "Get a list of Proxies",
+        "description": "Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.",
         "operationId": "listAllProxies_Spaces",
         "produces": ["application/json"],
         "parameters": [
@@ -17998,7 +17897,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Load all ProxyResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -18006,18 +17905,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/{baseSpaceId}/proxies/{id}": {
@@ -18257,7 +18145,7 @@
       "get": {
         "tags": ["Releases"],
         "summary": "Get a list of Releases",
-        "description": "Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.",
+        "description": "Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.",
         "operationId": "indexReleases",
         "produces": ["application/json"],
         "parameters": [
@@ -18998,7 +18886,7 @@
       "get": {
         "tags": ["Releases"],
         "summary": "Get a list of Releases",
-        "description": "Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.",
+        "description": "Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.",
         "operationId": "indexReleases_Spaces",
         "produces": ["application/json"],
         "parameters": [
@@ -24753,13 +24641,13 @@
     "/tagsets/all": {
       "get": {
         "tags": ["TagSets"],
-        "summary": "Get a list of TagSetResources",
-        "description": "Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.",
+        "summary": "Get a list of Tag Sets",
+        "description": "Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.",
         "operationId": "listAllTagSets",
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Load all TagSetResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -24767,18 +24655,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/tagsets/sortorder": {
@@ -25013,8 +24890,8 @@
     "/{baseSpaceId}/tagsets/all": {
       "get": {
         "tags": ["TagSets"],
-        "summary": "Get a list of TagSetResources",
-        "description": "Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.",
+        "summary": "Get a list of Tag Sets",
+        "description": "Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.",
         "operationId": "listAllTagSets_Spaces",
         "produces": ["application/json"],
         "parameters": [
@@ -25028,7 +24905,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Load all TagSetResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -25036,18 +24913,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/{baseSpaceId}/tagsets/sortorder": {
@@ -28505,13 +28371,13 @@
     "/userroles/all": {
       "get": {
         "tags": ["UserRoles"],
-        "summary": "Get a list of UserRoleResources",
-        "description": "Lists all of the user roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.",
+        "summary": "Get a list of User Roles",
+        "description": "Lists all of the User Roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.",
         "operationId": "listAllUserRoles",
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Load all UserRoleResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -28519,18 +28385,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/userroles/{id}": {
@@ -29548,13 +29403,24 @@
     "/workerpools/all": {
       "get": {
         "tags": ["WorkerPools"],
-        "summary": "Get a list of WorkerPoolResources",
-        "description": "Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.",
+        "summary": "Get a list of Worker Pools",
+        "description": "Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.",
         "operationId": "listAllWorkerPools",
         "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ids",
+            "description": "A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Load all WorkerPoolResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -29562,18 +29428,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/workerpools/dynamicworkertypes": {
@@ -29946,11 +29801,20 @@
     "/{baseSpaceId}/workerpools/all": {
       "get": {
         "tags": ["WorkerPools"],
-        "summary": "Get a list of WorkerPoolResources",
-        "description": "Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.",
+        "summary": "Get a list of Worker Pools",
+        "description": "Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.",
         "operationId": "listAllWorkerPools_Spaces",
         "produces": ["application/json"],
         "parameters": [
+          {
+            "in": "query",
+            "name": "ids",
+            "description": "A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           {
             "in": "path",
             "name": "baseSpaceId",
@@ -29961,7 +29825,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Load all WorkerPoolResource",
+            "description": "Success",
             "schema": {
               "type": "array",
               "items": {
@@ -29969,18 +29833,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          },
-          {
-            "APIKeyQuery": []
-          },
-          {
-            "NugetApiKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/{baseSpaceId}/workerpools/dynamicworkertypes": {
