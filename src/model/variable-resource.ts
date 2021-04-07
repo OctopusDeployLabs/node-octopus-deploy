@@ -1,4 +1,4 @@
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import { VariablePromptOptions } from "./variable-prompt-options";
 import { VariableResourceScope } from "./variable-resource-scope";

@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -298,8 +298,8 @@ export const UserRolesApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists all of the user roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
-     * @summary Get a list of UserRoleResources
+     * Lists all of the User Roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
+     * @summary Get a list of User Roles
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -544,8 +544,8 @@ export const UserRolesApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists all of the user roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
-     * @summary Get a list of UserRoleResources
+     * Lists all of the User Roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
+     * @summary Get a list of User Roles
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -668,8 +668,8 @@ export const UserRolesApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists all of the user roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
-     * @summary Get a list of UserRoleResources
+     * Lists all of the User Roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
+     * @summary Get a list of User Roles
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -753,8 +753,8 @@ export interface UserRolesApiInterface {
   ): AxiosPromise<UserRoleResourceCollection>;
 
   /**
-   * Lists all of the user roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
-   * @summary Get a list of UserRoleResources
+   * Lists all of the User Roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
+   * @summary Get a list of User Roles
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof UserRolesApiInterface
@@ -842,8 +842,8 @@ export class UserRolesApi extends BaseAPI implements UserRolesApiInterface {
   }
 
   /**
-   * Lists all of the user roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
-   * @summary Get a list of UserRoleResources
+   * Lists all of the User Roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
+   * @summary Get a list of User Roles
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof UserRolesApi

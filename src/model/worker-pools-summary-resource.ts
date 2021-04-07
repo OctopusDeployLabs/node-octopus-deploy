@@ -1,4 +1,4 @@
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import { WorkerPoolSummaryResource } from "./worker-pool-summary-resource";
 

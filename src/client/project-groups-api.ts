@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -740,8 +740,8 @@ export const ProjectGroupsApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ProjectGroupResources
+     * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+     * @summary Get a list of Project Group
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -794,8 +794,8 @@ export const ProjectGroupsApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ProjectGroupResources
+     * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+     * @summary Get a list of Project Group
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1317,8 +1317,8 @@ export const ProjectGroupsApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ProjectGroupResources
+     * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+     * @summary Get a list of Project Group
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1341,8 +1341,8 @@ export const ProjectGroupsApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ProjectGroupResources
+     * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+     * @summary Get a list of Project Group
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1614,8 +1614,8 @@ export const ProjectGroupsApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ProjectGroupResources
+     * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+     * @summary Get a list of Project Group
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1627,8 +1627,8 @@ export const ProjectGroupsApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ProjectGroupResources
+     * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+     * @summary Get a list of Project Group
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1836,8 +1836,8 @@ export interface ProjectGroupsApiInterface {
   ): AxiosPromise<ProjectGroupResourceCollection>;
 
   /**
-   * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ProjectGroupResources
+   * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of Project Group
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof ProjectGroupsApiInterface
@@ -1847,8 +1847,8 @@ export interface ProjectGroupsApiInterface {
   ): AxiosPromise<Array<ProjectGroupResource>>;
 
   /**
-   * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ProjectGroupResources
+   * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of Project Group
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -2081,8 +2081,8 @@ export class ProjectGroupsApi
   }
 
   /**
-   * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ProjectGroupResources
+   * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of Project Group
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof ProjectGroupsApi
@@ -2094,8 +2094,8 @@ export class ProjectGroupsApi
   }
 
   /**
-   * Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ProjectGroupResources
+   * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of Project Group
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}

@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -577,8 +577,8 @@ export const ProxiesApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-     * @summary Get a list of ProxyResources
+     * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+     * @summary Get a list of Proxies
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -631,8 +631,8 @@ export const ProxiesApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-     * @summary Get a list of ProxyResources
+     * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+     * @summary Get a list of Proxies
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1067,8 +1067,8 @@ export const ProxiesApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-     * @summary Get a list of ProxyResources
+     * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+     * @summary Get a list of Proxies
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1091,8 +1091,8 @@ export const ProxiesApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-     * @summary Get a list of ProxyResources
+     * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+     * @summary Get a list of Proxies
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1315,8 +1315,8 @@ export const ProxiesApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-     * @summary Get a list of ProxyResources
+     * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+     * @summary Get a list of Proxies
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1326,8 +1326,8 @@ export const ProxiesApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-     * @summary Get a list of ProxyResources
+     * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+     * @summary Get a list of Proxies
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1493,8 +1493,8 @@ export interface ProxiesApiInterface {
   ): AxiosPromise<ProxyResourceCollection>;
 
   /**
-   * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get a list of ProxyResources
+   * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+   * @summary Get a list of Proxies
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof ProxiesApiInterface
@@ -1502,8 +1502,8 @@ export interface ProxiesApiInterface {
   listAllProxies(options?: any): AxiosPromise<Array<ProxyResource>>;
 
   /**
-   * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get a list of ProxyResources
+   * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+   * @summary Get a list of Proxies
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -1682,8 +1682,8 @@ export class ProxiesApi extends BaseAPI implements ProxiesApiInterface {
   }
 
   /**
-   * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get a list of ProxyResources
+   * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+   * @summary Get a list of Proxies
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof ProxiesApi
@@ -1695,8 +1695,8 @@ export class ProxiesApi extends BaseAPI implements ProxiesApiInterface {
   }
 
   /**
-   * Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get a list of ProxyResources
+   * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+   * @summary Get a list of Proxies
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}

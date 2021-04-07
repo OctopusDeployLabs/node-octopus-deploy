@@ -12,8 +12,8 @@ Method | HTTP request | Description
 [**getProxyByIdSpaces**](ProxiesApi.md#getProxyByIdSpaces) | **GET** /{baseSpaceId}/proxies/{id} | Get a Proxy by ID
 [**indexProxies**](ProxiesApi.md#indexProxies) | **GET** /proxies | Get a list of ProxyResources
 [**indexProxiesSpaces**](ProxiesApi.md#indexProxiesSpaces) | **GET** /{baseSpaceId}/proxies | Get a list of ProxyResources
-[**listAllProxies**](ProxiesApi.md#listAllProxies) | **GET** /proxies/all | Get a list of ProxyResources
-[**listAllProxiesSpaces**](ProxiesApi.md#listAllProxiesSpaces) | **GET** /{baseSpaceId}/proxies/all | Get a list of ProxyResources
+[**listAllProxies**](ProxiesApi.md#listAllProxies) | **GET** /proxies/all | Get a list of Proxies
+[**listAllProxiesSpaces**](ProxiesApi.md#listAllProxiesSpaces) | **GET** /{baseSpaceId}/proxies/all | Get a list of Proxies
 [**updateProxy**](ProxiesApi.md#updateProxy) | **PUT** /proxies/{id} | Modify a ProxyResource by ID
 [**updateProxySpaces**](ProxiesApi.md#updateProxySpaces) | **PUT** /{baseSpaceId}/proxies/{id} | Modify a ProxyResource by ID
 
@@ -240,9 +240,9 @@ Name | Type | Description  | Notes
 # **listAllProxies**
 > List listAllProxies()
 
-Get a list of ProxyResources
+Get a list of Proxies
 
-    Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+    Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -264,9 +264,9 @@ This endpoint does not need any parameter.
 # **listAllProxiesSpaces**
 > List listAllProxiesSpaces(baseSpaceId)
 
-Get a list of ProxyResources
+Get a list of Proxies
 
-    Lists the name and ID of all of the proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
+    Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
 
 ### Parameters
 

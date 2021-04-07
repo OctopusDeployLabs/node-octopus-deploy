@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**indexProjectGroupProjectsSpaces**](ProjectGroupsApi.md#indexProjectGroupProjectsSpaces) | **GET** /{baseSpaceId}/projectgroups/{id}/projects | Lists all of the Projects that belong to the given Project Group
 [**indexProjectGroups**](ProjectGroupsApi.md#indexProjectGroups) | **GET** /projectgroups | Get a list of ProjectGroupResources
 [**indexProjectGroupsSpaces**](ProjectGroupsApi.md#indexProjectGroupsSpaces) | **GET** /{baseSpaceId}/projectgroups | Get a list of ProjectGroupResources
-[**listAllProjectGroups**](ProjectGroupsApi.md#listAllProjectGroups) | **GET** /projectgroups/all | Get a list of ProjectGroupResources
-[**listAllProjectGroupsSpaces**](ProjectGroupsApi.md#listAllProjectGroupsSpaces) | **GET** /{baseSpaceId}/projectgroups/all | Get a list of ProjectGroupResources
+[**listAllProjectGroups**](ProjectGroupsApi.md#listAllProjectGroups) | **GET** /projectgroups/all | Get a list of Project Group
+[**listAllProjectGroupsSpaces**](ProjectGroupsApi.md#listAllProjectGroupsSpaces) | **GET** /{baseSpaceId}/projectgroups/all | Get a list of Project Group
 [**updateProjectGroup**](ProjectGroupsApi.md#updateProjectGroup) | **PUT** /projectgroups/{id} | Modify a ProjectGroupResource by ID
 [**updateProjectGroupSpaces**](ProjectGroupsApi.md#updateProjectGroupSpaces) | **PUT** /{baseSpaceId}/projectgroups/{id} | Modify a ProjectGroupResource by ID
 
@@ -297,9 +297,9 @@ Name | Type | Description  | Notes
 # **listAllProjectGroups**
 > List listAllProjectGroups()
 
-Get a list of ProjectGroupResources
+Get a list of Project Group
 
-    Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+    Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -321,9 +321,9 @@ This endpoint does not need any parameter.
 # **listAllProjectGroupsSpaces**
 > List listAllProjectGroupsSpaces(baseSpaceId)
 
-Get a list of ProjectGroupResources
+Get a list of Project Group
 
-    Lists the name and ID of all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+    Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
 
 ### Parameters
 

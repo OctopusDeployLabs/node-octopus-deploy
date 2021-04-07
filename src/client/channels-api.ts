@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -1140,7 +1140,7 @@ export const ChannelsApiAxiosParamCreator = function (
     },
     /**
      * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ChannelResources
+     * @summary Get a list of Channels
      * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1202,7 +1202,7 @@ export const ChannelsApiAxiosParamCreator = function (
     },
     /**
      * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ChannelResources
+     * @summary Get a list of Channels
      * @param {string} baseSpaceId ID of the space
      * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
      * @param {*} [options] Override http request option.
@@ -1886,7 +1886,7 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
     },
     /**
      * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ChannelResources
+     * @summary Get a list of Channels
      * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1913,7 +1913,7 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
     },
     /**
      * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ChannelResources
+     * @summary Get a list of Channels
      * @param {string} baseSpaceId ID of the space
      * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
      * @param {*} [options] Override http request option.
@@ -2285,7 +2285,7 @@ export const ChannelsApiFactory = function (
     },
     /**
      * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ChannelResources
+     * @summary Get a list of Channels
      * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2300,7 +2300,7 @@ export const ChannelsApiFactory = function (
     },
     /**
      * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of ChannelResources
+     * @summary Get a list of Channels
      * @param {string} baseSpaceId ID of the space
      * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
      * @param {*} [options] Override http request option.
@@ -2588,7 +2588,7 @@ export interface ChannelsApiInterface {
 
   /**
    * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ChannelResources
+   * @summary Get a list of Channels
    * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -2601,7 +2601,7 @@ export interface ChannelsApiInterface {
 
   /**
    * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ChannelResources
+   * @summary Get a list of Channels
    * @param {string} baseSpaceId ID of the space
    * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
    * @param {*} [options] Override http request option.
@@ -2932,7 +2932,7 @@ export class ChannelsApi extends BaseAPI implements ChannelsApiInterface {
 
   /**
    * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ChannelResources
+   * @summary Get a list of Channels
    * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -2946,7 +2946,7 @@ export class ChannelsApi extends BaseAPI implements ChannelsApiInterface {
 
   /**
    * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ChannelResources
+   * @summary Get a list of Channels
    * @param {string} baseSpaceId ID of the space
    * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
    * @param {*} [options] Override http request option.

@@ -20,10 +20,15 @@
   "license": "Apache-2.0",
   "main": "./dist/index.js",
   "name": "@octopusdeploy/octopusdeploy",
+  "private": true,
   "repository": "github:OctopusDeployLabs/node-octopus-deploy",
   "scripts": {
-    "build": "tsc --outDir dist/",
+    "all": "npm run clean && npm run build && npm run docs",
+    "build": "tsc --project src/tsconfig.json",
+    "clean": "rm -rf docs src",
+    "docs": "openapi-generator generate -g markdown -i spec/swagger.json -o docs --skip-validate-spec -p withSeparateModelsAndApi=true -p apiPackage=client -p modelPackage=model -p withoutPrefixEnums=true -p withInterfaces=true",
+    "prebuild": "openapi-generator generate --enable-post-process-file -g typescript-axios -i spec/swagger.json -o src --skip-validate-spec -p withSeparateModelsAndApi=true -p apiPackage=client -p modelPackage=model -p withoutPrefixEnums=true -p withInterfaces=true -p npmName=@octopusdeploy/octopusdeploy -t templates",
     "prepublishOnly": "npm run build"
   },
-  "version": "2021.2.1290"
+  "version": "2021.2.1387"
 }

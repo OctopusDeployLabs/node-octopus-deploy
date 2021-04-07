@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -1467,7 +1467,7 @@ export const AccountsApiAxiosParamCreator = function (
     },
     /**
      * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of AccountResources
+     * @summary Get a list of Accounts
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1521,7 +1521,7 @@ export const AccountsApiAxiosParamCreator = function (
     },
     /**
      * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of AccountResources
+     * @summary Get a list of Accounts
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2328,7 +2328,7 @@ export const AccountsApiFp = function (configuration?: Configuration) {
     },
     /**
      * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of AccountResources
+     * @summary Get a list of Accounts
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -2352,7 +2352,7 @@ export const AccountsApiFp = function (configuration?: Configuration) {
     },
     /**
      * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of AccountResources
+     * @summary Get a list of Accounts
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2785,7 +2785,7 @@ export const AccountsApiFactory = function (
     },
     /**
      * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of AccountResources
+     * @summary Get a list of Accounts
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -2796,7 +2796,7 @@ export const AccountsApiFactory = function (
     },
     /**
      * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-     * @summary Get a list of AccountResources
+     * @summary Get a list of Accounts
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3137,7 +3137,7 @@ export interface AccountsApiInterface {
 
   /**
    * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of AccountResources
+   * @summary Get a list of Accounts
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof AccountsApiInterface
@@ -3146,7 +3146,7 @@ export interface AccountsApiInterface {
 
   /**
    * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of AccountResources
+   * @summary Get a list of Accounts
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -3541,7 +3541,7 @@ export class AccountsApi extends BaseAPI implements AccountsApiInterface {
 
   /**
    * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of AccountResources
+   * @summary Get a list of Accounts
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof AccountsApi
@@ -3554,7 +3554,7 @@ export class AccountsApi extends BaseAPI implements AccountsApiInterface {
 
   /**
    * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of AccountResources
+   * @summary Get a list of Accounts
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}

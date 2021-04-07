@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -1103,12 +1103,16 @@ export const WorkerPoolsApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-     * @summary Get a list of WorkerPoolResources
+     * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+     * @summary Get a list of Worker Pools
+     * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listAllWorkerPools: async (options: any = {}): Promise<RequestArgs> => {
+    listAllWorkerPools: async (
+      ids?: Array<string>,
+      options: any = {}
+    ): Promise<RequestArgs> => {
       const localVarPath = `/workerpools/all`;
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1142,6 +1146,10 @@ export const WorkerPoolsApiAxiosParamCreator = function (
         configuration
       );
 
+      if (ids) {
+        localVarQueryParameter["ids"] = ids.join(COLLECTION_FORMATS.csv);
+      }
+
       setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
       let headersFromBaseOptions =
         baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1157,14 +1165,16 @@ export const WorkerPoolsApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-     * @summary Get a list of WorkerPoolResources
+     * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+     * @summary Get a list of Worker Pools
      * @param {string} baseSpaceId ID of the space
+     * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     listAllWorkerPoolsSpaces: async (
       baseSpaceId: string,
+      ids?: Array<string>,
       options: any = {}
     ): Promise<RequestArgs> => {
       // verify required parameter 'baseSpaceId' is not null or undefined
@@ -1204,6 +1214,10 @@ export const WorkerPoolsApiAxiosParamCreator = function (
         "X-NuGet-ApiKey",
         configuration
       );
+
+      if (ids) {
+        localVarQueryParameter["ids"] = ids.join(COLLECTION_FORMATS.csv);
+      }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
       let headersFromBaseOptions =
@@ -1942,12 +1956,14 @@ export const WorkerPoolsApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-     * @summary Get a list of WorkerPoolResources
+     * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+     * @summary Get a list of Worker Pools
+     * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async listAllWorkerPools(
+      ids?: Array<string>,
       options?: any
     ): Promise<
       (
@@ -1956,6 +1972,7 @@ export const WorkerPoolsApiFp = function (configuration?: Configuration) {
       ) => AxiosPromise<Array<WorkerPoolResource>>
     > {
       const localVarAxiosArgs = await localVarAxiosParamCreator.listAllWorkerPools(
+        ids,
         options
       );
       return createRequestFunction(
@@ -1966,14 +1983,16 @@ export const WorkerPoolsApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-     * @summary Get a list of WorkerPoolResources
+     * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+     * @summary Get a list of Worker Pools
      * @param {string} baseSpaceId ID of the space
+     * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async listAllWorkerPoolsSpaces(
       baseSpaceId: string,
+      ids?: Array<string>,
       options?: any
     ): Promise<
       (
@@ -1983,6 +2002,7 @@ export const WorkerPoolsApiFp = function (configuration?: Configuration) {
     > {
       const localVarAxiosArgs = await localVarAxiosParamCreator.listAllWorkerPoolsSpaces(
         baseSpaceId,
+        ids,
         options
       );
       return createRequestFunction(
@@ -2360,29 +2380,35 @@ export const WorkerPoolsApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-     * @summary Get a list of WorkerPoolResources
+     * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+     * @summary Get a list of Worker Pools
+     * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listAllWorkerPools(options?: any): AxiosPromise<Array<WorkerPoolResource>> {
+    listAllWorkerPools(
+      ids?: Array<string>,
+      options?: any
+    ): AxiosPromise<Array<WorkerPoolResource>> {
       return localVarFp
-        .listAllWorkerPools(options)
+        .listAllWorkerPools(ids, options)
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-     * @summary Get a list of WorkerPoolResources
+     * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+     * @summary Get a list of Worker Pools
      * @param {string} baseSpaceId ID of the space
+     * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     listAllWorkerPoolsSpaces(
       baseSpaceId: string,
+      ids?: Array<string>,
       options?: any
     ): AxiosPromise<Array<WorkerPoolResource>> {
       return localVarFp
-        .listAllWorkerPoolsSpaces(baseSpaceId, options)
+        .listAllWorkerPoolsSpaces(baseSpaceId, ids, options)
         .then((request) => request(axios, basePath));
     },
     /**
@@ -2670,24 +2696,30 @@ export interface WorkerPoolsApiInterface {
   ): AxiosPromise<WorkerPoolResourceCollection>;
 
   /**
-   * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-   * @summary Get a list of WorkerPoolResources
+   * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+   * @summary Get a list of Worker Pools
+   * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof WorkerPoolsApiInterface
    */
-  listAllWorkerPools(options?: any): AxiosPromise<Array<WorkerPoolResource>>;
+  listAllWorkerPools(
+    ids?: Array<string>,
+    options?: any
+  ): AxiosPromise<Array<WorkerPoolResource>>;
 
   /**
-   * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-   * @summary Get a list of WorkerPoolResources
+   * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+   * @summary Get a list of Worker Pools
    * @param {string} baseSpaceId ID of the space
+   * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof WorkerPoolsApiInterface
    */
   listAllWorkerPoolsSpaces(
     baseSpaceId: string,
+    ids?: Array<string>,
     options?: any
   ): AxiosPromise<Array<WorkerPoolResource>>;
 
@@ -3009,29 +3041,35 @@ export class WorkerPoolsApi extends BaseAPI implements WorkerPoolsApiInterface {
   }
 
   /**
-   * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-   * @summary Get a list of WorkerPoolResources
+   * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+   * @summary Get a list of Worker Pools
+   * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof WorkerPoolsApi
    */
-  public listAllWorkerPools(options?: any) {
+  public listAllWorkerPools(ids?: Array<string>, options?: any) {
     return WorkerPoolsApiFp(this.configuration)
-      .listAllWorkerPools(options)
+      .listAllWorkerPools(ids, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
   /**
-   * Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each pool.
-   * @summary Get a list of WorkerPoolResources
+   * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+   * @summary Get a list of Worker Pools
    * @param {string} baseSpaceId ID of the space
+   * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof WorkerPoolsApi
    */
-  public listAllWorkerPoolsSpaces(baseSpaceId: string, options?: any) {
+  public listAllWorkerPoolsSpaces(
+    baseSpaceId: string,
+    ids?: Array<string>,
+    options?: any
+  ) {
     return WorkerPoolsApiFp(this.configuration)
-      .listAllWorkerPoolsSpaces(baseSpaceId, options)
+      .listAllWorkerPoolsSpaces(baseSpaceId, ids, options)
       .then((request) => request(this.axios, this.basePath));
   }
 

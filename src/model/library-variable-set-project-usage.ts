@@ -1,4 +1,4 @@
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import { LibraryVariableSetReleaseUsageEntry } from "./library-variable-set-release-usage-entry";
 import { LibraryVariableSetRunbookSnapshotUsageEntry } from "./library-variable-set-runbook-snapshot-usage-entry";

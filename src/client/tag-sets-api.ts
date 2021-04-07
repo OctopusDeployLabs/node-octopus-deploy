@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -577,8 +577,8 @@ export const TagSetsApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-     * @summary Get a list of TagSetResources
+     * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+     * @summary Get a list of Tag Sets
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -631,8 +631,8 @@ export const TagSetsApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-     * @summary Get a list of TagSetResources
+     * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+     * @summary Get a list of Tag Sets
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1182,8 +1182,8 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-     * @summary Get a list of TagSetResources
+     * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+     * @summary Get a list of Tag Sets
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1206,8 +1206,8 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-     * @summary Get a list of TagSetResources
+     * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+     * @summary Get a list of Tag Sets
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1473,8 +1473,8 @@ export const TagSetsApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-     * @summary Get a list of TagSetResources
+     * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+     * @summary Get a list of Tag Sets
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1484,8 +1484,8 @@ export const TagSetsApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-     * @summary Get a list of TagSetResources
+     * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+     * @summary Get a list of Tag Sets
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1678,8 +1678,8 @@ export interface TagSetsApiInterface {
   ): AxiosPromise<TagSetResourceCollection>;
 
   /**
-   * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-   * @summary Get a list of TagSetResources
+   * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+   * @summary Get a list of Tag Sets
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof TagSetsApiInterface
@@ -1687,8 +1687,8 @@ export interface TagSetsApiInterface {
   listAllTagSets(options?: any): AxiosPromise<Array<TagSetResource>>;
 
   /**
-   * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-   * @summary Get a list of TagSetResources
+   * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+   * @summary Get a list of Tag Sets
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -1887,8 +1887,8 @@ export class TagSetsApi extends BaseAPI implements TagSetsApiInterface {
   }
 
   /**
-   * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-   * @summary Get a list of TagSetResources
+   * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+   * @summary Get a list of Tag Sets
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof TagSetsApi
@@ -1900,8 +1900,8 @@ export class TagSetsApi extends BaseAPI implements TagSetsApiInterface {
   }
 
   /**
-   * Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each tag set.
-   * @summary Get a list of TagSetResources
+   * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
+   * @summary Get a list of Tag Sets
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}

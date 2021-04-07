@@ -885,7 +885,7 @@ Name | Type | Description  | Notes
 
 Get a list of Releases
 
-    Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+    Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
 
 ### Parameters
 
@@ -913,7 +913,7 @@ Name | Type | Description  | Notes
 
 Get a list of Releases
 
-    Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+    Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
 
 ### Parameters
 

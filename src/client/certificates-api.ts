@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -1357,12 +1357,16 @@ export const CertificatesApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists X.509 certificates managed by Octopus
-     * @summary Get a list of CertificateResources
+     * Lists X.509 certificates managed by Octopus.
+     * @summary Get a list of Certificates
+     * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listAllCertificates: async (options: any = {}): Promise<RequestArgs> => {
+    listAllCertificates: async (
+      ids?: Array<string>,
+      options: any = {}
+    ): Promise<RequestArgs> => {
       const localVarPath = `/certificates/all`;
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1396,6 +1400,10 @@ export const CertificatesApiAxiosParamCreator = function (
         configuration
       );
 
+      if (ids) {
+        localVarQueryParameter["ids"] = ids.join(COLLECTION_FORMATS.csv);
+      }
+
       setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
       let headersFromBaseOptions =
         baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1411,14 +1419,16 @@ export const CertificatesApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists X.509 certificates managed by Octopus
-     * @summary Get a list of CertificateResources
+     * Lists X.509 certificates managed by Octopus.
+     * @summary Get a list of Certificates
      * @param {string} baseSpaceId ID of the space
+     * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     listAllCertificatesSpaces: async (
       baseSpaceId: string,
+      ids?: Array<string>,
       options: any = {}
     ): Promise<RequestArgs> => {
       // verify required parameter 'baseSpaceId' is not null or undefined
@@ -1462,6 +1472,10 @@ export const CertificatesApiAxiosParamCreator = function (
         "X-NuGet-ApiKey",
         configuration
       );
+
+      if (ids) {
+        localVarQueryParameter["ids"] = ids.join(COLLECTION_FORMATS.csv);
+      }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
       let headersFromBaseOptions =
@@ -2169,12 +2183,14 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists X.509 certificates managed by Octopus
-     * @summary Get a list of CertificateResources
+     * Lists X.509 certificates managed by Octopus.
+     * @summary Get a list of Certificates
+     * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async listAllCertificates(
+      ids?: Array<string>,
       options?: any
     ): Promise<
       (
@@ -2183,6 +2199,7 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
       ) => AxiosPromise<Array<CertificateResource>>
     > {
       const localVarAxiosArgs = await localVarAxiosParamCreator.listAllCertificates(
+        ids,
         options
       );
       return createRequestFunction(
@@ -2193,14 +2210,16 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists X.509 certificates managed by Octopus
-     * @summary Get a list of CertificateResources
+     * Lists X.509 certificates managed by Octopus.
+     * @summary Get a list of Certificates
      * @param {string} baseSpaceId ID of the space
+     * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async listAllCertificatesSpaces(
       baseSpaceId: string,
+      ids?: Array<string>,
       options?: any
     ): Promise<
       (
@@ -2210,6 +2229,7 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
     > {
       const localVarAxiosArgs = await localVarAxiosParamCreator.listAllCertificatesSpaces(
         baseSpaceId,
+        ids,
         options
       );
       return createRequestFunction(
@@ -2591,31 +2611,35 @@ export const CertificatesApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists X.509 certificates managed by Octopus
-     * @summary Get a list of CertificateResources
+     * Lists X.509 certificates managed by Octopus.
+     * @summary Get a list of Certificates
+     * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     listAllCertificates(
+      ids?: Array<string>,
       options?: any
     ): AxiosPromise<Array<CertificateResource>> {
       return localVarFp
-        .listAllCertificates(options)
+        .listAllCertificates(ids, options)
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists X.509 certificates managed by Octopus
-     * @summary Get a list of CertificateResources
+     * Lists X.509 certificates managed by Octopus.
+     * @summary Get a list of Certificates
      * @param {string} baseSpaceId ID of the space
+     * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     listAllCertificatesSpaces(
       baseSpaceId: string,
+      ids?: Array<string>,
       options?: any
     ): AxiosPromise<Array<CertificateResource>> {
       return localVarFp
-        .listAllCertificatesSpaces(baseSpaceId, options)
+        .listAllCertificatesSpaces(baseSpaceId, ids, options)
         .then((request) => request(axios, basePath));
     },
     /**
@@ -2918,24 +2942,30 @@ export interface CertificatesApiInterface {
   ): AxiosPromise<CertificateResourceCollection>;
 
   /**
-   * Lists X.509 certificates managed by Octopus
-   * @summary Get a list of CertificateResources
+   * Lists X.509 certificates managed by Octopus.
+   * @summary Get a list of Certificates
+   * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof CertificatesApiInterface
    */
-  listAllCertificates(options?: any): AxiosPromise<Array<CertificateResource>>;
+  listAllCertificates(
+    ids?: Array<string>,
+    options?: any
+  ): AxiosPromise<Array<CertificateResource>>;
 
   /**
-   * Lists X.509 certificates managed by Octopus
-   * @summary Get a list of CertificateResources
+   * Lists X.509 certificates managed by Octopus.
+   * @summary Get a list of Certificates
    * @param {string} baseSpaceId ID of the space
+   * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof CertificatesApiInterface
    */
   listAllCertificatesSpaces(
     baseSpaceId: string,
+    ids?: Array<string>,
     options?: any
   ): AxiosPromise<Array<CertificateResource>>;
 
@@ -3298,29 +3328,35 @@ export class CertificatesApi
   }
 
   /**
-   * Lists X.509 certificates managed by Octopus
-   * @summary Get a list of CertificateResources
+   * Lists X.509 certificates managed by Octopus.
+   * @summary Get a list of Certificates
+   * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof CertificatesApi
    */
-  public listAllCertificates(options?: any) {
+  public listAllCertificates(ids?: Array<string>, options?: any) {
     return CertificatesApiFp(this.configuration)
-      .listAllCertificates(options)
+      .listAllCertificates(ids, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
   /**
-   * Lists X.509 certificates managed by Octopus
-   * @summary Get a list of CertificateResources
+   * Lists X.509 certificates managed by Octopus.
+   * @summary Get a list of Certificates
    * @param {string} baseSpaceId ID of the space
+   * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof CertificatesApi
    */
-  public listAllCertificatesSpaces(baseSpaceId: string, options?: any) {
+  public listAllCertificatesSpaces(
+    baseSpaceId: string,
+    ids?: Array<string>,
+    options?: any
+  ) {
     return CertificatesApiFp(this.configuration)
-      .listAllCertificatesSpaces(baseSpaceId, options)
+      .listAllCertificatesSpaces(baseSpaceId, ids, options)
       .then((request) => request(this.axios, this.basePath));
   }
 

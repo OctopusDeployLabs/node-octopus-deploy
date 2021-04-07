@@ -18,8 +18,8 @@ Method | HTTP request | Description
 [**indexMachinePolicyDeploymentTargetsSpaces**](MachinePoliciesApi.md#indexMachinePolicyDeploymentTargetsSpaces) | **GET** /{baseSpaceId}/machinepolicies/{id}/machines | Lists all of the machines that belong to the given Machine Policy
 [**indexMachinePolicyWorkers**](MachinePoliciesApi.md#indexMachinePolicyWorkers) | **GET** /machinepolicies/{id}/workers | Lists all of the workers that belong to the given Machine Policy
 [**indexMachinePolicyWorkersSpaces**](MachinePoliciesApi.md#indexMachinePolicyWorkersSpaces) | **GET** /{baseSpaceId}/machinepolicies/{id}/workers | Lists all of the workers that belong to the given Machine Policy
-[**listAllMachinePolicies**](MachinePoliciesApi.md#listAllMachinePolicies) | **GET** /machinepolicies/all | Get a list of MachinePolicyResources
-[**listAllMachinePoliciesSpaces**](MachinePoliciesApi.md#listAllMachinePoliciesSpaces) | **GET** /{baseSpaceId}/machinepolicies/all | Get a list of MachinePolicyResources
+[**listAllMachinePolicies**](MachinePoliciesApi.md#listAllMachinePolicies) | **GET** /machinepolicies/all | Get a list of Machine Policies
+[**listAllMachinePoliciesSpaces**](MachinePoliciesApi.md#listAllMachinePoliciesSpaces) | **GET** /{baseSpaceId}/machinepolicies/all | Get a list of Machine Policies
 [**updateMachinePolicy**](MachinePoliciesApi.md#updateMachinePolicy) | **PUT** /machinepolicies/{id} | Modify a MachinePolicyResource by ID
 [**updateMachinePolicySpaces**](MachinePoliciesApi.md#updateMachinePolicySpaces) | **PUT** /{baseSpaceId}/machinepolicies/{id} | Modify a MachinePolicyResource by ID
 
@@ -407,9 +407,9 @@ Name | Type | Description  | Notes
 # **listAllMachinePolicies**
 > List listAllMachinePolicies()
 
-Get a list of MachinePolicyResources
+Get a list of Machine Policies
 
-    Lists all the machine policies in the supplied Octopus Deploy Space.
+    Lists all the Machine Policies in the supplied Octopus Deploy Space.
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -431,9 +431,9 @@ This endpoint does not need any parameter.
 # **listAllMachinePoliciesSpaces**
 > List listAllMachinePoliciesSpaces(baseSpaceId)
 
-Get a list of MachinePolicyResources
+Get a list of Machine Policies
 
-    Lists all the machine policies in the supplied Octopus Deploy Space.
+    Lists all the Machine Policies in the supplied Octopus Deploy Space.
 
 ### Parameters
 

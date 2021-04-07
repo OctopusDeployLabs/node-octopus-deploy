@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -842,7 +842,7 @@ export const LifecyclesApiAxiosParamCreator = function (
     },
     /**
      * Lists all the lifecycles in the supplied Octopus Deploy Space.
-     * @summary Get a list of LifecycleResources
+     * @summary Get a list of Lifecycles
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -896,7 +896,7 @@ export const LifecyclesApiAxiosParamCreator = function (
     },
     /**
      * Lists all the lifecycles in the supplied Octopus Deploy Space.
-     * @summary Get a list of LifecycleResources
+     * @summary Get a list of Lifecycles
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1456,7 +1456,7 @@ export const LifecyclesApiFp = function (configuration?: Configuration) {
     },
     /**
      * Lists all the lifecycles in the supplied Octopus Deploy Space.
-     * @summary Get a list of LifecycleResources
+     * @summary Get a list of Lifecycles
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1480,7 +1480,7 @@ export const LifecyclesApiFp = function (configuration?: Configuration) {
     },
     /**
      * Lists all the lifecycles in the supplied Octopus Deploy Space.
-     * @summary Get a list of LifecycleResources
+     * @summary Get a list of Lifecycles
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1773,7 +1773,7 @@ export const LifecyclesApiFactory = function (
     },
     /**
      * Lists all the lifecycles in the supplied Octopus Deploy Space.
-     * @summary Get a list of LifecycleResources
+     * @summary Get a list of Lifecycles
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1784,7 +1784,7 @@ export const LifecyclesApiFactory = function (
     },
     /**
      * Lists all the lifecycles in the supplied Octopus Deploy Space.
-     * @summary Get a list of LifecycleResources
+     * @summary Get a list of Lifecycles
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2006,7 +2006,7 @@ export interface LifecyclesApiInterface {
 
   /**
    * Lists all the lifecycles in the supplied Octopus Deploy Space.
-   * @summary Get a list of LifecycleResources
+   * @summary Get a list of Lifecycles
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof LifecyclesApiInterface
@@ -2015,7 +2015,7 @@ export interface LifecyclesApiInterface {
 
   /**
    * Lists all the lifecycles in the supplied Octopus Deploy Space.
-   * @summary Get a list of LifecycleResources
+   * @summary Get a list of Lifecycles
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -2261,7 +2261,7 @@ export class LifecyclesApi extends BaseAPI implements LifecyclesApiInterface {
 
   /**
    * Lists all the lifecycles in the supplied Octopus Deploy Space.
-   * @summary Get a list of LifecycleResources
+   * @summary Get a list of Lifecycles
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof LifecyclesApi
@@ -2274,7 +2274,7 @@ export class LifecyclesApi extends BaseAPI implements LifecyclesApiInterface {
 
   /**
    * Lists all the lifecycles in the supplied Octopus Deploy Space.
-   * @summary Get a list of LifecycleResources
+   * @summary Get a list of Lifecycles
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}

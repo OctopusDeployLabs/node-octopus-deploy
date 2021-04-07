@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -1030,8 +1030,8 @@ export const MachinePoliciesApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists all the machine policies in the supplied Octopus Deploy Space.
-     * @summary Get a list of MachinePolicyResources
+     * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+     * @summary Get a list of Machine Policies
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1084,8 +1084,8 @@ export const MachinePoliciesApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists all the machine policies in the supplied Octopus Deploy Space.
-     * @summary Get a list of MachinePolicyResources
+     * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+     * @summary Get a list of Machine Policies
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1727,8 +1727,8 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists all the machine policies in the supplied Octopus Deploy Space.
-     * @summary Get a list of MachinePolicyResources
+     * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+     * @summary Get a list of Machine Policies
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -1751,8 +1751,8 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists all the machine policies in the supplied Octopus Deploy Space.
-     * @summary Get a list of MachinePolicyResources
+     * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+     * @summary Get a list of Machine Policies
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2094,8 +2094,8 @@ export const MachinePoliciesApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists all the machine policies in the supplied Octopus Deploy Space.
-     * @summary Get a list of MachinePolicyResources
+     * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+     * @summary Get a list of Machine Policies
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -2107,8 +2107,8 @@ export const MachinePoliciesApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists all the machine policies in the supplied Octopus Deploy Space.
-     * @summary Get a list of MachinePolicyResources
+     * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+     * @summary Get a list of Machine Policies
      * @param {string} baseSpaceId ID of the space
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2370,8 +2370,8 @@ export interface MachinePoliciesApiInterface {
   ): AxiosPromise<WorkerResourceCollection>;
 
   /**
-   * Lists all the machine policies in the supplied Octopus Deploy Space.
-   * @summary Get a list of MachinePolicyResources
+   * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+   * @summary Get a list of Machine Policies
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof MachinePoliciesApiInterface
@@ -2381,8 +2381,8 @@ export interface MachinePoliciesApiInterface {
   ): AxiosPromise<Array<MachinePolicyResource>>;
 
   /**
-   * Lists all the machine policies in the supplied Octopus Deploy Space.
-   * @summary Get a list of MachinePolicyResources
+   * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+   * @summary Get a list of Machine Policies
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -2688,8 +2688,8 @@ export class MachinePoliciesApi
   }
 
   /**
-   * Lists all the machine policies in the supplied Octopus Deploy Space.
-   * @summary Get a list of MachinePolicyResources
+   * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+   * @summary Get a list of Machine Policies
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof MachinePoliciesApi
@@ -2701,8 +2701,8 @@ export class MachinePoliciesApi
   }
 
   /**
-   * Lists all the machine policies in the supplied Octopus Deploy Space.
-   * @summary Get a list of MachinePolicyResources
+   * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+   * @summary Get a list of Machine Policies
    * @param {string} baseSpaceId ID of the space
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}

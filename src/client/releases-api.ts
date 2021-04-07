@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import globalAxios, { AxiosPromise, AxiosInstance } from "axios";
 import { Configuration } from "../configuration";
@@ -2124,7 +2124,7 @@ export const ReleasesApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+     * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
      * @summary Get a list of Releases
      * @param {number} [skip] Number of items to skip. Defaults to zero
      * @param {number} [take] Number of items to take. Defaults to 30
@@ -2192,7 +2192,7 @@ export const ReleasesApiAxiosParamCreator = function (
       };
     },
     /**
-     * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+     * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
      * @summary Get a list of Releases
      * @param {string} baseSpaceId ID of the space
      * @param {number} [skip] Number of items to skip. Defaults to zero
@@ -3307,7 +3307,7 @@ export const ReleasesApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+     * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
      * @summary Get a list of Releases
      * @param {number} [skip] Number of items to skip. Defaults to zero
      * @param {number} [take] Number of items to take. Defaults to 30
@@ -3337,7 +3337,7 @@ export const ReleasesApiFp = function (configuration?: Configuration) {
       );
     },
     /**
-     * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+     * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
      * @summary Get a list of Releases
      * @param {string} baseSpaceId ID of the space
      * @param {number} [skip] Number of items to skip. Defaults to zero
@@ -3949,7 +3949,7 @@ export const ReleasesApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+     * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
      * @summary Get a list of Releases
      * @param {number} [skip] Number of items to skip. Defaults to zero
      * @param {number} [take] Number of items to take. Defaults to 30
@@ -3966,7 +3966,7 @@ export const ReleasesApiFactory = function (
         .then((request) => request(axios, basePath));
     },
     /**
-     * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+     * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
      * @summary Get a list of Releases
      * @param {string} baseSpaceId ID of the space
      * @param {number} [skip] Number of items to skip. Defaults to zero
@@ -4458,7 +4458,7 @@ export interface ReleasesApiInterface {
   ): AxiosPromise<DeploymentResourceCollection>;
 
   /**
-   * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+   * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
    * @summary Get a list of Releases
    * @param {number} [skip] Number of items to skip. Defaults to zero
    * @param {number} [take] Number of items to take. Defaults to 30
@@ -4473,7 +4473,7 @@ export interface ReleasesApiInterface {
   ): AxiosPromise<ReleaseResourceCollection>;
 
   /**
-   * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+   * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
    * @summary Get a list of Releases
    * @param {string} baseSpaceId ID of the space
    * @param {number} [skip] Number of items to skip. Defaults to zero
@@ -5053,7 +5053,7 @@ export class ReleasesApi extends BaseAPI implements ReleasesApiInterface {
   }
 
   /**
-   * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+   * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
    * @summary Get a list of Releases
    * @param {number} [skip] Number of items to skip. Defaults to zero
    * @param {number} [take] Number of items to take. Defaults to 30
@@ -5068,7 +5068,7 @@ export class ReleasesApi extends BaseAPI implements ReleasesApiInterface {
   }
 
   /**
-   * Lists all of the releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+   * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
    * @summary Get a list of Releases
    * @param {string} baseSpaceId ID of the space
    * @param {number} [skip] Number of items to skip. Defaults to zero

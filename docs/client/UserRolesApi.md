@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**deleteUserRole**](UserRolesApi.md#deleteUserRole) | **DELETE** /userroles/{id} | Delete a UserRoleResource by ID
 [**getUserRoleById**](UserRolesApi.md#getUserRoleById) | **GET** /userroles/{id} | Get a User Role by ID
 [**indexUserRoles**](UserRolesApi.md#indexUserRoles) | **GET** /userroles | Get a list of UserRoleResources
-[**listAllUserRoles**](UserRolesApi.md#listAllUserRoles) | **GET** /userroles/all | Get a list of UserRoleResources
+[**listAllUserRoles**](UserRolesApi.md#listAllUserRoles) | **GET** /userroles/all | Get a list of User Roles
 [**updateUserRole**](UserRolesApi.md#updateUserRole) | **PUT** /userroles/{id} | Modify a UserRoleResource by ID
 
 
@@ -123,9 +123,9 @@ Name | Type | Description  | Notes
 # **listAllUserRoles**
 > List listAllUserRoles()
 
-Get a list of UserRoleResources
+Get a list of User Roles
 
-    Lists all of the user roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
+    Lists all of the User Roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
 
 ### Parameters
 This endpoint does not need any parameter.

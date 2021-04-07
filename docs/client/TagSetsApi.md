@@ -12,8 +12,8 @@ Method | HTTP request | Description
 [**getTagSetByIdSpaces**](TagSetsApi.md#getTagSetByIdSpaces) | **GET** /{baseSpaceId}/tagsets/{id} | Get a Tag Set by ID
 [**indexTagSets**](TagSetsApi.md#indexTagSets) | **GET** /tagsets | Get a list of TagSetResources
 [**indexTagSetsSpaces**](TagSetsApi.md#indexTagSetsSpaces) | **GET** /{baseSpaceId}/tagsets | Get a list of TagSetResources
-[**listAllTagSets**](TagSetsApi.md#listAllTagSets) | **GET** /tagsets/all | Get a list of TagSetResources
-[**listAllTagSetsSpaces**](TagSetsApi.md#listAllTagSetsSpaces) | **GET** /{baseSpaceId}/tagsets/all | Get a list of TagSetResources
+[**listAllTagSets**](TagSetsApi.md#listAllTagSets) | **GET** /tagsets/all | Get a list of Tag Sets
+[**listAllTagSetsSpaces**](TagSetsApi.md#listAllTagSetsSpaces) | **GET** /{baseSpaceId}/tagsets/all | Get a list of Tag Sets
 [**updateSortTagSets**](TagSetsApi.md#updateSortTagSets) | **PUT** /tagsets/sortorder | 
 [**updateSortTagSetsSpaces**](TagSetsApi.md#updateSortTagSetsSpaces) | **PUT** /{baseSpaceId}/tagsets/sortorder | 
 [**updateTagSet**](TagSetsApi.md#updateTagSet) | **PUT** /tagsets/{id} | Modify a TagSetResource by ID
@@ -242,9 +242,9 @@ Name | Type | Description  | Notes
 # **listAllTagSets**
 > List listAllTagSets()
 
-Get a list of TagSetResources
+Get a list of Tag Sets
 
-    Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the &#x60;SortOrder&#x60; field on each tag set.
+    Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the &#x60;SortOrder&#x60; field on each Tag Set.
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -266,9 +266,9 @@ This endpoint does not need any parameter.
 # **listAllTagSetsSpaces**
 > List listAllTagSetsSpaces(baseSpaceId)
 
-Get a list of TagSetResources
+Get a list of Tag Sets
 
-    Lists the details of all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted by the &#x60;SortOrder&#x60; field on each tag set.
+    Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the &#x60;SortOrder&#x60; field on each Tag Set.
 
 ### Parameters
 

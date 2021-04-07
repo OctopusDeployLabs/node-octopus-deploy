@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**getLifecycleProjectsSpaces**](LifecyclesApi.md#getLifecycleProjectsSpaces) | **GET** /{baseSpaceId}/lifecycles/{id}/projects | 
 [**indexLifecycles**](LifecyclesApi.md#indexLifecycles) | **GET** /lifecycles | Get a list of LifecycleResources
 [**indexLifecyclesSpaces**](LifecyclesApi.md#indexLifecyclesSpaces) | **GET** /{baseSpaceId}/lifecycles | Get a list of LifecycleResources
-[**listAllLifecycles**](LifecyclesApi.md#listAllLifecycles) | **GET** /lifecycles/all | Get a list of LifecycleResources
-[**listAllLifecyclesSpaces**](LifecyclesApi.md#listAllLifecyclesSpaces) | **GET** /{baseSpaceId}/lifecycles/all | Get a list of LifecycleResources
+[**listAllLifecycles**](LifecyclesApi.md#listAllLifecycles) | **GET** /lifecycles/all | Get a list of Lifecycles
+[**listAllLifecyclesSpaces**](LifecyclesApi.md#listAllLifecyclesSpaces) | **GET** /{baseSpaceId}/lifecycles/all | Get a list of Lifecycles
 [**updateLifecycle**](LifecyclesApi.md#updateLifecycle) | **PUT** /lifecycles/{id} | Modify a LifecycleResource by ID
 [**updateLifecycleSpaces**](LifecyclesApi.md#updateLifecycleSpaces) | **PUT** /{baseSpaceId}/lifecycles/{id} | Modify a LifecycleResource by ID
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 # **listAllLifecycles**
 > List listAllLifecycles()
 
-Get a list of LifecycleResources
+Get a list of Lifecycles
 
     Lists all the lifecycles in the supplied Octopus Deploy Space.
 
@@ -378,7 +378,7 @@ This endpoint does not need any parameter.
 # **listAllLifecyclesSpaces**
 > List listAllLifecyclesSpaces(baseSpaceId)
 
-Get a list of LifecycleResources
+Get a list of Lifecycles
 
     Lists all the lifecycles in the supplied Octopus Deploy Space.
 

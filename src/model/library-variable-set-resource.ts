@@ -1,4 +1,4 @@
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import { ActionTemplateParameterResource } from "./action-template-parameter-resource";
 import { VariableSetContentType } from "./variable-set-content-type";

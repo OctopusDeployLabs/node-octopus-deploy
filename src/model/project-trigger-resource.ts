@@ -1,4 +1,4 @@
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import { TriggerActionResource } from "./trigger-action-resource";
 import { TriggerFilterResource } from "./trigger-filter-resource";

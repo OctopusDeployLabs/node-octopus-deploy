@@ -1,4 +1,4 @@
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import { HealthCheckType } from "./health-check-type";
 import { MachineScriptPolicy } from "./machine-script-policy";

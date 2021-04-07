@@ -24,8 +24,8 @@ Method | HTTP request | Description
 [**getCertificateUsageSpaces**](CertificatesApi.md#getCertificateUsageSpaces) | **GET** /{baseSpaceId}/certificates/{id}/usages | 
 [**indexCertificates**](CertificatesApi.md#indexCertificates) | **GET** /certificates | Get a list of CertificateResources
 [**indexCertificatesSpaces**](CertificatesApi.md#indexCertificatesSpaces) | **GET** /{baseSpaceId}/certificates | Get a list of CertificateResources
-[**listAllCertificates**](CertificatesApi.md#listAllCertificates) | **GET** /certificates/all | Get a list of CertificateResources
-[**listAllCertificatesSpaces**](CertificatesApi.md#listAllCertificatesSpaces) | **GET** /{baseSpaceId}/certificates/all | Get a list of CertificateResources
+[**listAllCertificates**](CertificatesApi.md#listAllCertificates) | **GET** /certificates/all | Get a list of Certificates
+[**listAllCertificatesSpaces**](CertificatesApi.md#listAllCertificatesSpaces) | **GET** /{baseSpaceId}/certificates/all | Get a list of Certificates
 [**updateCertificate**](CertificatesApi.md#updateCertificate) | **PUT** /certificates/{id} | Modify a CertificateResource by ID
 [**updateCertificateSpaces**](CertificatesApi.md#updateCertificateSpaces) | **PUT** /{baseSpaceId}/certificates/{id} | Modify a CertificateResource by ID
 
@@ -580,14 +580,17 @@ Name | Type | Description  | Notes
 
 <a name="listAllCertificates"></a>
 # **listAllCertificates**
-> List listAllCertificates()
+> List listAllCertificates(ids)
 
-Get a list of CertificateResources
+Get a list of Certificates
 
-    Lists X.509 certificates managed by Octopus
+    Lists X.509 certificates managed by Octopus.
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ids** | [**List**](../model/String.md)| A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201 | [optional] [default to null]
 
 ### Return type
 
@@ -604,17 +607,18 @@ This endpoint does not need any parameter.
 
 <a name="listAllCertificatesSpaces"></a>
 # **listAllCertificatesSpaces**
-> List listAllCertificatesSpaces(baseSpaceId)
+> List listAllCertificatesSpaces(baseSpaceId, ids)
 
-Get a list of CertificateResources
+Get a list of Certificates
 
-    Lists X.509 certificates managed by Octopus
+    Lists X.509 certificates managed by Octopus.
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **baseSpaceId** | **String**| ID of the space | [default to null]
+ **ids** | [**List**](../model/String.md)| A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201 | [optional] [default to null]
 
 ### Return type
 

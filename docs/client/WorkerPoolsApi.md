@@ -20,8 +20,8 @@ Method | HTTP request | Description
 [**indexWorkerPoolWorkersSpaces**](WorkerPoolsApi.md#indexWorkerPoolWorkersSpaces) | **GET** /{baseSpaceId}/workerpools/{id}/workers | Get a list of WorkerResources for the given WorkerPoolResource
 [**indexWorkerPools**](WorkerPoolsApi.md#indexWorkerPools) | **GET** /workerpools | Get a list of WorkerPoolResources
 [**indexWorkerPoolsSpaces**](WorkerPoolsApi.md#indexWorkerPoolsSpaces) | **GET** /{baseSpaceId}/workerpools | Get a list of WorkerPoolResources
-[**listAllWorkerPools**](WorkerPoolsApi.md#listAllWorkerPools) | **GET** /workerpools/all | Get a list of WorkerPoolResources
-[**listAllWorkerPoolsSpaces**](WorkerPoolsApi.md#listAllWorkerPoolsSpaces) | **GET** /{baseSpaceId}/workerpools/all | Get a list of WorkerPoolResources
+[**listAllWorkerPools**](WorkerPoolsApi.md#listAllWorkerPools) | **GET** /workerpools/all | Get a list of Worker Pools
+[**listAllWorkerPoolsSpaces**](WorkerPoolsApi.md#listAllWorkerPoolsSpaces) | **GET** /{baseSpaceId}/workerpools/all | Get a list of Worker Pools
 [**updateSortWorkerPools**](WorkerPoolsApi.md#updateSortWorkerPools) | **PUT** /workerpools/sortorder | 
 [**updateSortWorkerPoolsSpaces**](WorkerPoolsApi.md#updateSortWorkerPoolsSpaces) | **PUT** /{baseSpaceId}/workerpools/sortorder | 
 [**updateWorkerPool**](WorkerPoolsApi.md#updateWorkerPool) | **PUT** /workerpools/{id} | Modify a WorkerPoolResource by ID
@@ -460,14 +460,17 @@ Name | Type | Description  | Notes
 
 <a name="listAllWorkerPools"></a>
 # **listAllWorkerPools**
-> List listAllWorkerPools()
+> List listAllWorkerPools(ids)
 
-Get a list of WorkerPoolResources
+Get a list of Worker Pools
 
-    Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the &#x60;SortOrder&#x60; field on each pool.
+    Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the &#x60;SortOrder&#x60; field on each Worker Pool.
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ids** | [**List**](../model/String.md)| A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201 | [optional] [default to null]
 
 ### Return type
 
@@ -484,17 +487,18 @@ This endpoint does not need any parameter.
 
 <a name="listAllWorkerPoolsSpaces"></a>
 # **listAllWorkerPoolsSpaces**
-> List listAllWorkerPoolsSpaces(baseSpaceId)
+> List listAllWorkerPoolsSpaces(baseSpaceId, ids)
 
-Get a list of WorkerPoolResources
+Get a list of Worker Pools
 
-    Lists the name and ID of all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the &#x60;SortOrder&#x60; field on each pool.
+    Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the &#x60;SortOrder&#x60; field on each Worker Pool.
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **baseSpaceId** | **String**| ID of the space | [default to null]
+ **ids** | [**List**](../model/String.md)| A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201 | [optional] [default to null]
 
 ### Return type
 

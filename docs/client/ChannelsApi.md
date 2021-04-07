@@ -20,8 +20,8 @@ Method | HTTP request | Description
 [**indexChannelsSpaces**](ChannelsApi.md#indexChannelsSpaces) | **GET** /{baseSpaceId}/channels | Get a list of ChannelResources
 [**indexProjectChannels**](ChannelsApi.md#indexProjectChannels) | **GET** /projects/{id}/channels | Get a list of ChannelResources for the given ProjectResource
 [**indexProjectChannelsSpaces**](ChannelsApi.md#indexProjectChannelsSpaces) | **GET** /{baseSpaceId}/projects/{id}/channels | Get a list of ChannelResources for the given ProjectResource
-[**listAllChannels**](ChannelsApi.md#listAllChannels) | **GET** /channels/all | Get a list of ChannelResources
-[**listAllChannelsSpaces**](ChannelsApi.md#listAllChannelsSpaces) | **GET** /{baseSpaceId}/channels/all | Get a list of ChannelResources
+[**listAllChannels**](ChannelsApi.md#listAllChannels) | **GET** /channels/all | Get a list of Channels
+[**listAllChannelsSpaces**](ChannelsApi.md#listAllChannelsSpaces) | **GET** /{baseSpaceId}/channels/all | Get a list of Channels
 [**updateChannel**](ChannelsApi.md#updateChannel) | **PUT** /channels/{id} | Modify a ChannelResource by ID
 [**updateChannelSpaces**](ChannelsApi.md#updateChannelSpaces) | **PUT** /{baseSpaceId}/channels/{id} | Modify a ChannelResource by ID
 
@@ -470,7 +470,7 @@ Name | Type | Description  | Notes
 # **listAllChannels**
 > List listAllChannels(ids)
 
-Get a list of ChannelResources
+Get a list of Channels
 
     Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 # **listAllChannelsSpaces**
 > List listAllChannelsSpaces(baseSpaceId, ids)
 
-Get a list of ChannelResources
+Get a list of Channels
 
     Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
 

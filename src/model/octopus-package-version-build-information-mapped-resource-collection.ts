@@ -1,4 +1,4 @@
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import { OctopusPackageVersionBuildInformationMappedResource } from "./octopus-package-version-build-information-mapped-resource";
 

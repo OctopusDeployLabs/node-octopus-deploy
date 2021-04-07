@@ -1,4 +1,4 @@
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import { VariableResource } from "./variable-resource";
 import { VariableScopeValues } from "./variable-scope-values";

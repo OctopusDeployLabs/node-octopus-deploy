@@ -1,4 +1,4 @@
-// Octopus REST API v2021.2.1290
+// Octopus REST API v2021.2.1387
 
 import { CommitDetails } from "./commit-details";
 import { ReleasePackageVersionBuildInformation } from "./release-package-version-build-information";

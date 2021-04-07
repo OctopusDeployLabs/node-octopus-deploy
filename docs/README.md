@@ -28,8 +28,8 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**getAzureWebSitesSlotListSpaces**](Apis/AccountsApi.md#getazurewebsitesslotlistspaces) | **GET** /{baseSpaceId}/accounts/{id}/{resourceGroupName}/websites/{webSiteName}/slots | Lists the slots associated with an Azure Web Site.
 *AccountsApi* | [**indexAccounts**](Apis/AccountsApi.md#indexaccounts) | **GET** /accounts | Get a list of AccountResources
 *AccountsApi* | [**indexAccountsSpaces**](Apis/AccountsApi.md#indexaccountsspaces) | **GET** /{baseSpaceId}/accounts | Get a list of AccountResources
-*AccountsApi* | [**listAllAccounts**](Apis/AccountsApi.md#listallaccounts) | **GET** /accounts/all | Get a list of AccountResources
-*AccountsApi* | [**listAllAccountsSpaces**](Apis/AccountsApi.md#listallaccountsspaces) | **GET** /{baseSpaceId}/accounts/all | Get a list of AccountResources
+*AccountsApi* | [**listAllAccounts**](Apis/AccountsApi.md#listallaccounts) | **GET** /accounts/all | Get a list of Accounts
+*AccountsApi* | [**listAllAccountsSpaces**](Apis/AccountsApi.md#listallaccountsspaces) | **GET** /{baseSpaceId}/accounts/all | Get a list of Accounts
 *AccountsApi* | [**updateAccount**](Apis/AccountsApi.md#updateaccount) | **PUT** /accounts/{id} | Modify a AccountResource by ID
 *AccountsApi* | [**updateAccountSpaces**](Apis/AccountsApi.md#updateaccountspaces) | **PUT** /{baseSpaceId}/accounts/{id} | Modify a AccountResource by ID
 *ActionTemplatesApi* | [**createActionTemplate**](Apis/ActionTemplatesApi.md#createactiontemplate) | **POST** /actiontemplates | Create a ActionTemplateResource
@@ -119,8 +119,8 @@ Class | Method | HTTP request | Description
 *CertificatesApi* | [**getCertificateUsageSpaces**](Apis/CertificatesApi.md#getcertificateusagespaces) | **GET** /{baseSpaceId}/certificates/{id}/usages | Get the usages of a certificate
 *CertificatesApi* | [**indexCertificates**](Apis/CertificatesApi.md#indexcertificates) | **GET** /certificates | Get a list of CertificateResources
 *CertificatesApi* | [**indexCertificatesSpaces**](Apis/CertificatesApi.md#indexcertificatesspaces) | **GET** /{baseSpaceId}/certificates | Get a list of CertificateResources
-*CertificatesApi* | [**listAllCertificates**](Apis/CertificatesApi.md#listallcertificates) | **GET** /certificates/all | Get a list of CertificateResources
-*CertificatesApi* | [**listAllCertificatesSpaces**](Apis/CertificatesApi.md#listallcertificatesspaces) | **GET** /{baseSpaceId}/certificates/all | Get a list of CertificateResources
+*CertificatesApi* | [**listAllCertificates**](Apis/CertificatesApi.md#listallcertificates) | **GET** /certificates/all | Get a list of Certificates
+*CertificatesApi* | [**listAllCertificatesSpaces**](Apis/CertificatesApi.md#listallcertificatesspaces) | **GET** /{baseSpaceId}/certificates/all | Get a list of Certificates
 *CertificatesApi* | [**updateCertificate**](Apis/CertificatesApi.md#updatecertificate) | **PUT** /certificates/{id} | Modify a CertificateResource by ID
 *CertificatesApi* | [**updateCertificateSpaces**](Apis/CertificatesApi.md#updatecertificatespaces) | **PUT** /{baseSpaceId}/certificates/{id} | Modify a CertificateResource by ID
 *ChannelsApi* | [**createChannel**](Apis/ChannelsApi.md#createchannel) | **POST** /channels | Create a ChannelResource
@@ -139,8 +139,8 @@ Class | Method | HTTP request | Description
 *ChannelsApi* | [**indexChannelsSpaces**](Apis/ChannelsApi.md#indexchannelsspaces) | **GET** /{baseSpaceId}/channels | Get a list of ChannelResources
 *ChannelsApi* | [**indexProjectChannels**](Apis/ChannelsApi.md#indexprojectchannels) | **GET** /projects/{id}/channels | Get a list of ChannelResources for the given ProjectResource
 *ChannelsApi* | [**indexProjectChannelsSpaces**](Apis/ChannelsApi.md#indexprojectchannelsspaces) | **GET** /{baseSpaceId}/projects/{id}/channels | Get a list of ChannelResources for the given ProjectResource
-*ChannelsApi* | [**listAllChannels**](Apis/ChannelsApi.md#listallchannels) | **GET** /channels/all | Get a list of ChannelResources
-*ChannelsApi* | [**listAllChannelsSpaces**](Apis/ChannelsApi.md#listallchannelsspaces) | **GET** /{baseSpaceId}/channels/all | Get a list of ChannelResources
+*ChannelsApi* | [**listAllChannels**](Apis/ChannelsApi.md#listallchannels) | **GET** /channels/all | Get a list of Channels
+*ChannelsApi* | [**listAllChannelsSpaces**](Apis/ChannelsApi.md#listallchannelsspaces) | **GET** /{baseSpaceId}/channels/all | Get a list of Channels
 *ChannelsApi* | [**updateChannel**](Apis/ChannelsApi.md#updatechannel) | **PUT** /channels/{id} | Modify a ChannelResource by ID
 *ChannelsApi* | [**updateChannelSpaces**](Apis/ChannelsApi.md#updatechannelspaces) | **PUT** /{baseSpaceId}/channels/{id} | Modify a ChannelResource by ID
 *CloudTemplateApi* | [**createCloudTemplateMetadata**](Apis/CloudTemplateApi.md#createcloudtemplatemetadata) | **POST** /cloudtemplate/{id}/metadata | Provides parameter metadata for a cloud (AWS etc) resource template
@@ -293,8 +293,8 @@ Class | Method | HTTP request | Description
 *LifecyclesApi* | [**getLifecycleProjectsSpaces**](Apis/LifecyclesApi.md#getlifecycleprojectsspaces) | **GET** /{baseSpaceId}/lifecycles/{id}/projects | Gets a all projects that use this lifecycle.
 *LifecyclesApi* | [**indexLifecycles**](Apis/LifecyclesApi.md#indexlifecycles) | **GET** /lifecycles | Get a list of LifecycleResources
 *LifecyclesApi* | [**indexLifecyclesSpaces**](Apis/LifecyclesApi.md#indexlifecyclesspaces) | **GET** /{baseSpaceId}/lifecycles | Get a list of LifecycleResources
-*LifecyclesApi* | [**listAllLifecycles**](Apis/LifecyclesApi.md#listalllifecycles) | **GET** /lifecycles/all | Get a list of LifecycleResources
-*LifecyclesApi* | [**listAllLifecyclesSpaces**](Apis/LifecyclesApi.md#listalllifecyclesspaces) | **GET** /{baseSpaceId}/lifecycles/all | Get a list of LifecycleResources
+*LifecyclesApi* | [**listAllLifecycles**](Apis/LifecyclesApi.md#listalllifecycles) | **GET** /lifecycles/all | Get a list of Lifecycles
+*LifecyclesApi* | [**listAllLifecyclesSpaces**](Apis/LifecyclesApi.md#listalllifecyclesspaces) | **GET** /{baseSpaceId}/lifecycles/all | Get a list of Lifecycles
 *LifecyclesApi* | [**updateLifecycle**](Apis/LifecyclesApi.md#updatelifecycle) | **PUT** /lifecycles/{id} | Modify a LifecycleResource by ID
 *LifecyclesApi* | [**updateLifecycleSpaces**](Apis/LifecyclesApi.md#updatelifecyclespaces) | **PUT** /{baseSpaceId}/lifecycles/{id} | Modify a LifecycleResource by ID
 *MachinePoliciesApi* | [**createMachinePolicy**](Apis/MachinePoliciesApi.md#createmachinepolicy) | **POST** /machinepolicies | Create a MachinePolicyResource
@@ -311,8 +311,8 @@ Class | Method | HTTP request | Description
 *MachinePoliciesApi* | [**indexMachinePolicyDeploymentTargetsSpaces**](Apis/MachinePoliciesApi.md#indexmachinepolicydeploymenttargetsspaces) | **GET** /{baseSpaceId}/machinepolicies/{id}/machines | Lists all of the machines that belong to the given Machine Policy
 *MachinePoliciesApi* | [**indexMachinePolicyWorkers**](Apis/MachinePoliciesApi.md#indexmachinepolicyworkers) | **GET** /machinepolicies/{id}/workers | Lists all of the workers that belong to the given Machine Policy
 *MachinePoliciesApi* | [**indexMachinePolicyWorkersSpaces**](Apis/MachinePoliciesApi.md#indexmachinepolicyworkersspaces) | **GET** /{baseSpaceId}/machinepolicies/{id}/workers | Lists all of the workers that belong to the given Machine Policy
-*MachinePoliciesApi* | [**listAllMachinePolicies**](Apis/MachinePoliciesApi.md#listallmachinepolicies) | **GET** /machinepolicies/all | Get a list of MachinePolicyResources
-*MachinePoliciesApi* | [**listAllMachinePoliciesSpaces**](Apis/MachinePoliciesApi.md#listallmachinepoliciesspaces) | **GET** /{baseSpaceId}/machinepolicies/all | Get a list of MachinePolicyResources
+*MachinePoliciesApi* | [**listAllMachinePolicies**](Apis/MachinePoliciesApi.md#listallmachinepolicies) | **GET** /machinepolicies/all | Get a list of Machine Policies
+*MachinePoliciesApi* | [**listAllMachinePoliciesSpaces**](Apis/MachinePoliciesApi.md#listallmachinepoliciesspaces) | **GET** /{baseSpaceId}/machinepolicies/all | Get a list of Machine Policies
 *MachinePoliciesApi* | [**updateMachinePolicy**](Apis/MachinePoliciesApi.md#updatemachinepolicy) | **PUT** /machinepolicies/{id} | Modify a MachinePolicyResource by ID
 *MachinePoliciesApi* | [**updateMachinePolicySpaces**](Apis/MachinePoliciesApi.md#updatemachinepolicyspaces) | **PUT** /{baseSpaceId}/machinepolicies/{id} | Modify a MachinePolicyResource by ID
 *MachineRolesApi* | [**getMachineRolesListAll**](Apis/MachineRolesApi.md#getmachineroleslistall) | **GET** /machineroles/all | Gets all machine roles that have been defined in this Octopus installation. The result will be a string array.
@@ -401,8 +401,8 @@ Class | Method | HTTP request | Description
 *ProjectGroupsApi* | [**indexProjectGroupProjectsSpaces**](Apis/ProjectGroupsApi.md#indexprojectgroupprojectsspaces) | **GET** /{baseSpaceId}/projectgroups/{id}/projects | Lists all of the Projects that belong to the given Project Group
 *ProjectGroupsApi* | [**indexProjectGroups**](Apis/ProjectGroupsApi.md#indexprojectgroups) | **GET** /projectgroups | Get a list of ProjectGroupResources
 *ProjectGroupsApi* | [**indexProjectGroupsSpaces**](Apis/ProjectGroupsApi.md#indexprojectgroupsspaces) | **GET** /{baseSpaceId}/projectgroups | Get a list of ProjectGroupResources
-*ProjectGroupsApi* | [**listAllProjectGroups**](Apis/ProjectGroupsApi.md#listallprojectgroups) | **GET** /projectgroups/all | Get a list of ProjectGroupResources
-*ProjectGroupsApi* | [**listAllProjectGroupsSpaces**](Apis/ProjectGroupsApi.md#listallprojectgroupsspaces) | **GET** /{baseSpaceId}/projectgroups/all | Get a list of ProjectGroupResources
+*ProjectGroupsApi* | [**listAllProjectGroups**](Apis/ProjectGroupsApi.md#listallprojectgroups) | **GET** /projectgroups/all | Get a list of Project Group
+*ProjectGroupsApi* | [**listAllProjectGroupsSpaces**](Apis/ProjectGroupsApi.md#listallprojectgroupsspaces) | **GET** /{baseSpaceId}/projectgroups/all | Get a list of Project Group
 *ProjectGroupsApi* | [**updateProjectGroup**](Apis/ProjectGroupsApi.md#updateprojectgroup) | **PUT** /projectgroups/{id} | Modify a ProjectGroupResource by ID
 *ProjectGroupsApi* | [**updateProjectGroupSpaces**](Apis/ProjectGroupsApi.md#updateprojectgroupspaces) | **PUT** /{baseSpaceId}/projectgroups/{id} | Modify a ProjectGroupResource by ID
 *ProjectTriggersApi* | [**createProjectTrigger**](Apis/ProjectTriggersApi.md#createprojecttrigger) | **POST** /projecttriggers | Create a ProjectTriggerResource
@@ -451,8 +451,8 @@ Class | Method | HTTP request | Description
 *ProxiesApi* | [**getProxyByIdSpaces**](Apis/ProxiesApi.md#getproxybyidspaces) | **GET** /{baseSpaceId}/proxies/{id} | Get a Proxy by ID
 *ProxiesApi* | [**indexProxies**](Apis/ProxiesApi.md#indexproxies) | **GET** /proxies | Get a list of ProxyResources
 *ProxiesApi* | [**indexProxiesSpaces**](Apis/ProxiesApi.md#indexproxiesspaces) | **GET** /{baseSpaceId}/proxies | Get a list of ProxyResources
-*ProxiesApi* | [**listAllProxies**](Apis/ProxiesApi.md#listallproxies) | **GET** /proxies/all | Get a list of ProxyResources
-*ProxiesApi* | [**listAllProxiesSpaces**](Apis/ProxiesApi.md#listallproxiesspaces) | **GET** /{baseSpaceId}/proxies/all | Get a list of ProxyResources
+*ProxiesApi* | [**listAllProxies**](Apis/ProxiesApi.md#listallproxies) | **GET** /proxies/all | Get a list of Proxies
+*ProxiesApi* | [**listAllProxiesSpaces**](Apis/ProxiesApi.md#listallproxiesspaces) | **GET** /{baseSpaceId}/proxies/all | Get a list of Proxies
 *ProxiesApi* | [**updateProxy**](Apis/ProxiesApi.md#updateproxy) | **PUT** /proxies/{id} | Modify a ProxyResource by ID
 *ProxiesApi* | [**updateProxySpaces**](Apis/ProxiesApi.md#updateproxyspaces) | **PUT** /{baseSpaceId}/proxies/{id} | Modify a ProxyResource by ID
 *ReleasesApi* | [**createDefectReported**](Apis/ReleasesApi.md#createdefectreported) | **POST** /releases/{id}/defects | Record defect in a release.
@@ -623,8 +623,8 @@ Class | Method | HTTP request | Description
 *TagSetsApi* | [**getTagSetByIdSpaces**](Apis/TagSetsApi.md#gettagsetbyidspaces) | **GET** /{baseSpaceId}/tagsets/{id} | Get a Tag Set by ID
 *TagSetsApi* | [**indexTagSets**](Apis/TagSetsApi.md#indextagsets) | **GET** /tagsets | Get a list of TagSetResources
 *TagSetsApi* | [**indexTagSetsSpaces**](Apis/TagSetsApi.md#indextagsetsspaces) | **GET** /{baseSpaceId}/tagsets | Get a list of TagSetResources
-*TagSetsApi* | [**listAllTagSets**](Apis/TagSetsApi.md#listalltagsets) | **GET** /tagsets/all | Get a list of TagSetResources
-*TagSetsApi* | [**listAllTagSetsSpaces**](Apis/TagSetsApi.md#listalltagsetsspaces) | **GET** /{baseSpaceId}/tagsets/all | Get a list of TagSetResources
+*TagSetsApi* | [**listAllTagSets**](Apis/TagSetsApi.md#listalltagsets) | **GET** /tagsets/all | Get a list of Tag Sets
+*TagSetsApi* | [**listAllTagSetsSpaces**](Apis/TagSetsApi.md#listalltagsetsspaces) | **GET** /{baseSpaceId}/tagsets/all | Get a list of Tag Sets
 *TagSetsApi* | [**updateSortTagSets**](Apis/TagSetsApi.md#updatesorttagsets) | **PUT** /tagsets/sortorder | Takes an array of tag set IDs as the request body, uses the order of items in the array to sort the tag sets on the server. The ID of every tag set must be specified.
 *TagSetsApi* | [**updateSortTagSetsSpaces**](Apis/TagSetsApi.md#updatesorttagsetsspaces) | **PUT** /{baseSpaceId}/tagsets/sortorder | Takes an array of tag set IDs as the request body, uses the order of items in the array to sort the tag sets on the server. The ID of every tag set must be specified.
 *TagSetsApi* | [**updateTagSet**](Apis/TagSetsApi.md#updatetagset) | **PUT** /tagsets/{id} | Modify a TagSetResource by ID
@@ -713,7 +713,7 @@ Class | Method | HTTP request | Description
 *UserRolesApi* | [**deleteUserRole**](Apis/UserRolesApi.md#deleteuserrole) | **DELETE** /userroles/{id} | Delete a UserRoleResource by ID
 *UserRolesApi* | [**getUserRoleById**](Apis/UserRolesApi.md#getuserrolebyid) | **GET** /userroles/{id} | Get a User Role by ID
 *UserRolesApi* | [**indexUserRoles**](Apis/UserRolesApi.md#indexuserroles) | **GET** /userroles | Get a list of UserRoleResources
-*UserRolesApi* | [**listAllUserRoles**](Apis/UserRolesApi.md#listalluserroles) | **GET** /userroles/all | Get a list of UserRoleResources
+*UserRolesApi* | [**listAllUserRoles**](Apis/UserRolesApi.md#listalluserroles) | **GET** /userroles/all | Get a list of User Roles
 *UserRolesApi* | [**updateUserRole**](Apis/UserRolesApi.md#updateuserrole) | **PUT** /userroles/{id} | Modify a UserRoleResource by ID
 *UserTeamsApi* | [**getUserGetTeams**](Apis/UserTeamsApi.md#getusergetteams) | **GET** /users/{id}/teams | Gets a list of teams (id and name only) for the specified user, including any from external auth-provider security groups.
 *UserTeamsApi* | [**getUserGetTeamsSpaces**](Apis/UserTeamsApi.md#getusergetteamsspaces) | **GET** /{baseSpaceId}/users/{id}/teams | Gets a list of teams (id and name only) for the specified user, including any from external auth-provider security groups.
@@ -758,8 +758,8 @@ Class | Method | HTTP request | Description
 *WorkerPoolsApi* | [**indexWorkerPoolWorkersSpaces**](Apis/WorkerPoolsApi.md#indexworkerpoolworkersspaces) | **GET** /{baseSpaceId}/workerpools/{id}/workers | Get a list of WorkerResources for the given WorkerPoolResource
 *WorkerPoolsApi* | [**indexWorkerPools**](Apis/WorkerPoolsApi.md#indexworkerpools) | **GET** /workerpools | Get a list of WorkerPoolResources
 *WorkerPoolsApi* | [**indexWorkerPoolsSpaces**](Apis/WorkerPoolsApi.md#indexworkerpoolsspaces) | **GET** /{baseSpaceId}/workerpools | Get a list of WorkerPoolResources
-*WorkerPoolsApi* | [**listAllWorkerPools**](Apis/WorkerPoolsApi.md#listallworkerpools) | **GET** /workerpools/all | Get a list of WorkerPoolResources
-*WorkerPoolsApi* | [**listAllWorkerPoolsSpaces**](Apis/WorkerPoolsApi.md#listallworkerpoolsspaces) | **GET** /{baseSpaceId}/workerpools/all | Get a list of WorkerPoolResources
+*WorkerPoolsApi* | [**listAllWorkerPools**](Apis/WorkerPoolsApi.md#listallworkerpools) | **GET** /workerpools/all | Get a list of Worker Pools
+*WorkerPoolsApi* | [**listAllWorkerPoolsSpaces**](Apis/WorkerPoolsApi.md#listallworkerpoolsspaces) | **GET** /{baseSpaceId}/workerpools/all | Get a list of Worker Pools
 *WorkerPoolsApi* | [**updateSortWorkerPools**](Apis/WorkerPoolsApi.md#updatesortworkerpools) | **PUT** /workerpools/sortorder | Takes an array of work pool IDs as the request body, uses the order of items in the array to sort the worker pools on the server. The ID of every worker pool must be specified.
 *WorkerPoolsApi* | [**updateSortWorkerPoolsSpaces**](Apis/WorkerPoolsApi.md#updatesortworkerpoolsspaces) | **PUT** /{baseSpaceId}/workerpools/sortorder | Takes an array of work pool IDs as the request body, uses the order of items in the array to sort the worker pools on the server. The ID of every worker pool must be specified.
 *WorkerPoolsApi* | [**updateWorkerPool**](Apis/WorkerPoolsApi.md#updateworkerpool) | **PUT** /workerpools/{id} | Modify a WorkerPoolResource by ID

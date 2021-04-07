@@ -25,8 +25,8 @@ Method | HTTP request | Description
 [**getAzureWebSitesSlotListSpaces**](AccountsApi.md#getAzureWebSitesSlotListSpaces) | **GET** /{baseSpaceId}/accounts/{id}/{resourceGroupName}/websites/{webSiteName}/slots | 
 [**indexAccounts**](AccountsApi.md#indexAccounts) | **GET** /accounts | Get a list of AccountResources
 [**indexAccountsSpaces**](AccountsApi.md#indexAccountsSpaces) | **GET** /{baseSpaceId}/accounts | Get a list of AccountResources
-[**listAllAccounts**](AccountsApi.md#listAllAccounts) | **GET** /accounts/all | Get a list of AccountResources
-[**listAllAccountsSpaces**](AccountsApi.md#listAllAccountsSpaces) | **GET** /{baseSpaceId}/accounts/all | Get a list of AccountResources
+[**listAllAccounts**](AccountsApi.md#listAllAccounts) | **GET** /accounts/all | Get a list of Accounts
+[**listAllAccountsSpaces**](AccountsApi.md#listAllAccountsSpaces) | **GET** /{baseSpaceId}/accounts/all | Get a list of Accounts
 [**updateAccount**](AccountsApi.md#updateAccount) | **PUT** /accounts/{id} | Modify a AccountResource by ID
 [**updateAccountSpaces**](AccountsApi.md#updateAccountSpaces) | **PUT** /{baseSpaceId}/accounts/{id} | Modify a AccountResource by ID
 
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 # **listAllAccounts**
 > List listAllAccounts()
 
-Get a list of AccountResources
+Get a list of Accounts
 
     Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
 
@@ -635,7 +635,7 @@ This endpoint does not need any parameter.
 # **listAllAccountsSpaces**
 > List listAllAccountsSpaces(baseSpaceId)
 
-Get a list of AccountResources
+Get a list of Accounts
 
     Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
 
