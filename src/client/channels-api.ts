@@ -1471,11 +1471,12 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ChannelResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createChannelSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createChannelSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1493,9 +1494,8 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createVersionRuleTest(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createVersionRuleTest(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1515,10 +1515,11 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createVersionRuleTestSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createVersionRuleTestSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1565,11 +1566,12 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteChannelSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteChannelSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1622,11 +1624,12 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ChannelResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getChannelByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getChannelByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1644,9 +1647,8 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getVersionRuleTest(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getVersionRuleTest(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1666,10 +1668,11 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getVersionRuleTestSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getVersionRuleTestSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1697,12 +1700,13 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ReleaseResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexChannelReleases(
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexChannelReleases(
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1732,13 +1736,14 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ReleaseResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexChannelReleasesSpaces(
-        baseSpaceId,
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexChannelReleasesSpaces(
+          baseSpaceId,
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1796,12 +1801,13 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ChannelResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexChannelsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexChannelsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1831,13 +1837,14 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ChannelResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexProjectChannels(
-        id,
-        partialName,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexProjectChannels(
+          id,
+          partialName,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1869,14 +1876,15 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ChannelResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexProjectChannelsSpaces(
-        id,
-        baseSpaceId,
-        partialName,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexProjectChannelsSpaces(
+          id,
+          baseSpaceId,
+          partialName,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1929,11 +1937,12 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ChannelResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllChannelsSpaces(
-        baseSpaceId,
-        ids,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllChannelsSpaces(
+          baseSpaceId,
+          ids,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1991,12 +2000,13 @@ export const ChannelsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ChannelResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateChannelSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateChannelSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2355,305 +2365,12 @@ export const ChannelsApiFactory = function (
 };
 
 /**
- * ChannelsApi - interface
- * @export
- * @interface ChannelsApi
- */
-export interface ChannelsApiInterface {
-  /**
-   * Creates a new channel
-   * @summary Create a ChannelResource
-   * @param {ChannelResource} [body] The ChannelResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  createChannel(
-    body?: ChannelResource,
-    options?: any
-  ): AxiosPromise<ChannelResource>;
-
-  /**
-   * Creates a new channel
-   * @summary Create a ChannelResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {ChannelResource} [body] The ChannelResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  createChannelSpaces(
-    baseSpaceId: string,
-    body?: ChannelResource,
-    options?: any
-  ): AxiosPromise<ChannelResource>;
-
-  /**
-   * Perform channel version rule test against provided package version
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  createVersionRuleTest(options?: any): AxiosPromise<void>;
-
-  /**
-   * Perform channel version rule test against provided package version
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  createVersionRuleTestSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing channel.
-   * @summary Delete a ChannelResource by ID
-   * @param {string} id ID of the ChannelResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  deleteChannel(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing channel.
-   * @summary Delete a ChannelResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ChannelResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  deleteChannelSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get a Channel by ID
-   * @param {string} id ID of the Channel to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  getChannelById(id: string, options?: any): AxiosPromise<ChannelResource>;
-
-  /**
-   *
-   * @summary Get a Channel by ID
-   * @param {string} id ID of the Channel to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  getChannelByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<ChannelResource>;
-
-  /**
-   * Perform channel version rule test against provided package version
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  getVersionRuleTest(options?: any): AxiosPromise<void>;
-
-  /**
-   * Perform channel version rule test against provided package version
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  getVersionRuleTestSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Lists all of the releases that belong to the given channel. Releases will be ordered from most recent to least recent.
-   * @summary Get a list of ReleaseResources for the given ChannelResource
-   * @param {string} id ID of the Channel
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  indexChannelReleases(
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ReleaseResourceCollection>;
-
-  /**
-   * Lists all of the releases that belong to the given channel. Releases will be ordered from most recent to least recent.
-   * @summary Get a list of ReleaseResources for the given ChannelResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the Channel
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  indexChannelReleasesSpaces(
-    baseSpaceId: string,
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ReleaseResourceCollection>;
-
-  /**
-   * Lists all of the channels in the supplied Octopus Deploy Space, from all projects, sorted by name.
-   * @summary Get a list of ChannelResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  indexChannels(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ChannelResourceCollection>;
-
-  /**
-   * Lists all of the channels in the supplied Octopus Deploy Space, from all projects, sorted by name.
-   * @summary Get a list of ChannelResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  indexChannelsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ChannelResourceCollection>;
-
-  /**
-   * Lists all the channels for the given project
-   * @summary Get a list of ChannelResources for the given ProjectResource
-   * @param {string} id ID of the Project
-   * @param {string} [partialName] A partial or complete name to limit the set of retrieved Tenants to. This will perform a \&quot;contains\&quot; style match against the supplied name or name-fragment
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 30
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  indexProjectChannels(
-    id: string,
-    partialName?: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ChannelResourceCollection>;
-
-  /**
-   * Lists all the channels for the given project
-   * @summary Get a list of ChannelResources for the given ProjectResource
-   * @param {string} id ID of the Project
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} [partialName] A partial or complete name to limit the set of retrieved Tenants to. This will perform a \&quot;contains\&quot; style match against the supplied name or name-fragment
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 30
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  indexProjectChannelsSpaces(
-    id: string,
-    baseSpaceId: string,
-    partialName?: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ChannelResourceCollection>;
-
-  /**
-   * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of Channels
-   * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  listAllChannels(
-    ids?: Array<string>,
-    options?: any
-  ): AxiosPromise<Array<ChannelResource>>;
-
-  /**
-   * Lists all of the channels in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of Channels
-   * @param {string} baseSpaceId ID of the space
-   * @param {Array<string>} [ids] A set of Channel IDs to retrieve Channels for. Example: Channel-101,Channel-201
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  listAllChannelsSpaces(
-    baseSpaceId: string,
-    ids?: Array<string>,
-    options?: any
-  ): AxiosPromise<Array<ChannelResource>>;
-
-  /**
-   * Updates an existing channel
-   * @summary Modify a ChannelResource by ID
-   * @param {string} id ID of the ChannelResource to modify
-   * @param {ChannelResource} [body] The ChannelResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  updateChannel(
-    id: string,
-    body?: ChannelResource,
-    options?: any
-  ): AxiosPromise<ChannelResource>;
-
-  /**
-   * Updates an existing channel
-   * @summary Modify a ChannelResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ChannelResource to modify
-   * @param {ChannelResource} [body] The ChannelResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ChannelsApiInterface
-   */
-  updateChannelSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: ChannelResource,
-    options?: any
-  ): AxiosPromise<ChannelResource>;
-}
-
-/**
  * ChannelsApi - object-oriented interface
  * @export
  * @class ChannelsApi
  * @extends {BaseAPI}
  */
-export class ChannelsApi extends BaseAPI implements ChannelsApiInterface {
+export class ChannelsApi extends BaseAPI {
   /**
    * Creates a new channel
    * @summary Create a ChannelResource

@@ -566,9 +566,8 @@ export const DeploymentsApiAxiosParamCreator = function (
  * @export
  */
 export const DeploymentsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = DeploymentsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    DeploymentsApiAxiosParamCreator(configuration);
   return {
     /**
      * Creates a new deployment.
@@ -583,9 +582,8 @@ export const DeploymentsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createDeploymentCreate(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createDeploymentCreate(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -608,10 +606,11 @@ export const DeploymentsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createDeploymentCreateSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createDeploymentCreateSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -632,10 +631,8 @@ export const DeploymentsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteDeployment(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteDeployment(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -658,11 +655,12 @@ export const DeploymentsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteDeploymentSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteDeploymentSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -686,10 +684,8 @@ export const DeploymentsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -715,11 +711,12 @@ export const DeploymentsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -745,11 +742,8 @@ export const DeploymentsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexDeployments(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexDeployments(skip, take, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -777,12 +771,13 @@ export const DeploymentsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexDeploymentsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexDeploymentsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -929,124 +924,12 @@ export const DeploymentsApiFactory = function (
 };
 
 /**
- * DeploymentsApi - interface
- * @export
- * @interface DeploymentsApi
- */
-export interface DeploymentsApiInterface {
-  /**
-   * Creates a new deployment.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentsApiInterface
-   */
-  createDeploymentCreate(options?: any): AxiosPromise<DeploymentResource>;
-
-  /**
-   * Creates a new deployment.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentsApiInterface
-   */
-  createDeploymentCreateSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<DeploymentResource>;
-
-  /**
-   * Deletes a deployment.
-   * @summary Delete a DeploymentResource by ID
-   * @param {string} id ID of the DeploymentResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentsApiInterface
-   */
-  deleteDeployment(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes a deployment.
-   * @summary Delete a DeploymentResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the DeploymentResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentsApiInterface
-   */
-  deleteDeploymentSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get a Deployment by ID
-   * @param {string} id ID of the Deployment to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentsApiInterface
-   */
-  getDeploymentById(
-    id: string,
-    options?: any
-  ): AxiosPromise<DeploymentResource>;
-
-  /**
-   *
-   * @summary Get a Deployment by ID
-   * @param {string} id ID of the Deployment to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentsApiInterface
-   */
-  getDeploymentByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<DeploymentResource>;
-
-  /**
-   * Lists all of the deployments in the supplied Octopus Deploy Space, from projects, releases and environments accessible by the current user. The results will be sorted from most recent to least recent deployment.
-   * @summary Get a list of DeploymentResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentsApiInterface
-   */
-  indexDeployments(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<DeploymentResourceCollection>;
-
-  /**
-   * Lists all of the deployments in the supplied Octopus Deploy Space, from projects, releases and environments accessible by the current user. The results will be sorted from most recent to least recent deployment.
-   * @summary Get a list of DeploymentResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentsApiInterface
-   */
-  indexDeploymentsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<DeploymentResourceCollection>;
-}
-
-/**
  * DeploymentsApi - object-oriented interface
  * @export
  * @class DeploymentsApi
  * @extends {BaseAPI}
  */
-export class DeploymentsApi extends BaseAPI implements DeploymentsApiInterface {
+export class DeploymentsApi extends BaseAPI {
   /**
    * Creates a new deployment.
    * @param {*} [options] Override http request option.

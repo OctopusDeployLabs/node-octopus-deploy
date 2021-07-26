@@ -351,9 +351,8 @@ export const ConfigurationApiAxiosParamCreator = function (
  * @export
  */
 export const ConfigurationApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = ConfigurationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ConfigurationApiAxiosParamCreator(configuration);
   return {
     /**
      * Returns a structure that describes how to dynamically render the configuration section
@@ -367,10 +366,11 @@ export const ConfigurationApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Metadata>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getConfigurationItemMetadata(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getConfigurationItemMetadata(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -390,10 +390,8 @@ export const ConfigurationApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getConfigurationItemValues(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getConfigurationItemValues(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -414,9 +412,8 @@ export const ConfigurationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ConfigurationSectionMetadataCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getConfigurationSectionList(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getConfigurationSectionList(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -439,10 +436,11 @@ export const ConfigurationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ConfigurationSectionMetadata>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getConfigurationSectionMetadata(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getConfigurationSectionMetadata(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -462,10 +460,8 @@ export const ConfigurationApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateConfigurationItem(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateConfigurationItem(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -556,73 +552,12 @@ export const ConfigurationApiFactory = function (
 };
 
 /**
- * ConfigurationApi - interface
- * @export
- * @interface ConfigurationApi
- */
-export interface ConfigurationApiInterface {
-  /**
-   * Returns a structure that describes how to dynamically render the configuration section
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ConfigurationApiInterface
-   */
-  getConfigurationItemMetadata(
-    id: string,
-    options?: any
-  ): AxiosPromise<Metadata>;
-
-  /**
-   * Returns the current configuration for a specific configuration section
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ConfigurationApiInterface
-   */
-  getConfigurationItemValues(id: string, options?: any): AxiosPromise<object>;
-
-  /**
-   * Returns a list of configuration section settings
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ConfigurationApiInterface
-   */
-  getConfigurationSectionList(
-    options?: any
-  ): AxiosPromise<ConfigurationSectionMetadataCollection>;
-
-  /**
-   * Returns a single configuration section for the given id
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ConfigurationApiInterface
-   */
-  getConfigurationSectionMetadata(
-    id: string,
-    options?: any
-  ): AxiosPromise<ConfigurationSectionMetadata>;
-
-  /**
-   * Updates the configuration values for a specific configuration section
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ConfigurationApiInterface
-   */
-  updateConfigurationItem(id: string, options?: any): AxiosPromise<object>;
-}
-
-/**
  * ConfigurationApi - object-oriented interface
  * @export
  * @class ConfigurationApi
  * @extends {BaseAPI}
  */
-export class ConfigurationApi
-  extends BaseAPI
-  implements ConfigurationApiInterface {
+export class ConfigurationApi extends BaseAPI {
   /**
    * Returns a structure that describes how to dynamically render the configuration section
    * @param {string} id ID of the resource

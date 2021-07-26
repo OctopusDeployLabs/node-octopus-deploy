@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum CertificateFormat {
   Pkcs12 = "Pkcs12",
   Der = "Der",

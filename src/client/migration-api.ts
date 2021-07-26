@@ -154,9 +154,8 @@ export const MigrationApiAxiosParamCreator = function (
  * @export
  */
 export const MigrationApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = MigrationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    MigrationApiAxiosParamCreator(configuration);
   return {
     /**
      * Returns HTTP OK (200) when an import migration has been queued.
@@ -171,9 +170,8 @@ export const MigrationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MigrationImportResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createMigrationImport(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createMigrationImport(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -194,9 +192,8 @@ export const MigrationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MigrationPartialExportResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createMigrationPartialExport(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createMigrationPartialExport(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -246,37 +243,12 @@ export const MigrationApiFactory = function (
 };
 
 /**
- * MigrationApi - interface
- * @export
- * @interface MigrationApi
- */
-export interface MigrationApiInterface {
-  /**
-   * Returns HTTP OK (200) when an import migration has been queued.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MigrationApiInterface
-   */
-  createMigrationImport(options?: any): AxiosPromise<MigrationImportResource>;
-
-  /**
-   * Returns HTTP OK (200) when a partial-export migration has been queued.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MigrationApiInterface
-   */
-  createMigrationPartialExport(
-    options?: any
-  ): AxiosPromise<MigrationPartialExportResource>;
-}
-
-/**
  * MigrationApi - object-oriented interface
  * @export
  * @class MigrationApi
  * @extends {BaseAPI}
  */
-export class MigrationApi extends BaseAPI implements MigrationApiInterface {
+export class MigrationApi extends BaseAPI {
   /**
    * Returns HTTP OK (200) when an import migration has been queued.
    * @param {*} [options] Override http request option.

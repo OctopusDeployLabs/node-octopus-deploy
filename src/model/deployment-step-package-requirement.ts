@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum DeploymentStepPackageRequirement {
   LetOctopusDecide = "LetOctopusDecide",
   BeforePackageAcquisition = "BeforePackageAcquisition",

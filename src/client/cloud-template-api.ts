@@ -106,9 +106,8 @@ export const CloudTemplateApiAxiosParamCreator = function (
  * @export
  */
 export const CloudTemplateApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = CloudTemplateApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    CloudTemplateApiAxiosParamCreator(configuration);
   return {
     /**
      * Provides parameter metadata for a cloud (AWS etc) resource template
@@ -125,10 +124,11 @@ export const CloudTemplateApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CloudTemplateMetadata>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCloudTemplateMetadata(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCloudTemplateMetadata(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -168,33 +168,12 @@ export const CloudTemplateApiFactory = function (
 };
 
 /**
- * CloudTemplateApi - interface
- * @export
- * @interface CloudTemplateApi
- */
-export interface CloudTemplateApiInterface {
-  /**
-   * Provides parameter metadata for a cloud (AWS etc) resource template
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CloudTemplateApiInterface
-   */
-  createCloudTemplateMetadata(
-    id: string,
-    options?: any
-  ): AxiosPromise<CloudTemplateMetadata>;
-}
-
-/**
  * CloudTemplateApi - object-oriented interface
  * @export
  * @class CloudTemplateApi
  * @extends {BaseAPI}
  */
-export class CloudTemplateApi
-  extends BaseAPI
-  implements CloudTemplateApiInterface {
+export class CloudTemplateApi extends BaseAPI {
   /**
    * Provides parameter metadata for a cloud (AWS etc) resource template
    * @param {string} id ID of the resource

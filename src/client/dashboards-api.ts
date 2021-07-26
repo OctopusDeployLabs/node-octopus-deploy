@@ -280,9 +280,8 @@ export const DashboardsApiAxiosParamCreator = function (
  * @export
  */
 export const DashboardsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = DashboardsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    DashboardsApiAxiosParamCreator(configuration);
   return {
     /**
      * Returns information required to render the Octopus dashboard
@@ -297,9 +296,8 @@ export const DashboardsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DashboardResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDashboardView(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDashboardView(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -322,10 +320,11 @@ export const DashboardsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DashboardResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDashboardViewSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDashboardViewSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -346,9 +345,8 @@ export const DashboardsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DashboardResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDynamicDashboardView(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDynamicDashboardView(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -371,10 +369,11 @@ export const DashboardsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DashboardResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDynamicDashboardViewSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDynamicDashboardViewSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -448,59 +447,12 @@ export const DashboardsApiFactory = function (
 };
 
 /**
- * DashboardsApi - interface
- * @export
- * @interface DashboardsApi
- */
-export interface DashboardsApiInterface {
-  /**
-   * Returns information required to render the Octopus dashboard
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DashboardsApiInterface
-   */
-  getDashboardView(options?: any): AxiosPromise<DashboardResource>;
-
-  /**
-   * Returns information required to render the Octopus dashboard
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DashboardsApiInterface
-   */
-  getDashboardViewSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<DashboardResource>;
-
-  /**
-   * Returns the information required to render the dynamic dashboard. Deprecated.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DashboardsApiInterface
-   */
-  getDynamicDashboardView(options?: any): AxiosPromise<DashboardResource>;
-
-  /**
-   * Returns the information required to render the dynamic dashboard. Deprecated.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DashboardsApiInterface
-   */
-  getDynamicDashboardViewSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<DashboardResource>;
-}
-
-/**
  * DashboardsApi - object-oriented interface
  * @export
  * @class DashboardsApi
  * @extends {BaseAPI}
  */
-export class DashboardsApi extends BaseAPI implements DashboardsApiInterface {
+export class DashboardsApi extends BaseAPI {
   /**
    * Returns information required to render the Octopus dashboard
    * @param {*} [options] Override http request option.

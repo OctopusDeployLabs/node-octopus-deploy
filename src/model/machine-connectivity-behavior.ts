@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum MachineConnectivityBehavior {
   ExpectedToBeOnline = "ExpectedToBeOnline",
   MayBeOfflineAndCanBeSkipped = "MayBeOfflineAndCanBeSkipped",

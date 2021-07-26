@@ -156,9 +156,8 @@ export const MaintenanceConfigurationApiAxiosParamCreator = function (
 export const MaintenanceConfigurationApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = MaintenanceConfigurationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    MaintenanceConfigurationApiAxiosParamCreator(configuration);
   return {
     /**
      * Gets information about the maintenance configuration in use by the Octopus Server.
@@ -173,9 +172,8 @@ export const MaintenanceConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<MaintenanceConfigurationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getMaintenanceConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getMaintenanceConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -196,9 +194,8 @@ export const MaintenanceConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<MaintenanceConfigurationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateMaintenanceConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateMaintenanceConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -248,41 +245,12 @@ export const MaintenanceConfigurationApiFactory = function (
 };
 
 /**
- * MaintenanceConfigurationApi - interface
- * @export
- * @interface MaintenanceConfigurationApi
- */
-export interface MaintenanceConfigurationApiInterface {
-  /**
-   * Gets information about the maintenance configuration in use by the Octopus Server.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MaintenanceConfigurationApiInterface
-   */
-  getMaintenanceConfiguration(
-    options?: any
-  ): AxiosPromise<MaintenanceConfigurationResource>;
-
-  /**
-   * Updates the maintenance configuration used by the Octopus Server.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MaintenanceConfigurationApiInterface
-   */
-  updateMaintenanceConfiguration(
-    options?: any
-  ): AxiosPromise<MaintenanceConfigurationResource>;
-}
-
-/**
  * MaintenanceConfigurationApi - object-oriented interface
  * @export
  * @class MaintenanceConfigurationApi
  * @extends {BaseAPI}
  */
-export class MaintenanceConfigurationApi
-  extends BaseAPI
-  implements MaintenanceConfigurationApiInterface {
+export class MaintenanceConfigurationApi extends BaseAPI {
   /**
    * Gets information about the maintenance configuration in use by the Octopus Server.
    * @param {*} [options] Override http request option.

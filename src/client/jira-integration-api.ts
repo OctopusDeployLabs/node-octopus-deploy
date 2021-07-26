@@ -154,9 +154,8 @@ export const JiraIntegrationApiAxiosParamCreator = function (
  * @export
  */
 export const JiraIntegrationApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = JiraIntegrationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    JiraIntegrationApiAxiosParamCreator(configuration);
   return {
     /**
      *
@@ -171,9 +170,10 @@ export const JiraIntegrationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ConnectivityCheckResponse>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createJiraConnectAppConnectivityCheck(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createJiraConnectAppConnectivityCheck(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -194,9 +194,10 @@ export const JiraIntegrationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ConnectivityCheckResponse>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createJiraCredentialsConnectivityCheck(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createJiraCredentialsConnectivityCheck(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -246,41 +247,12 @@ export const JiraIntegrationApiFactory = function (
 };
 
 /**
- * JiraIntegrationApi - interface
- * @export
- * @interface JiraIntegrationApi
- */
-export interface JiraIntegrationApiInterface {
-  /**
-   *
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof JiraIntegrationApiInterface
-   */
-  createJiraConnectAppConnectivityCheck(
-    options?: any
-  ): AxiosPromise<ConnectivityCheckResponse>;
-
-  /**
-   *
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof JiraIntegrationApiInterface
-   */
-  createJiraCredentialsConnectivityCheck(
-    options?: any
-  ): AxiosPromise<ConnectivityCheckResponse>;
-}
-
-/**
  * JiraIntegrationApi - object-oriented interface
  * @export
  * @class JiraIntegrationApi
  * @extends {BaseAPI}
  */
-export class JiraIntegrationApi
-  extends BaseAPI
-  implements JiraIntegrationApiInterface {
+export class JiraIntegrationApi extends BaseAPI {
   /**
    *
    * @param {*} [options] Override http request option.

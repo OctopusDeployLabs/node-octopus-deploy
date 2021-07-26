@@ -161,9 +161,8 @@ export const MachineRolesApiAxiosParamCreator = function (
  * @export
  */
 export const MachineRolesApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = MachineRolesApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    MachineRolesApiAxiosParamCreator(configuration);
   return {
     /**
      * Gets all machine roles that have been defined in this Octopus installation. The result will be a string array.
@@ -175,9 +174,8 @@ export const MachineRolesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getMachineRolesListAll(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getMachineRolesListAll(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -197,10 +195,11 @@ export const MachineRolesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getMachineRolesListAllSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getMachineRolesListAllSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -250,41 +249,12 @@ export const MachineRolesApiFactory = function (
 };
 
 /**
- * MachineRolesApi - interface
- * @export
- * @interface MachineRolesApi
- */
-export interface MachineRolesApiInterface {
-  /**
-   * Gets all machine roles that have been defined in this Octopus installation. The result will be a string array.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachineRolesApiInterface
-   */
-  getMachineRolesListAll(options?: any): AxiosPromise<Array<string>>;
-
-  /**
-   * Gets all machine roles that have been defined in this Octopus installation. The result will be a string array.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachineRolesApiInterface
-   */
-  getMachineRolesListAllSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<string>>;
-}
-
-/**
  * MachineRolesApi - object-oriented interface
  * @export
  * @class MachineRolesApi
  * @extends {BaseAPI}
  */
-export class MachineRolesApi
-  extends BaseAPI
-  implements MachineRolesApiInterface {
+export class MachineRolesApi extends BaseAPI {
   /**
    * Gets all machine roles that have been defined in this Octopus installation. The result will be a string array.
    * @param {*} [options] Override http request option.

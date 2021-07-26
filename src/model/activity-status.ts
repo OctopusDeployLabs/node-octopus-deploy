@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum ActivityStatus {
   Pending = "Pending",
   Running = "Running",

@@ -334,9 +334,8 @@ export const DeploymentSettingsApiAxiosParamCreator = function (
 export const DeploymentSettingsApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = DeploymentSettingsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    DeploymentSettingsApiAxiosParamCreator(configuration);
   return {
     /**
      *
@@ -354,10 +353,8 @@ export const DeploymentSettingsApiFp = function (
         basePath?: string
       ) => AxiosPromise<DeploymentSettingsResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentSettingsById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentSettingsById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -383,11 +380,12 @@ export const DeploymentSettingsApiFp = function (
         basePath?: string
       ) => AxiosPromise<DeploymentSettingsResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentSettingsByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentSettingsByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -413,11 +411,12 @@ export const DeploymentSettingsApiFp = function (
         basePath?: string
       ) => AxiosPromise<DeploymentSettingsResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateDeploymentSettingsById(
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateDeploymentSettingsById(
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -445,12 +444,13 @@ export const DeploymentSettingsApiFp = function (
         basePath?: string
       ) => AxiosPromise<DeploymentSettingsResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateDeploymentSettingsByIdSpaces(
-        id,
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateDeploymentSettingsByIdSpaces(
+          id,
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -544,81 +544,12 @@ export const DeploymentSettingsApiFactory = function (
 };
 
 /**
- * DeploymentSettingsApi - interface
- * @export
- * @interface DeploymentSettingsApi
- */
-export interface DeploymentSettingsApiInterface {
-  /**
-   *
-   * @summary Gets deployment settings by ID.
-   * @param {string} id ID of the DeploymentSettings to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentSettingsApiInterface
-   */
-  getDeploymentSettingsById(
-    id: string,
-    options?: any
-  ): AxiosPromise<DeploymentSettingsResource>;
-
-  /**
-   *
-   * @summary Gets deployment settings by ID.
-   * @param {string} id ID of the DeploymentSettings to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentSettingsApiInterface
-   */
-  getDeploymentSettingsByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<DeploymentSettingsResource>;
-
-  /**
-   * Modifies deployment settings for a project.
-   * @summary Modifies deployment settings
-   * @param {string} id The ID of the deployment settings to update. Example &#x60;deploymentsettings-Projects-1&#x60;
-   * @param {DeploymentSettingsResource} body
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentSettingsApiInterface
-   */
-  updateDeploymentSettingsById(
-    id: string,
-    body: DeploymentSettingsResource,
-    options?: any
-  ): AxiosPromise<DeploymentSettingsResource>;
-
-  /**
-   * Modifies deployment settings for a project.
-   * @summary Modifies deployment settings
-   * @param {string} id The ID of the deployment settings to update. Example &#x60;deploymentsettings-Projects-1&#x60;
-   * @param {string} baseSpaceId ID of the space
-   * @param {DeploymentSettingsResource} body
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DeploymentSettingsApiInterface
-   */
-  updateDeploymentSettingsByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    body: DeploymentSettingsResource,
-    options?: any
-  ): AxiosPromise<DeploymentSettingsResource>;
-}
-
-/**
  * DeploymentSettingsApi - object-oriented interface
  * @export
  * @class DeploymentSettingsApi
  * @extends {BaseAPI}
  */
-export class DeploymentSettingsApi
-  extends BaseAPI
-  implements DeploymentSettingsApiInterface {
+export class DeploymentSettingsApi extends BaseAPI {
   /**
    *
    * @summary Gets deployment settings by ID.

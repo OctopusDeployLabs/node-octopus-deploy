@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum WorkerPoolType {
   StaticWorkerPool = "StaticWorkerPool",
   DynamicWorkerPool = "DynamicWorkerPool",

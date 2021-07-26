@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum Permission {
   AdministerSystem = "AdministerSystem",
   ProjectEdit = "ProjectEdit",

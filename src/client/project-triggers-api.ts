@@ -908,9 +908,8 @@ export const ProjectTriggersApiAxiosParamCreator = function (
  * @export
  */
 export const ProjectTriggersApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = ProjectTriggersApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ProjectTriggersApiAxiosParamCreator(configuration);
   return {
     /**
      * Creates a new project trigger
@@ -928,10 +927,8 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createProjectTrigger(
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createProjectTrigger(body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -957,11 +954,12 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createProjectTriggerSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createProjectTriggerSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -982,10 +980,8 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteProjectTrigger(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteProjectTrigger(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1008,11 +1004,12 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteProjectTriggerSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteProjectTriggerSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1036,10 +1033,8 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getProjectTriggerById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getProjectTriggerById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1065,11 +1060,12 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getProjectTriggerByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getProjectTriggerByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1097,12 +1093,13 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexProjectProjectTriggers(
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexProjectProjectTriggers(
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1132,13 +1129,14 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexProjectProjectTriggersSpaces(
-        baseSpaceId,
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexProjectProjectTriggersSpaces(
+          baseSpaceId,
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1164,11 +1162,12 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexProjectTriggers(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexProjectTriggers(
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1196,12 +1195,13 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexProjectTriggersSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexProjectTriggersSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1227,11 +1227,8 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateProjectTrigger(
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateProjectTrigger(id, body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1259,12 +1256,13 @@ export const ProjectTriggersApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProjectTriggerResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateProjectTriggerSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateProjectTriggerSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1495,202 +1493,12 @@ export const ProjectTriggersApiFactory = function (
 };
 
 /**
- * ProjectTriggersApi - interface
- * @export
- * @interface ProjectTriggersApi
- */
-export interface ProjectTriggersApiInterface {
-  /**
-   * Creates a new project trigger
-   * @summary Create a ProjectTriggerResource
-   * @param {ProjectTriggerResource} [body] The ProjectTriggerResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  createProjectTrigger(
-    body?: ProjectTriggerResource,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResource>;
-
-  /**
-   * Creates a new project trigger
-   * @summary Create a ProjectTriggerResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {ProjectTriggerResource} [body] The ProjectTriggerResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  createProjectTriggerSpaces(
-    baseSpaceId: string,
-    body?: ProjectTriggerResource,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResource>;
-
-  /**
-   * Deletes an existing project trigger.
-   * @summary Delete a ProjectTriggerResource by ID
-   * @param {string} id ID of the ProjectTriggerResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  deleteProjectTrigger(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing project trigger.
-   * @summary Delete a ProjectTriggerResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ProjectTriggerResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  deleteProjectTriggerSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get a Project Trigger by ID
-   * @param {string} id ID of the ProjectTrigger to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  getProjectTriggerById(
-    id: string,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResource>;
-
-  /**
-   *
-   * @summary Get a Project Trigger by ID
-   * @param {string} id ID of the ProjectTrigger to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  getProjectTriggerByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResource>;
-
-  /**
-   * Lists all the project triggers for the given project
-   * @summary Get a list of ProjectTriggerResources for the given ProjectResource
-   * @param {string} id ID of the Project
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  indexProjectProjectTriggers(
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResourceCollection>;
-
-  /**
-   * Lists all the project triggers for the given project
-   * @summary Get a list of ProjectTriggerResources for the given ProjectResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the Project
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  indexProjectProjectTriggersSpaces(
-    baseSpaceId: string,
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResourceCollection>;
-
-  /**
-   * Gets all the project triggers in the supplied Octopus Deploy Space, sorted by Id
-   * @summary Get a list of ProjectTriggerResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  indexProjectTriggers(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResourceCollection>;
-
-  /**
-   * Gets all the project triggers in the supplied Octopus Deploy Space, sorted by Id
-   * @summary Get a list of ProjectTriggerResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  indexProjectTriggersSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResourceCollection>;
-
-  /**
-   * Updates an existing project trigger
-   * @summary Modify a ProjectTriggerResource by ID
-   * @param {string} id ID of the ProjectTriggerResource to modify
-   * @param {ProjectTriggerResource} [body] The ProjectTriggerResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  updateProjectTrigger(
-    id: string,
-    body?: ProjectTriggerResource,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResource>;
-
-  /**
-   * Updates an existing project trigger
-   * @summary Modify a ProjectTriggerResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ProjectTriggerResource to modify
-   * @param {ProjectTriggerResource} [body] The ProjectTriggerResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProjectTriggersApiInterface
-   */
-  updateProjectTriggerSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: ProjectTriggerResource,
-    options?: any
-  ): AxiosPromise<ProjectTriggerResource>;
-}
-
-/**
  * ProjectTriggersApi - object-oriented interface
  * @export
  * @class ProjectTriggersApi
  * @extends {BaseAPI}
  */
-export class ProjectTriggersApi
-  extends BaseAPI
-  implements ProjectTriggersApiInterface {
+export class ProjectTriggersApi extends BaseAPI {
   /**
    * Creates a new project trigger
    * @summary Create a ProjectTriggerResource

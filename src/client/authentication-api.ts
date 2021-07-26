@@ -152,9 +152,8 @@ export const AuthenticationApiAxiosParamCreator = function (
  * @export
  */
 export const AuthenticationApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = AuthenticationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    AuthenticationApiAxiosParamCreator(configuration);
   return {
     /**
      * Given a URL query string, determines whether an external server (.e.g Okta) has initiated login and if so the provider\'s name
@@ -169,9 +168,8 @@ export const AuthenticationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<LoginInitiatedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createLoginInitiated(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createLoginInitiated(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -192,9 +190,8 @@ export const AuthenticationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<AuthenticationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAuthentication(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAuthentication(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -240,37 +237,12 @@ export const AuthenticationApiFactory = function (
 };
 
 /**
- * AuthenticationApi - interface
- * @export
- * @interface AuthenticationApi
- */
-export interface AuthenticationApiInterface {
-  /**
-   * Given a URL query string, determines whether an external server (.e.g Okta) has initiated login and if so the provider\'s name
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AuthenticationApiInterface
-   */
-  createLoginInitiated(options?: any): AxiosPromise<LoginInitiatedResource>;
-
-  /**
-   * Provides the details of the enabled authentication providers.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AuthenticationApiInterface
-   */
-  getAuthentication(options?: any): AxiosPromise<AuthenticationResource>;
-}
-
-/**
  * AuthenticationApi - object-oriented interface
  * @export
  * @class AuthenticationApi
  * @extends {BaseAPI}
  */
-export class AuthenticationApi
-  extends BaseAPI
-  implements AuthenticationApiInterface {
+export class AuthenticationApi extends BaseAPI {
   /**
    * Given a URL query string, determines whether an external server (.e.g Okta) has initiated login and if so the provider\'s name
    * @param {*} [options] Override http request option.

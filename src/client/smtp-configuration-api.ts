@@ -205,9 +205,8 @@ export const SmtpConfigurationApiAxiosParamCreator = function (
  * @export
  */
 export const SmtpConfigurationApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = SmtpConfigurationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    SmtpConfigurationApiAxiosParamCreator(configuration);
   return {
     /**
      * Gets information about the SMTP (email) settings in use by the Octopus Server.
@@ -219,9 +218,8 @@ export const SmtpConfigurationApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getSmtpConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getSmtpConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -242,9 +240,8 @@ export const SmtpConfigurationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<SmtpIsConfiguredResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getSmtpIsConfigured(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getSmtpIsConfigured(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -262,9 +259,8 @@ export const SmtpConfigurationApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateSmtpConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateSmtpConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -320,45 +316,12 @@ export const SmtpConfigurationApiFactory = function (
 };
 
 /**
- * SmtpConfigurationApi - interface
- * @export
- * @interface SmtpConfigurationApi
- */
-export interface SmtpConfigurationApiInterface {
-  /**
-   * Gets information about the SMTP (email) settings in use by the Octopus Server.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SmtpConfigurationApiInterface
-   */
-  getSmtpConfiguration(options?: any): AxiosPromise<void>;
-
-  /**
-   * A low privilege check to determine if SMTP is configured
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SmtpConfigurationApiInterface
-   */
-  getSmtpIsConfigured(options?: any): AxiosPromise<SmtpIsConfiguredResource>;
-
-  /**
-   * Updates the SMTP settings used by the Octopus Server.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SmtpConfigurationApiInterface
-   */
-  updateSmtpConfiguration(options?: any): AxiosPromise<void>;
-}
-
-/**
  * SmtpConfigurationApi - object-oriented interface
  * @export
  * @class SmtpConfigurationApi
  * @extends {BaseAPI}
  */
-export class SmtpConfigurationApi
-  extends BaseAPI
-  implements SmtpConfigurationApiInterface {
+export class SmtpConfigurationApi extends BaseAPI {
   /**
    * Gets information about the SMTP (email) settings in use by the Octopus Server.
    * @param {*} [options] Override http request option.

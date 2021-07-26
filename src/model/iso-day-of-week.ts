@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum IsoDayOfWeek {
   None = "None",
   Monday = "Monday",

@@ -1004,11 +1004,12 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createTagSetSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createTagSetSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1055,11 +1056,12 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteTagSetSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteTagSetSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1106,11 +1108,12 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getTagSetByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getTagSetByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1168,12 +1171,13 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<TagSetResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexTagSetsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexTagSetsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1221,10 +1225,11 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<TagSetResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllTagSetsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllTagSetsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1242,9 +1247,8 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateSortTagSets(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateSortTagSets(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1264,10 +1268,11 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateSortTagSetsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateSortTagSetsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1319,12 +1324,13 @@ export const TagSetsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateTagSetSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateTagSetSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1562,203 +1568,12 @@ export const TagSetsApiFactory = function (
 };
 
 /**
- * TagSetsApi - interface
- * @export
- * @interface TagSetsApi
- */
-export interface TagSetsApiInterface {
-  /**
-   * Creates a new tag set.
-   * @summary Create a TagSetResource
-   * @param {TagSetResource} [body] The TagSetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  createTagSet(
-    body?: TagSetResource,
-    options?: any
-  ): AxiosPromise<TagSetResource>;
-
-  /**
-   * Creates a new tag set.
-   * @summary Create a TagSetResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {TagSetResource} [body] The TagSetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  createTagSetSpaces(
-    baseSpaceId: string,
-    body?: TagSetResource,
-    options?: any
-  ): AxiosPromise<TagSetResource>;
-
-  /**
-   * Deletes an existing tag set.
-   * @summary Delete a TagSetResource by ID
-   * @param {string} id ID of the TagSetResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  deleteTagSet(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing tag set.
-   * @summary Delete a TagSetResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the TagSetResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  deleteTagSetSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get a Tag Set by ID
-   * @param {string} id ID of the TagSet to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  getTagSetById(id: string, options?: any): AxiosPromise<TagSetResource>;
-
-  /**
-   *
-   * @summary Get a Tag Set by ID
-   * @param {string} id ID of the TagSet to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  getTagSetByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<TagSetResource>;
-
-  /**
-   * Lists all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted alphabetically by the `SortOrder` field on each tag set.
-   * @summary Get a list of TagSetResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  indexTagSets(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<TagSetResourceCollection>;
-
-  /**
-   * Lists all of the tag sets in the supplied Octopus Deploy Space. The results will be sorted alphabetically by the `SortOrder` field on each tag set.
-   * @summary Get a list of TagSetResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  indexTagSetsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<TagSetResourceCollection>;
-
-  /**
-   * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
-   * @summary Get a list of Tag Sets
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  listAllTagSets(options?: any): AxiosPromise<Array<TagSetResource>>;
-
-  /**
-   * Lists the details of all of the Tag Sets in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Tag Set.
-   * @summary Get a list of Tag Sets
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  listAllTagSetsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<TagSetResource>>;
-
-  /**
-   * Takes an array of tag set IDs as the request body, uses the order of items in the array to sort the tag sets on the server. The ID of every tag set must be specified.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  updateSortTagSets(options?: any): AxiosPromise<void>;
-
-  /**
-   * Takes an array of tag set IDs as the request body, uses the order of items in the array to sort the tag sets on the server. The ID of every tag set must be specified.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  updateSortTagSetsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Modifies an existing tag set.
-   * @summary Modify a TagSetResource by ID
-   * @param {string} id ID of the TagSetResource to modify
-   * @param {TagSetResource} [body] The TagSetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  updateTagSet(
-    id: string,
-    body?: TagSetResource,
-    options?: any
-  ): AxiosPromise<TagSetResource>;
-
-  /**
-   * Modifies an existing tag set.
-   * @summary Modify a TagSetResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the TagSetResource to modify
-   * @param {TagSetResource} [body] The TagSetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TagSetsApiInterface
-   */
-  updateTagSetSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: TagSetResource,
-    options?: any
-  ): AxiosPromise<TagSetResource>;
-}
-
-/**
  * TagSetsApi - object-oriented interface
  * @export
  * @class TagSetsApi
  * @extends {BaseAPI}
  */
-export class TagSetsApi extends BaseAPI implements TagSetsApiInterface {
+export class TagSetsApi extends BaseAPI {
   /**
    * Creates a new tag set.
    * @summary Create a TagSetResource

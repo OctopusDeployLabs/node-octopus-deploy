@@ -310,9 +310,8 @@ export const InvitationsApiAxiosParamCreator = function (
  * @export
  */
 export const InvitationsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = InvitationsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    InvitationsApiAxiosParamCreator(configuration);
   return {
     /**
      * Invite a user to register.
@@ -330,10 +329,8 @@ export const InvitationsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InvitationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createInvitation(
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createInvitation(body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -359,11 +356,12 @@ export const InvitationsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InvitationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createInvitationSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createInvitationSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -387,10 +385,8 @@ export const InvitationsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InvitationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getInvitationById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getInvitationById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -416,11 +412,12 @@ export const InvitationsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InvitationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getInvitationByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getInvitationByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -510,75 +507,12 @@ export const InvitationsApiFactory = function (
 };
 
 /**
- * InvitationsApi - interface
- * @export
- * @interface InvitationsApi
- */
-export interface InvitationsApiInterface {
-  /**
-   * Invite a user to register.
-   * @summary Create a InvitationResource
-   * @param {InvitationResource} [body] The InvitationResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InvitationsApiInterface
-   */
-  createInvitation(
-    body?: InvitationResource,
-    options?: any
-  ): AxiosPromise<InvitationResource>;
-
-  /**
-   * Invite a user to register.
-   * @summary Create a InvitationResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {InvitationResource} [body] The InvitationResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InvitationsApiInterface
-   */
-  createInvitationSpaces(
-    baseSpaceId: string,
-    body?: InvitationResource,
-    options?: any
-  ): AxiosPromise<InvitationResource>;
-
-  /**
-   *
-   * @summary Get an Invitation by ID
-   * @param {string} id ID of the Invitation to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InvitationsApiInterface
-   */
-  getInvitationById(
-    id: string,
-    options?: any
-  ): AxiosPromise<InvitationResource>;
-
-  /**
-   *
-   * @summary Get an Invitation by ID
-   * @param {string} id ID of the Invitation to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InvitationsApiInterface
-   */
-  getInvitationByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<InvitationResource>;
-}
-
-/**
  * InvitationsApi - object-oriented interface
  * @export
  * @class InvitationsApi
  * @extends {BaseAPI}
  */
-export class InvitationsApi extends BaseAPI implements InvitationsApiInterface {
+export class InvitationsApi extends BaseAPI {
   /**
    * Invite a user to register.
    * @summary Create a InvitationResource

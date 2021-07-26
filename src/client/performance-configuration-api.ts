@@ -156,9 +156,8 @@ export const PerformanceConfigurationApiAxiosParamCreator = function (
 export const PerformanceConfigurationApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = PerformanceConfigurationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    PerformanceConfigurationApiAxiosParamCreator(configuration);
   return {
     /**
      * Get performance settings for the Octopus Server
@@ -173,9 +172,8 @@ export const PerformanceConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<PerformanceConfigurationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPerformanceConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPerformanceConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -196,9 +194,8 @@ export const PerformanceConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<PerformanceConfigurationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updatePerformanceConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updatePerformanceConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -248,41 +245,12 @@ export const PerformanceConfigurationApiFactory = function (
 };
 
 /**
- * PerformanceConfigurationApi - interface
- * @export
- * @interface PerformanceConfigurationApi
- */
-export interface PerformanceConfigurationApiInterface {
-  /**
-   * Get performance settings for the Octopus Server
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PerformanceConfigurationApiInterface
-   */
-  getPerformanceConfiguration(
-    options?: any
-  ): AxiosPromise<PerformanceConfigurationResource>;
-
-  /**
-   * Updates the performance settings for the Octopus Server
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PerformanceConfigurationApiInterface
-   */
-  updatePerformanceConfiguration(
-    options?: any
-  ): AxiosPromise<PerformanceConfigurationResource>;
-}
-
-/**
  * PerformanceConfigurationApi - object-oriented interface
  * @export
  * @class PerformanceConfigurationApi
  * @extends {BaseAPI}
  */
-export class PerformanceConfigurationApi
-  extends BaseAPI
-  implements PerformanceConfigurationApiInterface {
+export class PerformanceConfigurationApi extends BaseAPI {
   /**
    * Get performance settings for the Octopus Server
    * @param {*} [options] Override http request option.

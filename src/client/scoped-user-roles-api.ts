@@ -177,9 +177,8 @@ export const ScopedUserRolesApiAxiosParamCreator = function (
  * @export
  */
 export const ScopedUserRolesApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = ScopedUserRolesApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ScopedUserRolesApiAxiosParamCreator(configuration);
   return {
     /**
      *
@@ -197,10 +196,8 @@ export const ScopedUserRolesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ScopedUserRoleResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getScopedUserRoleById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getScopedUserRoleById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -226,11 +223,12 @@ export const ScopedUserRolesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ScopedUserRoleResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getScopedUserRoleByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getScopedUserRoleByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -288,49 +286,12 @@ export const ScopedUserRolesApiFactory = function (
 };
 
 /**
- * ScopedUserRolesApi - interface
- * @export
- * @interface ScopedUserRolesApi
- */
-export interface ScopedUserRolesApiInterface {
-  /**
-   *
-   * @summary Get a Scoped User Role by ID
-   * @param {string} id ID of the ScopedUserRole to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ScopedUserRolesApiInterface
-   */
-  getScopedUserRoleById(
-    id: string,
-    options?: any
-  ): AxiosPromise<ScopedUserRoleResource>;
-
-  /**
-   *
-   * @summary Get a Scoped User Role by ID
-   * @param {string} id ID of the ScopedUserRole to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ScopedUserRolesApiInterface
-   */
-  getScopedUserRoleByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<ScopedUserRoleResource>;
-}
-
-/**
  * ScopedUserRolesApi - object-oriented interface
  * @export
  * @class ScopedUserRolesApi
  * @extends {BaseAPI}
  */
-export class ScopedUserRolesApi
-  extends BaseAPI
-  implements ScopedUserRolesApiInterface {
+export class ScopedUserRolesApi extends BaseAPI {
   /**
    *
    * @summary Get a Scoped User Role by ID

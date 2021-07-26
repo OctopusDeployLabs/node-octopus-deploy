@@ -169,9 +169,8 @@ export const NuGetApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.pushNuGetPackage(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.pushNuGetPackage(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -191,10 +190,11 @@ export const NuGetApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.pushNuGetPackageSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.pushNuGetPackageSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -244,39 +244,12 @@ export const NuGetApiFactory = function (
 };
 
 /**
- * NuGetApi - interface
- * @export
- * @interface NuGetApi
- */
-export interface NuGetApiInterface {
-  /**
-   * Octopus allows NuGet.exe and compatible tools to push packages to this endpoint.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof NuGetApiInterface
-   */
-  pushNuGetPackage(options?: any): AxiosPromise<void>;
-
-  /**
-   * Octopus allows NuGet.exe and compatible tools to push packages to this endpoint.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof NuGetApiInterface
-   */
-  pushNuGetPackageSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<void>;
-}
-
-/**
  * NuGetApi - object-oriented interface
  * @export
  * @class NuGetApi
  * @extends {BaseAPI}
  */
-export class NuGetApi extends BaseAPI implements NuGetApiInterface {
+export class NuGetApi extends BaseAPI {
   /**
    * Octopus allows NuGet.exe and compatible tools to push packages to this endpoint.
    * @param {*} [options] Override http request option.

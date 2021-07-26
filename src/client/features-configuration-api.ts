@@ -156,9 +156,8 @@ export const FeaturesConfigurationApiAxiosParamCreator = function (
 export const FeaturesConfigurationApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = FeaturesConfigurationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    FeaturesConfigurationApiAxiosParamCreator(configuration);
   return {
     /**
      * Gets information about the features configuration in use by the Octopus Server
@@ -173,9 +172,8 @@ export const FeaturesConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<FeaturesConfigurationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getFeaturesConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getFeaturesConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -196,9 +194,8 @@ export const FeaturesConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<FeaturesConfigurationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateFeaturesConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateFeaturesConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -248,41 +245,12 @@ export const FeaturesConfigurationApiFactory = function (
 };
 
 /**
- * FeaturesConfigurationApi - interface
- * @export
- * @interface FeaturesConfigurationApi
- */
-export interface FeaturesConfigurationApiInterface {
-  /**
-   * Gets information about the features configuration in use by the Octopus Server
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeaturesConfigurationApiInterface
-   */
-  getFeaturesConfiguration(
-    options?: any
-  ): AxiosPromise<FeaturesConfigurationResource>;
-
-  /**
-   * Updates the features configuration used by the Octopus Server
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeaturesConfigurationApiInterface
-   */
-  updateFeaturesConfiguration(
-    options?: any
-  ): AxiosPromise<FeaturesConfigurationResource>;
-}
-
-/**
  * FeaturesConfigurationApi - object-oriented interface
  * @export
  * @class FeaturesConfigurationApi
  * @extends {BaseAPI}
  */
-export class FeaturesConfigurationApi
-  extends BaseAPI
-  implements FeaturesConfigurationApiInterface {
+export class FeaturesConfigurationApi extends BaseAPI {
   /**
    * Gets information about the features configuration in use by the Octopus Server
    * @param {*} [options] Override http request option.

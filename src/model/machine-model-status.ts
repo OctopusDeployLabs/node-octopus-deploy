@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum MachineModelStatus {
   Online = "Online",
   Offline = "Offline",

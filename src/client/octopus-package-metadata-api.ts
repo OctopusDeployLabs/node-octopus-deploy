@@ -298,9 +298,8 @@ export const OctopusPackageMetadataApiAxiosParamCreator = function (
 export const OctopusPackageMetadataApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = OctopusPackageMetadataApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    OctopusPackageMetadataApiAxiosParamCreator(configuration);
   return {
     /**
      * Creates package build information. Deprecated. Please use the \'build-information\' api instead.
@@ -315,9 +314,8 @@ export const OctopusPackageMetadataApiFp = function (
         basePath?: string
       ) => AxiosPromise<OctopusPackageMetadataMappedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createOctopusPackageMetadata(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createOctopusPackageMetadata(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -340,10 +338,11 @@ export const OctopusPackageMetadataApiFp = function (
         basePath?: string
       ) => AxiosPromise<OctopusPackageMetadataMappedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createOctopusPackageMetadataSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createOctopusPackageMetadataSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -366,10 +365,8 @@ export const OctopusPackageMetadataApiFp = function (
         basePath?: string
       ) => AxiosPromise<OctopusPackageMetadataMappedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getOctopusPackageMetadata(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getOctopusPackageMetadata(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -394,11 +391,12 @@ export const OctopusPackageMetadataApiFp = function (
         basePath?: string
       ) => AxiosPromise<OctopusPackageMetadataMappedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getOctopusPackageMetadataSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getOctopusPackageMetadataSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -480,69 +478,12 @@ export const OctopusPackageMetadataApiFactory = function (
 };
 
 /**
- * OctopusPackageMetadataApi - interface
- * @export
- * @interface OctopusPackageMetadataApi
- */
-export interface OctopusPackageMetadataApiInterface {
-  /**
-   * Creates package build information. Deprecated. Please use the \'build-information\' api instead.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusPackageMetadataApiInterface
-   */
-  createOctopusPackageMetadata(
-    options?: any
-  ): AxiosPromise<OctopusPackageMetadataMappedResource>;
-
-  /**
-   * Creates package build information. Deprecated. Please use the \'build-information\' api instead.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusPackageMetadataApiInterface
-   */
-  createOctopusPackageMetadataSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<OctopusPackageMetadataMappedResource>;
-
-  /**
-   * Returns package build information for the specified id. Deprecated. Please use the \'build-information\' api instead.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusPackageMetadataApiInterface
-   */
-  getOctopusPackageMetadata(
-    id: string,
-    options?: any
-  ): AxiosPromise<OctopusPackageMetadataMappedResource>;
-
-  /**
-   * Returns package build information for the specified id. Deprecated. Please use the \'build-information\' api instead.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusPackageMetadataApiInterface
-   */
-  getOctopusPackageMetadataSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<OctopusPackageMetadataMappedResource>;
-}
-
-/**
  * OctopusPackageMetadataApi - object-oriented interface
  * @export
  * @class OctopusPackageMetadataApi
  * @extends {BaseAPI}
  */
-export class OctopusPackageMetadataApi
-  extends BaseAPI
-  implements OctopusPackageMetadataApiInterface {
+export class OctopusPackageMetadataApi extends BaseAPI {
   /**
    * Creates package build information. Deprecated. Please use the \'build-information\' api instead.
    * @param {*} [options] Override http request option.

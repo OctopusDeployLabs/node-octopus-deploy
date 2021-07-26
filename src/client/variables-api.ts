@@ -659,9 +659,8 @@ export const VariablesApiAxiosParamCreator = function (
  * @export
  */
 export const VariablesApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = VariablesApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    VariablesApiAxiosParamCreator(configuration);
   return {
     /**
      * List the names of variables that can be used in deployment actions. If a project is specified, this will include variables in that project.  If a project environments filter is specified, project variables only scoped to the environment will be excluded.
@@ -673,9 +672,8 @@ export const VariablesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getVariableNamesList(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getVariableNamesList(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -695,10 +693,11 @@ export const VariablesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getVariableNamesListSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getVariableNamesListSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -719,9 +718,8 @@ export const VariablesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<VariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getVariablePreviewList(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getVariablePreviewList(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -744,10 +742,11 @@ export const VariablesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<VariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getVariablePreviewListSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getVariablePreviewListSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -771,10 +770,8 @@ export const VariablesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<VariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getVariableSetById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getVariableSetById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -800,11 +797,12 @@ export const VariablesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<VariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getVariableSetByIdSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getVariableSetByIdSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -826,9 +824,8 @@ export const VariablesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<VariableSetResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllVariableSets(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllVariableSets(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -852,10 +849,11 @@ export const VariablesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<VariableSetResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllVariableSetsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllVariableSetsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -878,10 +876,8 @@ export const VariablesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<VariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateVariableSet(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateVariableSet(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -906,11 +902,12 @@ export const VariablesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<VariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateVariableSetSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateVariableSetSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1074,135 +1071,12 @@ export const VariablesApiFactory = function (
 };
 
 /**
- * VariablesApi - interface
- * @export
- * @interface VariablesApi
- */
-export interface VariablesApiInterface {
-  /**
-   * List the names of variables that can be used in deployment actions. If a project is specified, this will include variables in that project.  If a project environments filter is specified, project variables only scoped to the environment will be excluded.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  getVariableNamesList(options?: any): AxiosPromise<void>;
-
-  /**
-   * List the names of variables that can be used in deployment actions. If a project is specified, this will include variables in that project.  If a project environments filter is specified, project variables only scoped to the environment will be excluded.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  getVariableNamesListSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * List the evaluated variables for a deployment.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  getVariablePreviewList(options?: any): AxiosPromise<VariableSetResource>;
-
-  /**
-   * List the evaluated variables for a deployment.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  getVariablePreviewListSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<VariableSetResource>;
-
-  /**
-   * Gets a variable set by Id.
-   * @summary Get a VariableSetResource by ID
-   * @param {string} id ID of the VariableSetResource to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  getVariableSetById(
-    id: string,
-    options?: any
-  ): AxiosPromise<VariableSetResource>;
-
-  /**
-   * Gets a variable set by Id.
-   * @summary Get a VariableSetResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the VariableSetResource to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  getVariableSetByIdSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<VariableSetResource>;
-
-  /**
-   * Lists all the variable sets in the supplied Octopus Deploy Space.
-   * @summary Get a list of VariableSetResources
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  listAllVariableSets(options?: any): AxiosPromise<Array<VariableSetResource>>;
-
-  /**
-   * Lists all the variable sets in the supplied Octopus Deploy Space.
-   * @summary Get a list of VariableSetResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  listAllVariableSetsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<VariableSetResource>>;
-
-  /**
-   * Updates a variable set.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  updateVariableSet(
-    id: string,
-    options?: any
-  ): AxiosPromise<VariableSetResource>;
-
-  /**
-   * Updates a variable set.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof VariablesApiInterface
-   */
-  updateVariableSetSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<VariableSetResource>;
-}
-
-/**
  * VariablesApi - object-oriented interface
  * @export
  * @class VariablesApi
  * @extends {BaseAPI}
  */
-export class VariablesApi extends BaseAPI implements VariablesApiInterface {
+export class VariablesApi extends BaseAPI {
   /**
    * List the names of variables that can be used in deployment actions. If a project is specified, this will include variables in that project.  If a project environments filter is specified, project variables only scoped to the environment will be excluded.
    * @param {*} [options] Override http request option.

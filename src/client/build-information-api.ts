@@ -685,9 +685,8 @@ export const BuildInformationApiAxiosParamCreator = function (
  * @export
  */
 export const BuildInformationApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = BuildInformationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    BuildInformationApiAxiosParamCreator(configuration);
   return {
     /**
      * Updates a specific build information record describing the vcs information for a given package
@@ -702,9 +701,8 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createBuildInformation(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createBuildInformation(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -727,10 +725,11 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createBuildInformationSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createBuildInformationSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -750,10 +749,11 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteBuildInformationDeleteById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteBuildInformationDeleteById(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -775,11 +775,12 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteBuildInformationDeleteByIdSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteBuildInformationDeleteByIdSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -799,10 +800,11 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteBuildInformationDeleteByIds(
-        ids,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteBuildInformationDeleteByIds(
+          ids,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -824,11 +826,12 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteBuildInformationDeleteByIdsSpaces(
-        baseSpaceId,
-        ids,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteBuildInformationDeleteByIdsSpaces(
+          baseSpaceId,
+          ids,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -851,10 +854,8 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getBuildInformation(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getBuildInformation(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -875,9 +876,8 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<OctopusPackageVersionBuildInformationMappedResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getBuildInformationList(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getBuildInformationList(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -900,10 +900,11 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<OctopusPackageVersionBuildInformationMappedResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getBuildInformationListSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getBuildInformationListSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -928,11 +929,12 @@ export const BuildInformationApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getBuildInformationSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getBuildInformationSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1100,143 +1102,12 @@ export const BuildInformationApiFactory = function (
 };
 
 /**
- * BuildInformationApi - interface
- * @export
- * @interface BuildInformationApi
- */
-export interface BuildInformationApiInterface {
-  /**
-   * Updates a specific build information record describing the vcs information for a given package
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  createBuildInformation(
-    options?: any
-  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>;
-
-  /**
-   * Updates a specific build information record describing the vcs information for a given package
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  createBuildInformationSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>;
-
-  /**
-   * Deletes a specific build information record
-   * @param {string} id ID of the build information resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  deleteBuildInformationDeleteById(
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Deletes a specific build information record
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the build information resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  deleteBuildInformationDeleteByIdSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Bulk deletes specific build information records
-   * @param {string} ids Comma separated list of IDs to be deleted
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  deleteBuildInformationDeleteByIds(
-    ids: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Bulk deletes specific build information records
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} ids Comma separated list of IDs to be deleted
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  deleteBuildInformationDeleteByIdsSpaces(
-    baseSpaceId: string,
-    ids: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Retrieves a specific build information record describing the vcs information for a given package
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  getBuildInformation(
-    id: string,
-    options?: any
-  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>;
-
-  /**
-   * Retrieves a list of build information records describing the vcs information for a given package
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  getBuildInformationList(
-    options?: any
-  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResourceCollection>;
-
-  /**
-   * Retrieves a list of build information records describing the vcs information for a given package
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  getBuildInformationListSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResourceCollection>;
-
-  /**
-   * Retrieves a specific build information record describing the vcs information for a given package
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof BuildInformationApiInterface
-   */
-  getBuildInformationSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>;
-}
-
-/**
  * BuildInformationApi - object-oriented interface
  * @export
  * @class BuildInformationApi
  * @extends {BaseAPI}
  */
-export class BuildInformationApi
-  extends BaseAPI
-  implements BuildInformationApiInterface {
+export class BuildInformationApi extends BaseAPI {
   /**
    * Updates a specific build information record describing the vcs information for a given package
    * @param {*} [options] Override http request option.

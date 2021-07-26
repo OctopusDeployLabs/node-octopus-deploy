@@ -161,9 +161,8 @@ export const TenantVariablesApiAxiosParamCreator = function (
  * @export
  */
 export const TenantVariablesApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = TenantVariablesApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    TenantVariablesApiAxiosParamCreator(configuration);
   return {
     /**
      * Lists all of the tenant variables in the supplied Octopus Deploy Space. The results will be sorted alphabetically by id.
@@ -175,9 +174,8 @@ export const TenantVariablesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getTenantVariablesAll(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getTenantVariablesAll(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -197,10 +195,11 @@ export const TenantVariablesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getTenantVariablesAllSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getTenantVariablesAllSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -250,41 +249,12 @@ export const TenantVariablesApiFactory = function (
 };
 
 /**
- * TenantVariablesApi - interface
- * @export
- * @interface TenantVariablesApi
- */
-export interface TenantVariablesApiInterface {
-  /**
-   * Lists all of the tenant variables in the supplied Octopus Deploy Space. The results will be sorted alphabetically by id.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TenantVariablesApiInterface
-   */
-  getTenantVariablesAll(options?: any): AxiosPromise<void>;
-
-  /**
-   * Lists all of the tenant variables in the supplied Octopus Deploy Space. The results will be sorted alphabetically by id.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TenantVariablesApiInterface
-   */
-  getTenantVariablesAllSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<void>;
-}
-
-/**
  * TenantVariablesApi - object-oriented interface
  * @export
  * @class TenantVariablesApi
  * @extends {BaseAPI}
  */
-export class TenantVariablesApi
-  extends BaseAPI
-  implements TenantVariablesApiInterface {
+export class TenantVariablesApi extends BaseAPI {
   /**
    * Lists all of the tenant variables in the supplied Octopus Deploy Space. The results will be sorted alphabetically by id.
    * @param {*} [options] Override http request option.

@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum LicenseMessageDisposition {
   Information = "Information",
   Warning = "Warning",

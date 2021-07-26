@@ -717,9 +717,8 @@ export const InterruptionsApiAxiosParamCreator = function (
  * @export
  */
 export const InterruptionsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = InterruptionsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    InterruptionsApiAxiosParamCreator(configuration);
   return {
     /**
      * Submits a dictionary of form values for the interruption. Only the user with responsibility for this interruption can submit this form.
@@ -736,10 +735,8 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InterruptionResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createSubmitInterruption(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createSubmitInterruption(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -764,11 +761,12 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InterruptionResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createSubmitInterruptionSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createSubmitInterruptionSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -792,10 +790,8 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InterruptionResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getInterruptionById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getInterruptionById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -821,11 +817,12 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InterruptionResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getInterruptionByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getInterruptionByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -845,10 +842,11 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getInterruptionResponsibility(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getInterruptionResponsibility(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -870,11 +868,12 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getInterruptionResponsibilitySpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getInterruptionResponsibilitySpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -900,11 +899,8 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InterruptionResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexInterruptions(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexInterruptions(skip, take, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -932,12 +928,13 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InterruptionResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexInterruptionsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexInterruptionsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -957,10 +954,11 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateInterruptionResponsibility(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateInterruptionResponsibility(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -982,11 +980,12 @@ export const InterruptionsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateInterruptionResponsibilitySpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateInterruptionResponsibilitySpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1170,159 +1169,12 @@ export const InterruptionsApiFactory = function (
 };
 
 /**
- * InterruptionsApi - interface
- * @export
- * @interface InterruptionsApi
- */
-export interface InterruptionsApiInterface {
-  /**
-   * Submits a dictionary of form values for the interruption. Only the user with responsibility for this interruption can submit this form.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  createSubmitInterruption(
-    id: string,
-    options?: any
-  ): AxiosPromise<InterruptionResource>;
-
-  /**
-   * Submits a dictionary of form values for the interruption. Only the user with responsibility for this interruption can submit this form.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  createSubmitInterruptionSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<InterruptionResource>;
-
-  /**
-   *
-   * @summary Get an Interruption by ID
-   * @param {string} id ID of the Interruption to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  getInterruptionById(
-    id: string,
-    options?: any
-  ): AxiosPromise<InterruptionResource>;
-
-  /**
-   *
-   * @summary Get an Interruption by ID
-   * @param {string} id ID of the Interruption to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  getInterruptionByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<InterruptionResource>;
-
-  /**
-   * Gets the user that is currently responsible for this interruption.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  getInterruptionResponsibility(
-    id: string,
-    options?: any
-  ): AxiosPromise<UserResource>;
-
-  /**
-   * Gets the user that is currently responsible for this interruption.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  getInterruptionResponsibilitySpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<UserResource>;
-
-  /**
-   * Lists interruptions for user attention. The results will be sorted by date from most recently to least recently created.
-   * @summary Get a list of InterruptionResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  indexInterruptions(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<InterruptionResourceCollection>;
-
-  /**
-   * Lists interruptions for user attention. The results will be sorted by date from most recently to least recently created.
-   * @summary Get a list of InterruptionResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  indexInterruptionsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<InterruptionResourceCollection>;
-
-  /**
-   * Allows the current user to take responsibility for this interruption. Only users in one of the responsible teams on this interruption can take responsibility for it.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  updateInterruptionResponsibility(
-    id: string,
-    options?: any
-  ): AxiosPromise<UserResource>;
-
-  /**
-   * Allows the current user to take responsibility for this interruption. Only users in one of the responsible teams on this interruption can take responsibility for it.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof InterruptionsApiInterface
-   */
-  updateInterruptionResponsibilitySpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<UserResource>;
-}
-
-/**
  * InterruptionsApi - object-oriented interface
  * @export
  * @class InterruptionsApi
  * @extends {BaseAPI}
  */
-export class InterruptionsApi
-  extends BaseAPI
-  implements InterruptionsApiInterface {
+export class InterruptionsApi extends BaseAPI {
   /**
    * Submits a dictionary of form values for the interruption. Only the user with responsibility for this interruption can submit this form.
    * @param {string} id ID of the resource

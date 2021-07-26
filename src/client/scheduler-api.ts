@@ -382,9 +382,8 @@ export const SchedulerApiAxiosParamCreator = function (
  * @export
  */
 export const SchedulerApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = SchedulerApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    SchedulerApiAxiosParamCreator(configuration);
   return {
     /**
      * Get the details of a scheduled task.
@@ -401,10 +400,8 @@ export const SchedulerApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ScheduledTaskDetailsResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getScheduledTaskDetails(
-        name,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getScheduledTaskDetails(name, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -424,10 +421,11 @@ export const SchedulerApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getScheduledTaskRawDetails(
-        name,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getScheduledTaskRawDetails(
+          name,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -468,9 +466,8 @@ export const SchedulerApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getSchedulerStart(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getSchedulerStart(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -488,9 +485,8 @@ export const SchedulerApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getSchedulerStop(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getSchedulerStop(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -508,9 +504,8 @@ export const SchedulerApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getSchedulerTrigger(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getSchedulerTrigger(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -604,72 +599,12 @@ export const SchedulerApiFactory = function (
 };
 
 /**
- * SchedulerApi - interface
- * @export
- * @interface SchedulerApi
- */
-export interface SchedulerApiInterface {
-  /**
-   * Get the details of a scheduled task.
-   * @param {string} name Name of the task
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SchedulerApiInterface
-   */
-  getScheduledTaskDetails(
-    name: string,
-    options?: any
-  ): AxiosPromise<ScheduledTaskDetailsResource>;
-
-  /**
-   * Get the details of a scheduled task as raw text.
-   * @param {string} name Name of the scheduled task
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SchedulerApiInterface
-   */
-  getScheduledTaskRawDetails(name: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Returns status of Octopus scheduled tasks.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SchedulerApiInterface
-   */
-  getScheduler(options?: any): AxiosPromise<SchedulerStatusResource>;
-
-  /**
-   * Returns HTTP OK (200) when the Octopus Server scheduler has been started.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SchedulerApiInterface
-   */
-  getSchedulerStart(options?: any): AxiosPromise<void>;
-
-  /**
-   * Returns HTTP OK (200) when the Octopus Server scheduler has been stopped.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SchedulerApiInterface
-   */
-  getSchedulerStop(options?: any): AxiosPromise<void>;
-
-  /**
-   * Returns HTTP OK (200) when the Octopus Server scheduler has been triggered.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SchedulerApiInterface
-   */
-  getSchedulerTrigger(options?: any): AxiosPromise<void>;
-}
-
-/**
  * SchedulerApi - object-oriented interface
  * @export
  * @class SchedulerApi
  * @extends {BaseAPI}
  */
-export class SchedulerApi extends BaseAPI implements SchedulerApiInterface {
+export class SchedulerApi extends BaseAPI {
   /**
    * Get the details of a scheduled task.
    * @param {string} name Name of the task

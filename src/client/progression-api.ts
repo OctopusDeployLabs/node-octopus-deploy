@@ -238,10 +238,11 @@ export const ProgressionApiAxiosParamCreator = function (
         "baseSpaceId",
         baseSpaceId
       );
-      const localVarPath = `/{baseSpaceId}/progression/runbooks/taskRuns`.replace(
-        `{${"baseSpaceId"}}`,
-        encodeURIComponent(String(baseSpaceId))
-      );
+      const localVarPath =
+        `/{baseSpaceId}/progression/runbooks/taskRuns`.replace(
+          `{${"baseSpaceId"}}`,
+          encodeURIComponent(String(baseSpaceId))
+        );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -427,9 +428,8 @@ export const ProgressionApiAxiosParamCreator = function (
  * @export
  */
 export const ProgressionApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = ProgressionApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ProgressionApiAxiosParamCreator(configuration);
   return {
     /**
      * Returns the progress of a release in the environment lifecycle.
@@ -446,10 +446,8 @@ export const ProgressionApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProgressionResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getProgressionView(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getProgressionView(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -474,11 +472,12 @@ export const ProgressionApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProgressionResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getProgressionViewSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getProgressionViewSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -499,9 +498,10 @@ export const ProgressionApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbooksDashboardItemResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookTaskRunDashboardItems(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookTaskRunDashboardItems(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -524,10 +524,11 @@ export const ProgressionApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbooksDashboardItemResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookTaskRunDashboardItemsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookTaskRunDashboardItemsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -550,10 +551,8 @@ export const ProgressionApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbooksProgressionResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbooksProgressionView(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbooksProgressionView(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -578,11 +577,12 @@ export const ProgressionApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbooksProgressionResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbooksProgressionViewSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbooksProgressionViewSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -694,93 +694,12 @@ export const ProgressionApiFactory = function (
 };
 
 /**
- * ProgressionApi - interface
- * @export
- * @interface ProgressionApi
- */
-export interface ProgressionApiInterface {
-  /**
-   * Returns the progress of a release in the environment lifecycle.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProgressionApiInterface
-   */
-  getProgressionView(
-    id: string,
-    options?: any
-  ): AxiosPromise<ProgressionResource>;
-
-  /**
-   * Returns the progress of a release in the environment lifecycle.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProgressionApiInterface
-   */
-  getProgressionViewSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<ProgressionResource>;
-
-  /**
-   * Returns a list of runbook dashboard items, filtered by various criteria including projectIds, environmentIds, tenantIds, runbookIds, taskIds
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProgressionApiInterface
-   */
-  getRunbookTaskRunDashboardItems(
-    options?: any
-  ): AxiosPromise<RunbooksDashboardItemResourceCollection>;
-
-  /**
-   * Returns a list of runbook dashboard items, filtered by various criteria including projectIds, environmentIds, tenantIds, runbookIds, taskIds
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProgressionApiInterface
-   */
-  getRunbookTaskRunDashboardItemsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<RunbooksDashboardItemResourceCollection>;
-
-  /**
-   * Returns the progress of a runbook in the environment lifecycle
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProgressionApiInterface
-   */
-  getRunbooksProgressionView(
-    id: string,
-    options?: any
-  ): AxiosPromise<RunbooksProgressionResource>;
-
-  /**
-   * Returns the progress of a runbook in the environment lifecycle
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProgressionApiInterface
-   */
-  getRunbooksProgressionViewSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<RunbooksProgressionResource>;
-}
-
-/**
  * ProgressionApi - object-oriented interface
  * @export
  * @class ProgressionApi
  * @extends {BaseAPI}
  */
-export class ProgressionApi extends BaseAPI implements ProgressionApiInterface {
+export class ProgressionApi extends BaseAPI {
   /**
    * Returns the progress of a release in the environment lifecycle.
    * @param {string} id ID of the resource

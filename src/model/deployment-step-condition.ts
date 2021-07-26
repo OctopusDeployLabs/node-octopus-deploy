@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum DeploymentStepCondition {
   Success = "Success",
   Failure = "Failure",

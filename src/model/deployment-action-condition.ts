@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum DeploymentActionCondition {
   Success = "Success",
   Variable = "Variable",

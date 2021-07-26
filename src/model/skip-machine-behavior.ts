@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum SkipMachineBehavior {
   None = "None",
   SkipUnavailableMachines = "SkipUnavailableMachines",

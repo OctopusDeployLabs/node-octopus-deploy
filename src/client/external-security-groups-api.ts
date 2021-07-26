@@ -101,9 +101,8 @@ export const ExternalSecurityGroupsApiAxiosParamCreator = function (
 export const ExternalSecurityGroupsApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = ExternalSecurityGroupsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ExternalSecurityGroupsApiAxiosParamCreator(configuration);
   return {
     /**
      * Lists the authentication providers that support external group lookups.
@@ -118,9 +117,10 @@ export const ExternalSecurityGroupsApiFp = function (
         basePath?: string
       ) => AxiosPromise<Array<AuthenticationProviderThatSupportsGroups>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getListProvidersThatSupportExternalSecurityGroups(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getListProvidersThatSupportExternalSecurityGroups(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -158,31 +158,12 @@ export const ExternalSecurityGroupsApiFactory = function (
 };
 
 /**
- * ExternalSecurityGroupsApi - interface
- * @export
- * @interface ExternalSecurityGroupsApi
- */
-export interface ExternalSecurityGroupsApiInterface {
-  /**
-   * Lists the authentication providers that support external group lookups.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ExternalSecurityGroupsApiInterface
-   */
-  getListProvidersThatSupportExternalSecurityGroups(
-    options?: any
-  ): AxiosPromise<Array<AuthenticationProviderThatSupportsGroups>>;
-}
-
-/**
  * ExternalSecurityGroupsApi - object-oriented interface
  * @export
  * @class ExternalSecurityGroupsApi
  * @extends {BaseAPI}
  */
-export class ExternalSecurityGroupsApi
-  extends BaseAPI
-  implements ExternalSecurityGroupsApiInterface {
+export class ExternalSecurityGroupsApi extends BaseAPI {
   /**
    * Lists the authentication providers that support external group lookups.
    * @param {*} [options] Override http request option.

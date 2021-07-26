@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum PropertyApplicabilityMode {
   ApplicableIfHasAnyValue = "ApplicableIfHasAnyValue",
   ApplicableIfHasNoValue = "ApplicableIfHasNoValue",

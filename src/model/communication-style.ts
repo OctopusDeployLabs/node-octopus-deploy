@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum CommunicationStyle {
   None = "None",
   TentaclePassive = "TentaclePassive",

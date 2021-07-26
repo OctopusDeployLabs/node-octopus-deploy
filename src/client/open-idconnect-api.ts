@@ -152,9 +152,8 @@ export const OpenIDConnectApiAxiosParamCreator = function (
  * @export
  */
 export const OpenIDConnectApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = OpenIDConnectApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    OpenIDConnectApiAxiosParamCreator(configuration);
   return {
     /**
      *
@@ -166,9 +165,10 @@ export const OpenIDConnectApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createOctopusIDUserAuthenticated(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createOctopusIDUserAuthenticated(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -186,9 +186,10 @@ export const OpenIDConnectApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createOctopusIDUserAuthentication(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createOctopusIDUserAuthentication(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -234,37 +235,12 @@ export const OpenIDConnectApiFactory = function (
 };
 
 /**
- * OpenIDConnectApi - interface
- * @export
- * @interface OpenIDConnectApi
- */
-export interface OpenIDConnectApiInterface {
-  /**
-   *
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OpenIDConnectApiInterface
-   */
-  createOctopusIDUserAuthenticated(options?: any): AxiosPromise<void>;
-
-  /**
-   *
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OpenIDConnectApiInterface
-   */
-  createOctopusIDUserAuthentication(options?: any): AxiosPromise<void>;
-}
-
-/**
  * OpenIDConnectApi - object-oriented interface
  * @export
  * @class OpenIDConnectApi
  * @extends {BaseAPI}
  */
-export class OpenIDConnectApi
-  extends BaseAPI
-  implements OpenIDConnectApiInterface {
+export class OpenIDConnectApi extends BaseAPI {
   /**
    *
    * @param {*} [options] Override http request option.

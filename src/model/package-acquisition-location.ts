@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum PackageAcquisitionLocation {
   Server = "Server",
   ExecutionTarget = "ExecutionTarget",

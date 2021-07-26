@@ -520,10 +520,11 @@ export const MachinesApiAxiosParamCreator = function (
         "baseSpaceId",
         baseSpaceId
       );
-      const localVarPath = `/{baseSpaceId}/machines/operatingsystem/names/all`.replace(
-        `{${"baseSpaceId"}}`,
-        encodeURIComponent(String(baseSpaceId))
-      );
+      const localVarPath =
+        `/{baseSpaceId}/machines/operatingsystem/names/all`.replace(
+          `{${"baseSpaceId"}}`,
+          encodeURIComponent(String(baseSpaceId))
+        );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -641,10 +642,11 @@ export const MachinesApiAxiosParamCreator = function (
         "baseSpaceId",
         baseSpaceId
       );
-      const localVarPath = `/{baseSpaceId}/machines/operatingsystem/shells/all`.replace(
-        `{${"baseSpaceId"}}`,
-        encodeURIComponent(String(baseSpaceId))
-      );
+      const localVarPath =
+        `/{baseSpaceId}/machines/operatingsystem/shells/all`.replace(
+          `{${"baseSpaceId"}}`,
+          encodeURIComponent(String(baseSpaceId))
+        );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -1549,10 +1551,8 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createDeploymentTarget(
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createDeploymentTarget(body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1578,11 +1578,12 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createDeploymentTargetSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createDeploymentTargetSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1603,10 +1604,8 @@ export const MachinesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteDeploymentTarget(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteDeploymentTarget(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1629,11 +1628,12 @@ export const MachinesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteDeploymentTargetSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteDeploymentTargetSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1656,10 +1656,11 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachineConnectionStatus>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentTargetConnectionStatus(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentTargetConnectionStatus(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1684,11 +1685,12 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachineConnectionStatus>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentTargetConnectionStatusSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentTargetConnectionStatusSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1706,9 +1708,10 @@ export const MachinesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentTargetOperatingSystemNamesListAll(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentTargetOperatingSystemNamesListAll(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1728,10 +1731,11 @@ export const MachinesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentTargetOperatingSystemNamesListAllSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentTargetOperatingSystemNamesListAllSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1749,9 +1753,10 @@ export const MachinesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentTargetOperatingSystemShellNameListAll(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentTargetOperatingSystemShellNameListAll(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1771,10 +1776,11 @@ export const MachinesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentTargetOperatingSystemShellNameListAllSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentTargetOperatingSystemShellNameListAllSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1795,9 +1801,8 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachineResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDiscoverDeploymentTarget(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDiscoverDeploymentTarget(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1820,10 +1825,11 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachineResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDiscoverDeploymentTargetSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDiscoverDeploymentTargetSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1847,10 +1853,8 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getMachineResourceById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getMachineResourceById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1876,11 +1880,12 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getMachineResourceByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getMachineResourceByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1908,12 +1913,13 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<TaskResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexDeploymentTargetTasks(
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexDeploymentTargetTasks(
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1943,13 +1949,14 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<TaskResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexDeploymentTargetTasksSpaces(
-        baseSpaceId,
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexDeploymentTargetTasksSpaces(
+          baseSpaceId,
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1975,11 +1982,12 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexDeploymentTargets(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexDeploymentTargets(
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2007,12 +2015,13 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexDeploymentTargetsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexDeploymentTargetsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2034,9 +2043,8 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<DeploymentTargetResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllDeploymentTargets(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllDeploymentTargets(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2060,10 +2068,11 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<DeploymentTargetResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllDeploymentTargetsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllDeploymentTargetsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2089,11 +2098,12 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateDeploymentTarget(
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateDeploymentTarget(
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2121,12 +2131,13 @@ export const MachinesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateDeploymentTargetSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateDeploymentTargetSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2497,314 +2508,12 @@ export const MachinesApiFactory = function (
 };
 
 /**
- * MachinesApi - interface
- * @export
- * @interface MachinesApi
- */
-export interface MachinesApiInterface {
-  /**
-   * Creates a new machine.
-   * @summary Create a DeploymentTargetResource
-   * @param {DeploymentTargetResource} [body] The DeploymentTargetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  createDeploymentTarget(
-    body?: DeploymentTargetResource,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResource>;
-
-  /**
-   * Creates a new machine.
-   * @summary Create a DeploymentTargetResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {DeploymentTargetResource} [body] The DeploymentTargetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  createDeploymentTargetSpaces(
-    baseSpaceId: string,
-    body?: DeploymentTargetResource,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResource>;
-
-  /**
-   * Deletes an existing machine.
-   * @summary Delete a DeploymentTargetResource by ID
-   * @param {string} id ID of the DeploymentTargetResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  deleteDeploymentTarget(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing machine.
-   * @summary Delete a DeploymentTargetResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the DeploymentTargetResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  deleteDeploymentTargetSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Get the status of the network connection between the Octopus server and a machine.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getDeploymentTargetConnectionStatus(
-    id: string,
-    options?: any
-  ): AxiosPromise<MachineConnectionStatus>;
-
-  /**
-   * Get the status of the network connection between the Octopus server and a machine.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getDeploymentTargetConnectionStatusSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<MachineConnectionStatus>;
-
-  /**
-   * Gets all operating system names for deployment targets. The result will be a string array.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getDeploymentTargetOperatingSystemNamesListAll(
-    options?: any
-  ): AxiosPromise<Array<string>>;
-
-  /**
-   * Gets all operating system names for deployment targets. The result will be a string array.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getDeploymentTargetOperatingSystemNamesListAllSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<string>>;
-
-  /**
-   * Gets all operating system shell names for deployment targets. The result will be a string array.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getDeploymentTargetOperatingSystemShellNameListAll(
-    options?: any
-  ): AxiosPromise<Array<string>>;
-
-  /**
-   * Gets all operating system shell names for deployment targets. The result will be a string array.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getDeploymentTargetOperatingSystemShellNameListAllSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<string>>;
-
-  /**
-   * Interrogate a machine for communication details so that it may be added to the installation.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getDiscoverDeploymentTarget(options?: any): AxiosPromise<MachineResource>;
-
-  /**
-   * Interrogate a machine for communication details so that it may be added to the installation.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getDiscoverDeploymentTargetSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<MachineResource>;
-
-  /**
-   *
-   * @summary Get a Machine by ID
-   * @param {string} id ID of the Machine to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getMachineResourceById(
-    id: string,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResource>;
-
-  /**
-   *
-   * @summary Get a Machine by ID
-   * @param {string} id ID of the Machine to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  getMachineResourceByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResource>;
-
-  /**
-   * Get the history of related tasks for a machine.
-   * @summary Get a list of TaskResources for the given DeploymentTargetResource
-   * @param {string} id ID of the DeploymentTarget
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  indexDeploymentTargetTasks(
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<TaskResourceCollection>;
-
-  /**
-   * Get the history of related tasks for a machine.
-   * @summary Get a list of TaskResources for the given DeploymentTargetResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the DeploymentTarget
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  indexDeploymentTargetTasksSpaces(
-    baseSpaceId: string,
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<TaskResourceCollection>;
-
-  /**
-   * Lists all of the registered machines in the supplied Octopus Deploy Space, from all environments. The results will be sorted alphabetically by name.
-   * @summary Get a list of DeploymentTargetResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  indexDeploymentTargets(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResourceCollection>;
-
-  /**
-   * Lists all of the registered machines in the supplied Octopus Deploy Space, from all environments. The results will be sorted alphabetically by name.
-   * @summary Get a list of DeploymentTargetResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  indexDeploymentTargetsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResourceCollection>;
-
-  /**
-   * Lists all of the deployment targets in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of DeploymentTargetResources
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  listAllDeploymentTargets(
-    options?: any
-  ): AxiosPromise<Array<DeploymentTargetResource>>;
-
-  /**
-   * Lists all of the deployment targets in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of DeploymentTargetResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  listAllDeploymentTargetsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<DeploymentTargetResource>>;
-
-  /**
-   * Modifies an existing machine.
-   * @summary Modify a DeploymentTargetResource by ID
-   * @param {string} id ID of the DeploymentTargetResource to modify
-   * @param {DeploymentTargetResource} [body] The DeploymentTargetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  updateDeploymentTarget(
-    id: string,
-    body?: DeploymentTargetResource,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResource>;
-
-  /**
-   * Modifies an existing machine.
-   * @summary Modify a DeploymentTargetResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the DeploymentTargetResource to modify
-   * @param {DeploymentTargetResource} [body] The DeploymentTargetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinesApiInterface
-   */
-  updateDeploymentTargetSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: DeploymentTargetResource,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResource>;
-}
-
-/**
  * MachinesApi - object-oriented interface
  * @export
  * @class MachinesApi
  * @extends {BaseAPI}
  */
-export class MachinesApi extends BaseAPI implements MachinesApiInterface {
+export class MachinesApi extends BaseAPI {
   /**
    * Creates a new machine.
    * @summary Create a DeploymentTargetResource

@@ -13,7 +13,7 @@ export interface AccountResource {
    * @type {string}
    * @memberof AccountResource
    */
-  AccountType?: AccountTypeEnum;
+  AccountType?: AccountResourceAccountTypeEnum;
   /**
    *
    * @type {string}
@@ -86,7 +86,7 @@ export interface AccountResource {
  * @export
  * @enum {string}
  */
-export enum AccountTypeEnum {
+export enum AccountResourceAccountTypeEnum {
   AmazonWebServicesAccount = "AmazonWebServicesAccount",
   AzureServicePrincipal = "AzureServicePrincipal",
   AzureSubscription = "AzureSubscription",

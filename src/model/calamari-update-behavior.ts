@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum CalamariUpdateBehavior {
   UpdateOnDeployment = "UpdateOnDeployment",
   UpdateOnNewMachine = "UpdateOnNewMachine",

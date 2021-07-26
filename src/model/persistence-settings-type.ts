@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum PersistenceSettingsType {
   Database = "Database",
   VersionControlled = "VersionControlled",

@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum PermissionsMode {
   Unspecified = "Unspecified",
   Restricted = "Restricted",

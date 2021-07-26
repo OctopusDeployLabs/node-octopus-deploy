@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum MachineScriptPolicyRunType {
   InheritFromDefault = "InheritFromDefault",
   Inline = "Inline",

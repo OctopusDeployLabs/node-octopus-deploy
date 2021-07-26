@@ -193,9 +193,13 @@ export const RunbookSnapshotsApiAxiosParamCreator = function (
         "id",
         id
       );
-      const localVarPath = `/{baseSpaceId}/runbookSnapshots/{id}/snapshot-variables`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+      const localVarPath =
+        `/{baseSpaceId}/runbookSnapshots/{id}/snapshot-variables`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -471,9 +475,13 @@ export const RunbookSnapshotsApiAxiosParamCreator = function (
       );
       // verify required parameter 'id' is not null or undefined
       assertParamExists("getRunbookRunPreviewForRunbookSnapshot", "id", id);
-      const localVarPath = `/runbookSnapshots/{id}/runbookRuns/preview/{environment}`
-        .replace(`{${"environment"}}`, encodeURIComponent(String(environment)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+      const localVarPath =
+        `/runbookSnapshots/{id}/runbookRuns/preview/{environment}`
+          .replace(
+            `{${"environment"}}`,
+            encodeURIComponent(String(environment))
+          )
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -548,10 +556,14 @@ export const RunbookSnapshotsApiAxiosParamCreator = function (
         "tenant",
         tenant
       );
-      const localVarPath = `/runbookSnapshots/{id}/runbookRuns/preview/{environment}/{tenant}`
-        .replace(`{${"environment"}}`, encodeURIComponent(String(environment)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-        .replace(`{${"tenant"}}`, encodeURIComponent(String(tenant)));
+      const localVarPath =
+        `/runbookSnapshots/{id}/runbookRuns/preview/{environment}/{tenant}`
+          .replace(
+            `{${"environment"}}`,
+            encodeURIComponent(String(environment))
+          )
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+          .replace(`{${"tenant"}}`, encodeURIComponent(String(tenant)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -630,10 +642,17 @@ export const RunbookSnapshotsApiAxiosParamCreator = function (
         "id",
         id
       );
-      const localVarPath = `/{baseSpaceId}/runbookSnapshots/{id}/runbookRuns/preview/{environment}`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"environment"}}`, encodeURIComponent(String(environment)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+      const localVarPath =
+        `/{baseSpaceId}/runbookSnapshots/{id}/runbookRuns/preview/{environment}`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(
+            `{${"environment"}}`,
+            encodeURIComponent(String(environment))
+          )
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -720,11 +739,18 @@ export const RunbookSnapshotsApiAxiosParamCreator = function (
         "tenant",
         tenant
       );
-      const localVarPath = `/{baseSpaceId}/runbookSnapshots/{id}/runbookRuns/preview/{environment}/{tenant}`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"environment"}}`, encodeURIComponent(String(environment)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-        .replace(`{${"tenant"}}`, encodeURIComponent(String(tenant)));
+      const localVarPath =
+        `/{baseSpaceId}/runbookSnapshots/{id}/runbookRuns/preview/{environment}/{tenant}`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(
+            `{${"environment"}}`,
+            encodeURIComponent(String(environment))
+          )
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+          .replace(`{${"tenant"}}`, encodeURIComponent(String(tenant)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -783,10 +809,11 @@ export const RunbookSnapshotsApiAxiosParamCreator = function (
     ): Promise<RequestArgs> => {
       // verify required parameter 'id' is not null or undefined
       assertParamExists("getRunbookRunTemplateForRunbookSnapshot", "id", id);
-      const localVarPath = `/runbookSnapshots/{id}/runbookRuns/template`.replace(
-        `{${"id"}}`,
-        encodeURIComponent(String(id))
-      );
+      const localVarPath =
+        `/runbookSnapshots/{id}/runbookRuns/template`.replace(
+          `{${"id"}}`,
+          encodeURIComponent(String(id))
+        );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -857,9 +884,13 @@ export const RunbookSnapshotsApiAxiosParamCreator = function (
         "id",
         id
       );
-      const localVarPath = `/{baseSpaceId}/runbookSnapshots/{id}/runbookRuns/template`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+      const localVarPath =
+        `/{baseSpaceId}/runbookSnapshots/{id}/runbookRuns/template`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -1132,10 +1163,14 @@ export const RunbookSnapshotsApiAxiosParamCreator = function (
         "name",
         name
       );
-      const localVarPath = `/{baseSpaceId}/projects/{id}/runbookSnapshots/{name}`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-        .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+      const localVarPath =
+        `/{baseSpaceId}/projects/{id}/runbookSnapshots/{name}`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+          .replace(`{${"name"}}`, encodeURIComponent(String(name)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -1802,9 +1837,8 @@ export const RunbookSnapshotsApiAxiosParamCreator = function (
  * @export
  */
 export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = RunbookSnapshotsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    RunbookSnapshotsApiAxiosParamCreator(configuration);
   return {
     /**
      * Creates a new snapshot.
@@ -1822,10 +1856,8 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createRunbookSnapshot(
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createRunbookSnapshot(body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1848,10 +1880,11 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createRunbookSnapshotSnapshotVariables(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createRunbookSnapshotSnapshotVariables(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1876,11 +1909,12 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createRunbookSnapshotSnapshotVariablesSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createRunbookSnapshotSnapshotVariablesSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1906,11 +1940,12 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createRunbookSnapshotSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createRunbookSnapshotSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1931,10 +1966,8 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteRunbookSnapshot(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteRunbookSnapshot(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1957,11 +1990,12 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteRunbookSnapshotSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteRunbookSnapshotSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1986,11 +2020,12 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookRunPreviewResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookRunPreviewForRunbookSnapshot(
-        environment,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookRunPreviewForRunbookSnapshot(
+          environment,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2017,12 +2052,13 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookRunPreviewResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookRunPreviewForRunbookSnapshot1(
-        environment,
-        id,
-        tenant,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookRunPreviewForRunbookSnapshot1(
+          environment,
+          id,
+          tenant,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2049,12 +2085,13 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookRunPreviewResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookRunPreviewForRunbookSnapshotSpaces(
-        baseSpaceId,
-        environment,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookRunPreviewForRunbookSnapshotSpaces(
+          baseSpaceId,
+          environment,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2083,13 +2120,14 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookRunPreviewResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookRunPreviewForRunbookSnapshotSpaces1(
-        baseSpaceId,
-        environment,
-        id,
-        tenant,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookRunPreviewForRunbookSnapshotSpaces1(
+          baseSpaceId,
+          environment,
+          id,
+          tenant,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2112,10 +2150,11 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookRunTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookRunTemplateForRunbookSnapshot(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookRunTemplateForRunbookSnapshot(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2140,11 +2179,12 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookRunTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookRunTemplateForRunbookSnapshotSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookRunTemplateForRunbookSnapshotSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2168,10 +2208,8 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookSnapshotById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookSnapshotById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2197,11 +2235,12 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookSnapshotByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookSnapshotByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2226,11 +2265,12 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookSnapshotByProjectAndName(
-        id,
-        name,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookSnapshotByProjectAndName(
+          id,
+          name,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2257,12 +2297,13 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getRunbookSnapshotByProjectAndNameSpaces(
-        baseSpaceId,
-        id,
-        name,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getRunbookSnapshotByProjectAndNameSpaces(
+          baseSpaceId,
+          id,
+          name,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2290,12 +2331,13 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexProjectRunbookSnapshots(
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexProjectRunbookSnapshots(
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2325,13 +2367,14 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexProjectRunbookSnapshotsSpaces(
-        baseSpaceId,
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexProjectRunbookSnapshotsSpaces(
+          baseSpaceId,
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2359,12 +2402,13 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexRunbookRunbookSnapshots(
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexRunbookRunbookSnapshots(
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2394,13 +2438,14 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexRunbookRunbookSnapshotsSpaces(
-        baseSpaceId,
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexRunbookRunbookSnapshotsSpaces(
+          baseSpaceId,
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2426,11 +2471,12 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexRunbookSnapshots(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexRunbookSnapshots(
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2458,12 +2504,13 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexRunbookSnapshotsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexRunbookSnapshotsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2489,11 +2536,12 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateRunbookSnapshot(
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateRunbookSnapshot(
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2521,12 +2569,13 @@ export const RunbookSnapshotsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<RunbookSnapshotResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateRunbookSnapshotSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateRunbookSnapshotSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2996,384 +3045,12 @@ export const RunbookSnapshotsApiFactory = function (
 };
 
 /**
- * RunbookSnapshotsApi - interface
- * @export
- * @interface RunbookSnapshotsApi
- */
-export interface RunbookSnapshotsApiInterface {
-  /**
-   * Creates a new snapshot.
-   * @summary Create a RunbookSnapshotResource
-   * @param {RunbookSnapshotResource} [body] The RunbookSnapshotResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  createRunbookSnapshot(
-    body?: RunbookSnapshotResource,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-
-  /**
-   * Refresh the variable snapshots associated with the runbook snapshot. The runbook\'s process must not have changed since the snapshot was created.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  createRunbookSnapshotSnapshotVariables(
-    id: string,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-
-  /**
-   * Refresh the variable snapshots associated with the runbook snapshot. The runbook\'s process must not have changed since the snapshot was created.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  createRunbookSnapshotSnapshotVariablesSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-
-  /**
-   * Creates a new snapshot.
-   * @summary Create a RunbookSnapshotResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {RunbookSnapshotResource} [body] The RunbookSnapshotResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  createRunbookSnapshotSpaces(
-    baseSpaceId: string,
-    body?: RunbookSnapshotResource,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-
-  /**
-   * Deletes an existing snapshot, along with all of the runs, tasks and other associated resources belonging to the snapshot.
-   * @summary Delete a RunbookSnapshotResource by ID
-   * @param {string} id ID of the RunbookSnapshotResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  deleteRunbookSnapshot(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing snapshot, along with all of the runs, tasks and other associated resources belonging to the snapshot.
-   * @summary Delete a RunbookSnapshotResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the RunbookSnapshotResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  deleteRunbookSnapshotSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Gets a document that describes what steps will/won\'t be run during a run to a given environment (and tenant if supplied).
-   * @param {string} environment ID of the environment
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookRunPreviewForRunbookSnapshot(
-    environment: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<RunbookRunPreviewResource>;
-
-  /**
-   * Gets a document that describes what steps will/won\'t be run during a run to a given environment (and tenant if supplied).
-   * @param {string} environment ID of the environment
-   * @param {string} id ID of the resource
-   * @param {string} tenant ID of the tenant
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookRunPreviewForRunbookSnapshot1(
-    environment: string,
-    id: string,
-    tenant: string,
-    options?: any
-  ): AxiosPromise<RunbookRunPreviewResource>;
-
-  /**
-   * Gets a document that describes what steps will/won\'t be run during a run to a given environment (and tenant if supplied).
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} environment ID of the environment
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookRunPreviewForRunbookSnapshotSpaces(
-    baseSpaceId: string,
-    environment: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<RunbookRunPreviewResource>;
-
-  /**
-   * Gets a document that describes what steps will/won\'t be run during a run to a given environment (and tenant if supplied).
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} environment ID of the environment
-   * @param {string} id ID of the resource
-   * @param {string} tenant ID of the tenant
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookRunPreviewForRunbookSnapshotSpaces1(
-    baseSpaceId: string,
-    environment: string,
-    id: string,
-    tenant: string,
-    options?: any
-  ): AxiosPromise<RunbookRunPreviewResource>;
-
-  /**
-   * Gets all of the information necessary for creating or editing a run for this snapshot.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookRunTemplateForRunbookSnapshot(
-    id: string,
-    options?: any
-  ): AxiosPromise<RunbookRunTemplateResource>;
-
-  /**
-   * Gets all of the information necessary for creating or editing a run for this snapshot.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookRunTemplateForRunbookSnapshotSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<RunbookRunTemplateResource>;
-
-  /**
-   *
-   * @summary Get a Runbook Snapshot by ID
-   * @param {string} id ID of the RunbookSnapshot to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookSnapshotById(
-    id: string,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-
-  /**
-   *
-   * @summary Get a Runbook Snapshot by ID
-   * @param {string} id ID of the RunbookSnapshot to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookSnapshotByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-
-  /**
-   * Gets a single runbookSnapshot by project ID and name.
-   * @param {string} id ID of the resource
-   * @param {string} name Name of the runbook
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookSnapshotByProjectAndName(
-    id: string,
-    name: string,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-
-  /**
-   * Gets a single runbookSnapshot by project ID and name.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {string} name Name of the runbook
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  getRunbookSnapshotByProjectAndNameSpaces(
-    baseSpaceId: string,
-    id: string,
-    name: string,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-
-  /**
-   * Lists all of the runbookSnapshots that belong to the given project. RunbookSnapshots will be ordered from most recent to least recent.
-   * @summary Get a list of RunbookSnapshotResources for the given ProjectResource
-   * @param {string} id ID of the Project
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  indexProjectRunbookSnapshots(
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResourceCollection>;
-
-  /**
-   * Lists all of the runbookSnapshots that belong to the given project. RunbookSnapshots will be ordered from most recent to least recent.
-   * @summary Get a list of RunbookSnapshotResources for the given ProjectResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the Project
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  indexProjectRunbookSnapshotsSpaces(
-    baseSpaceId: string,
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResourceCollection>;
-
-  /**
-   * Lists all of the runbookSnapshots that belong to the given runbook. RunbookSnapshots will be ordered from most recent to least recent.
-   * @summary Get a list of RunbookSnapshotResources for the given RunbookResource
-   * @param {string} id ID of the Runbook
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  indexRunbookRunbookSnapshots(
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResourceCollection>;
-
-  /**
-   * Lists all of the runbookSnapshots that belong to the given runbook. RunbookSnapshots will be ordered from most recent to least recent.
-   * @summary Get a list of RunbookSnapshotResources for the given RunbookResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the Runbook
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  indexRunbookRunbookSnapshotsSpaces(
-    baseSpaceId: string,
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResourceCollection>;
-
-  /**
-   * Lists all of the snapshots in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent snapshot.
-   * @summary Get a list of Runbook Snapshots
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 30
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  indexRunbookSnapshots(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResourceCollection>;
-
-  /**
-   * Lists all of the snapshots in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent snapshot.
-   * @summary Get a list of Runbook Snapshots
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 30
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  indexRunbookSnapshotsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResourceCollection>;
-
-  /**
-   * Updates an existing snapshot.
-   * @summary Modify a RunbookSnapshotResource by ID
-   * @param {string} id ID of the RunbookSnapshotResource to modify
-   * @param {RunbookSnapshotResource} [body] The RunbookSnapshotResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  updateRunbookSnapshot(
-    id: string,
-    body?: RunbookSnapshotResource,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-
-  /**
-   * Updates an existing snapshot.
-   * @summary Modify a RunbookSnapshotResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the RunbookSnapshotResource to modify
-   * @param {RunbookSnapshotResource} [body] The RunbookSnapshotResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof RunbookSnapshotsApiInterface
-   */
-  updateRunbookSnapshotSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: RunbookSnapshotResource,
-    options?: any
-  ): AxiosPromise<RunbookSnapshotResource>;
-}
-
-/**
  * RunbookSnapshotsApi - object-oriented interface
  * @export
  * @class RunbookSnapshotsApi
  * @extends {BaseAPI}
  */
-export class RunbookSnapshotsApi
-  extends BaseAPI
-  implements RunbookSnapshotsApiInterface {
+export class RunbookSnapshotsApi extends BaseAPI {
   /**
    * Creates a new snapshot.
    * @summary Create a RunbookSnapshotResource

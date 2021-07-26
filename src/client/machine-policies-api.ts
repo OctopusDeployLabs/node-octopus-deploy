@@ -1309,9 +1309,8 @@ export const MachinePoliciesApiAxiosParamCreator = function (
  * @export
  */
 export const MachinePoliciesApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = MachinePoliciesApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    MachinePoliciesApiAxiosParamCreator(configuration);
   return {
     /**
      * Creates a new machine policy.
@@ -1329,10 +1328,8 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createMachinePolicy(
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createMachinePolicy(body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1358,11 +1355,12 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createMachinePolicySpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createMachinePolicySpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1382,10 +1380,8 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteMachinePolicy(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteMachinePolicy(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1407,11 +1403,12 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteMachinePolicySpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteMachinePolicySpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1435,10 +1432,8 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getMachinePolicyById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getMachinePolicyById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1464,11 +1459,12 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getMachinePolicyByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getMachinePolicyByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1489,9 +1485,8 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getMachinePolicyTemplate(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getMachinePolicyTemplate(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1514,10 +1509,11 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getMachinePolicyTemplateSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getMachinePolicyTemplateSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1543,11 +1539,12 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexMachinePolicies(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexMachinePolicies(
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1575,12 +1572,13 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexMachinePoliciesSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexMachinePoliciesSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1608,12 +1606,13 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexMachinePolicyDeploymentTargets(
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexMachinePolicyDeploymentTargets(
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1643,13 +1642,14 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DeploymentTargetResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexMachinePolicyDeploymentTargetsSpaces(
-        id,
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexMachinePolicyDeploymentTargetsSpaces(
+          id,
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1677,12 +1677,13 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<WorkerResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexMachinePolicyWorkers(
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexMachinePolicyWorkers(
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1712,13 +1713,14 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<WorkerResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexMachinePolicyWorkersSpaces(
-        id,
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexMachinePolicyWorkersSpaces(
+          id,
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1740,9 +1742,8 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<MachinePolicyResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllMachinePolicies(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllMachinePolicies(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1766,10 +1767,11 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<MachinePolicyResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllMachinePoliciesSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllMachinePoliciesSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1795,11 +1797,8 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateMachinePolicy(
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateMachinePolicy(id, body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1827,12 +1826,13 @@ export const MachinePoliciesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<MachinePolicyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateMachinePolicySpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateMachinePolicySpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2161,280 +2161,12 @@ export const MachinePoliciesApiFactory = function (
 };
 
 /**
- * MachinePoliciesApi - interface
- * @export
- * @interface MachinePoliciesApi
- */
-export interface MachinePoliciesApiInterface {
-  /**
-   * Creates a new machine policy.
-   * @summary Create a MachinePolicyResource
-   * @param {MachinePolicyResource} [body] The MachinePolicyResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  createMachinePolicy(
-    body?: MachinePolicyResource,
-    options?: any
-  ): AxiosPromise<MachinePolicyResource>;
-
-  /**
-   * Creates a new machine policy.
-   * @summary Create a MachinePolicyResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {MachinePolicyResource} [body] The MachinePolicyResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  createMachinePolicySpaces(
-    baseSpaceId: string,
-    body?: MachinePolicyResource,
-    options?: any
-  ): AxiosPromise<MachinePolicyResource>;
-
-  /**
-   * Deletes an existing machine policy.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  deleteMachinePolicy(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing machine policy.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  deleteMachinePolicySpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get a Machine Policy by ID
-   * @param {string} id ID of the MachinePolicy to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  getMachinePolicyById(
-    id: string,
-    options?: any
-  ): AxiosPromise<MachinePolicyResource>;
-
-  /**
-   *
-   * @summary Get a Machine Policy by ID
-   * @param {string} id ID of the MachinePolicy to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  getMachinePolicyByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<MachinePolicyResource>;
-
-  /**
-   * Gets a template for a new Machine Policy, which includes any defaults.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  getMachinePolicyTemplate(options?: any): AxiosPromise<MachinePolicyResource>;
-
-  /**
-   * Gets a template for a new Machine Policy, which includes any defaults.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  getMachinePolicyTemplateSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<MachinePolicyResource>;
-
-  /**
-   * Lists all of the machine policies in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of MachinePolicyResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  indexMachinePolicies(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<MachinePolicyResourceCollection>;
-
-  /**
-   * Lists all of the machine policies in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of MachinePolicyResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  indexMachinePoliciesSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<MachinePolicyResourceCollection>;
-
-  /**
-   *
-   * @summary Lists all of the machines that belong to the given Machine Policy
-   * @param {string} id ID of the MachinePolicy to load
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 10
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  indexMachinePolicyDeploymentTargets(
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResourceCollection>;
-
-  /**
-   *
-   * @summary Lists all of the machines that belong to the given Machine Policy
-   * @param {string} id ID of the MachinePolicy to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 10
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  indexMachinePolicyDeploymentTargetsSpaces(
-    id: string,
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<DeploymentTargetResourceCollection>;
-
-  /**
-   *
-   * @summary Lists all of the workers that belong to the given Machine Policy
-   * @param {string} id ID of the Machine Policy to load
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 10
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  indexMachinePolicyWorkers(
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<WorkerResourceCollection>;
-
-  /**
-   *
-   * @summary Lists all of the workers that belong to the given Machine Policy
-   * @param {string} id ID of the Machine Policy to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 10
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  indexMachinePolicyWorkersSpaces(
-    id: string,
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<WorkerResourceCollection>;
-
-  /**
-   * Lists all the Machine Policies in the supplied Octopus Deploy Space.
-   * @summary Get a list of Machine Policies
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  listAllMachinePolicies(
-    options?: any
-  ): AxiosPromise<Array<MachinePolicyResource>>;
-
-  /**
-   * Lists all the Machine Policies in the supplied Octopus Deploy Space.
-   * @summary Get a list of Machine Policies
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  listAllMachinePoliciesSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<MachinePolicyResource>>;
-
-  /**
-   * Modifies an existing machine policy.
-   * @summary Modify a MachinePolicyResource by ID
-   * @param {string} id ID of the MachinePolicyResource to modify
-   * @param {MachinePolicyResource} [body] The MachinePolicyResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  updateMachinePolicy(
-    id: string,
-    body?: MachinePolicyResource,
-    options?: any
-  ): AxiosPromise<MachinePolicyResource>;
-
-  /**
-   * Modifies an existing machine policy.
-   * @summary Modify a MachinePolicyResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the MachinePolicyResource to modify
-   * @param {MachinePolicyResource} [body] The MachinePolicyResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof MachinePoliciesApiInterface
-   */
-  updateMachinePolicySpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: MachinePolicyResource,
-    options?: any
-  ): AxiosPromise<MachinePolicyResource>;
-}
-
-/**
  * MachinePoliciesApi - object-oriented interface
  * @export
  * @class MachinePoliciesApi
  * @extends {BaseAPI}
  */
-export class MachinePoliciesApi
-  extends BaseAPI
-  implements MachinePoliciesApiInterface {
+export class MachinePoliciesApi extends BaseAPI {
   /**
    * Creates a new machine policy.
    * @summary Create a MachinePolicyResource

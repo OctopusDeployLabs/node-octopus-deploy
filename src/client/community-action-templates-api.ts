@@ -52,10 +52,11 @@ export const CommunityActionTemplatesApiAxiosParamCreator = function (
     ): Promise<RequestArgs> => {
       // verify required parameter 'id' is not null or undefined
       assertParamExists("createCommunityActionTemplateInstallation", "id", id);
-      const localVarPath = `/communityactiontemplates/{id}/installation`.replace(
-        `{${"id"}}`,
-        encodeURIComponent(String(id))
-      );
+      const localVarPath =
+        `/communityactiontemplates/{id}/installation`.replace(
+          `{${"id"}}`,
+          encodeURIComponent(String(id))
+        );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -122,9 +123,10 @@ export const CommunityActionTemplatesApiAxiosParamCreator = function (
         "spaceId",
         spaceId
       );
-      const localVarPath = `/communityactiontemplates/{id}/installation/{spaceId}`
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-        .replace(`{${"spaceId"}}`, encodeURIComponent(String(spaceId)));
+      const localVarPath =
+        `/communityactiontemplates/{id}/installation/{spaceId}`
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+          .replace(`{${"spaceId"}}`, encodeURIComponent(String(spaceId)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -187,10 +189,11 @@ export const CommunityActionTemplatesApiAxiosParamCreator = function (
         "id",
         id
       );
-      const localVarPath = `/communityactiontemplates/{id}/actiontemplate`.replace(
-        `{${"id"}}`,
-        encodeURIComponent(String(id))
-      );
+      const localVarPath =
+        `/communityactiontemplates/{id}/actiontemplate`.replace(
+          `{${"id"}}`,
+          encodeURIComponent(String(id))
+        );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -261,9 +264,10 @@ export const CommunityActionTemplatesApiAxiosParamCreator = function (
         "spaceId",
         spaceId
       );
-      const localVarPath = `/communityactiontemplates/{id}/actiontemplate/{spaceId}`
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-        .replace(`{${"spaceId"}}`, encodeURIComponent(String(spaceId)));
+      const localVarPath =
+        `/communityactiontemplates/{id}/actiontemplate/{spaceId}`
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+          .replace(`{${"spaceId"}}`, encodeURIComponent(String(spaceId)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -519,10 +523,11 @@ export const CommunityActionTemplatesApiAxiosParamCreator = function (
         "id",
         id
       );
-      const localVarPath = `/communityactiontemplates/{id}/installation`.replace(
-        `{${"id"}}`,
-        encodeURIComponent(String(id))
-      );
+      const localVarPath =
+        `/communityactiontemplates/{id}/installation`.replace(
+          `{${"id"}}`,
+          encodeURIComponent(String(id))
+        );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -593,9 +598,10 @@ export const CommunityActionTemplatesApiAxiosParamCreator = function (
         "spaceId",
         spaceId
       );
-      const localVarPath = `/communityactiontemplates/{id}/installation/{spaceId}`
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-        .replace(`{${"spaceId"}}`, encodeURIComponent(String(spaceId)));
+      const localVarPath =
+        `/communityactiontemplates/{id}/installation/{spaceId}`
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+          .replace(`{${"spaceId"}}`, encodeURIComponent(String(spaceId)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -652,9 +658,8 @@ export const CommunityActionTemplatesApiAxiosParamCreator = function (
 export const CommunityActionTemplatesApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = CommunityActionTemplatesApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    CommunityActionTemplatesApiAxiosParamCreator(configuration);
   return {
     /**
      * Installs community step template.
@@ -671,10 +676,11 @@ export const CommunityActionTemplatesApiFp = function (
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCommunityActionTemplateInstallation(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCommunityActionTemplateInstallation(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -699,11 +705,12 @@ export const CommunityActionTemplatesApiFp = function (
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCommunityActionTemplateInstallation1(
-        id,
-        spaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCommunityActionTemplateInstallation1(
+          id,
+          spaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -726,10 +733,11 @@ export const CommunityActionTemplatesApiFp = function (
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateBasedOnCommunityActionTemplate(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateBasedOnCommunityActionTemplate(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -754,11 +762,12 @@ export const CommunityActionTemplatesApiFp = function (
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateBasedOnCommunityActionTemplate1(
-        id,
-        spaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateBasedOnCommunityActionTemplate1(
+          id,
+          spaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -782,10 +791,11 @@ export const CommunityActionTemplatesApiFp = function (
         basePath?: string
       ) => AxiosPromise<CommunityActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCommunityActionTemplateById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCommunityActionTemplateById(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -805,10 +815,11 @@ export const CommunityActionTemplatesApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCommunityActionTemplateLogo(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCommunityActionTemplateLogo(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -834,11 +845,12 @@ export const CommunityActionTemplatesApiFp = function (
         basePath?: string
       ) => AxiosPromise<CommunityActionTemplateResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexCommunityActionTemplates(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexCommunityActionTemplates(
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -861,10 +873,11 @@ export const CommunityActionTemplatesApiFp = function (
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateCommunityActionTemplateInstallationPut(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateCommunityActionTemplateInstallationPut(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -889,11 +902,12 @@ export const CommunityActionTemplatesApiFp = function (
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateCommunityActionTemplateInstallationPut1(
-        id,
-        spaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateCommunityActionTemplateInstallationPut1(
+          id,
+          spaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1055,136 +1069,12 @@ export const CommunityActionTemplatesApiFactory = function (
 };
 
 /**
- * CommunityActionTemplatesApi - interface
- * @export
- * @interface CommunityActionTemplatesApi
- */
-export interface CommunityActionTemplatesApiInterface {
-  /**
-   * Installs community step template.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CommunityActionTemplatesApiInterface
-   */
-  createCommunityActionTemplateInstallation(
-    id: string,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   * Installs community step template.
-   * @param {string} id ID of the resource
-   * @param {string} spaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CommunityActionTemplatesApiInterface
-   */
-  createCommunityActionTemplateInstallation1(
-    id: string,
-    spaceId: string,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   * Gets installed version of the template.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CommunityActionTemplatesApiInterface
-   */
-  getActionTemplateBasedOnCommunityActionTemplate(
-    id: string,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   * Gets installed version of the template.
-   * @param {string} id ID of the resource
-   * @param {string} spaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CommunityActionTemplatesApiInterface
-   */
-  getActionTemplateBasedOnCommunityActionTemplate1(
-    id: string,
-    spaceId: string,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   *
-   * @summary Get a Community Action Template by ID
-   * @param {string} id ID of the CommunityActionTemplate to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CommunityActionTemplatesApiInterface
-   */
-  getCommunityActionTemplateById(
-    id: string,
-    options?: any
-  ): AxiosPromise<CommunityActionTemplateResource>;
-
-  /**
-   * Gets the logo associated with the community step template.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CommunityActionTemplatesApiInterface
-   */
-  getCommunityActionTemplateLogo(id: string, options?: any): AxiosPromise<any>;
-
-  /**
-   *
-   * @summary Get a list of Community Action Templates
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 30
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CommunityActionTemplatesApiInterface
-   */
-  indexCommunityActionTemplates(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<CommunityActionTemplateResourceCollection>;
-
-  /**
-   * Updates installed community step template to the latest version.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CommunityActionTemplatesApiInterface
-   */
-  updateCommunityActionTemplateInstallationPut(
-    id: string,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   * Updates installed community step template to the latest version.
-   * @param {string} id ID of the resource
-   * @param {string} spaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CommunityActionTemplatesApiInterface
-   */
-  updateCommunityActionTemplateInstallationPut1(
-    id: string,
-    spaceId: string,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-}
-
-/**
  * CommunityActionTemplatesApi - object-oriented interface
  * @export
  * @class CommunityActionTemplatesApi
  * @extends {BaseAPI}
  */
-export class CommunityActionTemplatesApi
-  extends BaseAPI
-  implements CommunityActionTemplatesApiInterface {
+export class CommunityActionTemplatesApi extends BaseAPI {
   /**
    * Installs community step template.
    * @param {string} id ID of the resource

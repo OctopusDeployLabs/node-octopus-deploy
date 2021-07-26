@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum ActionUpdateOutcome {
   Success = "Success",
   ManualMergeRequired = "ManualMergeRequired",

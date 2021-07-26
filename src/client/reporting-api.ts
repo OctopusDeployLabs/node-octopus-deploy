@@ -107,10 +107,11 @@ export const ReportingApiAxiosParamCreator = function (
         "baseSpaceId",
         baseSpaceId
       );
-      const localVarPath = `/{baseSpaceId}/reporting/deployments-counted-by-week`.replace(
-        `{${"baseSpaceId"}}`,
-        encodeURIComponent(String(baseSpaceId))
-      );
+      const localVarPath =
+        `/{baseSpaceId}/reporting/deployments-counted-by-week`.replace(
+          `{${"baseSpaceId"}}`,
+          encodeURIComponent(String(baseSpaceId))
+        );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -280,9 +281,8 @@ export const ReportingApiAxiosParamCreator = function (
  * @export
  */
 export const ReportingApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = ReportingApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ReportingApiAxiosParamCreator(configuration);
   return {
     /**
      * Provides a report summarizing the weekly deployments per project over the last 6 months
@@ -297,9 +297,8 @@ export const ReportingApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ReportDeploymentCountOverTimeResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentsByProjectReport(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentsByProjectReport(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -322,10 +321,11 @@ export const ReportingApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ReportDeploymentCountOverTimeResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentsByProjectReportSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentsByProjectReportSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -343,9 +343,8 @@ export const ReportingApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentsXml(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentsXml(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -365,10 +364,11 @@ export const ReportingApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDeploymentsXmlSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDeploymentsXmlSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -444,61 +444,12 @@ export const ReportingApiFactory = function (
 };
 
 /**
- * ReportingApi - interface
- * @export
- * @interface ReportingApi
- */
-export interface ReportingApiInterface {
-  /**
-   * Provides a report summarizing the weekly deployments per project over the last 6 months
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ReportingApiInterface
-   */
-  getDeploymentsByProjectReport(
-    options?: any
-  ): AxiosPromise<Array<ReportDeploymentCountOverTimeResource>>;
-
-  /**
-   * Provides a report summarizing the weekly deployments per project over the last 6 months
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ReportingApiInterface
-   */
-  getDeploymentsByProjectReportSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<ReportDeploymentCountOverTimeResource>>;
-
-  /**
-   * Provides an XML report that contains all of the information about deployments
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ReportingApiInterface
-   */
-  getDeploymentsXml(options?: any): AxiosPromise<void>;
-
-  /**
-   * Provides an XML report that contains all of the information about deployments
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ReportingApiInterface
-   */
-  getDeploymentsXmlSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<void>;
-}
-
-/**
  * ReportingApi - object-oriented interface
  * @export
  * @class ReportingApi
  * @extends {BaseAPI}
  */
-export class ReportingApi extends BaseAPI implements ReportingApiInterface {
+export class ReportingApi extends BaseAPI {
   /**
    * Provides a report summarizing the weekly deployments per project over the last 6 months
    * @param {*} [options] Override http request option.

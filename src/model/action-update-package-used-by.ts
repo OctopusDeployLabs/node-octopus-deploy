@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum ActionUpdatePackageUsedBy {
   ProjectVersionStrategy = "ProjectVersionStrategy",
   ProjectReleaseCreationStrategy = "ProjectReleaseCreationStrategy",

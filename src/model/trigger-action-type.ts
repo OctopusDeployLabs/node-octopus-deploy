@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum TriggerActionType {
   AutoDeploy = "AutoDeploy",
   DeployLatestRelease = "DeployLatestRelease",

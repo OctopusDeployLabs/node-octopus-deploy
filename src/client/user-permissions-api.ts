@@ -437,9 +437,8 @@ export const UserPermissionsApiAxiosParamCreator = function (
  * @export
  */
 export const UserPermissionsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = UserPermissionsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    UserPermissionsApiAxiosParamCreator(configuration);
   return {
     /**
      * Gets summarized permission information. Available for the current authenticated user only.
@@ -456,10 +455,8 @@ export const UserPermissionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<UserPermissionSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getUserGetPermissions(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getUserGetPermissions(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -482,10 +479,11 @@ export const UserPermissionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<UserPermissionSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getUserGetPermissionsConfiguration(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getUserGetPermissionsConfiguration(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -510,11 +508,12 @@ export const UserPermissionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<UserPermissionSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getUserGetPermissionsConfigurationSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getUserGetPermissionsConfigurationSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -539,11 +538,12 @@ export const UserPermissionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<UserPermissionSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getUserGetPermissionsSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getUserGetPermissionsSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -563,10 +563,8 @@ export const UserPermissionsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getUserPermissionsExport(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getUserPermissionsExport(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -588,11 +586,12 @@ export const UserPermissionsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getUserPermissionsExportSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getUserPermissionsExportSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -705,96 +704,12 @@ export const UserPermissionsApiFactory = function (
 };
 
 /**
- * UserPermissionsApi - interface
- * @export
- * @interface UserPermissionsApi
- */
-export interface UserPermissionsApiInterface {
-  /**
-   * Gets summarized permission information. Available for the current authenticated user only.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof UserPermissionsApiInterface
-   */
-  getUserGetPermissions(
-    id: string,
-    options?: any
-  ): AxiosPromise<UserPermissionSetResource>;
-
-  /**
-   * Gets a summary of the configuration of the user\'s permissions information. Available for the current authenticated user only.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof UserPermissionsApiInterface
-   */
-  getUserGetPermissionsConfiguration(
-    id: string,
-    options?: any
-  ): AxiosPromise<UserPermissionSetResource>;
-
-  /**
-   * Gets a summary of the configuration of the user\'s permissions information. Available for the current authenticated user only.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof UserPermissionsApiInterface
-   */
-  getUserGetPermissionsConfigurationSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<UserPermissionSetResource>;
-
-  /**
-   * Gets summarized permission information. Available for the current authenticated user only.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof UserPermissionsApiInterface
-   */
-  getUserGetPermissionsSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<UserPermissionSetResource>;
-
-  /**
-   * Gets list of permissions as a csv file. Available for the current authenticated user only.
-   * @param {string} id ID of the user
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof UserPermissionsApiInterface
-   */
-  getUserPermissionsExport(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Gets list of permissions as a csv file. Available for the current authenticated user only.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the user
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof UserPermissionsApiInterface
-   */
-  getUserPermissionsExportSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-}
-
-/**
  * UserPermissionsApi - object-oriented interface
  * @export
  * @class UserPermissionsApi
  * @extends {BaseAPI}
  */
-export class UserPermissionsApi
-  extends BaseAPI
-  implements UserPermissionsApiInterface {
+export class UserPermissionsApi extends BaseAPI {
   /**
    * Gets summarized permission information. Available for the current authenticated user only.
    * @param {string} id ID of the resource

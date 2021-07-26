@@ -1646,9 +1646,8 @@ export const CertificatesApiAxiosParamCreator = function (
  * @export
  */
 export const CertificatesApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = CertificatesApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    CertificatesApiAxiosParamCreator(configuration);
   return {
     /**
      * Adds a new certificate
@@ -1666,10 +1665,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificate(
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificate(body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1689,10 +1686,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificateArchive(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificateArchive(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1714,11 +1709,12 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificateArchiveSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificateArchiveSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1739,9 +1735,10 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificateCreateSelfSigned(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificateCreateSelfSigned(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1764,10 +1761,11 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificateCreateSelfSignedSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificateCreateSelfSignedSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1790,10 +1788,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificateReplace(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificateReplace(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1818,11 +1814,12 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificateReplaceSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificateReplaceSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1848,11 +1845,12 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificateSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificateSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1872,10 +1870,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificateUnArchive(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificateUnArchive(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1897,11 +1893,12 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createCertificateUnArchiveSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createCertificateUnArchiveSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1922,10 +1919,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteCertificate(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteCertificate(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1948,11 +1943,12 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteCertificateSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteCertificateSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1975,10 +1971,11 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCertificateByIdOrThumbprint(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCertificateByIdOrThumbprint(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2003,11 +2000,12 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCertificateByIdOrThumbprintSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCertificateByIdOrThumbprintSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2027,10 +2025,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCertificateExport(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCertificateExport(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2052,11 +2048,12 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCertificateExportSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCertificateExportSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2079,10 +2076,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateUsageResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCertificateUsage(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCertificateUsage(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2107,11 +2102,12 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateUsageResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCertificateUsageSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCertificateUsageSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2137,11 +2133,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexCertificates(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexCertificates(skip, take, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2169,12 +2162,13 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexCertificatesSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexCertificatesSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2198,10 +2192,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<CertificateResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllCertificates(
-        ids,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllCertificates(ids, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2227,11 +2219,12 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<CertificateResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllCertificatesSpaces(
-        baseSpaceId,
-        ids,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllCertificatesSpaces(
+          baseSpaceId,
+          ids,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2257,11 +2250,8 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateCertificate(
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateCertificate(id, body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2289,12 +2279,13 @@ export const CertificatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<CertificateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateCertificateSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateCertificateSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2682,335 +2673,12 @@ export const CertificatesApiFactory = function (
 };
 
 /**
- * CertificatesApi - interface
- * @export
- * @interface CertificatesApi
- */
-export interface CertificatesApiInterface {
-  /**
-   * Adds a new certificate
-   * @summary Create a CertificateResource
-   * @param {CertificateResource} [body] The CertificateResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificate(
-    body?: CertificateResource,
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-
-  /**
-   * Archives a certificate
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificateArchive(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Archives a certificate
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificateArchiveSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Creates a self signed certificate
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificateCreateSelfSigned(
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-
-  /**
-   * Creates a self signed certificate
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificateCreateSelfSignedSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-
-  /**
-   * Replaces a certificate with another
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificateReplace(
-    id: string,
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-
-  /**
-   * Replaces a certificate with another
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificateReplaceSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-
-  /**
-   * Adds a new certificate
-   * @summary Create a CertificateResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {CertificateResource} [body] The CertificateResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificateSpaces(
-    baseSpaceId: string,
-    body?: CertificateResource,
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-
-  /**
-   * Un-archives a certificate
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificateUnArchive(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Un-archives a certificate
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  createCertificateUnArchiveSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Permanently deletes a certificate
-   * @summary Delete a CertificateResource by ID
-   * @param {string} id ID of the CertificateResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  deleteCertificate(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Permanently deletes a certificate
-   * @summary Delete a CertificateResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the CertificateResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  deleteCertificateSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Get a certificate by ID or thumbprint
-   * @param {string} id ID or thumbprint of certificate
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  getCertificateByIdOrThumbprint(
-    id: string,
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-
-  /**
-   * Get a certificate by ID or thumbprint
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID or thumbprint of certificate
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  getCertificateByIdOrThumbprintSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-
-  /**
-   * Exports the certificate
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  getCertificateExport(id: string, options?: any): AxiosPromise<any>;
-
-  /**
-   * Exports the certificate
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  getCertificateExportSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<any>;
-
-  /**
-   * Get the usages of a certificate
-   * @param {string} id ID of the certificate
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  getCertificateUsage(
-    id: string,
-    options?: any
-  ): AxiosPromise<CertificateUsageResource>;
-
-  /**
-   * Get the usages of a certificate
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the certificate
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  getCertificateUsageSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<CertificateUsageResource>;
-
-  /**
-   * Lists X.509 certificates managed by Octopus
-   * @summary Get a list of CertificateResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  indexCertificates(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<CertificateResourceCollection>;
-
-  /**
-   * Lists X.509 certificates managed by Octopus
-   * @summary Get a list of CertificateResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  indexCertificatesSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<CertificateResourceCollection>;
-
-  /**
-   * Lists X.509 certificates managed by Octopus.
-   * @summary Get a list of Certificates
-   * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  listAllCertificates(
-    ids?: Array<string>,
-    options?: any
-  ): AxiosPromise<Array<CertificateResource>>;
-
-  /**
-   * Lists X.509 certificates managed by Octopus.
-   * @summary Get a list of Certificates
-   * @param {string} baseSpaceId ID of the space
-   * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  listAllCertificatesSpaces(
-    baseSpaceId: string,
-    ids?: Array<string>,
-    options?: any
-  ): AxiosPromise<Array<CertificateResource>>;
-
-  /**
-   * Modifies an existing certificate
-   * @summary Modify a CertificateResource by ID
-   * @param {string} id ID of the CertificateResource to modify
-   * @param {CertificateResource} [body] The CertificateResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  updateCertificate(
-    id: string,
-    body?: CertificateResource,
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-
-  /**
-   * Modifies an existing certificate
-   * @summary Modify a CertificateResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the CertificateResource to modify
-   * @param {CertificateResource} [body] The CertificateResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificatesApiInterface
-   */
-  updateCertificateSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: CertificateResource,
-    options?: any
-  ): AxiosPromise<CertificateResource>;
-}
-
-/**
  * CertificatesApi - object-oriented interface
  * @export
  * @class CertificatesApi
  * @extends {BaseAPI}
  */
-export class CertificatesApi
-  extends BaseAPI
-  implements CertificatesApiInterface {
+export class CertificatesApi extends BaseAPI {
   /**
    * Adds a new certificate
    * @summary Create a CertificateResource

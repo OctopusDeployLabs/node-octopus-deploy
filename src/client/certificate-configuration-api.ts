@@ -168,10 +168,11 @@ export const CertificateConfigurationApiAxiosParamCreator = function (
     ): Promise<RequestArgs> => {
       // verify required parameter 'id' is not null or undefined
       assertParamExists("getCertificatePublicCerDownload", "id", id);
-      const localVarPath = `/configuration/certificates/{id}/public-cer`.replace(
-        `{${"id"}}`,
-        encodeURIComponent(String(id))
-      );
+      const localVarPath =
+        `/configuration/certificates/{id}/public-cer`.replace(
+          `{${"id"}}`,
+          encodeURIComponent(String(id))
+        );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -296,9 +297,8 @@ export const CertificateConfigurationApiAxiosParamCreator = function (
 export const CertificateConfigurationApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = CertificateConfigurationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    CertificateConfigurationApiAxiosParamCreator(configuration);
   return {
     /**
      *
@@ -316,10 +316,11 @@ export const CertificateConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<CertificateConfigurationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCertificateConfigurationById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCertificateConfigurationById(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -340,9 +341,10 @@ export const CertificateConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<CertificateConfigurationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCertificateConfigurationByIdLegacy(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCertificateConfigurationByIdLegacy(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -362,10 +364,11 @@ export const CertificateConfigurationApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getCertificatePublicCerDownload(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getCertificatePublicCerDownload(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -391,11 +394,12 @@ export const CertificateConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<CertificateConfigurationResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexCertificateConfigurations(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexCertificateConfigurations(
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -479,68 +483,12 @@ export const CertificateConfigurationApiFactory = function (
 };
 
 /**
- * CertificateConfigurationApi - interface
- * @export
- * @interface CertificateConfigurationApi
- */
-export interface CertificateConfigurationApiInterface {
-  /**
-   *
-   * @summary Get a Certificate Configuration by ID
-   * @param {string} id ID of the CertificateConfiguration to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificateConfigurationApiInterface
-   */
-  getCertificateConfigurationById(
-    id: string,
-    options?: any
-  ): AxiosPromise<CertificateConfigurationResource>;
-
-  /**
-   * Returns the server thumbprint used to identify this Octopus Server to any Tentacles when executing a deployment. Deprecated.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificateConfigurationApiInterface
-   */
-  getCertificateConfigurationByIdLegacy(
-    options?: any
-  ): AxiosPromise<CertificateConfigurationResource>;
-
-  /**
-   * Downloads the public portion of the certificate in .cer format
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificateConfigurationApiInterface
-   */
-  getCertificatePublicCerDownload(id: string, options?: any): AxiosPromise<any>;
-
-  /**
-   * Lists all of the X509 certificates in the current Octopus Deploy installation.
-   * @summary Get a list of CertificateConfigurationResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof CertificateConfigurationApiInterface
-   */
-  indexCertificateConfigurations(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<CertificateConfigurationResourceCollection>;
-}
-
-/**
  * CertificateConfigurationApi - object-oriented interface
  * @export
  * @class CertificateConfigurationApi
  * @extends {BaseAPI}
  */
-export class CertificateConfigurationApi
-  extends BaseAPI
-  implements CertificateConfigurationApiInterface {
+export class CertificateConfigurationApi extends BaseAPI {
   /**
    *
    * @summary Get a Certificate Configuration by ID

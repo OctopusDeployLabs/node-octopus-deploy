@@ -609,9 +609,8 @@ export const OctopusServerNodesApiAxiosParamCreator = function (
 export const OctopusServerNodesApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = OctopusServerNodesApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    OctopusServerNodesApiAxiosParamCreator(configuration);
   return {
     /**
      * Deletes an Octopus Server node.
@@ -626,10 +625,8 @@ export const OctopusServerNodesApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteOctopusServerNode(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteOctopusServerNode(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -651,9 +648,8 @@ export const OctopusServerNodesApiFp = function (
         basePath?: string
       ) => AxiosPromise<Array<OctopusServerNodeResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAllOctopusServerNodes(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAllOctopusServerNodes(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -677,10 +673,11 @@ export const OctopusServerNodesApiFp = function (
         basePath?: string
       ) => AxiosPromise<Array<OctopusServerNodeResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAllOctopusServerNodesSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAllOctopusServerNodesSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -698,9 +695,8 @@ export const OctopusServerNodesApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getLoadBalancerPing(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getLoadBalancerPing(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -718,9 +714,8 @@ export const OctopusServerNodesApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getOctopusServerClusterSummary(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getOctopusServerClusterSummary(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -744,10 +739,8 @@ export const OctopusServerNodesApiFp = function (
         basePath?: string
       ) => AxiosPromise<OctopusServerNodeResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getOctopusServerNodeById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getOctopusServerNodeById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -770,10 +763,11 @@ export const OctopusServerNodesApiFp = function (
         basePath?: string
       ) => AxiosPromise<OctopusServerNodeDetailsResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getOctopusServerNodeDetails(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getOctopusServerNodeDetails(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -799,11 +793,12 @@ export const OctopusServerNodesApiFp = function (
         basePath?: string
       ) => AxiosPromise<OctopusServerNodeResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexOctopusServerNodes(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexOctopusServerNodes(
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -829,11 +824,12 @@ export const OctopusServerNodesApiFp = function (
         basePath?: string
       ) => AxiosPromise<OctopusServerNodeResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateOctopusServerNode(
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateOctopusServerNode(
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -982,126 +978,12 @@ export const OctopusServerNodesApiFactory = function (
 };
 
 /**
- * OctopusServerNodesApi - interface
- * @export
- * @interface OctopusServerNodesApi
- */
-export interface OctopusServerNodesApiInterface {
-  /**
-   * Deletes an Octopus Server node.
-   * @summary Delete a OctopusServerNodeResource by ID
-   * @param {string} id ID of the OctopusServerNodeResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusServerNodesApiInterface
-   */
-  deleteOctopusServerNode(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Lists the name and ID of all Octopus Server nodes.
-   * @summary Get all Octopus Server Nodes
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusServerNodesApiInterface
-   */
-  getAllOctopusServerNodes(
-    options?: any
-  ): AxiosPromise<Array<OctopusServerNodeResource>>;
-
-  /**
-   * Lists the name and ID of all Octopus Server nodes.
-   * @summary Get all Octopus Server Nodes
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusServerNodesApiInterface
-   */
-  getAllOctopusServerNodesSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<OctopusServerNodeResource>>;
-
-  /**
-   * Returns HTTP ImATeapot (418) when the Octopus Server node is draining or offline, otherwise HTTP OK (200). Always returns the node information in the body.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusServerNodesApiInterface
-   */
-  getLoadBalancerPing(options?: any): AxiosPromise<void>;
-
-  /**
-   * Returns all nodes, with status information
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusServerNodesApiInterface
-   */
-  getOctopusServerClusterSummary(options?: any): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get an Octopus Server Node by ID
-   * @param {string} id ID of the OctopusServerNode to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusServerNodesApiInterface
-   */
-  getOctopusServerNodeById(
-    id: string,
-    options?: any
-  ): AxiosPromise<OctopusServerNodeResource>;
-
-  /**
-   * A count of the running tasks per node.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusServerNodesApiInterface
-   */
-  getOctopusServerNodeDetails(
-    id: string,
-    options?: any
-  ): AxiosPromise<OctopusServerNodeDetailsResource>;
-
-  /**
-   * List all of the Octopus Server nodes participating in the current Octopus Server cluster.
-   * @summary Get a list of OctopusServerNodeResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusServerNodesApiInterface
-   */
-  indexOctopusServerNodes(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<OctopusServerNodeResourceCollection>;
-
-  /**
-   * Modifies an Octopus Server node.
-   * @summary Modify a OctopusServerNodeResource by ID
-   * @param {string} id ID of the OctopusServerNodeResource to modify
-   * @param {OctopusServerNodeResource} [body] The OctopusServerNodeResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof OctopusServerNodesApiInterface
-   */
-  updateOctopusServerNode(
-    id: string,
-    body?: OctopusServerNodeResource,
-    options?: any
-  ): AxiosPromise<OctopusServerNodeResource>;
-}
-
-/**
  * OctopusServerNodesApi - object-oriented interface
  * @export
  * @class OctopusServerNodesApi
  * @extends {BaseAPI}
  */
-export class OctopusServerNodesApi
-  extends BaseAPI
-  implements OctopusServerNodesApiInterface {
+export class OctopusServerNodesApi extends BaseAPI {
   /**
    * Deletes an Octopus Server node.
    * @summary Delete a OctopusServerNodeResource by ID

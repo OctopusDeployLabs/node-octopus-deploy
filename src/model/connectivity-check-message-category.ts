@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum ConnectivityCheckMessageCategory {
   Info = "Info",
   Warning = "Warning",

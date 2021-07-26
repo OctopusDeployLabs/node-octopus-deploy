@@ -322,9 +322,8 @@ export const TeamMembershipApiAxiosParamCreator = function (
  * @export
  */
 export const TeamMembershipApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = TeamMembershipApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    TeamMembershipApiAxiosParamCreator(configuration);
   return {
     /**
      * Lists all the Users that would belong to the specified Team, including information about whether they are directly assigned and/or indirectly assigned via external security groups.
@@ -342,10 +341,11 @@ export const TeamMembershipApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<TeamMembership>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createTeamMembershipPreview(
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createTeamMembershipPreview(
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -371,11 +371,12 @@ export const TeamMembershipApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<TeamMembership>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createTeamMembershipPreviewSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createTeamMembershipPreviewSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -399,10 +400,8 @@ export const TeamMembershipApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<TeamMembership>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getTeamMembership(
-        userId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getTeamMembership(userId, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -428,11 +427,12 @@ export const TeamMembershipApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<TeamMembership>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getTeamMembershipSpaces(
-        userId,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getTeamMembershipSpaces(
+          userId,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -522,77 +522,12 @@ export const TeamMembershipApiFactory = function (
 };
 
 /**
- * TeamMembershipApi - interface
- * @export
- * @interface TeamMembershipApi
- */
-export interface TeamMembershipApiInterface {
-  /**
-   * Lists all the Users that would belong to the specified Team, including information about whether they are directly assigned and/or indirectly assigned via external security groups.
-   * @summary Preview Users that would belong to the specified Team
-   * @param {TeamResource} [body]
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamMembershipApiInterface
-   */
-  createTeamMembershipPreview(
-    body?: TeamResource,
-    options?: any
-  ): AxiosPromise<Array<TeamMembership>>;
-
-  /**
-   * Lists all the Users that would belong to the specified Team, including information about whether they are directly assigned and/or indirectly assigned via external security groups.
-   * @summary Preview Users that would belong to the specified Team
-   * @param {string} baseSpaceId ID of the space
-   * @param {TeamResource} [body]
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamMembershipApiInterface
-   */
-  createTeamMembershipPreviewSpaces(
-    baseSpaceId: string,
-    body?: TeamResource,
-    options?: any
-  ): AxiosPromise<Array<TeamMembership>>;
-
-  /**
-   * Lists all teams a user is a member of, including any from external auth-provider security groups. Memberships are filtered by userId.
-   * @summary Gets a list of team memberships for a user
-   * @param {string} userId ID of the user
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamMembershipApiInterface
-   */
-  getTeamMembership(
-    userId: string,
-    options?: any
-  ): AxiosPromise<Array<TeamMembership>>;
-
-  /**
-   * Lists all teams a user is a member of, including any from external auth-provider security groups. Memberships are filtered by userId.
-   * @summary Gets a list of team memberships for a user
-   * @param {string} userId ID of the user
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamMembershipApiInterface
-   */
-  getTeamMembershipSpaces(
-    userId: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<TeamMembership>>;
-}
-
-/**
  * TeamMembershipApi - object-oriented interface
  * @export
  * @class TeamMembershipApi
  * @extends {BaseAPI}
  */
-export class TeamMembershipApi
-  extends BaseAPI
-  implements TeamMembershipApiInterface {
+export class TeamMembershipApi extends BaseAPI {
   /**
    * Lists all the Users that would belong to the specified Team, including information about whether they are directly assigned and/or indirectly assigned via external security groups.
    * @summary Preview Users that would belong to the specified Team

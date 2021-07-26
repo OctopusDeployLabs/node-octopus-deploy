@@ -1289,11 +1289,12 @@ export const FeedsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<FeedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createFeedSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createFeedSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1340,11 +1341,12 @@ export const FeedsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteFeedSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteFeedSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1365,9 +1367,8 @@ export const FeedsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<BuiltInFeedStatsResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getBuiltInFeedStats(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getBuiltInFeedStats(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1390,10 +1391,11 @@ export const FeedsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<BuiltInFeedStatsResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getBuiltInFeedStatsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getBuiltInFeedStatsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1440,11 +1442,12 @@ export const FeedsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<FeedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getFeedByIdSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getFeedByIdSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1467,10 +1470,8 @@ export const FeedsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageDescriptionResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageSearch(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageSearch(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1495,11 +1496,12 @@ export const FeedsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageDescriptionResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageSearchSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageSearchSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1524,11 +1526,12 @@ export const FeedsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageVersionResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageVersionSearch(
-        id,
-        packageId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageVersionSearch(
+          id,
+          packageId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1555,12 +1558,13 @@ export const FeedsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageVersionResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageVersionSearchSpaces(
-        baseSpaceId,
-        id,
-        packageId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageVersionSearchSpaces(
+          baseSpaceId,
+          id,
+          packageId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1618,12 +1622,13 @@ export const FeedsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<FeedResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexFeedsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexFeedsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1671,10 +1676,11 @@ export const FeedsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<FeedResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllFeedsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllFeedsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1726,12 +1732,13 @@ export const FeedsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<FeedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateFeedSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateFeedSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2030,256 +2037,12 @@ export const FeedsApiFactory = function (
 };
 
 /**
- * FeedsApi - interface
- * @export
- * @interface FeedsApi
- */
-export interface FeedsApiInterface {
-  /**
-   * Creates a feed.
-   * @summary Create a FeedResource
-   * @param {FeedResource} [body] The FeedResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  createFeed(body?: FeedResource, options?: any): AxiosPromise<FeedResource>;
-
-  /**
-   * Creates a feed.
-   * @summary Create a FeedResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {FeedResource} [body] The FeedResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  createFeedSpaces(
-    baseSpaceId: string,
-    body?: FeedResource,
-    options?: any
-  ): AxiosPromise<FeedResource>;
-
-  /**
-   * Deletes an existing feed.
-   * @summary Delete a FeedResource by ID
-   * @param {string} id ID of the FeedResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  deleteFeed(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing feed.
-   * @summary Delete a FeedResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the FeedResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  deleteFeedSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Provides statistics for the built-in package repository.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  getBuiltInFeedStats(options?: any): AxiosPromise<BuiltInFeedStatsResource>;
-
-  /**
-   * Provides statistics for the built-in package repository.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  getBuiltInFeedStatsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<BuiltInFeedStatsResource>;
-
-  /**
-   * Gets a single feed by ID.
-   * @summary Get a FeedResource by ID
-   * @param {string} id ID of the FeedResource to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  getFeedById(id: string, options?: any): AxiosPromise<FeedResource>;
-
-  /**
-   * Gets a single feed by ID.
-   * @summary Get a FeedResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the FeedResource to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  getFeedByIdSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<FeedResource>;
-
-  /**
-   * Searches the specified feed for packages based on the specified search term
-   * @param {string} id ID of the feed
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  getPackageSearch(
-    id: string,
-    options?: any
-  ): AxiosPromise<PackageDescriptionResourceCollection>;
-
-  /**
-   * Searches the specified feed for packages based on the specified search term
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the feed
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  getPackageSearchSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<PackageDescriptionResourceCollection>;
-
-  /**
-   * Lists available versions of the package specified
-   * @param {string} id ID of the feed
-   * @param {string} packageId Package ID to search
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  getPackageVersionSearch(
-    id: string,
-    packageId: string,
-    options?: any
-  ): AxiosPromise<PackageVersionResourceCollection>;
-
-  /**
-   * Lists available versions of the package specified
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the feed
-   * @param {string} packageId Package ID to search
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  getPackageVersionSearchSpaces(
-    baseSpaceId: string,
-    id: string,
-    packageId: string,
-    options?: any
-  ): AxiosPromise<PackageVersionResourceCollection>;
-
-  /**
-   * Lists all the feeds used by the current Octopus installation. The results will be sorted alphabetically by name.
-   * @summary Get a list of FeedResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  indexFeeds(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<FeedResourceCollection>;
-
-  /**
-   * Lists all the feeds used by the current Octopus installation. The results will be sorted alphabetically by name.
-   * @summary Get a list of FeedResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  indexFeedsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<FeedResourceCollection>;
-
-  /**
-   * Lists all the feeds in the specified Octopus Deploy Space.
-   * @summary Get a list of FeedResources
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  listAllFeeds(options?: any): AxiosPromise<Array<FeedResource>>;
-
-  /**
-   * Lists all the feeds in the specified Octopus Deploy Space.
-   * @summary Get a list of FeedResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  listAllFeedsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<FeedResource>>;
-
-  /**
-   * Modifies an existing feed.
-   * @summary Modify a FeedResource by ID
-   * @param {string} id ID of the FeedResource to modify
-   * @param {FeedResource} [body] The FeedResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  updateFeed(
-    id: string,
-    body?: FeedResource,
-    options?: any
-  ): AxiosPromise<FeedResource>;
-
-  /**
-   * Modifies an existing feed.
-   * @summary Modify a FeedResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the FeedResource to modify
-   * @param {FeedResource} [body] The FeedResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof FeedsApiInterface
-   */
-  updateFeedSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: FeedResource,
-    options?: any
-  ): AxiosPromise<FeedResource>;
-}
-
-/**
  * FeedsApi - object-oriented interface
  * @export
  * @class FeedsApi
  * @extends {BaseAPI}
  */
-export class FeedsApi extends BaseAPI implements FeedsApiInterface {
+export class FeedsApi extends BaseAPI {
   /**
    * Creates a feed.
    * @summary Create a FeedResource

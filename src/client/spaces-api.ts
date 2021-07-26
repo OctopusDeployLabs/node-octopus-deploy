@@ -960,12 +960,13 @@ export const SpacesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<SpaceSearchResult>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.searchSpaceSpaces(
-        id,
-        keyword,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.searchSpaceSpaces(
+          id,
+          keyword,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -985,10 +986,8 @@ export const SpacesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SpaceResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateModifySpace(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateModifySpace(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1178,138 +1177,12 @@ export const SpacesApiFactory = function (
 };
 
 /**
- * SpacesApi - interface
- * @export
- * @interface SpacesApi
- */
-export interface SpacesApiInterface {
-  /**
-   * Creates a new Space.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  createSpace(options?: any): AxiosPromise<SpaceResource>;
-
-  /**
-   * Updates the logo associated with the space.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  createSpaceLogo(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing space.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  deleteSpace(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get a Space by ID
-   * @param {string} id ID of the Space to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  getSpaceById(id: string, options?: any): AxiosPromise<SpaceResource>;
-
-  /**
-   * Gets the logo associated with the space.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  getSpaceLogo(id: string, options?: any): AxiosPromise<any>;
-
-  /**
-   * Lists all of the spaces in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of SpaceResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  indexSpaces(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<SpaceResourceCollection>;
-
-  /**
-   * Lists all of the spaces in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of SpaceResources
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  listAllSpaces(options?: any): AxiosPromise<Array<SpaceResource>>;
-
-  /**
-   *
-   * @summary Searches in the supplied Octopus Deploy Space using the given keyword.
-   * @param {string} id ID of the Space to search
-   * @param {string} keyword A keyword to search. Example: ABC
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  searchSpace(
-    id: string,
-    keyword: string,
-    options?: any
-  ): AxiosPromise<Array<SpaceSearchResult>>;
-
-  /**
-   *
-   * @summary Searches in the supplied Octopus Deploy Space using the given keyword.
-   * @param {string} id ID of the Space to search
-   * @param {string} keyword A keyword to search. Example: ABC
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  searchSpaceSpaces(
-    id: string,
-    keyword: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<SpaceSearchResult>>;
-
-  /**
-   * Modifies an existing space.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  updateModifySpace(id: string, options?: any): AxiosPromise<SpaceResource>;
-
-  /**
-   * Updates the logo associated with the space.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpacesApiInterface
-   */
-  updateSpaceLogo(id: string, options?: any): AxiosPromise<void>;
-}
-
-/**
  * SpacesApi - object-oriented interface
  * @export
  * @class SpacesApi
  * @extends {BaseAPI}
  */
-export class SpacesApi extends BaseAPI implements SpacesApiInterface {
+export class SpacesApi extends BaseAPI {
   /**
    * Creates a new Space.
    * @param {*} [options] Override http request option.

@@ -99,9 +99,8 @@ export const PermissionsApiAxiosParamCreator = function (
  * @export
  */
 export const PermissionsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = PermissionsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    PermissionsApiAxiosParamCreator(configuration);
   return {
     /**
      * Gets a dictionary of available permissions and their descriptions and restrictions
@@ -116,9 +115,8 @@ export const PermissionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<InlineResponse200>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPermissionDefinitions(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPermissionDefinitions(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -154,27 +152,12 @@ export const PermissionsApiFactory = function (
 };
 
 /**
- * PermissionsApi - interface
- * @export
- * @interface PermissionsApi
- */
-export interface PermissionsApiInterface {
-  /**
-   * Gets a dictionary of available permissions and their descriptions and restrictions
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PermissionsApiInterface
-   */
-  getPermissionDefinitions(options?: any): AxiosPromise<InlineResponse200>;
-}
-
-/**
  * PermissionsApi - object-oriented interface
  * @export
  * @class PermissionsApi
  * @extends {BaseAPI}
  */
-export class PermissionsApi extends BaseAPI implements PermissionsApiInterface {
+export class PermissionsApi extends BaseAPI {
   /**
    * Gets a dictionary of available permissions and their descriptions and restrictions
    * @param {*} [options] Override http request option.

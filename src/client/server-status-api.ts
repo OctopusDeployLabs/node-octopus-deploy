@@ -474,9 +474,8 @@ export const ServerStatusApiAxiosParamCreator = function (
  * @export
  */
 export const ServerStatusApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = ServerStatusApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ServerStatusApiAxiosParamCreator(configuration);
   return {
     /**
      * Forces a GC collect.
@@ -488,9 +487,8 @@ export const ServerStatusApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createSystemGarbageCollect(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createSystemGarbageCollect(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -511,9 +509,8 @@ export const ServerStatusApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ExtensionsInfoResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getExtensionStats(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getExtensionStats(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -534,9 +531,8 @@ export const ServerStatusApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ServerTimezoneResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getListServerTimezones(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getListServerTimezones(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -597,9 +593,8 @@ export const ServerStatusApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ServerStatusHealthResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getServerStatusHealth(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getServerStatusHealth(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -751,89 +746,12 @@ export const ServerStatusApiFactory = function (
 };
 
 /**
- * ServerStatusApi - interface
- * @export
- * @interface ServerStatusApi
- */
-export interface ServerStatusApiInterface {
-  /**
-   * Forces a GC collect.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerStatusApiInterface
-   */
-  createSystemGarbageCollect(options?: any): AxiosPromise<void>;
-
-  /**
-   * Provides statistics for the loaded server extensions.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerStatusApiInterface
-   */
-  getExtensionStats(options?: any): AxiosPromise<Array<ExtensionsInfoResource>>;
-
-  /**
-   * Lists timezones supported by the server.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerStatusApiInterface
-   */
-  getListServerTimezones(
-    options?: any
-  ): AxiosPromise<Array<ServerTimezoneResource>>;
-
-  /**
-   * Retrieves the most recent high-priority log messages from this execution of the Octopus Server process.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerStatusApiInterface
-   */
-  getRecentLogs(options?: any): AxiosPromise<void>;
-
-  /**
-   * Shows information about the status of the Octopus Server.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerStatusApiInterface
-   */
-  getServerStatus(options?: any): AxiosPromise<void>;
-
-  /**
-   * Provides a super simple interface perfect for checking the general health of your entire Octopus Server cluster.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerStatusApiInterface
-   */
-  getServerStatusHealth(
-    options?: any
-  ): AxiosPromise<ServerStatusHealthResource>;
-
-  /**
-   * Provides information about the Octopus Server process and the machine on which it is running.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerStatusApiInterface
-   */
-  getSystemInfo(options?: any): AxiosPromise<void>;
-
-  /**
-   * Creates a .zip archive containing an aggregate of the other system information APIs.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerStatusApiInterface
-   */
-  getSystemReport(options?: any): AxiosPromise<void>;
-}
-
-/**
  * ServerStatusApi - object-oriented interface
  * @export
  * @class ServerStatusApi
  * @extends {BaseAPI}
  */
-export class ServerStatusApi
-  extends BaseAPI
-  implements ServerStatusApiInterface {
+export class ServerStatusApi extends BaseAPI {
   /**
    * Forces a GC collect.
    * @param {*} [options] Override http request option.

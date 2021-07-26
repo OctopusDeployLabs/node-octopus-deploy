@@ -154,9 +154,8 @@ export const UpgradeConfigurationApiAxiosParamCreator = function (
 export const UpgradeConfigurationApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = UpgradeConfigurationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    UpgradeConfigurationApiAxiosParamCreator(configuration);
   return {
     /**
      * Gets information about the upgrade configuration in use by the Octopus Server.
@@ -168,9 +167,8 @@ export const UpgradeConfigurationApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getUpgradeConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getUpgradeConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -188,9 +186,8 @@ export const UpgradeConfigurationApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateUpgradeConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateUpgradeConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -236,37 +233,12 @@ export const UpgradeConfigurationApiFactory = function (
 };
 
 /**
- * UpgradeConfigurationApi - interface
- * @export
- * @interface UpgradeConfigurationApi
- */
-export interface UpgradeConfigurationApiInterface {
-  /**
-   * Gets information about the upgrade configuration in use by the Octopus Server.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof UpgradeConfigurationApiInterface
-   */
-  getUpgradeConfiguration(options?: any): AxiosPromise<void>;
-
-  /**
-   * Updates the upgrade configuration used by the Octopus Server.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof UpgradeConfigurationApiInterface
-   */
-  updateUpgradeConfiguration(options?: any): AxiosPromise<void>;
-}
-
-/**
  * UpgradeConfigurationApi - object-oriented interface
  * @export
  * @class UpgradeConfigurationApi
  * @extends {BaseAPI}
  */
-export class UpgradeConfigurationApi
-  extends BaseAPI
-  implements UpgradeConfigurationApiInterface {
+export class UpgradeConfigurationApi extends BaseAPI {
   /**
    * Gets information about the upgrade configuration in use by the Octopus Server.
    * @param {*} [options] Override http request option.

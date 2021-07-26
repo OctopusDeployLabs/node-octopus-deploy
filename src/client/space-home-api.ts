@@ -106,9 +106,8 @@ export const SpaceHomeApiAxiosParamCreator = function (
  * @export
  */
 export const SpaceHomeApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = SpaceHomeApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    SpaceHomeApiAxiosParamCreator(configuration);
   return {
     /**
      * Returns a document describing the specified Space and links to other parts of the API that apply to the Space.
@@ -168,28 +167,12 @@ export const SpaceHomeApiFactory = function (
 };
 
 /**
- * SpaceHomeApi - interface
- * @export
- * @interface SpaceHomeApi
- */
-export interface SpaceHomeApiInterface {
-  /**
-   * Returns a document describing the specified Space and links to other parts of the API that apply to the Space.
-   * @param {string} spaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof SpaceHomeApiInterface
-   */
-  getSpaceHome(spaceId: string, options?: any): AxiosPromise<SpaceRootResource>;
-}
-
-/**
  * SpaceHomeApi - object-oriented interface
  * @export
  * @class SpaceHomeApi
  * @extends {BaseAPI}
  */
-export class SpaceHomeApi extends BaseAPI implements SpaceHomeApiInterface {
+export class SpaceHomeApi extends BaseAPI {
   /**
    * Returns a document describing the specified Space and links to other parts of the API that apply to the Space.
    * @param {string} spaceId ID of the space

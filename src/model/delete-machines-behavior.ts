@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum DeleteMachinesBehavior {
   DoNotDelete = "DoNotDelete",
   DeleteUnavailableMachines = "DeleteUnavailableMachines",

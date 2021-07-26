@@ -889,11 +889,12 @@ export const ProxiesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProxyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createProxySpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createProxySpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -940,11 +941,12 @@ export const ProxiesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteProxySpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteProxySpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -991,11 +993,12 @@ export const ProxiesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProxyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getProxyByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getProxyByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1053,12 +1056,13 @@ export const ProxiesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ProxyResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexProxiesSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexProxiesSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1106,10 +1110,11 @@ export const ProxiesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ProxyResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllProxiesSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllProxiesSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1161,12 +1166,13 @@ export const ProxiesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProxyResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateProxySpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateProxySpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1380,180 +1386,12 @@ export const ProxiesApiFactory = function (
 };
 
 /**
- * ProxiesApi - interface
- * @export
- * @interface ProxiesApi
- */
-export interface ProxiesApiInterface {
-  /**
-   * Creates a proxy.
-   * @summary Create a ProxyResource
-   * @param {ProxyResource} [body] The ProxyResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  createProxy(body?: ProxyResource, options?: any): AxiosPromise<ProxyResource>;
-
-  /**
-   * Creates a proxy.
-   * @summary Create a ProxyResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {ProxyResource} [body] The ProxyResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  createProxySpaces(
-    baseSpaceId: string,
-    body?: ProxyResource,
-    options?: any
-  ): AxiosPromise<ProxyResource>;
-
-  /**
-   * Deletes an existing proxy.
-   * @summary Delete a ProxyResource by ID
-   * @param {string} id ID of the ProxyResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  deleteProxy(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing proxy.
-   * @summary Delete a ProxyResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ProxyResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  deleteProxySpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get a Proxy by ID
-   * @param {string} id ID of the Proxy to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  getProxyById(id: string, options?: any): AxiosPromise<ProxyResource>;
-
-  /**
-   *
-   * @summary Get a Proxy by ID
-   * @param {string} id ID of the Proxy to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  getProxyByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<ProxyResource>;
-
-  /**
-   * Lists all of the proxies in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ProxyResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  indexProxies(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ProxyResourceCollection>;
-
-  /**
-   * Lists all of the proxies in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ProxyResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  indexProxiesSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ProxyResourceCollection>;
-
-  /**
-   * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get a list of Proxies
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  listAllProxies(options?: any): AxiosPromise<Array<ProxyResource>>;
-
-  /**
-   * Lists the name and ID of all of the Proxies in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get a list of Proxies
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  listAllProxiesSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<ProxyResource>>;
-
-  /**
-   * Modifies an existing proxy.
-   * @summary Modify a ProxyResource by ID
-   * @param {string} id ID of the ProxyResource to modify
-   * @param {ProxyResource} [body] The ProxyResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  updateProxy(
-    id: string,
-    body?: ProxyResource,
-    options?: any
-  ): AxiosPromise<ProxyResource>;
-
-  /**
-   * Modifies an existing proxy.
-   * @summary Modify a ProxyResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ProxyResource to modify
-   * @param {ProxyResource} [body] The ProxyResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ProxiesApiInterface
-   */
-  updateProxySpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: ProxyResource,
-    options?: any
-  ): AxiosPromise<ProxyResource>;
-}
-
-/**
  * ProxiesApi - object-oriented interface
  * @export
  * @class ProxiesApi
  * @extends {BaseAPI}
  */
-export class ProxiesApi extends BaseAPI implements ProxiesApiInterface {
+export class ProxiesApi extends BaseAPI {
   /**
    * Creates a proxy.
    * @summary Create a ProxyResource

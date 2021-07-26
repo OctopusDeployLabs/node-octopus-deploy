@@ -1064,10 +1064,14 @@ export const ActionTemplatesApiAxiosParamCreator = function (
         "version",
         version
       );
-      const localVarPath = `/{baseSpaceId}/actiontemplates/{typeOrId}/versions/{version}/logo`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"typeOrId"}}`, encodeURIComponent(String(typeOrId)))
-        .replace(`{${"version"}}`, encodeURIComponent(String(version)));
+      const localVarPath =
+        `/{baseSpaceId}/actiontemplates/{typeOrId}/versions/{version}/logo`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(`{${"typeOrId"}}`, encodeURIComponent(String(typeOrId)))
+          .replace(`{${"version"}}`, encodeURIComponent(String(version)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -1465,10 +1469,14 @@ export const ActionTemplatesApiAxiosParamCreator = function (
       assertParamExists("getActionTemplateVersionSpaces1", "id", id);
       // verify required parameter 'version' is not null or undefined
       assertParamExists("getActionTemplateVersionSpaces1", "version", version);
-      const localVarPath = `/{baseSpaceId}/actiontemplates/{id}/versions/{version}`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-        .replace(`{${"version"}}`, encodeURIComponent(String(version)));
+      const localVarPath =
+        `/{baseSpaceId}/actiontemplates/{id}/versions/{version}`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+          .replace(`{${"version"}}`, encodeURIComponent(String(version)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -2194,9 +2202,8 @@ export const ActionTemplatesApiAxiosParamCreator = function (
  * @export
  */
 export const ActionTemplatesApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = ActionTemplatesApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ActionTemplatesApiAxiosParamCreator(configuration);
   return {
     /**
      * Creates a new action template.
@@ -2214,10 +2221,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createActionTemplate(
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createActionTemplate(body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2240,10 +2245,11 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionUpdateResultResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createActionTemplateActions(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createActionTemplateActions(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2268,11 +2274,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionUpdateResultResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createActionTemplateActionsSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createActionTemplateActionsSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2292,10 +2299,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createActionTemplateLogo(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createActionTemplateLogo(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2317,11 +2322,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createActionTemplateLogoSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createActionTemplateLogoSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2347,11 +2353,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createActionTemplateSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createActionTemplateSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2372,10 +2379,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteActionTemplate(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteActionTemplate(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2398,11 +2403,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteActionTemplateSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteActionTemplateSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2426,10 +2432,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2455,11 +2459,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2480,9 +2485,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionTemplateCategoryResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateCategories(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateCategories(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2505,10 +2509,11 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionTemplateCategoryResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateCategoriesSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateCategoriesSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2528,10 +2533,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateLogo(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateLogo(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2553,11 +2556,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateLogoSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateLogoSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2579,11 +2583,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateLogoVersion(
-        typeOrId,
-        version,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateLogoVersion(
+          typeOrId,
+          version,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2607,12 +2612,13 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateLogoVersionSpaces(
-        baseSpaceId,
-        typeOrId,
-        version,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateLogoVersionSpaces(
+          baseSpaceId,
+          typeOrId,
+          version,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2635,10 +2641,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionTemplateUsageResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateUsage(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateUsage(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2663,11 +2667,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionTemplateUsageResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateUsageSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateUsageSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2687,10 +2692,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateVersion(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateVersion(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2712,11 +2715,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateVersion1(
-        id,
-        version,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateVersion1(
+          id,
+          version,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2738,11 +2742,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateVersionSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateVersionSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2766,12 +2771,13 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplateVersionSpaces1(
-        baseSpaceId,
-        id,
-        version,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplateVersionSpaces1(
+          baseSpaceId,
+          id,
+          version,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2792,9 +2798,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionTemplateSearchResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplatesSearch(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplatesSearch(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2817,10 +2822,11 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionTemplateSearchResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getActionTemplatesSearchSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getActionTemplatesSearchSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2842,9 +2848,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionTemplateResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAllActionTemplates(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAllActionTemplates(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2868,10 +2873,11 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<ActionTemplateResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAllActionTemplatesSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAllActionTemplatesSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2897,11 +2903,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ActionTemplateResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexActionTemplates(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexActionTemplates(
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2929,12 +2936,13 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ActionTemplateResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexActionTemplatesSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexActionTemplatesSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2960,11 +2968,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateActionTemplate(
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateActionTemplate(id, body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2984,10 +2989,8 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateActionTemplateLogo(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateActionTemplateLogo(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -3009,11 +3012,12 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateActionTemplateLogoSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateActionTemplateLogoSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -3041,12 +3045,13 @@ export const ActionTemplatesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ActionTemplateResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateActionTemplateSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateActionTemplateSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -3558,438 +3563,12 @@ export const ActionTemplatesApiFactory = function (
 };
 
 /**
- * ActionTemplatesApi - interface
- * @export
- * @interface ActionTemplatesApi
- */
-export interface ActionTemplatesApiInterface {
-  /**
-   * Creates a new action template.
-   * @summary Create a ActionTemplateResource
-   * @param {ActionTemplateResource} [body] The ActionTemplateResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  createActionTemplate(
-    body?: ActionTemplateResource,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   * Updates deployment actions to specific version of action template
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  createActionTemplateActions(
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<ActionUpdateResultResource>>;
-
-  /**
-   * Updates deployment actions to specific version of action template
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  createActionTemplateActionsSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<ActionUpdateResultResource>>;
-
-  /**
-   * Updates the logo associated with the latest version of the action template.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  createActionTemplateLogo(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Updates the logo associated with the latest version of the action template.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  createActionTemplateLogoSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Creates a new action template.
-   * @summary Create a ActionTemplateResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {ActionTemplateResource} [body] The ActionTemplateResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  createActionTemplateSpaces(
-    baseSpaceId: string,
-    body?: ActionTemplateResource,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   * Deletes an existing action template and all its versions.
-   * @summary Delete a ActionTemplateResource by ID
-   * @param {string} id ID of the ActionTemplateResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  deleteActionTemplate(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing action template and all its versions.
-   * @summary Delete a ActionTemplateResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ActionTemplateResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  deleteActionTemplateSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get an Action Template by ID
-   * @param {string} id ID of the ActionTemplate to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateById(
-    id: string,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   *
-   * @summary Get an Action Template by ID
-   * @param {string} id ID of the ActionTemplate to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   * Lists action template categories.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateCategories(
-    options?: any
-  ): AxiosPromise<Array<ActionTemplateCategoryResource>>;
-
-  /**
-   * Lists action template categories.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateCategoriesSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<ActionTemplateCategoryResource>>;
-
-  /**
-   * Gets the logo associated with the latest version of action template.
-   * @param {string} id Action Type or ID of the action type logo
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateLogo(id: string, options?: any): AxiosPromise<any>;
-
-  /**
-   * Gets the logo associated with the latest version of action template.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id Action Type or ID of the action type logo
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateLogoSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<any>;
-
-  /**
-   * Gets the logo associated with specific version of the action template.
-   * @param {string} typeOrId Action Type or ID of the action type logo
-   * @param {number} version Version of the action type logo
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateLogoVersion(
-    typeOrId: string,
-    version: number,
-    options?: any
-  ): AxiosPromise<any>;
-
-  /**
-   * Gets the logo associated with specific version of the action template.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} typeOrId Action Type or ID of the action type logo
-   * @param {number} version Version of the action type logo
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateLogoVersionSpaces(
-    baseSpaceId: string,
-    typeOrId: string,
-    version: number,
-    options?: any
-  ): AxiosPromise<any>;
-
-  /**
-   * Gets a list of all steps/deployment processes that use a given action template.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateUsage(
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<ActionTemplateUsageResource>>;
-
-  /**
-   * Gets a list of all steps/deployment processes that use a given action template.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateUsageSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<ActionTemplateUsageResource>>;
-
-  /**
-   * Gets specific version of action template.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateVersion(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Gets specific version of action template.
-   * @param {string} id ID of the resource
-   * @param {number} version Template version to get
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateVersion1(
-    id: string,
-    version: number,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Gets specific version of action template.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateVersionSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Gets specific version of action template.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {number} version Template version to get
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplateVersionSpaces1(
-    baseSpaceId: string,
-    id: string,
-    version: number,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Lists all available action templates including built-in, custom and community contributed step templates.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplatesSearch(
-    options?: any
-  ): AxiosPromise<Array<ActionTemplateSearchResource>>;
-
-  /**
-   * Lists all available action templates including built-in, custom and community contributed step templates.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getActionTemplatesSearchSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<ActionTemplateSearchResource>>;
-
-  /**
-   * Lists the all of the action templates in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get all Action Templates
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getAllActionTemplates(
-    options?: any
-  ): AxiosPromise<Array<ActionTemplateResource>>;
-
-  /**
-   * Lists the all of the action templates in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get all Action Templates
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  getAllActionTemplatesSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<ActionTemplateResource>>;
-
-  /**
-   * Lists all of the action templates in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ActionTemplateResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  indexActionTemplates(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ActionTemplateResourceCollection>;
-
-  /**
-   * Lists all of the action templates in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of ActionTemplateResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  indexActionTemplatesSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ActionTemplateResourceCollection>;
-
-  /**
-   * Modifies an existing action template.
-   * @summary Modify a ActionTemplateResource by ID
-   * @param {string} id ID of the ActionTemplateResource to modify
-   * @param {ActionTemplateResource} [body] The ActionTemplateResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  updateActionTemplate(
-    id: string,
-    body?: ActionTemplateResource,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-
-  /**
-   * Updates the logo associated with the latest version of the action template.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  updateActionTemplateLogo(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Updates the logo associated with the latest version of the action template.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  updateActionTemplateLogoSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Modifies an existing action template.
-   * @summary Modify a ActionTemplateResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ActionTemplateResource to modify
-   * @param {ActionTemplateResource} [body] The ActionTemplateResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ActionTemplatesApiInterface
-   */
-  updateActionTemplateSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: ActionTemplateResource,
-    options?: any
-  ): AxiosPromise<ActionTemplateResource>;
-}
-
-/**
  * ActionTemplatesApi - object-oriented interface
  * @export
  * @class ActionTemplatesApi
  * @extends {BaseAPI}
  */
-export class ActionTemplatesApi
-  extends BaseAPI
-  implements ActionTemplatesApiInterface {
+export class ActionTemplatesApi extends BaseAPI {
   /**
    * Creates a new action template.
    * @summary Create a ActionTemplateResource

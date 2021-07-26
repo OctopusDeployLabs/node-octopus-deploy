@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum HealthCheckType {
   RunScript = "RunScript",
   OnlyConnectivity = "OnlyConnectivity",

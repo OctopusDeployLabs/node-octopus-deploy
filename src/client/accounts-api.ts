@@ -1179,13 +1179,17 @@ export const AccountsApiAxiosParamCreator = function (
       );
       // verify required parameter 'webSiteName' is not null or undefined
       assertParamExists("getAzureWebSitesSlotList", "webSiteName", webSiteName);
-      const localVarPath = `/accounts/{id}/{resourceGroupName}/websites/{webSiteName}/slots`
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-        .replace(
-          `{${"resourceGroupName"}}`,
-          encodeURIComponent(String(resourceGroupName))
-        )
-        .replace(`{${"webSiteName"}}`, encodeURIComponent(String(webSiteName)));
+      const localVarPath =
+        `/accounts/{id}/{resourceGroupName}/websites/{webSiteName}/slots`
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+          .replace(
+            `{${"resourceGroupName"}}`,
+            encodeURIComponent(String(resourceGroupName))
+          )
+          .replace(
+            `{${"webSiteName"}}`,
+            encodeURIComponent(String(webSiteName))
+          );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -1268,14 +1272,21 @@ export const AccountsApiAxiosParamCreator = function (
         "webSiteName",
         webSiteName
       );
-      const localVarPath = `/{baseSpaceId}/accounts/{id}/{resourceGroupName}/websites/{webSiteName}/slots`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-        .replace(
-          `{${"resourceGroupName"}}`,
-          encodeURIComponent(String(resourceGroupName))
-        )
-        .replace(`{${"webSiteName"}}`, encodeURIComponent(String(webSiteName)));
+      const localVarPath =
+        `/{baseSpaceId}/accounts/{id}/{resourceGroupName}/websites/{webSiteName}/slots`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+          .replace(
+            `{${"resourceGroupName"}}`,
+            encodeURIComponent(String(resourceGroupName))
+          )
+          .replace(
+            `{${"webSiteName"}}`,
+            encodeURIComponent(String(webSiteName))
+          );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -1784,11 +1795,12 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<AccountResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createAccountSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createAccountSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1835,11 +1847,12 @@ export const AccountsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteAccountSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteAccountSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1892,11 +1905,12 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<AccountResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAccountByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAccountByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1916,10 +1930,11 @@ export const AccountsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAccountPublicKeyDownload(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAccountPublicKeyDownload(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1941,11 +1956,12 @@ export const AccountsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAccountPublicKeyDownloadSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAccountPublicKeyDownloadSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1968,10 +1984,8 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<AccountUsageResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAccountUsageList(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAccountUsageList(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1996,11 +2010,12 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<AccountUsageResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAccountUsageListSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAccountUsageListSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2021,9 +2036,8 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AzureEnvironmentResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAzureEnvironmentsList(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAzureEnvironmentsList(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2046,10 +2060,8 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AzureResourceGroupResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAzureResourceGroupsList(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAzureResourceGroupsList(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2074,11 +2086,12 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AzureResourceGroupResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAzureResourceGroupsListSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAzureResourceGroupsListSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2101,10 +2114,11 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AzureStorageAccountResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAzureStorageAccountsList(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAzureStorageAccountsList(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2129,11 +2143,12 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AzureStorageAccountResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAzureStorageAccountsListSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAzureStorageAccountsListSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2156,10 +2171,8 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AzureWebSiteResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAzureWebSitesList(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAzureWebSitesList(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2184,11 +2197,12 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AzureWebSiteResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAzureWebSitesListSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAzureWebSitesListSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2215,12 +2229,13 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AzureWebSiteSlotResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAzureWebSitesSlotList(
-        id,
-        resourceGroupName,
-        webSiteName,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAzureWebSitesSlotList(
+          id,
+          resourceGroupName,
+          webSiteName,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2249,13 +2264,14 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AzureWebSiteSlotResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getAzureWebSitesSlotListSpaces(
-        baseSpaceId,
-        id,
-        resourceGroupName,
-        webSiteName,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getAzureWebSitesSlotListSpaces(
+          baseSpaceId,
+          id,
+          resourceGroupName,
+          webSiteName,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2313,12 +2329,13 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<AccountResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexAccountsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexAccountsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2366,10 +2383,11 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<AccountResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllAccountsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllAccountsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2427,12 +2445,13 @@ export const AccountsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<AccountResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateAccountSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateAccountSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2849,354 +2868,12 @@ export const AccountsApiFactory = function (
 };
 
 /**
- * AccountsApi - interface
- * @export
- * @interface AccountsApi
- */
-export interface AccountsApiInterface {
-  /**
-   * Creates a new account.
-   * @summary Create a AccountResource
-   * @param {AccountResource} [body] The AccountResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  createAccount(
-    body?: AccountResource,
-    options?: any
-  ): AxiosPromise<AccountResource>;
-
-  /**
-   * Creates a new account.
-   * @summary Create a AccountResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {AccountResource} [body] The AccountResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  createAccountSpaces(
-    baseSpaceId: string,
-    body?: AccountResource,
-    options?: any
-  ): AxiosPromise<AccountResource>;
-
-  /**
-   * Deletes an existing account.
-   * @summary Delete a AccountResource by ID
-   * @param {string} id ID of the AccountResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  deleteAccount(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing account.
-   * @summary Delete a AccountResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the AccountResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  deleteAccountSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get an Account by ID
-   * @param {string} id ID of the Account to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAccountById(id: string, options?: any): AxiosPromise<AccountResource>;
-
-  /**
-   *
-   * @summary Get an Account by ID
-   * @param {string} id ID of the Account to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAccountByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<AccountResource>;
-
-  /**
-   * Downloads the public key portion of the account\'s associated certificate, if present.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAccountPublicKeyDownload(id: string, options?: any): AxiosPromise<any>;
-
-  /**
-   * Downloads the public key portion of the account\'s associated certificate, if present.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAccountPublicKeyDownloadSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<any>;
-
-  /**
-   * Lists projects and deployments which are using an account.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAccountUsageList(
-    id: string,
-    options?: any
-  ): AxiosPromise<AccountUsageResource>;
-
-  /**
-   * Lists projects and deployments which are using an account.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAccountUsageListSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<AccountUsageResource>;
-
-  /**
-   * Lists the Azure Environments provided by the SDK
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAzureEnvironmentsList(
-    options?: any
-  ): AxiosPromise<Array<AzureEnvironmentResource>>;
-
-  /**
-   * Lists the Resource Groups associated with an Azure account.
-   * @param {string} id The account id
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAzureResourceGroupsList(
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<AzureResourceGroupResource>>;
-
-  /**
-   * Lists the Resource Groups associated with an Azure account.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id The account id
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAzureResourceGroupsListSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<AzureResourceGroupResource>>;
-
-  /**
-   * Lists the storage accounts associated with an Azure account.
-   * @param {string} id The account id
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAzureStorageAccountsList(
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<AzureStorageAccountResource>>;
-
-  /**
-   * Lists the storage accounts associated with an Azure account.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id The account id
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAzureStorageAccountsListSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<AzureStorageAccountResource>>;
-
-  /**
-   * Lists the websites associated with an Azure account.
-   * @param {string} id The account id
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAzureWebSitesList(
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<AzureWebSiteResource>>;
-
-  /**
-   * Lists the websites associated with an Azure account.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id The account id
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAzureWebSitesListSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<AzureWebSiteResource>>;
-
-  /**
-   * Lists the slots associated with an Azure Web Site.
-   * @param {string} id The account id
-   * @param {string} resourceGroupName Azure resource group name
-   * @param {string} webSiteName Website name
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAzureWebSitesSlotList(
-    id: string,
-    resourceGroupName: string,
-    webSiteName: string,
-    options?: any
-  ): AxiosPromise<Array<AzureWebSiteSlotResource>>;
-
-  /**
-   * Lists the slots associated with an Azure Web Site.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id The account id
-   * @param {string} resourceGroupName Azure resource group name
-   * @param {string} webSiteName Website name
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  getAzureWebSitesSlotListSpaces(
-    baseSpaceId: string,
-    id: string,
-    resourceGroupName: string,
-    webSiteName: string,
-    options?: any
-  ): AxiosPromise<Array<AzureWebSiteSlotResource>>;
-
-  /**
-   * Lists accounts in the supplied Octopus Deploy Space in pages. The results will be sorted alphabetically by name.
-   * @summary Get a list of AccountResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  indexAccounts(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<AccountResourceCollection>;
-
-  /**
-   * Lists accounts in the supplied Octopus Deploy Space in pages. The results will be sorted alphabetically by name.
-   * @summary Get a list of AccountResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  indexAccountsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<AccountResourceCollection>;
-
-  /**
-   * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of Accounts
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  listAllAccounts(options?: any): AxiosPromise<Array<AccountResource>>;
-
-  /**
-   * Lists all of the accounts in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of Accounts
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  listAllAccountsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<AccountResource>>;
-
-  /**
-   * Modifies an existing account.
-   * @summary Modify a AccountResource by ID
-   * @param {string} id ID of the AccountResource to modify
-   * @param {AccountResource} [body] The AccountResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  updateAccount(
-    id: string,
-    body?: AccountResource,
-    options?: any
-  ): AxiosPromise<AccountResource>;
-
-  /**
-   * Modifies an existing account.
-   * @summary Modify a AccountResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the AccountResource to modify
-   * @param {AccountResource} [body] The AccountResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AccountsApiInterface
-   */
-  updateAccountSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: AccountResource,
-    options?: any
-  ): AxiosPromise<AccountResource>;
-}
-
-/**
  * AccountsApi - object-oriented interface
  * @export
  * @class AccountsApi
  * @extends {BaseAPI}
  */
-export class AccountsApi extends BaseAPI implements AccountsApiInterface {
+export class AccountsApi extends BaseAPI {
   /**
    * Creates a new account.
    * @summary Create a AccountResource

@@ -1069,11 +1069,12 @@ export const TeamsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TeamResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createTeamSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createTeamSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1120,11 +1121,12 @@ export const TeamsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteTeamSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteTeamSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1152,12 +1154,13 @@ export const TeamsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ScopedUserRoleResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getListScopedUserRoleForTeam(
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getListScopedUserRoleForTeam(
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1187,13 +1190,14 @@ export const TeamsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ScopedUserRoleResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getListScopedUserRoleForTeamSpaces(
-        id,
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getListScopedUserRoleForTeamSpaces(
+          id,
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1240,11 +1244,12 @@ export const TeamsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TeamResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getTeamByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getTeamByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1292,10 +1297,11 @@ export const TeamsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<TeamResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllTeamsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllTeamsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1422,12 +1428,13 @@ export const TeamsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TeamResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateTeamSpaces(
-        id,
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateTeamSpaces(
+          id,
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1692,224 +1699,12 @@ export const TeamsApiFactory = function (
 };
 
 /**
- * TeamsApi - interface
- * @export
- * @interface TeamsApi
- */
-export interface TeamsApiInterface {
-  /**
-   * Creates a team.
-   * @summary Creates a new Team
-   * @param {TeamResource} [body]
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  createTeam(body?: TeamResource, options?: any): AxiosPromise<TeamResource>;
-
-  /**
-   * Creates a team.
-   * @summary Creates a new Team
-   * @param {string} baseSpaceId ID of the space
-   * @param {TeamResource} [body]
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  createTeamSpaces(
-    baseSpaceId: string,
-    body?: TeamResource,
-    options?: any
-  ): AxiosPromise<TeamResource>;
-
-  /**
-   *
-   * @summary Deletes an existing Team
-   * @param {string} id ID of the Team to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  deleteTeam(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Deletes an existing Team
-   * @param {string} id ID of the Team to delete
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  deleteTeamSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * List all the Scoped User Roles for the Team. Results will be sorted by Space Id with System Teams being sorted before Space Teams.
-   * @summary Get a list of a Team\'s Scoped User Roles
-   * @param {string} id The ID of the Team
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 30
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  getListScopedUserRoleForTeam(
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ScopedUserRoleResourceCollection>;
-
-  /**
-   * List all the Scoped User Roles for the Team. Results will be sorted by Space Id with System Teams being sorted before Space Teams.
-   * @summary Get a list of a Team\'s Scoped User Roles
-   * @param {string} id The ID of the Team
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 30
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  getListScopedUserRoleForTeamSpaces(
-    id: string,
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ScopedUserRoleResourceCollection>;
-
-  /**
-   *
-   * @summary Get a Team by ID
-   * @param {string} id ID of the Team to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  getTeamById(id: string, options?: any): AxiosPromise<TeamResource>;
-
-  /**
-   *
-   * @summary Get a Team by ID
-   * @param {string} id ID of the Team to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  getTeamByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<TeamResource>;
-
-  /**
-   * Lists the name and ID of all of the teams in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get a list of Teams
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  listAllTeams(options?: any): AxiosPromise<Array<TeamResource>>;
-
-  /**
-   * Lists the name and ID of all of the teams in the supplied Octopus Deploy Space. The results will be sorted by name.
-   * @summary Get a list of Teams
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  listAllTeamsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<TeamResource>>;
-
-  /**
-   * Lists all of the teams in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Gets a list of teams
-   * @param {Array<string>} [ids] A list of Team IDs, to limit the matching of Teams to those with a particular ID. Example: [\&quot;Teams-1\&quot;, \&quot;Teams-2\&quot;]
-   * @param {string} [partialName] A partial name, to limit the set of Teams to those with a name that includes the partial name
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 30
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  listTeams(
-    ids?: Array<string>,
-    partialName?: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<TeamResourceCollection>;
-
-  /**
-   * Lists all of the teams in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Gets a list of teams
-   * @param {string} baseSpaceId ID of the space
-   * @param {Array<string>} [ids] A list of Team IDs, to limit the matching of Teams to those with a particular ID. Example: [\&quot;Teams-1\&quot;, \&quot;Teams-2\&quot;]
-   * @param {string} [partialName] A partial name, to limit the set of Teams to those with a name that includes the partial name
-   * @param {number} [skip] Number of items to skip. Defaults to zero
-   * @param {number} [take] Number of items to take. Defaults to 30
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  listTeamsSpaces(
-    baseSpaceId: string,
-    ids?: Array<string>,
-    partialName?: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<TeamResourceCollection>;
-
-  /**
-   * The Everyone team is treated as a special case and its members and external groups may not be changed.
-   * @summary Modifies an existing Team
-   * @param {string} id
-   * @param {TeamResource} [body]
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  updateTeam(
-    id: string,
-    body?: TeamResource,
-    options?: any
-  ): AxiosPromise<TeamResource>;
-
-  /**
-   * The Everyone team is treated as a special case and its members and external groups may not be changed.
-   * @summary Modifies an existing Team
-   * @param {string} id
-   * @param {string} baseSpaceId ID of the space
-   * @param {TeamResource} [body]
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TeamsApiInterface
-   */
-  updateTeamSpaces(
-    id: string,
-    baseSpaceId: string,
-    body?: TeamResource,
-    options?: any
-  ): AxiosPromise<TeamResource>;
-}
-
-/**
  * TeamsApi - object-oriented interface
  * @export
  * @class TeamsApi
  * @extends {BaseAPI}
  */
-export class TeamsApi extends BaseAPI implements TeamsApiInterface {
+export class TeamsApi extends BaseAPI {
   /**
    * Creates a team.
    * @summary Creates a new Team

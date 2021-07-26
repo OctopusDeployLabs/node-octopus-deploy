@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum ActivityLogEntryCategory {
   Trace = "Trace",
   Verbose = "Verbose",

@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum PhaseProgress {
   Pending = "Pending",
   Current = "Current",

@@ -211,9 +211,8 @@ export const DynamicExtensionsApiAxiosParamCreator = function (
  * @export
  */
 export const DynamicExtensionsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = DynamicExtensionsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    DynamicExtensionsApiAxiosParamCreator(configuration);
   return {
     /**
      * Retrieves the current dynamic extensions feature metadata.
@@ -228,9 +227,10 @@ export const DynamicExtensionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DynamicExtensionsFeaturesMetadataResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDynamicExtensionsFeaturesMetadata(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDynamicExtensionsFeaturesMetadata(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -251,9 +251,10 @@ export const DynamicExtensionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DynamicExtensionsFeaturesValuesResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getDynamicExtensionsFeaturesValues(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getDynamicExtensionsFeaturesValues(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -274,9 +275,10 @@ export const DynamicExtensionsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<DynamicExtensionsFeaturesValuesResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateDynamicExtensionsFeaturesValues(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateDynamicExtensionsFeaturesValues(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -338,51 +340,12 @@ export const DynamicExtensionsApiFactory = function (
 };
 
 /**
- * DynamicExtensionsApi - interface
- * @export
- * @interface DynamicExtensionsApi
- */
-export interface DynamicExtensionsApiInterface {
-  /**
-   * Retrieves the current dynamic extensions feature metadata.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DynamicExtensionsApiInterface
-   */
-  getDynamicExtensionsFeaturesMetadata(
-    options?: any
-  ): AxiosPromise<DynamicExtensionsFeaturesMetadataResource>;
-
-  /**
-   * Retrieves the current dynamic extensions feature values.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DynamicExtensionsApiInterface
-   */
-  getDynamicExtensionsFeaturesValues(
-    options?: any
-  ): AxiosPromise<DynamicExtensionsFeaturesValuesResource>;
-
-  /**
-   * Modifies the current dynamic extensions feature values.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof DynamicExtensionsApiInterface
-   */
-  updateDynamicExtensionsFeaturesValues(
-    options?: any
-  ): AxiosPromise<DynamicExtensionsFeaturesValuesResource>;
-}
-
-/**
  * DynamicExtensionsApi - object-oriented interface
  * @export
  * @class DynamicExtensionsApi
  * @extends {BaseAPI}
  */
-export class DynamicExtensionsApi
-  extends BaseAPI
-  implements DynamicExtensionsApiInterface {
+export class DynamicExtensionsApi extends BaseAPI {
   /**
    * Retrieves the current dynamic extensions feature metadata.
    * @param {*} [options] Override http request option.

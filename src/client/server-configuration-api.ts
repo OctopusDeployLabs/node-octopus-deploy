@@ -211,9 +211,8 @@ export const ServerConfigurationApiAxiosParamCreator = function (
 export const ServerConfigurationApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = ServerConfigurationApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ServerConfigurationApiAxiosParamCreator(configuration);
   return {
     /**
      * Gets information about the editable server configuration in use by the Octopus Server
@@ -228,9 +227,8 @@ export const ServerConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<ServerConfigurationResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getServerConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getServerConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -251,9 +249,10 @@ export const ServerConfigurationApiFp = function (
         basePath?: string
       ) => AxiosPromise<Array<ServerConfigurationSettingsResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getServerConfigurationSettingsList(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getServerConfigurationSettingsList(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -271,9 +270,8 @@ export const ServerConfigurationApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateServerConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateServerConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -333,49 +331,12 @@ export const ServerConfigurationApiFactory = function (
 };
 
 /**
- * ServerConfigurationApi - interface
- * @export
- * @interface ServerConfigurationApi
- */
-export interface ServerConfigurationApiInterface {
-  /**
-   * Gets information about the editable server configuration in use by the Octopus Server
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerConfigurationApiInterface
-   */
-  getServerConfiguration(
-    options?: any
-  ): AxiosPromise<ServerConfigurationResource>;
-
-  /**
-   * Gets information about the server configuration in use by the Octopus Server
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerConfigurationApiInterface
-   */
-  getServerConfigurationSettingsList(
-    options?: any
-  ): AxiosPromise<Array<ServerConfigurationSettingsResource>>;
-
-  /**
-   * Updates the server configuration used by the Octopus Server
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ServerConfigurationApiInterface
-   */
-  updateServerConfiguration(options?: any): AxiosPromise<void>;
-}
-
-/**
  * ServerConfigurationApi - object-oriented interface
  * @export
  * @class ServerConfigurationApi
  * @extends {BaseAPI}
  */
-export class ServerConfigurationApi
-  extends BaseAPI
-  implements ServerConfigurationApiInterface {
+export class ServerConfigurationApi extends BaseAPI {
   /**
    * Gets information about the editable server configuration in use by the Octopus Server
    * @param {*} [options] Override http request option.

@@ -224,9 +224,8 @@ export const LicensesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<LicenseResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getLicenseGetCurrent(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getLicenseGetCurrent(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -247,9 +246,8 @@ export const LicensesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<LicenseStatusResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getLicenseStatusGetCurrent(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getLicenseStatusGetCurrent(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -270,9 +268,8 @@ export const LicensesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<LicenseResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateLicensePutCurrent(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateLicensePutCurrent(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -330,45 +327,12 @@ export const LicensesApiFactory = function (
 };
 
 /**
- * LicensesApi - interface
- * @export
- * @interface LicensesApi
- */
-export interface LicensesApiInterface {
-  /**
-   * Returns the details of the current license in use by the Octopus Cluster.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LicensesApiInterface
-   */
-  getLicenseGetCurrent(options?: any): AxiosPromise<LicenseResource>;
-
-  /**
-   * Calculates the status of the current Octopus license including compliance and maintenance expiry.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LicensesApiInterface
-   */
-  getLicenseStatusGetCurrent(
-    options?: any
-  ): AxiosPromise<LicenseStatusResource>;
-
-  /**
-   * Updates the license for the Octopus cluster.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LicensesApiInterface
-   */
-  updateLicensePutCurrent(options?: any): AxiosPromise<LicenseResource>;
-}
-
-/**
  * LicensesApi - object-oriented interface
  * @export
  * @class LicensesApi
  * @extends {BaseAPI}
  */
-export class LicensesApi extends BaseAPI implements LicensesApiInterface {
+export class LicensesApi extends BaseAPI {
   /**
    * Returns the details of the current license in use by the Octopus Cluster.
    * @param {*} [options] Override http request option.

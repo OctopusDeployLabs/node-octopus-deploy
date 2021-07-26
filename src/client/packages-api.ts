@@ -149,10 +149,17 @@ export const PackagesApiAxiosParamCreator = function (
         "packageId",
         packageId
       );
-      const localVarPath = `/{baseSpaceId}/packages/{packageId}/{baseVersion}/delta`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"baseVersion"}}`, encodeURIComponent(String(baseVersion)))
-        .replace(`{${"packageId"}}`, encodeURIComponent(String(packageId)));
+      const localVarPath =
+        `/{baseSpaceId}/packages/{packageId}/{baseVersion}/delta`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(
+            `{${"baseVersion"}}`,
+            encodeURIComponent(String(baseVersion))
+          )
+          .replace(`{${"packageId"}}`, encodeURIComponent(String(packageId)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -1025,10 +1032,14 @@ export const PackagesApiAxiosParamCreator = function (
         "version",
         version
       );
-      const localVarPath = `/{baseSpaceId}/packages/{packageId}/{version}/delta-signature`
-        .replace(`{${"baseSpaceId"}}`, encodeURIComponent(String(baseSpaceId)))
-        .replace(`{${"packageId"}}`, encodeURIComponent(String(packageId)))
-        .replace(`{${"version"}}`, encodeURIComponent(String(version)));
+      const localVarPath =
+        `/{baseSpaceId}/packages/{packageId}/{version}/delta-signature`
+          .replace(
+            `{${"baseSpaceId"}}`,
+            encodeURIComponent(String(baseSpaceId))
+          )
+          .replace(`{${"packageId"}}`, encodeURIComponent(String(packageId)))
+          .replace(`{${"version"}}`, encodeURIComponent(String(version)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -1551,11 +1562,12 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createPackageRepositoryDeltaUpload(
-        baseVersion,
-        packageId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createPackageRepositoryDeltaUpload(
+          baseVersion,
+          packageId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1579,12 +1591,13 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createPackageRepositoryDeltaUploadSpaces(
-        baseSpaceId,
-        baseVersion,
-        packageId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createPackageRepositoryDeltaUploadSpaces(
+          baseSpaceId,
+          baseVersion,
+          packageId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1602,9 +1615,8 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createPackageRepositoryUpload(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createPackageRepositoryUpload(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1624,10 +1636,11 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createPackageRepositoryUploadSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createPackageRepositoryUploadSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1647,10 +1660,11 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deletePackageRepositoryDeleteById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deletePackageRepositoryDeleteById(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1672,11 +1686,12 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deletePackageRepositoryDeleteByIdSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deletePackageRepositoryDeleteByIdSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1696,10 +1711,11 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deletePackageRepositoryDeleteByIds(
-        ids,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deletePackageRepositoryDeleteByIds(
+          ids,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1721,11 +1737,12 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deletePackageRepositoryDeleteByIdsSpaces(
-        baseSpaceId,
-        ids,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deletePackageRepositoryDeleteByIdsSpaces(
+          baseSpaceId,
+          ids,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1746,9 +1763,8 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageNoteListResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageListNotes(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageListNotes(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1771,10 +1787,11 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageNoteListResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageListNotesSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageListNotesSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1829,13 +1846,14 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageNotesSpaces(
-        baseSpaceId,
-        id,
-        packageId,
-        version,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageNotesSpaces(
+          baseSpaceId,
+          id,
+          packageId,
+          version,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1858,10 +1876,8 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageFromBuiltInFeedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageRepository(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageRepository(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1886,11 +1902,12 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageSignatureResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageRepositoryDeltaSignature(
-        packageId,
-        version,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageRepositoryDeltaSignature(
+          packageId,
+          version,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1917,12 +1934,13 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageSignatureResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageRepositoryDeltaSignatureSpaces(
-        baseSpaceId,
-        packageId,
-        version,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageRepositoryDeltaSignatureSpaces(
+          baseSpaceId,
+          packageId,
+          version,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1942,10 +1960,8 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageRepositoryGetRaw(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageRepositoryGetRaw(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1967,11 +1983,12 @@ export const PackagesApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageRepositoryGetRawSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageRepositoryGetRawSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1992,9 +2009,8 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageRepositoryList(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageRepositoryList(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2017,10 +2033,11 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageRepositoryListSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageRepositoryListSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2045,11 +2062,12 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<PackageFromBuiltInFeedResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageRepositorySpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageRepositorySpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2072,10 +2090,8 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<PackageResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageSearchActionOld(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageSearchActionOld(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2100,11 +2116,12 @@ export const PackagesApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<PackageResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getPackageSearchActionOldSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getPackageSearchActionOldSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2467,302 +2484,12 @@ export const PackagesApiFactory = function (
 };
 
 /**
- * PackagesApi - interface
- * @export
- * @interface PackagesApi
- */
-export interface PackagesApiInterface {
-  /**
-   * Uploads a delta patch for the given file. Used to optimize file upload.
-   * @param {string} baseVersion The version of the package that was used to create the signature
-   * @param {string} packageId Package ID of the package to be uploaded
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  createPackageRepositoryDeltaUpload(
-    baseVersion: string,
-    packageId: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Uploads a delta patch for the given file. Used to optimize file upload.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} baseVersion The version of the package that was used to create the signature
-   * @param {string} packageId Package ID of the package to be uploaded
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  createPackageRepositoryDeltaUploadSpaces(
-    baseSpaceId: string,
-    baseVersion: string,
-    packageId: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Uploads a new package
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  createPackageRepositoryUpload(options?: any): AxiosPromise<void>;
-
-  /**
-   * Uploads a new package
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  createPackageRepositoryUploadSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Deletes the specified package
-   * @param {string} id ID of the package
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  deletePackageRepositoryDeleteById(
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Deletes the specified package
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the package
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  deletePackageRepositoryDeleteByIdSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Bulk deletes packages
-   * @param {string} ids Comma separated list of IDs to be deleted
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  deletePackageRepositoryDeleteByIds(
-    ids: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Bulk deletes packages
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} ids Comma separated list of IDs to be deleted
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  deletePackageRepositoryDeleteByIdsSpaces(
-    baseSpaceId: string,
-    ids: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Returns a list of release notes for the specified packages
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageListNotes(options?: any): AxiosPromise<PackageNoteListResource>;
-
-  /**
-   * Returns a list of release notes for the specified packages
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageListNotesSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<PackageNoteListResource>;
-
-  /**
-   * Returns the release notes for the specified package
-   * @param {string} id ID of the feed
-   * @param {string} [packageId] Package Id
-   * @param {string} [version] Package Version
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageNotes(
-    id: string,
-    packageId?: string,
-    version?: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Returns the release notes for the specified package
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the feed
-   * @param {string} [packageId] Package Id
-   * @param {string} [version] Package Version
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageNotesSpaces(
-    baseSpaceId: string,
-    id: string,
-    packageId?: string,
-    version?: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Returns package information for the specified package id
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageRepository(
-    id: string,
-    options?: any
-  ): AxiosPromise<PackageFromBuiltInFeedResource>;
-
-  /**
-   * Returns the delta-signature for a given package. Used to optimize file upload.
-   * @param {string} packageId Package ID of the package to be uploaded
-   * @param {string} version The version of the package to be uploaded
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageRepositoryDeltaSignature(
-    packageId: string,
-    version: string,
-    options?: any
-  ): AxiosPromise<PackageSignatureResource>;
-
-  /**
-   * Returns the delta-signature for a given package. Used to optimize file upload.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} packageId Package ID of the package to be uploaded
-   * @param {string} version The version of the package to be uploaded
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageRepositoryDeltaSignatureSpaces(
-    baseSpaceId: string,
-    packageId: string,
-    version: string,
-    options?: any
-  ): AxiosPromise<PackageSignatureResource>;
-
-  /**
-   * Downloads the specified package
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageRepositoryGetRaw(id: string, options?: any): AxiosPromise<any>;
-
-  /**
-   * Downloads the specified package
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageRepositoryGetRawSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<any>;
-
-  /**
-   * Returns a list of packages matching the specified criteria
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageRepositoryList(
-    options?: any
-  ): AxiosPromise<PackageResourceCollection>;
-
-  /**
-   * Returns a list of packages matching the specified criteria
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageRepositoryListSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<PackageResourceCollection>;
-
-  /**
-   * Returns package information for the specified package id
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageRepositorySpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<PackageFromBuiltInFeedResource>;
-
-  /**
-   * Searches the specified feed for packages. Legacy. Please use the /feeds{id}/packages/search endpoint instead.
-   * @param {string} id ID of the feed
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageSearchActionOld(
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<PackageResource>>;
-
-  /**
-   * Searches the specified feed for packages. Legacy. Please use the /feeds{id}/packages/search endpoint instead.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the feed
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof PackagesApiInterface
-   */
-  getPackageSearchActionOldSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<Array<PackageResource>>;
-}
-
-/**
  * PackagesApi - object-oriented interface
  * @export
  * @class PackagesApi
  * @extends {BaseAPI}
  */
-export class PackagesApi extends BaseAPI implements PackagesApiInterface {
+export class PackagesApi extends BaseAPI {
   /**
    * Uploads a delta patch for the given file. Used to optimize file upload.
    * @param {string} baseVersion The version of the package that was used to create the signature

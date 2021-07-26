@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum RetentionUnit {
   Days = "Days",
   Items = "Items",

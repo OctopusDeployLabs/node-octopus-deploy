@@ -99,9 +99,8 @@ export const AzureDevOpsApiAxiosParamCreator = function (
  * @export
  */
 export const AzureDevOpsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = AzureDevOpsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    AzureDevOpsApiAxiosParamCreator(configuration);
   return {
     /**
      *
@@ -116,9 +115,10 @@ export const AzureDevOpsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ConnectivityCheckResponse>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createAzureDevOpsConnectivityCheck(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createAzureDevOpsConnectivityCheck(
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -156,29 +156,12 @@ export const AzureDevOpsApiFactory = function (
 };
 
 /**
- * AzureDevOpsApi - interface
- * @export
- * @interface AzureDevOpsApi
- */
-export interface AzureDevOpsApiInterface {
-  /**
-   *
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof AzureDevOpsApiInterface
-   */
-  createAzureDevOpsConnectivityCheck(
-    options?: any
-  ): AxiosPromise<ConnectivityCheckResponse>;
-}
-
-/**
  * AzureDevOpsApi - object-oriented interface
  * @export
  * @class AzureDevOpsApi
  * @extends {BaseAPI}
  */
-export class AzureDevOpsApi extends BaseAPI implements AzureDevOpsApiInterface {
+export class AzureDevOpsApi extends BaseAPI {
   /**
    *
    * @param {*} [options] Override http request option.

@@ -1373,10 +1373,8 @@ export const TasksApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TaskResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createTaskCancel(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createTaskCancel(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1398,11 +1396,12 @@ export const TasksApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TaskResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createTaskCancelSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createTaskCancelSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1447,11 +1446,12 @@ export const TasksApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TaskResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createTaskRerunSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createTaskRerunSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1474,11 +1474,12 @@ export const TasksApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TaskResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createTaskSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createTaskSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1523,11 +1524,12 @@ export const TasksApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TaskResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createTaskStateSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createTaskStateSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1548,9 +1550,8 @@ export const TasksApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<TaskTypeResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getListTaskTypes(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getListTaskTypes(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1573,10 +1574,11 @@ export const TasksApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<Array<TaskTypeResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getListTaskTypesSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getListTaskTypesSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1622,10 +1624,11 @@ export const TasksApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<TaskResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getListTasksSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getListTasksSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1672,11 +1675,12 @@ export const TasksApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<TaskResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getTaskByIdSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getTaskByIdSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1727,11 +1731,12 @@ export const TasksApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<TaskDetailsResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getTaskDetailsSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getTaskDetailsSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1776,11 +1781,12 @@ export const TasksApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getTaskRawSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getTaskRawSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1808,12 +1814,13 @@ export const TasksApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<TaskResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexTaskQueuedBehind(
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexTaskQueuedBehind(
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1843,13 +1850,14 @@ export const TasksApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<TaskResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexTaskQueuedBehindSpaces(
-        baseSpaceId,
-        id,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexTaskQueuedBehindSpaces(
+          baseSpaceId,
+          id,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -2159,260 +2167,12 @@ export const TasksApiFactory = function (
 };
 
 /**
- * TasksApi - interface
- * @export
- * @interface TasksApi
- */
-export interface TasksApiInterface {
-  /**
-   * Creates a new task.
-   * @summary Create a TaskResource
-   * @param {TaskResource} [body] The TaskResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  createTask(body?: TaskResource, options?: any): AxiosPromise<TaskResource>;
-
-  /**
-   * Marks the given task as canceled.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  createTaskCancel(id: string, options?: any): AxiosPromise<TaskResource>;
-
-  /**
-   * Marks the given task as canceled.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  createTaskCancelSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<TaskResource>;
-
-  /**
-   * Creates a new task and executes it, using a given task as the input. Note that deployment tasks cannot be re-run.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  createTaskRerun(id: string, options?: any): AxiosPromise<TaskResource>;
-
-  /**
-   * Creates a new task and executes it, using a given task as the input. Note that deployment tasks cannot be re-run.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  createTaskRerunSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<TaskResource>;
-
-  /**
-   * Creates a new task.
-   * @summary Create a TaskResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {TaskResource} [body] The TaskResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  createTaskSpaces(
-    baseSpaceId: string,
-    body?: TaskResource,
-    options?: any
-  ): AxiosPromise<TaskResource>;
-
-  /**
-   * Change the state of a task
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  createTaskState(id: string, options?: any): AxiosPromise<TaskResource>;
-
-  /**
-   * Change the state of a task
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  createTaskStateSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<TaskResource>;
-
-  /**
-   * Lists supported task types.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getListTaskTypes(options?: any): AxiosPromise<Array<TaskTypeResource>>;
-
-  /**
-   * Lists supported task types.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getListTaskTypesSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<TaskTypeResource>>;
-
-  /**
-   * Lists all of the tasks in the supplied Octopus Deploy Space. The results will be sorted from newest to oldest.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getListTasks(options?: any): AxiosPromise<TaskResourceCollection>;
-
-  /**
-   * Lists all of the tasks in the supplied Octopus Deploy Space. The results will be sorted from newest to oldest.
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getListTasksSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<TaskResourceCollection>;
-
-  /**
-   * Gets a single task by ID.
-   * @summary Get a TaskResource by ID
-   * @param {string} id ID of the TaskResource to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getTaskById(id: string, options?: any): AxiosPromise<TaskResource>;
-
-  /**
-   * Gets a single task by ID.
-   * @summary Get a TaskResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the TaskResource to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getTaskByIdSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<TaskResource>;
-
-  /**
-   * Gets a single task by ID, including the full task log as a tree of activity elements.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getTaskDetails(id: string, options?: any): AxiosPromise<TaskDetailsResource>;
-
-  /**
-   * Gets a single task by ID, including the full task log as a tree of activity elements.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getTaskDetailsSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<TaskDetailsResource>;
-
-  /**
-   * Gets the full task log of a given resource as plain text. Useful when the log needs to be rendered to a console or sent as an email attachment.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getTaskRaw(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Gets the full task log of a given resource as plain text. Useful when the log needs to be rendered to a console or sent as an email attachment.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  getTaskRawSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Gets a list of tasks that this task is currently queued behind.
-   * @summary Get a list of TaskResources for the given TaskResource
-   * @param {string} id ID of the Task
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  indexTaskQueuedBehind(
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<TaskResourceCollection>;
-
-  /**
-   * Gets a list of tasks that this task is currently queued behind.
-   * @summary Get a list of TaskResources for the given TaskResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the Task
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items per page
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof TasksApiInterface
-   */
-  indexTaskQueuedBehindSpaces(
-    baseSpaceId: string,
-    id: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<TaskResourceCollection>;
-}
-
-/**
  * TasksApi - object-oriented interface
  * @export
  * @class TasksApi
  * @extends {BaseAPI}
  */
-export class TasksApi extends BaseAPI implements TasksApiInterface {
+export class TasksApi extends BaseAPI {
   /**
    * Creates a new task.
    * @summary Create a TaskResource

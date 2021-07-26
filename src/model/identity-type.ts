@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum IdentityType {
   Guest = "Guest",
   UsernamePassword = "UsernamePassword",

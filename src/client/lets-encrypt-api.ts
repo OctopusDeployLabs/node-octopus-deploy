@@ -214,9 +214,8 @@ export const LetsEncryptApiAxiosParamCreator = function (
  * @export
  */
 export const LetsEncryptApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = LetsEncryptApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    LetsEncryptApiAxiosParamCreator(configuration);
   return {
     /**
      * Returns the current Let\'s Encrypt configuration
@@ -228,9 +227,8 @@ export const LetsEncryptApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getLetsEncryptConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getLetsEncryptConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -250,10 +248,11 @@ export const LetsEncryptApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getLetsEncryptHttpChallenge(
-        token,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getLetsEncryptHttpChallenge(
+          token,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -271,9 +270,8 @@ export const LetsEncryptApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateLetsEncryptConfiguration(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateLetsEncryptConfiguration(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -333,44 +331,12 @@ export const LetsEncryptApiFactory = function (
 };
 
 /**
- * LetsEncryptApi - interface
- * @export
- * @interface LetsEncryptApi
- */
-export interface LetsEncryptApiInterface {
-  /**
-   * Returns the current Let\'s Encrypt configuration
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LetsEncryptApiInterface
-   */
-  getLetsEncryptConfiguration(options?: any): AxiosPromise<void>;
-
-  /**
-   * Returns the computed HTTP challenge for a given token
-   * @param {string} token LetsEncrypt response token
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LetsEncryptApiInterface
-   */
-  getLetsEncryptHttpChallenge(token: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Updates the Let\'s Encrypt configuration used by the Octopus Server.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LetsEncryptApiInterface
-   */
-  updateLetsEncryptConfiguration(options?: any): AxiosPromise<void>;
-}
-
-/**
  * LetsEncryptApi - object-oriented interface
  * @export
  * @class LetsEncryptApi
  * @extends {BaseAPI}
  */
-export class LetsEncryptApi extends BaseAPI implements LetsEncryptApiInterface {
+export class LetsEncryptApi extends BaseAPI {
   /**
    * Returns the current Let\'s Encrypt configuration
    * @param {*} [options] Override http request option.

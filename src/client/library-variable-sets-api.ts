@@ -1009,9 +1009,8 @@ export const LibraryVariableSetsApiAxiosParamCreator = function (
 export const LibraryVariableSetsApiFp = function (
   configuration?: Configuration
 ) {
-  const localVarAxiosParamCreator = LibraryVariableSetsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    LibraryVariableSetsApiAxiosParamCreator(configuration);
   return {
     /**
      * Creates a new library variable set.
@@ -1029,10 +1028,8 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createLibraryVariableSet(
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createLibraryVariableSet(body, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1058,11 +1055,12 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createLibraryVariableSetSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createLibraryVariableSetSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1083,10 +1081,8 @@ export const LibraryVariableSetsApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteLibraryVariableSet(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteLibraryVariableSet(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1109,11 +1105,12 @@ export const LibraryVariableSetsApiFp = function (
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteLibraryVariableSetSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteLibraryVariableSetSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1137,10 +1134,8 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getLibraryVariableSetById(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getLibraryVariableSetById(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1166,11 +1161,12 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getLibraryVariableSetByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getLibraryVariableSetByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1193,10 +1189,11 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetUsageResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getLibraryVariableSetUsageList(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getLibraryVariableSetUsageList(
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1221,11 +1218,12 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetUsageResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getLibraryVariableSetUsageListSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getLibraryVariableSetUsageListSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1251,11 +1249,12 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexLibraryVariableSets(
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexLibraryVariableSets(
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1283,12 +1282,13 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexLibraryVariableSetsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexLibraryVariableSetsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1310,9 +1310,8 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<Array<LibraryVariableSetResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllLibraryVariableSets(
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllLibraryVariableSets(options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1336,10 +1335,11 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<Array<LibraryVariableSetResource>>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listAllLibraryVariableSetsSpaces(
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.listAllLibraryVariableSetsSpaces(
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1365,11 +1365,12 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateLibraryVariableSet(
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateLibraryVariableSet(
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1397,12 +1398,13 @@ export const LibraryVariableSetsApiFp = function (
         basePath?: string
       ) => AxiosPromise<LibraryVariableSetResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateLibraryVariableSetSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateLibraryVariableSetSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1651,216 +1653,12 @@ export const LibraryVariableSetsApiFactory = function (
 };
 
 /**
- * LibraryVariableSetsApi - interface
- * @export
- * @interface LibraryVariableSetsApi
- */
-export interface LibraryVariableSetsApiInterface {
-  /**
-   * Creates a new library variable set.
-   * @summary Create a LibraryVariableSetResource
-   * @param {LibraryVariableSetResource} [body] The LibraryVariableSetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  createLibraryVariableSet(
-    body?: LibraryVariableSetResource,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetResource>;
-
-  /**
-   * Creates a new library variable set.
-   * @summary Create a LibraryVariableSetResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {LibraryVariableSetResource} [body] The LibraryVariableSetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  createLibraryVariableSetSpaces(
-    baseSpaceId: string,
-    body?: LibraryVariableSetResource,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetResource>;
-
-  /**
-   * Deletes an existing library variable set.
-   * @summary Delete a LibraryVariableSetResource by ID
-   * @param {string} id ID of the LibraryVariableSetResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  deleteLibraryVariableSet(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing library variable set.
-   * @summary Delete a LibraryVariableSetResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the LibraryVariableSetResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  deleteLibraryVariableSetSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get a Library Variable Set by ID
-   * @param {string} id ID of the LibraryVariableSet to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  getLibraryVariableSetById(
-    id: string,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetResource>;
-
-  /**
-   *
-   * @summary Get a Library Variable Set by ID
-   * @param {string} id ID of the LibraryVariableSet to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  getLibraryVariableSetByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetResource>;
-
-  /**
-   * Lists projects and deployments which are using an library variable set.
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  getLibraryVariableSetUsageList(
-    id: string,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetUsageResource>;
-
-  /**
-   * Lists projects and deployments which are using an library variable set.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the resource
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  getLibraryVariableSetUsageListSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetUsageResource>;
-
-  /**
-   * Lists all of the library variable sets in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of LibraryVariableSetResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  indexLibraryVariableSets(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetResourceCollection>;
-
-  /**
-   * Lists all of the library variable sets in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of LibraryVariableSetResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  indexLibraryVariableSetsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetResourceCollection>;
-
-  /**
-   * Lists all the library variable sets in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of LibraryVariableSetResources
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  listAllLibraryVariableSets(
-    options?: any
-  ): AxiosPromise<Array<LibraryVariableSetResource>>;
-
-  /**
-   * Lists all the library variable sets in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
-   * @summary Get a list of LibraryVariableSetResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  listAllLibraryVariableSetsSpaces(
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<Array<LibraryVariableSetResource>>;
-
-  /**
-   * Modifies an existing library variable set.
-   * @summary Modify a LibraryVariableSetResource by ID
-   * @param {string} id ID of the LibraryVariableSetResource to modify
-   * @param {LibraryVariableSetResource} [body] The LibraryVariableSetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  updateLibraryVariableSet(
-    id: string,
-    body?: LibraryVariableSetResource,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetResource>;
-
-  /**
-   * Modifies an existing library variable set.
-   * @summary Modify a LibraryVariableSetResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the LibraryVariableSetResource to modify
-   * @param {LibraryVariableSetResource} [body] The LibraryVariableSetResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof LibraryVariableSetsApiInterface
-   */
-  updateLibraryVariableSetSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: LibraryVariableSetResource,
-    options?: any
-  ): AxiosPromise<LibraryVariableSetResource>;
-}
-
-/**
  * LibraryVariableSetsApi - object-oriented interface
  * @export
  * @class LibraryVariableSetsApi
  * @extends {BaseAPI}
  */
-export class LibraryVariableSetsApi
-  extends BaseAPI
-  implements LibraryVariableSetsApiInterface {
+export class LibraryVariableSetsApi extends BaseAPI {
   /**
    * Creates a new library variable set.
    * @summary Create a LibraryVariableSetResource

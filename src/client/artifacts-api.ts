@@ -989,9 +989,8 @@ export const ArtifactsApiAxiosParamCreator = function (
  * @export
  */
 export const ArtifactsApiFp = function (configuration?: Configuration) {
-  const localVarAxiosParamCreator = ArtifactsApiAxiosParamCreator(
-    configuration
-  );
+  const localVarAxiosParamCreator =
+    ArtifactsApiAxiosParamCreator(configuration);
   return {
     /**
      * Creates a new artifact.
@@ -1038,11 +1037,12 @@ export const ArtifactsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ArtifactResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.createArtifactSpaces(
-        baseSpaceId,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.createArtifactSpaces(
+          baseSpaceId,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1089,11 +1089,12 @@ export const ArtifactsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.deleteArtifactSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.deleteArtifactSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1146,11 +1147,12 @@ export const ArtifactsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ArtifactResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getArtifactByIdSpaces(
-        id,
-        baseSpaceId,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getArtifactByIdSpaces(
+          id,
+          baseSpaceId,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1170,10 +1172,8 @@ export const ArtifactsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getArtifactContent(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getArtifactContent(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1195,11 +1195,12 @@ export const ArtifactsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.getArtifactContentSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.getArtifactContentSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1257,12 +1258,13 @@ export const ArtifactsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ArtifactResourceCollection>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.indexArtifactsSpaces(
-        baseSpaceId,
-        skip,
-        take,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.indexArtifactsSpaces(
+          baseSpaceId,
+          skip,
+          take,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1312,10 +1314,8 @@ export const ArtifactsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateArtifactContent(
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateArtifactContent(id, options);
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1337,11 +1337,12 @@ export const ArtifactsApiFp = function (configuration?: Configuration) {
     ): Promise<
       (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateArtifactContentSpaces(
-        baseSpaceId,
-        id,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateArtifactContentSpaces(
+          baseSpaceId,
+          id,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1369,12 +1370,13 @@ export const ArtifactsApiFp = function (configuration?: Configuration) {
         basePath?: string
       ) => AxiosPromise<ArtifactResource>
     > {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.updateArtifactSpaces(
-        baseSpaceId,
-        id,
-        body,
-        options
-      );
+      const localVarAxiosArgs =
+        await localVarAxiosParamCreator.updateArtifactSpaces(
+          baseSpaceId,
+          id,
+          body,
+          options
+        );
       return createRequestFunction(
         localVarAxiosArgs,
         globalAxios,
@@ -1616,207 +1618,12 @@ export const ArtifactsApiFactory = function (
 };
 
 /**
- * ArtifactsApi - interface
- * @export
- * @interface ArtifactsApi
- */
-export interface ArtifactsApiInterface {
-  /**
-   * Creates a new artifact.
-   * @summary Create a ArtifactResource
-   * @param {ArtifactResource} [body] The ArtifactResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  createArtifact(
-    body?: ArtifactResource,
-    options?: any
-  ): AxiosPromise<ArtifactResource>;
-
-  /**
-   * Creates a new artifact.
-   * @summary Create a ArtifactResource
-   * @param {string} baseSpaceId ID of the space
-   * @param {ArtifactResource} [body] The ArtifactResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  createArtifactSpaces(
-    baseSpaceId: string,
-    body?: ArtifactResource,
-    options?: any
-  ): AxiosPromise<ArtifactResource>;
-
-  /**
-   * Deletes an existing artifact.
-   * @summary Delete a ArtifactResource by ID
-   * @param {string} id ID of the ArtifactResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  deleteArtifact(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Deletes an existing artifact.
-   * @summary Delete a ArtifactResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ArtifactResource to delete
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  deleteArtifactSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   *
-   * @summary Get an Artifact by ID
-   * @param {string} id ID of the Artifact to load
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  getArtifactById(id: string, options?: any): AxiosPromise<ArtifactResource>;
-
-  /**
-   *
-   * @summary Get an Artifact by ID
-   * @param {string} id ID of the Artifact to load
-   * @param {string} baseSpaceId ID of the space
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  getArtifactByIdSpaces(
-    id: string,
-    baseSpaceId: string,
-    options?: any
-  ): AxiosPromise<ArtifactResource>;
-
-  /**
-   * Gets the content associated with an artifact.
-   * @param {string} id ID of the artifact
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  getArtifactContent(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Gets the content associated with an artifact.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the artifact
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  getArtifactContentSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Lists all of the artifacts in the supplied Octopus Deploy Space, from all releases. The results will be sorted by date from most recently to least recently created.
-   * @summary Get a list of ArtifactResources
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  indexArtifacts(
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ArtifactResourceCollection>;
-
-  /**
-   * Lists all of the artifacts in the supplied Octopus Deploy Space, from all releases. The results will be sorted by date from most recently to least recently created.
-   * @summary Get a list of ArtifactResources
-   * @param {string} baseSpaceId ID of the space
-   * @param {number} [skip] Number of items to skip
-   * @param {number} [take] Number of items to take
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  indexArtifactsSpaces(
-    baseSpaceId: string,
-    skip?: number,
-    take?: number,
-    options?: any
-  ): AxiosPromise<ArtifactResourceCollection>;
-
-  /**
-   * Modifies an existing artifact.
-   * @summary Modify a ArtifactResource by ID
-   * @param {string} id ID of the ArtifactResource to modify
-   * @param {ArtifactResource} [body] The ArtifactResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  updateArtifact(
-    id: string,
-    body?: ArtifactResource,
-    options?: any
-  ): AxiosPromise<ArtifactResource>;
-
-  /**
-   * Sets the content associated with an artifact.
-   * @param {string} id ID of the artifact
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  updateArtifactContent(id: string, options?: any): AxiosPromise<void>;
-
-  /**
-   * Sets the content associated with an artifact.
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the artifact
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  updateArtifactContentSpaces(
-    baseSpaceId: string,
-    id: string,
-    options?: any
-  ): AxiosPromise<void>;
-
-  /**
-   * Modifies an existing artifact.
-   * @summary Modify a ArtifactResource by ID
-   * @param {string} baseSpaceId ID of the space
-   * @param {string} id ID of the ArtifactResource to modify
-   * @param {ArtifactResource} [body] The ArtifactResource resource to create
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof ArtifactsApiInterface
-   */
-  updateArtifactSpaces(
-    baseSpaceId: string,
-    id: string,
-    body?: ArtifactResource,
-    options?: any
-  ): AxiosPromise<ArtifactResource>;
-}
-
-/**
  * ArtifactsApi - object-oriented interface
  * @export
  * @class ArtifactsApi
  * @extends {BaseAPI}
  */
-export class ArtifactsApi extends BaseAPI implements ArtifactsApiInterface {
+export class ArtifactsApi extends BaseAPI {
   /**
    * Creates a new artifact.
    * @summary Create a ArtifactResource

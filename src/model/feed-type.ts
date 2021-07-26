@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum FeedType {
   None = "None",
   NuGet = "NuGet",

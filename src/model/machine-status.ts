@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum MachineStatus {
   Healthy = "Healthy",
   HasWarnings = "HasWarnings",

@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum TenantedDeploymentMode {
   Untenanted = "Untenanted",
   TenantedOrUntenanted = "TenantedOrUntenanted",

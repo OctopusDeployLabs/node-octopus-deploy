@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum EmailPriority {
   Normal = "Normal",
   Low = "Low",

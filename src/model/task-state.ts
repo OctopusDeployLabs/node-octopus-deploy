@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum TaskState {
   Queued = "Queued",
   Executing = "Executing",

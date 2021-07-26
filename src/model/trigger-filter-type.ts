@@ -5,6 +5,7 @@
  * @export
  * @enum {string}
  */
+
 export enum TriggerFilterType {
   MachineFilter = "MachineFilter",
   DailySchedule = "DailySchedule",
