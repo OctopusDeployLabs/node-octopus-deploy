@@ -2512,12 +2512,319 @@ export const EnvironmentsApiFactory = function (
 };
 
 /**
+ * EnvironmentsApi - interface
+ * @export
+ * @interface EnvironmentsApi
+ */
+export interface EnvironmentsApiInterface {
+  /**
+   * Creates a new environment.
+   * @summary Create a EnvironmentResource
+   * @param {EnvironmentResource} [body] The EnvironmentResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  createEnvironment(
+    body?: EnvironmentResource,
+    options?: any
+  ): AxiosPromise<EnvironmentResource>;
+
+  /**
+   * Creates a new environment.
+   * @summary Create a EnvironmentResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {EnvironmentResource} [body] The EnvironmentResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  createEnvironmentSpaces(
+    baseSpaceId: string,
+    body?: EnvironmentResource,
+    options?: any
+  ): AxiosPromise<EnvironmentResource>;
+
+  /**
+   * Deletes an existing environment.
+   * @summary Delete a EnvironmentResource by ID
+   * @param {string} id ID of the EnvironmentResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  deleteEnvironment(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing environment.
+   * @summary Delete a EnvironmentResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the EnvironmentResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  deleteEnvironmentSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Gets the custom settings metadata from the extensions.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  getDeploymentEnvironmentSettingsMetadata(
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<DeploymentEnvironmentSettingsMetadata>>;
+
+  /**
+   * Gets the custom settings metadata from the extensions.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  getDeploymentEnvironmentSettingsMetadataSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<DeploymentEnvironmentSettingsMetadata>>;
+
+  /**
+   *
+   * @summary Get an Environment by ID
+   * @param {string} id ID of the Environment to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  getEnvironmentById(
+    id: string,
+    options?: any
+  ): AxiosPromise<EnvironmentResource>;
+
+  /**
+   *
+   * @summary Get an Environment by ID
+   * @param {string} id ID of the Environment to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  getEnvironmentByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<EnvironmentResource>;
+
+  /**
+   * Lists all environments, including a summary of machine information
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  getEnvironmentsSummary(
+    options?: any
+  ): AxiosPromise<EnvironmentsSummaryResource>;
+
+  /**
+   * Lists all environments, including a summary of machine information
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  getEnvironmentsSummarySpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<EnvironmentsSummaryResource>;
+
+  /**
+   * Lists all the variable set names (projects and library variable sets) that have variables that are scoped to only the given environment
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  getVariablesScopedToEnvironment(
+    id: string,
+    options?: any
+  ): AxiosPromise<VariablesScopedToEnvironmentResponse>;
+
+  /**
+   * Lists all the variable set names (projects and library variable sets) that have variables that are scoped to only the given environment
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  getVariablesScopedToEnvironmentSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<VariablesScopedToEnvironmentResponse>;
+
+  /**
+   * Lists all of the machines that belong to the given environment.
+   * @summary Get a list of DeploymentTargetResources for the given EnvironmentResource
+   * @param {string} id ID of the Environment
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  indexEnvironmentDeploymentTargets(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentTargetResourceCollection>;
+
+  /**
+   * Lists all of the machines that belong to the given environment.
+   * @summary Get a list of DeploymentTargetResources for the given EnvironmentResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the Environment
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  indexEnvironmentDeploymentTargetsSpaces(
+    baseSpaceId: string,
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentTargetResourceCollection>;
+
+  /**
+   * Lists all of the environments in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each environment.
+   * @summary Get a list of EnvironmentResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  indexEnvironments(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<EnvironmentResourceCollection>;
+
+  /**
+   * Lists all of the environments in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each environment.
+   * @summary Get a list of EnvironmentResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  indexEnvironmentsSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<EnvironmentResourceCollection>;
+
+  /**
+   * Lists the name and ID of all of the environments in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each environment.
+   * @summary Get a list of EnvironmentResources
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  listAllEnvironments(options?: any): AxiosPromise<Array<EnvironmentResource>>;
+
+  /**
+   * Lists the name and ID of all of the environments in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each environment.
+   * @summary Get a list of EnvironmentResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  listAllEnvironmentsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<EnvironmentResource>>;
+
+  /**
+   * Modifies an existing environment.
+   * @summary Modify a EnvironmentResource by ID
+   * @param {string} id ID of the EnvironmentResource to modify
+   * @param {EnvironmentResource} [body] The EnvironmentResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  updateEnvironment(
+    id: string,
+    body?: EnvironmentResource,
+    options?: any
+  ): AxiosPromise<EnvironmentResource>;
+
+  /**
+   * Modifies an existing environment.
+   * @summary Modify a EnvironmentResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the EnvironmentResource to modify
+   * @param {EnvironmentResource} [body] The EnvironmentResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  updateEnvironmentSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: EnvironmentResource,
+    options?: any
+  ): AxiosPromise<EnvironmentResource>;
+
+  /**
+   * Takes an array of environment IDs as the request body, uses the order of items in the array to sort the environments on the server. The ID of every environment must be specified.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  updateSortEnvironments(options?: any): AxiosPromise<void>;
+
+  /**
+   * Takes an array of environment IDs as the request body, uses the order of items in the array to sort the environments on the server. The ID of every environment must be specified.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EnvironmentsApiInterface
+   */
+  updateSortEnvironmentsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+}
+
+/**
  * EnvironmentsApi - object-oriented interface
  * @export
  * @class EnvironmentsApi
  * @extends {BaseAPI}
  */
-export class EnvironmentsApi extends BaseAPI {
+export class EnvironmentsApi
+  extends BaseAPI
+  implements EnvironmentsApiInterface
+{
   /**
    * Creates a new environment.
    * @summary Create a EnvironmentResource

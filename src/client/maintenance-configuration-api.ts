@@ -245,12 +245,42 @@ export const MaintenanceConfigurationApiFactory = function (
 };
 
 /**
+ * MaintenanceConfigurationApi - interface
+ * @export
+ * @interface MaintenanceConfigurationApi
+ */
+export interface MaintenanceConfigurationApiInterface {
+  /**
+   * Gets information about the maintenance configuration in use by the Octopus Server.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MaintenanceConfigurationApiInterface
+   */
+  getMaintenanceConfiguration(
+    options?: any
+  ): AxiosPromise<MaintenanceConfigurationResource>;
+
+  /**
+   * Updates the maintenance configuration used by the Octopus Server.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MaintenanceConfigurationApiInterface
+   */
+  updateMaintenanceConfiguration(
+    options?: any
+  ): AxiosPromise<MaintenanceConfigurationResource>;
+}
+
+/**
  * MaintenanceConfigurationApi - object-oriented interface
  * @export
  * @class MaintenanceConfigurationApi
  * @extends {BaseAPI}
  */
-export class MaintenanceConfigurationApi extends BaseAPI {
+export class MaintenanceConfigurationApi
+  extends BaseAPI
+  implements MaintenanceConfigurationApiInterface
+{
   /**
    * Gets information about the maintenance configuration in use by the Octopus Server.
    * @param {*} [options] Override http request option.

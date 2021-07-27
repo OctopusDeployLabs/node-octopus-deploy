@@ -1493,12 +1493,203 @@ export const ProjectTriggersApiFactory = function (
 };
 
 /**
+ * ProjectTriggersApi - interface
+ * @export
+ * @interface ProjectTriggersApi
+ */
+export interface ProjectTriggersApiInterface {
+  /**
+   * Creates a new project trigger
+   * @summary Create a ProjectTriggerResource
+   * @param {ProjectTriggerResource} [body] The ProjectTriggerResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  createProjectTrigger(
+    body?: ProjectTriggerResource,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResource>;
+
+  /**
+   * Creates a new project trigger
+   * @summary Create a ProjectTriggerResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {ProjectTriggerResource} [body] The ProjectTriggerResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  createProjectTriggerSpaces(
+    baseSpaceId: string,
+    body?: ProjectTriggerResource,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResource>;
+
+  /**
+   * Deletes an existing project trigger.
+   * @summary Delete a ProjectTriggerResource by ID
+   * @param {string} id ID of the ProjectTriggerResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  deleteProjectTrigger(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing project trigger.
+   * @summary Delete a ProjectTriggerResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ProjectTriggerResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  deleteProjectTriggerSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Get a Project Trigger by ID
+   * @param {string} id ID of the ProjectTrigger to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  getProjectTriggerById(
+    id: string,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResource>;
+
+  /**
+   *
+   * @summary Get a Project Trigger by ID
+   * @param {string} id ID of the ProjectTrigger to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  getProjectTriggerByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResource>;
+
+  /**
+   * Lists all the project triggers for the given project
+   * @summary Get a list of ProjectTriggerResources for the given ProjectResource
+   * @param {string} id ID of the Project
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  indexProjectProjectTriggers(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResourceCollection>;
+
+  /**
+   * Lists all the project triggers for the given project
+   * @summary Get a list of ProjectTriggerResources for the given ProjectResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the Project
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  indexProjectProjectTriggersSpaces(
+    baseSpaceId: string,
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResourceCollection>;
+
+  /**
+   * Gets all the project triggers in the supplied Octopus Deploy Space, sorted by Id
+   * @summary Get a list of ProjectTriggerResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  indexProjectTriggers(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResourceCollection>;
+
+  /**
+   * Gets all the project triggers in the supplied Octopus Deploy Space, sorted by Id
+   * @summary Get a list of ProjectTriggerResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  indexProjectTriggersSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResourceCollection>;
+
+  /**
+   * Updates an existing project trigger
+   * @summary Modify a ProjectTriggerResource by ID
+   * @param {string} id ID of the ProjectTriggerResource to modify
+   * @param {ProjectTriggerResource} [body] The ProjectTriggerResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  updateProjectTrigger(
+    id: string,
+    body?: ProjectTriggerResource,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResource>;
+
+  /**
+   * Updates an existing project trigger
+   * @summary Modify a ProjectTriggerResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ProjectTriggerResource to modify
+   * @param {ProjectTriggerResource} [body] The ProjectTriggerResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectTriggersApiInterface
+   */
+  updateProjectTriggerSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: ProjectTriggerResource,
+    options?: any
+  ): AxiosPromise<ProjectTriggerResource>;
+}
+
+/**
  * ProjectTriggersApi - object-oriented interface
  * @export
  * @class ProjectTriggersApi
  * @extends {BaseAPI}
  */
-export class ProjectTriggersApi extends BaseAPI {
+export class ProjectTriggersApi
+  extends BaseAPI
+  implements ProjectTriggersApiInterface
+{
   /**
    * Creates a new project trigger
    * @summary Create a ProjectTriggerResource

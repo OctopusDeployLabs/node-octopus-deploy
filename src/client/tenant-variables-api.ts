@@ -249,12 +249,42 @@ export const TenantVariablesApiFactory = function (
 };
 
 /**
+ * TenantVariablesApi - interface
+ * @export
+ * @interface TenantVariablesApi
+ */
+export interface TenantVariablesApiInterface {
+  /**
+   * Lists all of the tenant variables in the supplied Octopus Deploy Space. The results will be sorted alphabetically by id.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantVariablesApiInterface
+   */
+  getTenantVariablesAll(options?: any): AxiosPromise<void>;
+
+  /**
+   * Lists all of the tenant variables in the supplied Octopus Deploy Space. The results will be sorted alphabetically by id.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantVariablesApiInterface
+   */
+  getTenantVariablesAllSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+}
+
+/**
  * TenantVariablesApi - object-oriented interface
  * @export
  * @class TenantVariablesApi
  * @extends {BaseAPI}
  */
-export class TenantVariablesApi extends BaseAPI {
+export class TenantVariablesApi
+  extends BaseAPI
+  implements TenantVariablesApiInterface
+{
   /**
    * Lists all of the tenant variables in the supplied Octopus Deploy Space. The results will be sorted alphabetically by id.
    * @param {*} [options] Override http request option.

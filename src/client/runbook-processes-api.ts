@@ -1260,12 +1260,170 @@ export const RunbookProcessesApiFactory = function (
 };
 
 /**
+ * RunbookProcessesApi - interface
+ * @export
+ * @interface RunbookProcessesApi
+ */
+export interface RunbookProcessesApiInterface {
+  /**
+   *
+   * @summary Get a Runbook Process by ID
+   * @param {string} id ID of the RunbookProcess to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  getRunbookProcessById(
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookProcessResource>;
+
+  /**
+   *
+   * @summary Get a Runbook Process by ID
+   * @param {string} id ID of the RunbookProcess to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  getRunbookProcessByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<RunbookProcessResource>;
+
+  /**
+   * Gets all of the information necessary for creating or editing a Runbook Snapshot using this Runbook Process.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  getRunbookSnapshotTemplateForRunbookStep(
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotTemplateResource>;
+
+  /**
+   * Gets all of the information necessary for creating or editing a Runbook Snapshot using this Runbook Process.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  getRunbookSnapshotTemplateForRunbookStepSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotTemplateResource>;
+
+  /**
+   * Lists all the Runbook Processes in the supplied Octopus Deploy Space, sorted by Id
+   * @summary Get a list of Runbook Processes
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  indexRunbookProcesses(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookProcessResourceCollection>;
+
+  /**
+   * Lists all the Runbook Processes in the supplied Octopus Deploy Space, sorted by Id
+   * @summary Get a list of Runbook Processes
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  indexRunbookProcessesSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookProcessResourceCollection>;
+
+  /**
+   * Runs will be ordered from most recent to least recent
+   * @summary Lists all of the Runbook Runs that belong to the given Runbook Snapshot
+   * @param {string} id ID of the Runbook Snapshot to load
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  indexRunbookSnapshotRunbookRuns(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookRunResourceCollection>;
+
+  /**
+   * Runs will be ordered from most recent to least recent
+   * @summary Lists all of the Runbook Runs that belong to the given Runbook Snapshot
+   * @param {string} id ID of the Runbook Snapshot to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  indexRunbookSnapshotRunbookRunsSpaces(
+    id: string,
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookRunResourceCollection>;
+
+  /**
+   * Modifies a Runbook Process. Only allowed for Runbook Processes owned by a project.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  updateRunbookProcess(
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookProcessResource>;
+
+  /**
+   * Modifies a Runbook Process. Only allowed for Runbook Processes owned by a project.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookProcessesApiInterface
+   */
+  updateRunbookProcessSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookProcessResource>;
+}
+
+/**
  * RunbookProcessesApi - object-oriented interface
  * @export
  * @class RunbookProcessesApi
  * @extends {BaseAPI}
  */
-export class RunbookProcessesApi extends BaseAPI {
+export class RunbookProcessesApi
+  extends BaseAPI
+  implements RunbookProcessesApiInterface
+{
   /**
    *
    * @summary Get a Runbook Process by ID

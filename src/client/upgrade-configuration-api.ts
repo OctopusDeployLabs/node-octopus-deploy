@@ -233,12 +233,38 @@ export const UpgradeConfigurationApiFactory = function (
 };
 
 /**
+ * UpgradeConfigurationApi - interface
+ * @export
+ * @interface UpgradeConfigurationApi
+ */
+export interface UpgradeConfigurationApiInterface {
+  /**
+   * Gets information about the upgrade configuration in use by the Octopus Server.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UpgradeConfigurationApiInterface
+   */
+  getUpgradeConfiguration(options?: any): AxiosPromise<void>;
+
+  /**
+   * Updates the upgrade configuration used by the Octopus Server.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UpgradeConfigurationApiInterface
+   */
+  updateUpgradeConfiguration(options?: any): AxiosPromise<void>;
+}
+
+/**
  * UpgradeConfigurationApi - object-oriented interface
  * @export
  * @class UpgradeConfigurationApi
  * @extends {BaseAPI}
  */
-export class UpgradeConfigurationApi extends BaseAPI {
+export class UpgradeConfigurationApi
+  extends BaseAPI
+  implements UpgradeConfigurationApiInterface
+{
   /**
    * Gets information about the upgrade configuration in use by the Octopus Server.
    * @param {*} [options] Override http request option.

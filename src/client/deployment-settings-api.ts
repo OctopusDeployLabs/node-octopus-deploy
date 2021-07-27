@@ -544,12 +544,82 @@ export const DeploymentSettingsApiFactory = function (
 };
 
 /**
+ * DeploymentSettingsApi - interface
+ * @export
+ * @interface DeploymentSettingsApi
+ */
+export interface DeploymentSettingsApiInterface {
+  /**
+   *
+   * @summary Gets deployment settings by ID.
+   * @param {string} id ID of the DeploymentSettings to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentSettingsApiInterface
+   */
+  getDeploymentSettingsById(
+    id: string,
+    options?: any
+  ): AxiosPromise<DeploymentSettingsResource>;
+
+  /**
+   *
+   * @summary Gets deployment settings by ID.
+   * @param {string} id ID of the DeploymentSettings to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentSettingsApiInterface
+   */
+  getDeploymentSettingsByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<DeploymentSettingsResource>;
+
+  /**
+   * Modifies deployment settings for a project.
+   * @summary Modifies deployment settings
+   * @param {string} id The ID of the deployment settings to update. Example &#x60;deploymentsettings-Projects-1&#x60;
+   * @param {DeploymentSettingsResource} body
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentSettingsApiInterface
+   */
+  updateDeploymentSettingsById(
+    id: string,
+    body: DeploymentSettingsResource,
+    options?: any
+  ): AxiosPromise<DeploymentSettingsResource>;
+
+  /**
+   * Modifies deployment settings for a project.
+   * @summary Modifies deployment settings
+   * @param {string} id The ID of the deployment settings to update. Example &#x60;deploymentsettings-Projects-1&#x60;
+   * @param {string} baseSpaceId ID of the space
+   * @param {DeploymentSettingsResource} body
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentSettingsApiInterface
+   */
+  updateDeploymentSettingsByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    body: DeploymentSettingsResource,
+    options?: any
+  ): AxiosPromise<DeploymentSettingsResource>;
+}
+
+/**
  * DeploymentSettingsApi - object-oriented interface
  * @export
  * @class DeploymentSettingsApi
  * @extends {BaseAPI}
  */
-export class DeploymentSettingsApi extends BaseAPI {
+export class DeploymentSettingsApi
+  extends BaseAPI
+  implements DeploymentSettingsApiInterface
+{
   /**
    *
    * @summary Gets deployment settings by ID.

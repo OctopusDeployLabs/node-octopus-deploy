@@ -3045,12 +3045,385 @@ export const RunbookSnapshotsApiFactory = function (
 };
 
 /**
+ * RunbookSnapshotsApi - interface
+ * @export
+ * @interface RunbookSnapshotsApi
+ */
+export interface RunbookSnapshotsApiInterface {
+  /**
+   * Creates a new snapshot.
+   * @summary Create a RunbookSnapshotResource
+   * @param {RunbookSnapshotResource} [body] The RunbookSnapshotResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  createRunbookSnapshot(
+    body?: RunbookSnapshotResource,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+
+  /**
+   * Refresh the variable snapshots associated with the runbook snapshot. The runbook\'s process must not have changed since the snapshot was created.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  createRunbookSnapshotSnapshotVariables(
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+
+  /**
+   * Refresh the variable snapshots associated with the runbook snapshot. The runbook\'s process must not have changed since the snapshot was created.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  createRunbookSnapshotSnapshotVariablesSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+
+  /**
+   * Creates a new snapshot.
+   * @summary Create a RunbookSnapshotResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {RunbookSnapshotResource} [body] The RunbookSnapshotResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  createRunbookSnapshotSpaces(
+    baseSpaceId: string,
+    body?: RunbookSnapshotResource,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+
+  /**
+   * Deletes an existing snapshot, along with all of the runs, tasks and other associated resources belonging to the snapshot.
+   * @summary Delete a RunbookSnapshotResource by ID
+   * @param {string} id ID of the RunbookSnapshotResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  deleteRunbookSnapshot(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing snapshot, along with all of the runs, tasks and other associated resources belonging to the snapshot.
+   * @summary Delete a RunbookSnapshotResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the RunbookSnapshotResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  deleteRunbookSnapshotSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Gets a document that describes what steps will/won\'t be run during a run to a given environment (and tenant if supplied).
+   * @param {string} environment ID of the environment
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookRunPreviewForRunbookSnapshot(
+    environment: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookRunPreviewResource>;
+
+  /**
+   * Gets a document that describes what steps will/won\'t be run during a run to a given environment (and tenant if supplied).
+   * @param {string} environment ID of the environment
+   * @param {string} id ID of the resource
+   * @param {string} tenant ID of the tenant
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookRunPreviewForRunbookSnapshot1(
+    environment: string,
+    id: string,
+    tenant: string,
+    options?: any
+  ): AxiosPromise<RunbookRunPreviewResource>;
+
+  /**
+   * Gets a document that describes what steps will/won\'t be run during a run to a given environment (and tenant if supplied).
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} environment ID of the environment
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookRunPreviewForRunbookSnapshotSpaces(
+    baseSpaceId: string,
+    environment: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookRunPreviewResource>;
+
+  /**
+   * Gets a document that describes what steps will/won\'t be run during a run to a given environment (and tenant if supplied).
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} environment ID of the environment
+   * @param {string} id ID of the resource
+   * @param {string} tenant ID of the tenant
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookRunPreviewForRunbookSnapshotSpaces1(
+    baseSpaceId: string,
+    environment: string,
+    id: string,
+    tenant: string,
+    options?: any
+  ): AxiosPromise<RunbookRunPreviewResource>;
+
+  /**
+   * Gets all of the information necessary for creating or editing a run for this snapshot.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookRunTemplateForRunbookSnapshot(
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookRunTemplateResource>;
+
+  /**
+   * Gets all of the information necessary for creating or editing a run for this snapshot.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookRunTemplateForRunbookSnapshotSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookRunTemplateResource>;
+
+  /**
+   *
+   * @summary Get a Runbook Snapshot by ID
+   * @param {string} id ID of the RunbookSnapshot to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookSnapshotById(
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+
+  /**
+   *
+   * @summary Get a Runbook Snapshot by ID
+   * @param {string} id ID of the RunbookSnapshot to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookSnapshotByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+
+  /**
+   * Gets a single runbookSnapshot by project ID and name.
+   * @param {string} id ID of the resource
+   * @param {string} name Name of the runbook
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookSnapshotByProjectAndName(
+    id: string,
+    name: string,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+
+  /**
+   * Gets a single runbookSnapshot by project ID and name.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {string} name Name of the runbook
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  getRunbookSnapshotByProjectAndNameSpaces(
+    baseSpaceId: string,
+    id: string,
+    name: string,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+
+  /**
+   * Lists all of the runbookSnapshots that belong to the given project. RunbookSnapshots will be ordered from most recent to least recent.
+   * @summary Get a list of RunbookSnapshotResources for the given ProjectResource
+   * @param {string} id ID of the Project
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  indexProjectRunbookSnapshots(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResourceCollection>;
+
+  /**
+   * Lists all of the runbookSnapshots that belong to the given project. RunbookSnapshots will be ordered from most recent to least recent.
+   * @summary Get a list of RunbookSnapshotResources for the given ProjectResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the Project
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  indexProjectRunbookSnapshotsSpaces(
+    baseSpaceId: string,
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResourceCollection>;
+
+  /**
+   * Lists all of the runbookSnapshots that belong to the given runbook. RunbookSnapshots will be ordered from most recent to least recent.
+   * @summary Get a list of RunbookSnapshotResources for the given RunbookResource
+   * @param {string} id ID of the Runbook
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  indexRunbookRunbookSnapshots(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResourceCollection>;
+
+  /**
+   * Lists all of the runbookSnapshots that belong to the given runbook. RunbookSnapshots will be ordered from most recent to least recent.
+   * @summary Get a list of RunbookSnapshotResources for the given RunbookResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the Runbook
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  indexRunbookRunbookSnapshotsSpaces(
+    baseSpaceId: string,
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResourceCollection>;
+
+  /**
+   * Lists all of the snapshots in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent snapshot.
+   * @summary Get a list of Runbook Snapshots
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  indexRunbookSnapshots(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResourceCollection>;
+
+  /**
+   * Lists all of the snapshots in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent snapshot.
+   * @summary Get a list of Runbook Snapshots
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  indexRunbookSnapshotsSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResourceCollection>;
+
+  /**
+   * Updates an existing snapshot.
+   * @summary Modify a RunbookSnapshotResource by ID
+   * @param {string} id ID of the RunbookSnapshotResource to modify
+   * @param {RunbookSnapshotResource} [body] The RunbookSnapshotResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  updateRunbookSnapshot(
+    id: string,
+    body?: RunbookSnapshotResource,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+
+  /**
+   * Updates an existing snapshot.
+   * @summary Modify a RunbookSnapshotResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the RunbookSnapshotResource to modify
+   * @param {RunbookSnapshotResource} [body] The RunbookSnapshotResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookSnapshotsApiInterface
+   */
+  updateRunbookSnapshotSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: RunbookSnapshotResource,
+    options?: any
+  ): AxiosPromise<RunbookSnapshotResource>;
+}
+
+/**
  * RunbookSnapshotsApi - object-oriented interface
  * @export
  * @class RunbookSnapshotsApi
  * @extends {BaseAPI}
  */
-export class RunbookSnapshotsApi extends BaseAPI {
+export class RunbookSnapshotsApi
+  extends BaseAPI
+  implements RunbookSnapshotsApiInterface
+{
   /**
    * Creates a new snapshot.
    * @summary Create a RunbookSnapshotResource

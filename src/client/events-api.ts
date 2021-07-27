@@ -1221,12 +1221,143 @@ export const EventsApiFactory = function (
 };
 
 /**
+ * EventsApi - interface
+ * @export
+ * @interface EventsApi
+ */
+export interface EventsApiInterface {
+  /**
+   * Gets a single event by ID.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getEvent(id: string, options?: any): AxiosPromise<EventResource>;
+
+  /**
+   * Gets a single event by ID.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getEventSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<EventResource>;
+
+  /**
+   * Lists event agents.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEventAgents(options?: any): AxiosPromise<Array<EventAgentResource>>;
+
+  /**
+   * Lists event agents.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEventAgentsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<EventAgentResource>>;
+
+  /**
+   * Lists event categories.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEventCategories(
+    options?: any
+  ): AxiosPromise<Array<EventCategoryResource>>;
+
+  /**
+   * Lists event categories.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEventCategoriesSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<EventCategoryResource>>;
+
+  /**
+   * Lists subscription event document types.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEventDocumentTypes(
+    options?: any
+  ): AxiosPromise<Array<DocumentTypeDocument>>;
+
+  /**
+   * Lists subscription event document types.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEventDocumentTypesSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<DocumentTypeDocument>>;
+
+  /**
+   * Lists subscription event groups.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEventGroups(options?: any): AxiosPromise<Array<EventGroupResource>>;
+
+  /**
+   * Lists subscription event groups.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEventGroupsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<EventGroupResource>>;
+
+  /**
+   * List all of the the audit events collected to date. Events can be filtered by various criteria. Events will be ordered by the date of the event, descending.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEvents(options?: any): AxiosPromise<void>;
+
+  /**
+   * List all of the the audit events collected to date. Events can be filtered by various criteria. Events will be ordered by the date of the event, descending.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof EventsApiInterface
+   */
+  getListEventsSpaces(baseSpaceId: string, options?: any): AxiosPromise<void>;
+}
+
+/**
  * EventsApi - object-oriented interface
  * @export
  * @class EventsApi
  * @extends {BaseAPI}
  */
-export class EventsApi extends BaseAPI {
+export class EventsApi extends BaseAPI implements EventsApiInterface {
   /**
    * Gets a single event by ID.
    * @param {string} id ID of the resource

@@ -147,12 +147,27 @@ export const HomeApiFactory = function (
 };
 
 /**
+ * HomeApi - interface
+ * @export
+ * @interface HomeApi
+ */
+export interface HomeApiInterface {
+  /**
+   * Returns a document describing the current Octopus Server and links to other parts of the API.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof HomeApiInterface
+   */
+  getHome(options?: any): AxiosPromise<RootResource>;
+}
+
+/**
  * HomeApi - object-oriented interface
  * @export
  * @class HomeApi
  * @extends {BaseAPI}
  */
-export class HomeApi extends BaseAPI {
+export class HomeApi extends BaseAPI implements HomeApiInterface {
   /**
    * Returns a document describing the current Octopus Server and links to other parts of the API.
    * @param {*} [options] Override http request option.

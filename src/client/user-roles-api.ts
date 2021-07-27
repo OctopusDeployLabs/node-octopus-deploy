@@ -697,12 +697,91 @@ export const UserRolesApiFactory = function (
 };
 
 /**
+ * UserRolesApi - interface
+ * @export
+ * @interface UserRolesApi
+ */
+export interface UserRolesApiInterface {
+  /**
+   * Creates a custom user role definition.
+   * @summary Create a UserRoleResource
+   * @param {UserRoleResource} [body] The UserRoleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserRolesApiInterface
+   */
+  createUserRole(
+    body?: UserRoleResource,
+    options?: any
+  ): AxiosPromise<UserRoleResource>;
+
+  /**
+   * Deletes an existing user role.
+   * @summary Delete a UserRoleResource by ID
+   * @param {string} id ID of the UserRoleResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserRolesApiInterface
+   */
+  deleteUserRole(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Get a User Role by ID
+   * @param {string} id ID of the UserRole to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserRolesApiInterface
+   */
+  getUserRoleById(id: string, options?: any): AxiosPromise<UserRoleResource>;
+
+  /**
+   * Lists all of the user roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
+   * @summary Get a list of UserRoleResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserRolesApiInterface
+   */
+  indexUserRoles(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<UserRoleResourceCollection>;
+
+  /**
+   * Lists all of the User Roles in the current Octopus Deploy instance. The results will be sorted alphabetically by name.
+   * @summary Get a list of User Roles
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserRolesApiInterface
+   */
+  listAllUserRoles(options?: any): AxiosPromise<Array<UserRoleResource>>;
+
+  /**
+   * Modifies an existing user role definition.
+   * @summary Modify a UserRoleResource by ID
+   * @param {string} id ID of the UserRoleResource to modify
+   * @param {UserRoleResource} [body] The UserRoleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserRolesApiInterface
+   */
+  updateUserRole(
+    id: string,
+    body?: UserRoleResource,
+    options?: any
+  ): AxiosPromise<UserRoleResource>;
+}
+
+/**
  * UserRolesApi - object-oriented interface
  * @export
  * @class UserRolesApi
  * @extends {BaseAPI}
  */
-export class UserRolesApi extends BaseAPI {
+export class UserRolesApi extends BaseAPI implements UserRolesApiInterface {
   /**
    * Creates a custom user role definition.
    * @summary Create a UserRoleResource

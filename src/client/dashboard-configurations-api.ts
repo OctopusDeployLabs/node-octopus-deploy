@@ -459,12 +459,66 @@ export const DashboardConfigurationsApiFactory = function (
 };
 
 /**
+ * DashboardConfigurationsApi - interface
+ * @export
+ * @interface DashboardConfigurationsApi
+ */
+export interface DashboardConfigurationsApiInterface {
+  /**
+   * Returns the dashboard configuration for the current user
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DashboardConfigurationsApiInterface
+   */
+  getDashboardConfiguration(
+    options?: any
+  ): AxiosPromise<DashboardConfigurationResource>;
+
+  /**
+   * Returns the dashboard configuration for the current user
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DashboardConfigurationsApiInterface
+   */
+  getDashboardConfigurationSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<DashboardConfigurationResource>;
+
+  /**
+   * Updates the dashboard configuration for the current user
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DashboardConfigurationsApiInterface
+   */
+  updateDashboardConfiguration(
+    options?: any
+  ): AxiosPromise<DashboardConfigurationResource>;
+
+  /**
+   * Updates the dashboard configuration for the current user
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DashboardConfigurationsApiInterface
+   */
+  updateDashboardConfigurationSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<DashboardConfigurationResource>;
+}
+
+/**
  * DashboardConfigurationsApi - object-oriented interface
  * @export
  * @class DashboardConfigurationsApi
  * @extends {BaseAPI}
  */
-export class DashboardConfigurationsApi extends BaseAPI {
+export class DashboardConfigurationsApi
+  extends BaseAPI
+  implements DashboardConfigurationsApiInterface
+{
   /**
    * Returns the dashboard configuration for the current user
    * @param {*} [options] Override http request option.

@@ -167,12 +167,28 @@ export const SpaceHomeApiFactory = function (
 };
 
 /**
+ * SpaceHomeApi - interface
+ * @export
+ * @interface SpaceHomeApi
+ */
+export interface SpaceHomeApiInterface {
+  /**
+   * Returns a document describing the specified Space and links to other parts of the API that apply to the Space.
+   * @param {string} spaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SpaceHomeApiInterface
+   */
+  getSpaceHome(spaceId: string, options?: any): AxiosPromise<SpaceRootResource>;
+}
+
+/**
  * SpaceHomeApi - object-oriented interface
  * @export
  * @class SpaceHomeApi
  * @extends {BaseAPI}
  */
-export class SpaceHomeApi extends BaseAPI {
+export class SpaceHomeApi extends BaseAPI implements SpaceHomeApiInterface {
   /**
    * Returns a document describing the specified Space and links to other parts of the API that apply to the Space.
    * @param {string} spaceId ID of the space

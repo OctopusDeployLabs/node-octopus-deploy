@@ -552,12 +552,74 @@ export const ConfigurationApiFactory = function (
 };
 
 /**
+ * ConfigurationApi - interface
+ * @export
+ * @interface ConfigurationApi
+ */
+export interface ConfigurationApiInterface {
+  /**
+   * Returns a structure that describes how to dynamically render the configuration section
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ConfigurationApiInterface
+   */
+  getConfigurationItemMetadata(
+    id: string,
+    options?: any
+  ): AxiosPromise<Metadata>;
+
+  /**
+   * Returns the current configuration for a specific configuration section
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ConfigurationApiInterface
+   */
+  getConfigurationItemValues(id: string, options?: any): AxiosPromise<object>;
+
+  /**
+   * Returns a list of configuration section settings
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ConfigurationApiInterface
+   */
+  getConfigurationSectionList(
+    options?: any
+  ): AxiosPromise<ConfigurationSectionMetadataCollection>;
+
+  /**
+   * Returns a single configuration section for the given id
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ConfigurationApiInterface
+   */
+  getConfigurationSectionMetadata(
+    id: string,
+    options?: any
+  ): AxiosPromise<ConfigurationSectionMetadata>;
+
+  /**
+   * Updates the configuration values for a specific configuration section
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ConfigurationApiInterface
+   */
+  updateConfigurationItem(id: string, options?: any): AxiosPromise<object>;
+}
+
+/**
  * ConfigurationApi - object-oriented interface
  * @export
  * @class ConfigurationApi
  * @extends {BaseAPI}
  */
-export class ConfigurationApi extends BaseAPI {
+export class ConfigurationApi
+  extends BaseAPI
+  implements ConfigurationApiInterface
+{
   /**
    * Returns a structure that describes how to dynamically render the configuration section
    * @param {string} id ID of the resource

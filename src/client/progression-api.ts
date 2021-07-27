@@ -694,12 +694,93 @@ export const ProgressionApiFactory = function (
 };
 
 /**
+ * ProgressionApi - interface
+ * @export
+ * @interface ProgressionApi
+ */
+export interface ProgressionApiInterface {
+  /**
+   * Returns the progress of a release in the environment lifecycle.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProgressionApiInterface
+   */
+  getProgressionView(
+    id: string,
+    options?: any
+  ): AxiosPromise<ProgressionResource>;
+
+  /**
+   * Returns the progress of a release in the environment lifecycle.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProgressionApiInterface
+   */
+  getProgressionViewSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<ProgressionResource>;
+
+  /**
+   * Returns a list of runbook dashboard items, filtered by various criteria including projectIds, environmentIds, tenantIds, runbookIds, taskIds
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProgressionApiInterface
+   */
+  getRunbookTaskRunDashboardItems(
+    options?: any
+  ): AxiosPromise<RunbooksDashboardItemResourceCollection>;
+
+  /**
+   * Returns a list of runbook dashboard items, filtered by various criteria including projectIds, environmentIds, tenantIds, runbookIds, taskIds
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProgressionApiInterface
+   */
+  getRunbookTaskRunDashboardItemsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<RunbooksDashboardItemResourceCollection>;
+
+  /**
+   * Returns the progress of a runbook in the environment lifecycle
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProgressionApiInterface
+   */
+  getRunbooksProgressionView(
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbooksProgressionResource>;
+
+  /**
+   * Returns the progress of a runbook in the environment lifecycle
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProgressionApiInterface
+   */
+  getRunbooksProgressionViewSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbooksProgressionResource>;
+}
+
+/**
  * ProgressionApi - object-oriented interface
  * @export
  * @class ProgressionApi
  * @extends {BaseAPI}
  */
-export class ProgressionApi extends BaseAPI {
+export class ProgressionApi extends BaseAPI implements ProgressionApiInterface {
   /**
    * Returns the progress of a release in the environment lifecycle.
    * @param {string} id ID of the resource

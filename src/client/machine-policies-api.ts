@@ -2161,12 +2161,281 @@ export const MachinePoliciesApiFactory = function (
 };
 
 /**
+ * MachinePoliciesApi - interface
+ * @export
+ * @interface MachinePoliciesApi
+ */
+export interface MachinePoliciesApiInterface {
+  /**
+   * Creates a new machine policy.
+   * @summary Create a MachinePolicyResource
+   * @param {MachinePolicyResource} [body] The MachinePolicyResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  createMachinePolicy(
+    body?: MachinePolicyResource,
+    options?: any
+  ): AxiosPromise<MachinePolicyResource>;
+
+  /**
+   * Creates a new machine policy.
+   * @summary Create a MachinePolicyResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {MachinePolicyResource} [body] The MachinePolicyResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  createMachinePolicySpaces(
+    baseSpaceId: string,
+    body?: MachinePolicyResource,
+    options?: any
+  ): AxiosPromise<MachinePolicyResource>;
+
+  /**
+   * Deletes an existing machine policy.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  deleteMachinePolicy(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing machine policy.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  deleteMachinePolicySpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Get a Machine Policy by ID
+   * @param {string} id ID of the MachinePolicy to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  getMachinePolicyById(
+    id: string,
+    options?: any
+  ): AxiosPromise<MachinePolicyResource>;
+
+  /**
+   *
+   * @summary Get a Machine Policy by ID
+   * @param {string} id ID of the MachinePolicy to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  getMachinePolicyByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<MachinePolicyResource>;
+
+  /**
+   * Gets a template for a new Machine Policy, which includes any defaults.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  getMachinePolicyTemplate(options?: any): AxiosPromise<MachinePolicyResource>;
+
+  /**
+   * Gets a template for a new Machine Policy, which includes any defaults.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  getMachinePolicyTemplateSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<MachinePolicyResource>;
+
+  /**
+   * Lists all of the machine policies in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of MachinePolicyResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  indexMachinePolicies(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<MachinePolicyResourceCollection>;
+
+  /**
+   * Lists all of the machine policies in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of MachinePolicyResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  indexMachinePoliciesSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<MachinePolicyResourceCollection>;
+
+  /**
+   *
+   * @summary Lists all of the machines that belong to the given Machine Policy
+   * @param {string} id ID of the MachinePolicy to load
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 10
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  indexMachinePolicyDeploymentTargets(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentTargetResourceCollection>;
+
+  /**
+   *
+   * @summary Lists all of the machines that belong to the given Machine Policy
+   * @param {string} id ID of the MachinePolicy to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 10
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  indexMachinePolicyDeploymentTargetsSpaces(
+    id: string,
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentTargetResourceCollection>;
+
+  /**
+   *
+   * @summary Lists all of the workers that belong to the given Machine Policy
+   * @param {string} id ID of the Machine Policy to load
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 10
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  indexMachinePolicyWorkers(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<WorkerResourceCollection>;
+
+  /**
+   *
+   * @summary Lists all of the workers that belong to the given Machine Policy
+   * @param {string} id ID of the Machine Policy to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 10
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  indexMachinePolicyWorkersSpaces(
+    id: string,
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<WorkerResourceCollection>;
+
+  /**
+   * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+   * @summary Get a list of Machine Policies
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  listAllMachinePolicies(
+    options?: any
+  ): AxiosPromise<Array<MachinePolicyResource>>;
+
+  /**
+   * Lists all the Machine Policies in the supplied Octopus Deploy Space.
+   * @summary Get a list of Machine Policies
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  listAllMachinePoliciesSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<MachinePolicyResource>>;
+
+  /**
+   * Modifies an existing machine policy.
+   * @summary Modify a MachinePolicyResource by ID
+   * @param {string} id ID of the MachinePolicyResource to modify
+   * @param {MachinePolicyResource} [body] The MachinePolicyResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  updateMachinePolicy(
+    id: string,
+    body?: MachinePolicyResource,
+    options?: any
+  ): AxiosPromise<MachinePolicyResource>;
+
+  /**
+   * Modifies an existing machine policy.
+   * @summary Modify a MachinePolicyResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the MachinePolicyResource to modify
+   * @param {MachinePolicyResource} [body] The MachinePolicyResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MachinePoliciesApiInterface
+   */
+  updateMachinePolicySpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: MachinePolicyResource,
+    options?: any
+  ): AxiosPromise<MachinePolicyResource>;
+}
+
+/**
  * MachinePoliciesApi - object-oriented interface
  * @export
  * @class MachinePoliciesApi
  * @extends {BaseAPI}
  */
-export class MachinePoliciesApi extends BaseAPI {
+export class MachinePoliciesApi
+  extends BaseAPI
+  implements MachinePoliciesApiInterface
+{
   /**
    * Creates a new machine policy.
    * @summary Create a MachinePolicyResource

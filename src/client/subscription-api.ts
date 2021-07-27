@@ -984,12 +984,139 @@ export const SubscriptionApiFactory = function (
 };
 
 /**
+ * SubscriptionApi - interface
+ * @export
+ * @interface SubscriptionApi
+ */
+export interface SubscriptionApiInterface {
+  /**
+   * Creates a new subscription
+   * @summary Create a SubscriptionResource
+   * @param {SubscriptionResource} [body] The SubscriptionResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionApiInterface
+   */
+  createSubscription(
+    body?: SubscriptionResource,
+    options?: any
+  ): AxiosPromise<SubscriptionResource>;
+
+  /**
+   * Creates a new subscription
+   * @summary Create a SubscriptionResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {SubscriptionResource} [body] The SubscriptionResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionApiInterface
+   */
+  createSubscriptionSpaces(
+    baseSpaceId: string,
+    body?: SubscriptionResource,
+    options?: any
+  ): AxiosPromise<SubscriptionResource>;
+
+  /**
+   * Deletes an existing subscription.
+   * @summary Delete a SubscriptionResource by ID
+   * @param {string} id ID of the SubscriptionResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionApiInterface
+   */
+  deleteSubscription(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing subscription.
+   * @summary Delete a SubscriptionResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the SubscriptionResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionApiInterface
+   */
+  deleteSubscriptionSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Lists all of the subscriptions in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of SubscriptionResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionApiInterface
+   */
+  indexSubscriptions(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<SubscriptionResourceCollection>;
+
+  /**
+   * Lists all of the subscriptions in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of SubscriptionResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionApiInterface
+   */
+  indexSubscriptionsSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<SubscriptionResourceCollection>;
+
+  /**
+   * Updates an existing subscription
+   * @summary Modify a SubscriptionResource by ID
+   * @param {string} id ID of the SubscriptionResource to modify
+   * @param {SubscriptionResource} [body] The SubscriptionResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionApiInterface
+   */
+  updateSubscription(
+    id: string,
+    body?: SubscriptionResource,
+    options?: any
+  ): AxiosPromise<SubscriptionResource>;
+
+  /**
+   * Updates an existing subscription
+   * @summary Modify a SubscriptionResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the SubscriptionResource to modify
+   * @param {SubscriptionResource} [body] The SubscriptionResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionApiInterface
+   */
+  updateSubscriptionSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: SubscriptionResource,
+    options?: any
+  ): AxiosPromise<SubscriptionResource>;
+}
+
+/**
  * SubscriptionApi - object-oriented interface
  * @export
  * @class SubscriptionApi
  * @extends {BaseAPI}
  */
-export class SubscriptionApi extends BaseAPI {
+export class SubscriptionApi
+  extends BaseAPI
+  implements SubscriptionApiInterface
+{
   /**
    * Creates a new subscription
    * @summary Create a SubscriptionResource

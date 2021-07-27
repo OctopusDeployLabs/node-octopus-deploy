@@ -517,12 +517,74 @@ export const ApiKeysApiFactory = function (
 };
 
 /**
+ * ApiKeysApi - interface
+ * @export
+ * @interface ApiKeysApi
+ */
+export interface ApiKeysApiInterface {
+  /**
+   * Generates a new API key for the specified user. The API key returned in the result must be saved by the caller, as it cannot be retrieved subsequently from the Octopus server.
+   * @param {string} userId ID of the user
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ApiKeysApiInterface
+   */
+  createApiKey(
+    userId: string,
+    options?: any
+  ): AxiosPromise<ApiKeyCreatedResource>;
+
+  /**
+   * Revokes an existing API key.
+   * @summary Delete a ApiKeyResource by ID
+   * @param {string} id ID of the ApiKeyResource to delete
+   * @param {string} userId ID of the User that owns the ApiKey to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ApiKeysApiInterface
+   */
+  deleteApiKey(id: string, userId: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Gets a API key by ID.
+   * @summary Get a ApiKeyResource by ID
+   * @param {string} id ID of the ApiKeyResource to load
+   * @param {string} userId ID of the User that owns the ApiKey
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ApiKeysApiInterface
+   */
+  getApiKeyById(
+    id: string,
+    userId: string,
+    options?: any
+  ): AxiosPromise<ApiKeyResource>;
+
+  /**
+   * Lists all API keys for a user, returning the most recent results first.
+   * @summary Get a list of ApiKeyResources
+   * @param {string} userId ID of the user
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ApiKeysApiInterface
+   */
+  indexApiKeys(
+    userId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ApiKeyResourceCollection>;
+}
+
+/**
  * ApiKeysApi - object-oriented interface
  * @export
  * @class ApiKeysApi
  * @extends {BaseAPI}
  */
-export class ApiKeysApi extends BaseAPI {
+export class ApiKeysApi extends BaseAPI implements ApiKeysApiInterface {
   /**
    * Generates a new API key for the specified user. The API key returned in the result must be saved by the caller, as it cannot be retrieved subsequently from the Octopus server.
    * @param {string} userId ID of the user

@@ -247,12 +247,42 @@ export const JiraIntegrationApiFactory = function (
 };
 
 /**
+ * JiraIntegrationApi - interface
+ * @export
+ * @interface JiraIntegrationApi
+ */
+export interface JiraIntegrationApiInterface {
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof JiraIntegrationApiInterface
+   */
+  createJiraConnectAppConnectivityCheck(
+    options?: any
+  ): AxiosPromise<ConnectivityCheckResponse>;
+
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof JiraIntegrationApiInterface
+   */
+  createJiraCredentialsConnectivityCheck(
+    options?: any
+  ): AxiosPromise<ConnectivityCheckResponse>;
+}
+
+/**
  * JiraIntegrationApi - object-oriented interface
  * @export
  * @class JiraIntegrationApi
  * @extends {BaseAPI}
  */
-export class JiraIntegrationApi extends BaseAPI {
+export class JiraIntegrationApi
+  extends BaseAPI
+  implements JiraIntegrationApiInterface
+{
   /**
    *
    * @param {*} [options] Override http request option.

@@ -327,12 +327,45 @@ export const LicensesApiFactory = function (
 };
 
 /**
+ * LicensesApi - interface
+ * @export
+ * @interface LicensesApi
+ */
+export interface LicensesApiInterface {
+  /**
+   * Returns the details of the current license in use by the Octopus Cluster.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LicensesApiInterface
+   */
+  getLicenseGetCurrent(options?: any): AxiosPromise<LicenseResource>;
+
+  /**
+   * Calculates the status of the current Octopus license including compliance and maintenance expiry.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LicensesApiInterface
+   */
+  getLicenseStatusGetCurrent(
+    options?: any
+  ): AxiosPromise<LicenseStatusResource>;
+
+  /**
+   * Updates the license for the Octopus cluster.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LicensesApiInterface
+   */
+  updateLicensePutCurrent(options?: any): AxiosPromise<LicenseResource>;
+}
+
+/**
  * LicensesApi - object-oriented interface
  * @export
  * @class LicensesApi
  * @extends {BaseAPI}
  */
-export class LicensesApi extends BaseAPI {
+export class LicensesApi extends BaseAPI implements LicensesApiInterface {
   /**
    * Returns the details of the current license in use by the Octopus Cluster.
    * @param {*} [options] Override http request option.

@@ -3796,12 +3796,496 @@ export const TenantsApiFactory = function (
 };
 
 /**
+ * TenantsApi - interface
+ * @export
+ * @interface TenantsApi
+ */
+export interface TenantsApiInterface {
+  /**
+   * Creates a new Tenant, optionally cloning an existing tenant if the clone query string parameter is provided.
+   * @summary Creates a new Tenant
+   * @param {string} [clone] The ID of the Tenant to clone. Example: Tenants-101
+   * @param {TenantResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  createTenant(
+    clone?: string,
+    body?: TenantResource,
+    options?: any
+  ): AxiosPromise<TenantResource>;
+
+  /**
+   *
+   * @summary Sets the logo associated with the tenant.
+   * @param {string} id ID of the Tenant to set the logo for
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  createTenantLogo(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Sets the logo associated with the tenant.
+   * @param {string} id ID of the Tenant to set the logo for
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  createTenantLogoSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Creates a new Tenant, optionally cloning an existing tenant if the clone query string parameter is provided.
+   * @summary Creates a new Tenant
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} [clone] The ID of the Tenant to clone. Example: Tenants-101
+   * @param {TenantResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  createTenantSpaces(
+    baseSpaceId: string,
+    clone?: string,
+    body?: TenantResource,
+    options?: any
+  ): AxiosPromise<TenantResource>;
+
+  /**
+   *
+   * @summary Creates the variables associated with the tenant.
+   * @param {string} id ID of the Tenant to modify
+   * @param {TenantVariableResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  createTenantVariables(
+    id: string,
+    body?: TenantVariableResource,
+    options?: any
+  ): AxiosPromise<TenantVariableResource>;
+
+  /**
+   *
+   * @summary Creates the variables associated with the tenant.
+   * @param {string} id ID of the Tenant to modify
+   * @param {string} baseSpaceId ID of the space
+   * @param {TenantVariableResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  createTenantVariablesSpaces(
+    id: string,
+    baseSpaceId: string,
+    body?: TenantVariableResource,
+    options?: any
+  ): AxiosPromise<TenantVariableResource>;
+
+  /**
+   *
+   * @summary Deletes an existing tenant.
+   * @param {string} id ID of the Tenant to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  deleteTenant(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Deletes an existing tenant.
+   * @param {string} id ID of the Tenant to delete
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  deleteTenantSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Get a Tenant by ID
+   * @param {string} id ID of the Tenant to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getTenantById(id: string, options?: any): AxiosPromise<TenantResource>;
+
+  /**
+   *
+   * @summary Get a Tenant by ID
+   * @param {string} id ID of the Tenant to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getTenantByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<TenantResource>;
+
+  /**
+   *
+   * @summary Gets the logo associated with the Tenant
+   * @param {string} id ID of the Tenant to retrieve the logo for
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getTenantLogo(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Gets the logo associated with the Tenant
+   * @param {string} id ID of the Tenant to retrieve the logo for
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getTenantLogoSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Returns a list of tenants who are missing required variables
+   * @param {string} [tenantId] An ID for a Tenant. If supplied, will limit the result to variables missing for the Tenant identified by the ID. Example: Tenants-101
+   * @param {string} [projectId] A Project ID, to limit the set of inspected Tenants to those connected to a particular Project. Example: Projects-202
+   * @param {string} [environmentId] An Environment ID, to limit the set of inspected Tenants to those connected to a particular Environment. Example: Environments-202
+   * @param {boolean} [includeDetails] A switch to indicate whether missing variable details should be returned along with names
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getTenantVariablesMissing(
+    tenantId?: string,
+    projectId?: string,
+    environmentId?: string,
+    includeDetails?: boolean,
+    options?: any
+  ): AxiosPromise<Array<TenantsMissingVariablesResource>>;
+
+  /**
+   *
+   * @summary Returns a list of tenants who are missing required variables
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} [tenantId] An ID for a Tenant. If supplied, will limit the result to variables missing for the Tenant identified by the ID. Example: Tenants-101
+   * @param {string} [projectId] A Project ID, to limit the set of inspected Tenants to those connected to a particular Project. Example: Projects-202
+   * @param {string} [environmentId] An Environment ID, to limit the set of inspected Tenants to those connected to a particular Environment. Example: Environments-202
+   * @param {boolean} [includeDetails] A switch to indicate whether missing variable details should be returned along with names
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getTenantVariablesMissingSpaces(
+    baseSpaceId: string,
+    tenantId?: string,
+    projectId?: string,
+    environmentId?: string,
+    includeDetails?: boolean,
+    options?: any
+  ): AxiosPromise<Array<TenantsMissingVariablesResource>>;
+
+  /**
+   * If multi-tenancy is enabled, \"Enabled\" will be true, otherwise it will be false.
+   * @summary Reports back the status of multi-tenancy
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getTenantsConfiguration(
+    options?: any
+  ): AxiosPromise<MultiTenancyStatusResource>;
+
+  /**
+   * If multi-tenancy is enabled, \"Enabled\" will be true, otherwise it will be false.
+   * @summary Reports back the status of multi-tenancy
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getTenantsConfigurationSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<MultiTenancyStatusResource>;
+
+  /**
+   *
+   * @summary Gets variables associated with the provided tenant ID.
+   * @param {string} id Id of the Tenant to retrieve variables for
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getVariablesByTenantId(
+    id: string,
+    options?: any
+  ): AxiosPromise<TenantVariableResource>;
+
+  /**
+   *
+   * @summary Gets variables associated with the provided tenant ID.
+   * @param {string} id Id of the Tenant to retrieve variables for
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  getVariablesByTenantIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<TenantVariableResource>;
+
+  /**
+   * Lists all of the tenants in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Lists all tenants
+   * @param {Array<string>} [ids] A set of Tenant IDs to retrieve Tenants for. Example: Tenants-101,Tenants-201,Tenants-301
+   * @param {string} [projectId] A Project ID, to limit the set of retrieved Tenants to those connected to a particular Project. Example: Projects-101
+   * @param {Array<string>} [tags] A set of Tenant Tags, to limit the set of retrieved Tenants to those which are tagged with the specific tags. Example: Alpha,Beta,Stable
+   * @param {string} [name] (Obsolete) A partial or complete name to limit the set of retrieved Tenants to. This will perform a \&quot;contains\&quot; style match against the supplied name or name-fragment. Left for backwards compatibility.
+   * @param {string} [partialName] A partial or complete name to limit the set of retrieved Tenants to. This will perform a \&quot;contains\&quot; style match against the supplied name or name-fragment
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  listAllTenants(
+    ids?: Array<string>,
+    projectId?: string,
+    tags?: Array<string>,
+    name?: string,
+    partialName?: string,
+    options?: any
+  ): AxiosPromise<Array<TenantResource>>;
+
+  /**
+   * Lists all of the tenants in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Lists all tenants
+   * @param {string} baseSpaceId ID of the space
+   * @param {Array<string>} [ids] A set of Tenant IDs to retrieve Tenants for. Example: Tenants-101,Tenants-201,Tenants-301
+   * @param {string} [projectId] A Project ID, to limit the set of retrieved Tenants to those connected to a particular Project. Example: Projects-101
+   * @param {Array<string>} [tags] A set of Tenant Tags, to limit the set of retrieved Tenants to those which are tagged with the specific tags. Example: Alpha,Beta,Stable
+   * @param {string} [name] (Obsolete) A partial or complete name to limit the set of retrieved Tenants to. This will perform a \&quot;contains\&quot; style match against the supplied name or name-fragment. Left for backwards compatibility.
+   * @param {string} [partialName] A partial or complete name to limit the set of retrieved Tenants to. This will perform a \&quot;contains\&quot; style match against the supplied name or name-fragment
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  listAllTenantsSpaces(
+    baseSpaceId: string,
+    ids?: Array<string>,
+    projectId?: string,
+    tags?: Array<string>,
+    name?: string,
+    partialName?: string,
+    options?: any
+  ): AxiosPromise<Array<TenantResource>>;
+
+  /**
+   * Lists all of the tenants in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name, and returned 30 at a time.
+   * @summary Gets a list of tenants
+   * @param {string} [projectId] A Project ID, to limit the set of Tenants to those connected to a particular Project. Example: Projects-1
+   * @param {Array<string>} [ids] A list of Tenant IDs, to limit the matching of Tenants to those with a particular ID. Example: [\&quot;Tenants-1\&quot;, \&quot;Tenants-2\&quot;]
+   * @param {Array<string>} [tags] A set of Tenant Tags, to limit the set of retrieved Tenants to those which are tagged with the specific tags. Example: Alpha,Beta,Stable
+   * @param {string} [name] (Obsolete) A partial or complete name to limit the set of retrieved Tenants to. This will perform a \&quot;contains\&quot; style match against the supplied name or name-fragment. Left for backwards compatibility.
+   * @param {string} [partialName] A partial name, to limit the set of Tenants to those with a name that includes the partial name
+   * @param {string} [clonedFromTenantId] A Tenant ID, to limit the included Tenants to those cloned from that Tenant. Example: Tenants-1
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  listTenants(
+    projectId?: string,
+    ids?: Array<string>,
+    tags?: Array<string>,
+    name?: string,
+    partialName?: string,
+    clonedFromTenantId?: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<TenantResourceCollection>;
+
+  /**
+   * Lists all of the tenants in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name, and returned 30 at a time.
+   * @summary Gets a list of tenants
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} [projectId] A Project ID, to limit the set of Tenants to those connected to a particular Project. Example: Projects-1
+   * @param {Array<string>} [ids] A list of Tenant IDs, to limit the matching of Tenants to those with a particular ID. Example: [\&quot;Tenants-1\&quot;, \&quot;Tenants-2\&quot;]
+   * @param {Array<string>} [tags] A set of Tenant Tags, to limit the set of retrieved Tenants to those which are tagged with the specific tags. Example: Alpha,Beta,Stable
+   * @param {string} [name] (Obsolete) A partial or complete name to limit the set of retrieved Tenants to. This will perform a \&quot;contains\&quot; style match against the supplied name or name-fragment. Left for backwards compatibility.
+   * @param {string} [partialName] A partial name, to limit the set of Tenants to those with a name that includes the partial name
+   * @param {string} [clonedFromTenantId] A Tenant ID, to limit the included Tenants to those cloned from that Tenant. Example: Tenants-1
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  listTenantsSpaces(
+    baseSpaceId: string,
+    projectId?: string,
+    ids?: Array<string>,
+    tags?: Array<string>,
+    name?: string,
+    partialName?: string,
+    clonedFromTenantId?: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<TenantResourceCollection>;
+
+  /**
+   *
+   * @summary Checks tenants for matching tags
+   * @param {Array<string>} [tenantIds] A list of Tenant IDs to limit the matching to, delimited by commas. Example: Tenants-1,Tenants-2,Tenants-3
+   * @param {Array<string>} [tags] A list of Tenant Tags to limit the matching to, delimited by commas. Example: Alpha,Beta,Stable
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  testTenantTag(
+    tenantIds?: Array<string>,
+    tags?: Array<string>,
+    options?: any
+  ): AxiosPromise<{ [key: string]: TagTestResult }>;
+
+  /**
+   *
+   * @summary Checks tenants for matching tags
+   * @param {string} baseSpaceId ID of the space
+   * @param {Array<string>} [tenantIds] A list of Tenant IDs to limit the matching to, delimited by commas. Example: Tenants-1,Tenants-2,Tenants-3
+   * @param {Array<string>} [tags] A list of Tenant Tags to limit the matching to, delimited by commas. Example: Alpha,Beta,Stable
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  testTenantTagSpaces(
+    baseSpaceId: string,
+    tenantIds?: Array<string>,
+    tags?: Array<string>,
+    options?: any
+  ): AxiosPromise<{ [key: string]: TagTestResult }>;
+
+  /**
+   *
+   * @summary Modifies an existing Tenant
+   * @param {string} id
+   * @param {TenantResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  updateTenant(
+    id: string,
+    body?: TenantResource,
+    options?: any
+  ): AxiosPromise<TenantResource>;
+
+  /**
+   *
+   * @summary Updates the logo associated with the tenant.
+   * @param {string} id ID of the Tenant to update the logo for
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  updateTenantLogo(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Updates the logo associated with the tenant.
+   * @param {string} id ID of the Tenant to update the logo for
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  updateTenantLogoSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Modifies an existing Tenant
+   * @param {string} id
+   * @param {string} baseSpaceId ID of the space
+   * @param {TenantResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  updateTenantSpaces(
+    id: string,
+    baseSpaceId: string,
+    body?: TenantResource,
+    options?: any
+  ): AxiosPromise<TenantResource>;
+
+  /**
+   *
+   * @summary Updates the variables associated with the tenant.
+   * @param {string} id ID of the Tenant modify
+   * @param {TenantVariableResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  updateTenantVariables(
+    id: string,
+    body?: TenantVariableResource,
+    options?: any
+  ): AxiosPromise<TenantVariableResource>;
+
+  /**
+   *
+   * @summary Updates the variables associated with the tenant.
+   * @param {string} id ID of the Tenant modify
+   * @param {string} baseSpaceId ID of the space
+   * @param {TenantVariableResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TenantsApiInterface
+   */
+  updateTenantVariablesSpaces(
+    id: string,
+    baseSpaceId: string,
+    body?: TenantVariableResource,
+    options?: any
+  ): AxiosPromise<TenantVariableResource>;
+}
+
+/**
  * TenantsApi - object-oriented interface
  * @export
  * @class TenantsApi
  * @extends {BaseAPI}
  */
-export class TenantsApi extends BaseAPI {
+export class TenantsApi extends BaseAPI implements TenantsApiInterface {
   /**
    * Creates a new Tenant, optionally cloning an existing tenant if the clone query string parameter is provided.
    * @summary Creates a new Tenant

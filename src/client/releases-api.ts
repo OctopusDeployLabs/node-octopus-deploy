@@ -4065,12 +4065,511 @@ export const ReleasesApiFactory = function (
 };
 
 /**
+ * ReleasesApi - interface
+ * @export
+ * @interface ReleasesApi
+ */
+export interface ReleasesApiInterface {
+  /**
+   * Record defect in a release.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createDefectReported(id: string, options?: any): AxiosPromise<DefectResource>;
+
+  /**
+   * Record defect in a release.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createDefectReportedSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<DefectResource>;
+
+  /**
+   * Update or resolve defect in a release.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createDefectResolved(id: string, options?: any): AxiosPromise<DefectResource>;
+
+  /**
+   * Update or resolve defect in a release.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createDefectResolvedSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<DefectResource>;
+
+  /**
+   * Returns an array of documents that describes what steps will/won\'t be run during deployments to a given set of environments and tenants.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createDeploymentPreviewCollection(
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<DeploymentPreviewResource>>;
+
+  /**
+   * Returns an array of documents that describes what steps will/won\'t be run during deployments to a given set of environments and tenants.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createDeploymentPreviewCollectionSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<DeploymentPreviewResource>>;
+
+  /**
+   * Creates a new release.
+   * @summary Create a ReleaseResource
+   * @param {boolean} [ignoreChannelRules] Ignore channel rules.
+   * @param {ReleaseResource} [body] The ReleaseResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createRelease(
+    ignoreChannelRules?: boolean,
+    body?: ReleaseResource,
+    options?: any
+  ): AxiosPromise<ReleaseResource>;
+
+  /**
+   * Refresh the variable snapshots associated with the release. The project\'s deployment process must not have changed since the release was created.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createReleaseSnapshotVariables(
+    id: string,
+    options?: any
+  ): AxiosPromise<ReleaseResource>;
+
+  /**
+   * Refresh the variable snapshots associated with the release. The project\'s deployment process must not have changed since the release was created.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createReleaseSnapshotVariablesSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<ReleaseResource>;
+
+  /**
+   * Creates a new release.
+   * @summary Create a ReleaseResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {boolean} [ignoreChannelRules] Ignore channel rules.
+   * @param {ReleaseResource} [body] The ReleaseResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  createReleaseSpaces(
+    baseSpaceId: string,
+    ignoreChannelRules?: boolean,
+    body?: ReleaseResource,
+    options?: any
+  ): AxiosPromise<ReleaseResource>;
+
+  /**
+   * Deletes an existing release, along with all of the deployments, tasks and other associated resources belonging to the release.
+   * @summary Delete a ReleaseResource by ID
+   * @param {string} id ID of the ReleaseResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  deleteRelease(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing release, along with all of the deployments, tasks and other associated resources belonging to the release.
+   * @summary Delete a ReleaseResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ReleaseResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  deleteReleaseSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Gets a document that describes what steps will/won\'t be run during a deployment to a given environment (and tenant if supplied).
+   * @param {string} environment ID of the environment
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getDeploymentPreview(
+    environment: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<DeploymentPreviewResource>;
+
+  /**
+   * Gets a document that describes what steps will/won\'t be run during a deployment to a given environment (and tenant if supplied).
+   * @param {string} environment ID of the environment
+   * @param {string} id ID of the resource
+   * @param {string} tenant ID of the tenant
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getDeploymentPreview1(
+    environment: string,
+    id: string,
+    tenant: string,
+    options?: any
+  ): AxiosPromise<DeploymentPreviewResource>;
+
+  /**
+   * Gets a document that describes what steps will/won\'t be run during a deployment to a given environment (and tenant if supplied).
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} environment ID of the environment
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getDeploymentPreviewSpaces(
+    baseSpaceId: string,
+    environment: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<DeploymentPreviewResource>;
+
+  /**
+   * Gets a document that describes what steps will/won\'t be run during a deployment to a given environment (and tenant if supplied).
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} environment ID of the environment
+   * @param {string} id ID of the resource
+   * @param {string} tenant ID of the tenant
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getDeploymentPreviewSpaces1(
+    baseSpaceId: string,
+    environment: string,
+    id: string,
+    tenant: string,
+    options?: any
+  ): AxiosPromise<DeploymentPreviewResource>;
+
+  /**
+   * Gets all of the information necessary for creating or editing a deployment for this release.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getDeploymentTemplate(
+    id: string,
+    options?: any
+  ): AxiosPromise<DeploymentTemplateResource>;
+
+  /**
+   * Gets all of the information necessary for creating or editing a deployment for this release.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getDeploymentTemplateSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<DeploymentTemplateResource>;
+
+  /**
+   * Gets all defects for a release.
+   * @param {string} id ID of the defect
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getListDefects(
+    id: string,
+    options?: any
+  ): AxiosPromise<DefectResourceCollection>;
+
+  /**
+   * Gets all defects for a release.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the defect
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getListDefectsSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<DefectResourceCollection>;
+
+  /**
+   *
+   * @summary Get a Release by ID
+   * @param {string} id ID of the Release to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getReleaseById(id: string, options?: any): AxiosPromise<ReleaseResource>;
+
+  /**
+   *
+   * @summary Get a Release by ID
+   * @param {string} id ID of the Release to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getReleaseByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<ReleaseResource>;
+
+  /**
+   * Gets a single release by project ID and version number.
+   * @param {string} id ID of the resource
+   * @param {string} version Release version number
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getReleaseByProjectAndVersion(
+    id: string,
+    version: string,
+    options?: any
+  ): AxiosPromise<ReleaseResource>;
+
+  /**
+   * Gets a single release by project ID and version number.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {string} version Release version number
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getReleaseByProjectAndVersionSpaces(
+    baseSpaceId: string,
+    id: string,
+    version: string,
+    options?: any
+  ): AxiosPromise<ReleaseResource>;
+
+  /**
+   * Gets all of the information necessary for creating or editing a deployment for this release.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getReleaseLifecycleProgression(
+    id: string,
+    options?: any
+  ): AxiosPromise<LifecycleProgressionResource>;
+
+  /**
+   * Gets all of the information necessary for creating or editing a deployment for this release.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  getReleaseLifecycleProgressionSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<LifecycleProgressionResource>;
+
+  /**
+   * Lists all of the releases that belong to the given project. Releases will be ordered from most recent to least recent.
+   * @summary Get a list of ReleaseResources for the given ProjectResource
+   * @param {string} id ID of the Project
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  indexProjectReleases(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ReleaseResourceCollection>;
+
+  /**
+   * Lists all of the releases that belong to the given project. Releases will be ordered from most recent to least recent.
+   * @summary Get a list of ReleaseResources for the given ProjectResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the Project
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  indexProjectReleasesSpaces(
+    baseSpaceId: string,
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ReleaseResourceCollection>;
+
+  /**
+   * Deployments will be ordered from most recent to least recent
+   * @summary Lists all of the Deployments that belong to the given Release
+   * @param {string} id ID of the Release to load
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  indexReleaseDeployments(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentResourceCollection>;
+
+  /**
+   * Deployments will be ordered from most recent to least recent
+   * @summary Lists all of the Deployments that belong to the given Release
+   * @param {string} id ID of the Release to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  indexReleaseDeploymentsSpaces(
+    id: string,
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentResourceCollection>;
+
+  /**
+   * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+   * @summary Get a list of Releases
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  indexReleases(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ReleaseResourceCollection>;
+
+  /**
+   * Lists all of the Releases in the supplied Octopus Deploy Space, from all projects. The results will be sorted from most recent to least recent release.
+   * @summary Get a list of Releases
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  indexReleasesSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ReleaseResourceCollection>;
+
+  /**
+   * Updates an existing release.
+   * @summary Modify a ReleaseResource by ID
+   * @param {string} id ID of the ReleaseResource to modify
+   * @param {boolean} [ignoreChannelRules] Ignore channel rules.
+   * @param {ReleaseResource} [body] The ReleaseResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  updateRelease(
+    id: string,
+    ignoreChannelRules?: boolean,
+    body?: ReleaseResource,
+    options?: any
+  ): AxiosPromise<ReleaseResource>;
+
+  /**
+   * Updates an existing release.
+   * @summary Modify a ReleaseResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ReleaseResource to modify
+   * @param {boolean} [ignoreChannelRules] Ignore channel rules.
+   * @param {ReleaseResource} [body] The ReleaseResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReleasesApiInterface
+   */
+  updateReleaseSpaces(
+    baseSpaceId: string,
+    id: string,
+    ignoreChannelRules?: boolean,
+    body?: ReleaseResource,
+    options?: any
+  ): AxiosPromise<ReleaseResource>;
+}
+
+/**
  * ReleasesApi - object-oriented interface
  * @export
  * @class ReleasesApi
  * @extends {BaseAPI}
  */
-export class ReleasesApi extends BaseAPI {
+export class ReleasesApi extends BaseAPI implements ReleasesApiInterface {
   /**
    * Record defect in a release.
    * @param {string} id ID of the resource

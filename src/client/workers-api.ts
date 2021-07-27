@@ -2179,12 +2179,273 @@ export const WorkersApiFactory = function (
 };
 
 /**
+ * WorkersApi - interface
+ * @export
+ * @interface WorkersApi
+ */
+export interface WorkersApiInterface {
+  /**
+   * Creates a new worker.
+   * @summary Create a WorkerResource
+   * @param {WorkerResource} [body] The WorkerResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  createWorker(
+    body?: WorkerResource,
+    options?: any
+  ): AxiosPromise<WorkerResource>;
+
+  /**
+   * Creates a new worker.
+   * @summary Create a WorkerResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {WorkerResource} [body] The WorkerResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  createWorkerSpaces(
+    baseSpaceId: string,
+    body?: WorkerResource,
+    options?: any
+  ): AxiosPromise<WorkerResource>;
+
+  /**
+   * Deletes an existing worker machine.
+   * @summary Delete a WorkerResource by ID
+   * @param {string} id ID of the WorkerResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  deleteWorker(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing worker machine.
+   * @summary Delete a WorkerResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the WorkerResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  deleteWorkerSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Interrogate a machine for communication details so that it may be added to the installation.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getDiscoverWorker(options?: any): AxiosPromise<MachineResource>;
+
+  /**
+   * Interrogate a machine for communication details so that it may be added to the installation.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getDiscoverWorkerSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<MachineResource>;
+
+  /**
+   *
+   * @summary Get a Worker by ID
+   * @param {string} id ID of the Worker to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getWorkerById(id: string, options?: any): AxiosPromise<WorkerResource>;
+
+  /**
+   *
+   * @summary Get a Worker by ID
+   * @param {string} id ID of the Worker to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getWorkerByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<WorkerResource>;
+
+  /**
+   * Get the status of the network connection between the Octopus server and a worker.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getWorkerConnectionStatus(
+    id: string,
+    options?: any
+  ): AxiosPromise<MachineConnectionStatus>;
+
+  /**
+   * Get the status of the network connection between the Octopus server and a worker.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getWorkerConnectionStatusSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<MachineConnectionStatus>;
+
+  /**
+   * Gets all operating system names for workers. The result will be a string array.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getWorkerOperatingSystemNamesListAll(
+    options?: any
+  ): AxiosPromise<Array<string>>;
+
+  /**
+   * Gets all operating system names for workers. The result will be a string array.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getWorkerOperatingSystemNamesListAllSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<string>>;
+
+  /**
+   * Gets all operating system shell names for workers. The result will be a string array.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getWorkerOperatingSystemShellNameListAll(
+    options?: any
+  ): AxiosPromise<Array<string>>;
+
+  /**
+   * Gets all operating system shell names for workers. The result will be a string array.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  getWorkerOperatingSystemShellNameListAllSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<string>>;
+
+  /**
+   * Lists all of the registered worker machines in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of WorkerResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  indexWorkers(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<WorkerResourceCollection>;
+
+  /**
+   * Lists all of the registered worker machines in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of WorkerResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  indexWorkersSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<WorkerResourceCollection>;
+
+  /**
+   * Lists all of the workers in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of WorkerResources
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  listAllWorkers(options?: any): AxiosPromise<Array<WorkerResource>>;
+
+  /**
+   * Lists all of the workers in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of WorkerResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  listAllWorkersSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<WorkerResource>>;
+
+  /**
+   * Modifies an existing worker machine.
+   * @summary Modify a WorkerResource by ID
+   * @param {string} id ID of the WorkerResource to modify
+   * @param {WorkerResource} [body] The WorkerResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  updateWorker(
+    id: string,
+    body?: WorkerResource,
+    options?: any
+  ): AxiosPromise<WorkerResource>;
+
+  /**
+   * Modifies an existing worker machine.
+   * @summary Modify a WorkerResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the WorkerResource to modify
+   * @param {WorkerResource} [body] The WorkerResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkersApiInterface
+   */
+  updateWorkerSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: WorkerResource,
+    options?: any
+  ): AxiosPromise<WorkerResource>;
+}
+
+/**
  * WorkersApi - object-oriented interface
  * @export
  * @class WorkersApi
  * @extends {BaseAPI}
  */
-export class WorkersApi extends BaseAPI {
+export class WorkersApi extends BaseAPI implements WorkersApiInterface {
   /**
    * Creates a new worker.
    * @summary Create a WorkerResource

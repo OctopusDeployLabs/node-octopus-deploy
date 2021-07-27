@@ -331,12 +331,50 @@ export const ServerConfigurationApiFactory = function (
 };
 
 /**
+ * ServerConfigurationApi - interface
+ * @export
+ * @interface ServerConfigurationApi
+ */
+export interface ServerConfigurationApiInterface {
+  /**
+   * Gets information about the editable server configuration in use by the Octopus Server
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ServerConfigurationApiInterface
+   */
+  getServerConfiguration(
+    options?: any
+  ): AxiosPromise<ServerConfigurationResource>;
+
+  /**
+   * Gets information about the server configuration in use by the Octopus Server
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ServerConfigurationApiInterface
+   */
+  getServerConfigurationSettingsList(
+    options?: any
+  ): AxiosPromise<Array<ServerConfigurationSettingsResource>>;
+
+  /**
+   * Updates the server configuration used by the Octopus Server
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ServerConfigurationApiInterface
+   */
+  updateServerConfiguration(options?: any): AxiosPromise<void>;
+}
+
+/**
  * ServerConfigurationApi - object-oriented interface
  * @export
  * @class ServerConfigurationApi
  * @extends {BaseAPI}
  */
-export class ServerConfigurationApi extends BaseAPI {
+export class ServerConfigurationApi
+  extends BaseAPI
+  implements ServerConfigurationApiInterface
+{
   /**
    * Gets information about the editable server configuration in use by the Octopus Server
    * @param {*} [options] Override http request option.

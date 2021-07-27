@@ -486,12 +486,72 @@ export const SubscriptionsApiFactory = function (
 };
 
 /**
+ * SubscriptionsApi - interface
+ * @export
+ * @interface SubscriptionsApi
+ */
+export interface SubscriptionsApiInterface {
+  /**
+   * Lists all the subscriptions in the supplied Octopus Deploy Space.
+   * @summary Get all Subscriptions
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionsApiInterface
+   */
+  getAllSubscriptions(options?: any): AxiosPromise<Array<SubscriptionResource>>;
+
+  /**
+   * Lists all the subscriptions in the supplied Octopus Deploy Space.
+   * @summary Get all Subscriptions
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionsApiInterface
+   */
+  getAllSubscriptionsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<SubscriptionResource>>;
+
+  /**
+   *
+   * @summary Get a Subscription by ID
+   * @param {string} id ID of the Subscription to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionsApiInterface
+   */
+  getSubscriptionById(
+    id: string,
+    options?: any
+  ): AxiosPromise<SubscriptionResource>;
+
+  /**
+   *
+   * @summary Get a Subscription by ID
+   * @param {string} id ID of the Subscription to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SubscriptionsApiInterface
+   */
+  getSubscriptionByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<SubscriptionResource>;
+}
+
+/**
  * SubscriptionsApi - object-oriented interface
  * @export
  * @class SubscriptionsApi
  * @extends {BaseAPI}
  */
-export class SubscriptionsApi extends BaseAPI {
+export class SubscriptionsApi
+  extends BaseAPI
+  implements SubscriptionsApiInterface
+{
   /**
    * Lists all the subscriptions in the supplied Octopus Deploy Space.
    * @summary Get all Subscriptions

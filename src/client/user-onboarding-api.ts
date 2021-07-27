@@ -254,12 +254,42 @@ export const UserOnboardingApiFactory = function (
 };
 
 /**
+ * UserOnboardingApi - interface
+ * @export
+ * @interface UserOnboardingApi
+ */
+export interface UserOnboardingApiInterface {
+  /**
+   * Gets information about how far the Octopus Server is towards having its first release deployed.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserOnboardingApiInterface
+   */
+  getOnboarding(options?: any): AxiosPromise<OnboardingResource>;
+
+  /**
+   * Gets information about how far the Octopus Server is towards having its first release deployed.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserOnboardingApiInterface
+   */
+  getOnboardingSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<OnboardingResource>;
+}
+
+/**
  * UserOnboardingApi - object-oriented interface
  * @export
  * @class UserOnboardingApi
  * @extends {BaseAPI}
  */
-export class UserOnboardingApi extends BaseAPI {
+export class UserOnboardingApi
+  extends BaseAPI
+  implements UserOnboardingApiInterface
+{
   /**
    * Gets information about how far the Octopus Server is towards having its first release deployed.
    * @param {*} [options] Override http request option.

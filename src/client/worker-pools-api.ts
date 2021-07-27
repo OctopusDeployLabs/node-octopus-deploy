@@ -2471,12 +2471,314 @@ export const WorkerPoolsApiFactory = function (
 };
 
 /**
+ * WorkerPoolsApi - interface
+ * @export
+ * @interface WorkerPoolsApi
+ */
+export interface WorkerPoolsApiInterface {
+  /**
+   * Creates a new worker pool.
+   * @summary Create a WorkerPoolResource
+   * @param {WorkerPoolResource} [body] The WorkerPoolResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  createWorkerPool(
+    body?: WorkerPoolResource,
+    options?: any
+  ): AxiosPromise<WorkerPoolResource>;
+
+  /**
+   * Creates a new worker pool.
+   * @summary Create a WorkerPoolResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {WorkerPoolResource} [body] The WorkerPoolResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  createWorkerPoolSpaces(
+    baseSpaceId: string,
+    body?: WorkerPoolResource,
+    options?: any
+  ): AxiosPromise<WorkerPoolResource>;
+
+  /**
+   * Deletes an existing pool.
+   * @summary Delete a WorkerPoolResource by ID
+   * @param {string} id ID of the WorkerPoolResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  deleteWorkerPool(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing pool.
+   * @summary Delete a WorkerPoolResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the WorkerPoolResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  deleteWorkerPoolSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Get a Worker Pool by ID
+   * @param {string} id ID of the WorkerPool to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  getWorkerPoolById(
+    id: string,
+    options?: any
+  ): AxiosPromise<WorkerPoolResource>;
+
+  /**
+   *
+   * @summary Get a Worker Pool by ID
+   * @param {string} id ID of the WorkerPool to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  getWorkerPoolByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<WorkerPoolResource>;
+
+  /**
+   * Lists the available Worker Types for the Dynamic Worker Pool
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  getWorkerPoolDynamicWorkerTypes(
+    options?: any
+  ): AxiosPromise<WorkerPoolDynamicWorkerTypesResource>;
+
+  /**
+   * Lists the available Worker Types for the Dynamic Worker Pool
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  getWorkerPoolDynamicWorkerTypesSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<WorkerPoolDynamicWorkerTypesResource>;
+
+  /**
+   * Lists the available Worker Pool types.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  getWorkerPoolSupportedTypes(
+    options?: any
+  ): AxiosPromise<WorkerPoolSupportedTypesResource>;
+
+  /**
+   * Lists the available Worker Pool types.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  getWorkerPoolSupportedTypesSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<WorkerPoolSupportedTypesResource>;
+
+  /**
+   * Lists all worker pools, including a summary of machine information
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  getWorkerPoolsSummary(
+    options?: any
+  ): AxiosPromise<WorkerPoolsSummaryResource>;
+
+  /**
+   * Lists all worker pools, including a summary of machine information
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  getWorkerPoolsSummarySpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<WorkerPoolsSummaryResource>;
+
+  /**
+   * Lists all of the machines that belong to the given worker pool.
+   * @summary Get a list of WorkerResources for the given WorkerPoolResource
+   * @param {string} id ID of the WorkerPool
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  indexWorkerPoolWorkers(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<WorkerResourceCollection>;
+
+  /**
+   * Lists all of the machines that belong to the given worker pool.
+   * @summary Get a list of WorkerResources for the given WorkerPoolResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the WorkerPool
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items per page
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  indexWorkerPoolWorkersSpaces(
+    baseSpaceId: string,
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<WorkerResourceCollection>;
+
+  /**
+   * Lists all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each environment.
+   * @summary Get a list of WorkerPoolResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  indexWorkerPools(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<WorkerPoolResourceCollection>;
+
+  /**
+   * Lists all of the worker pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each environment.
+   * @summary Get a list of WorkerPoolResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  indexWorkerPoolsSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<WorkerPoolResourceCollection>;
+
+  /**
+   * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+   * @summary Get a list of Worker Pools
+   * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  listAllWorkerPools(
+    ids?: Array<string>,
+    options?: any
+  ): AxiosPromise<Array<WorkerPoolResource>>;
+
+  /**
+   * Lists the name and ID of all of the Worker Pools in the supplied Octopus Deploy Space. The results will be sorted by the `SortOrder` field on each Worker Pool.
+   * @summary Get a list of Worker Pools
+   * @param {string} baseSpaceId ID of the space
+   * @param {Array<string>} [ids] A set of Worker Pool IDs to retrieve Worker Pools for. Example: WorkerPool-101,WorkerPool-201
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  listAllWorkerPoolsSpaces(
+    baseSpaceId: string,
+    ids?: Array<string>,
+    options?: any
+  ): AxiosPromise<Array<WorkerPoolResource>>;
+
+  /**
+   * Takes an array of work pool IDs as the request body, uses the order of items in the array to sort the worker pools on the server. The ID of every worker pool must be specified.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  updateSortWorkerPools(options?: any): AxiosPromise<void>;
+
+  /**
+   * Takes an array of work pool IDs as the request body, uses the order of items in the array to sort the worker pools on the server. The ID of every worker pool must be specified.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  updateSortWorkerPoolsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Modifies an existing worker pool.
+   * @summary Modify a WorkerPoolResource by ID
+   * @param {string} id ID of the WorkerPoolResource to modify
+   * @param {WorkerPoolResource} [body] The WorkerPoolResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  updateWorkerPool(
+    id: string,
+    body?: WorkerPoolResource,
+    options?: any
+  ): AxiosPromise<WorkerPoolResource>;
+
+  /**
+   * Modifies an existing worker pool.
+   * @summary Modify a WorkerPoolResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the WorkerPoolResource to modify
+   * @param {WorkerPoolResource} [body] The WorkerPoolResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof WorkerPoolsApiInterface
+   */
+  updateWorkerPoolSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: WorkerPoolResource,
+    options?: any
+  ): AxiosPromise<WorkerPoolResource>;
+}
+
+/**
  * WorkerPoolsApi - object-oriented interface
  * @export
  * @class WorkerPoolsApi
  * @extends {BaseAPI}
  */
-export class WorkerPoolsApi extends BaseAPI {
+export class WorkerPoolsApi extends BaseAPI implements WorkerPoolsApiInterface {
   /**
    * Creates a new worker pool.
    * @summary Create a WorkerPoolResource

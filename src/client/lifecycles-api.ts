@@ -1837,12 +1837,235 @@ export const LifecyclesApiFactory = function (
 };
 
 /**
+ * LifecyclesApi - interface
+ * @export
+ * @interface LifecyclesApi
+ */
+export interface LifecyclesApiInterface {
+  /**
+   * Creates a new lifecycle.
+   * @summary Create a LifecycleResource
+   * @param {LifecycleResource} [body] The LifecycleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  createLifecycle(
+    body?: LifecycleResource,
+    options?: any
+  ): AxiosPromise<LifecycleResource>;
+
+  /**
+   * Creates a new lifecycle.
+   * @summary Create a LifecycleResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {LifecycleResource} [body] The LifecycleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  createLifecycleSpaces(
+    baseSpaceId: string,
+    body?: LifecycleResource,
+    options?: any
+  ): AxiosPromise<LifecycleResource>;
+
+  /**
+   * Deletes an existing lifecycle.
+   * @summary Delete a LifecycleResource by ID
+   * @param {string} id ID of the LifecycleResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  deleteLifecycle(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing lifecycle.
+   * @summary Delete a LifecycleResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the LifecycleResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  deleteLifecycleSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Get a Lifecycle by ID
+   * @param {string} id ID of the Lifecycle to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  getLifecycleById(id: string, options?: any): AxiosPromise<LifecycleResource>;
+
+  /**
+   *
+   * @summary Get a Lifecycle by ID
+   * @param {string} id ID of the Lifecycle to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  getLifecycleByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<LifecycleResource>;
+
+  /**
+   * Gets a single lifecycle by ID, as a preview.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  getLifecyclePreview(
+    id: string,
+    options?: any
+  ): AxiosPromise<LifecycleResource>;
+
+  /**
+   * Gets a single lifecycle by ID, as a preview.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  getLifecyclePreviewSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<LifecycleResource>;
+
+  /**
+   * Gets a all projects that use this lifecycle.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  getLifecycleProjects(
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<ProjectResource>>;
+
+  /**
+   * Gets a all projects that use this lifecycle.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  getLifecycleProjectsSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<ProjectResource>>;
+
+  /**
+   * Lists all of the lifecycles in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of LifecycleResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  indexLifecycles(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<LifecycleResourceCollection>;
+
+  /**
+   * Lists all of the lifecycles in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of LifecycleResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  indexLifecyclesSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<LifecycleResourceCollection>;
+
+  /**
+   * Lists all the lifecycles in the supplied Octopus Deploy Space.
+   * @summary Get a list of Lifecycles
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  listAllLifecycles(options?: any): AxiosPromise<Array<LifecycleResource>>;
+
+  /**
+   * Lists all the lifecycles in the supplied Octopus Deploy Space.
+   * @summary Get a list of Lifecycles
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  listAllLifecyclesSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<LifecycleResource>>;
+
+  /**
+   * Modifies an existing lifecycle.
+   * @summary Modify a LifecycleResource by ID
+   * @param {string} id ID of the LifecycleResource to modify
+   * @param {LifecycleResource} [body] The LifecycleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  updateLifecycle(
+    id: string,
+    body?: LifecycleResource,
+    options?: any
+  ): AxiosPromise<LifecycleResource>;
+
+  /**
+   * Modifies an existing lifecycle.
+   * @summary Modify a LifecycleResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the LifecycleResource to modify
+   * @param {LifecycleResource} [body] The LifecycleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof LifecyclesApiInterface
+   */
+  updateLifecycleSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: LifecycleResource,
+    options?: any
+  ): AxiosPromise<LifecycleResource>;
+}
+
+/**
  * LifecyclesApi - object-oriented interface
  * @export
  * @class LifecyclesApi
  * @extends {BaseAPI}
  */
-export class LifecyclesApi extends BaseAPI {
+export class LifecyclesApi extends BaseAPI implements LifecyclesApiInterface {
   /**
    * Creates a new lifecycle.
    * @summary Create a LifecycleResource

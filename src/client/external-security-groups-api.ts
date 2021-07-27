@@ -158,12 +158,32 @@ export const ExternalSecurityGroupsApiFactory = function (
 };
 
 /**
+ * ExternalSecurityGroupsApi - interface
+ * @export
+ * @interface ExternalSecurityGroupsApi
+ */
+export interface ExternalSecurityGroupsApiInterface {
+  /**
+   * Lists the authentication providers that support external group lookups.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ExternalSecurityGroupsApiInterface
+   */
+  getListProvidersThatSupportExternalSecurityGroups(
+    options?: any
+  ): AxiosPromise<Array<AuthenticationProviderThatSupportsGroups>>;
+}
+
+/**
  * ExternalSecurityGroupsApi - object-oriented interface
  * @export
  * @class ExternalSecurityGroupsApi
  * @extends {BaseAPI}
  */
-export class ExternalSecurityGroupsApi extends BaseAPI {
+export class ExternalSecurityGroupsApi
+  extends BaseAPI
+  implements ExternalSecurityGroupsApiInterface
+{
   /**
    * Lists the authentication providers that support external group lookups.
    * @param {*} [options] Override http request option.

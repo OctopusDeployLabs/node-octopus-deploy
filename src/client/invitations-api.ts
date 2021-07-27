@@ -507,12 +507,75 @@ export const InvitationsApiFactory = function (
 };
 
 /**
+ * InvitationsApi - interface
+ * @export
+ * @interface InvitationsApi
+ */
+export interface InvitationsApiInterface {
+  /**
+   * Invite a user to register.
+   * @summary Create a InvitationResource
+   * @param {InvitationResource} [body] The InvitationResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof InvitationsApiInterface
+   */
+  createInvitation(
+    body?: InvitationResource,
+    options?: any
+  ): AxiosPromise<InvitationResource>;
+
+  /**
+   * Invite a user to register.
+   * @summary Create a InvitationResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {InvitationResource} [body] The InvitationResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof InvitationsApiInterface
+   */
+  createInvitationSpaces(
+    baseSpaceId: string,
+    body?: InvitationResource,
+    options?: any
+  ): AxiosPromise<InvitationResource>;
+
+  /**
+   *
+   * @summary Get an Invitation by ID
+   * @param {string} id ID of the Invitation to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof InvitationsApiInterface
+   */
+  getInvitationById(
+    id: string,
+    options?: any
+  ): AxiosPromise<InvitationResource>;
+
+  /**
+   *
+   * @summary Get an Invitation by ID
+   * @param {string} id ID of the Invitation to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof InvitationsApiInterface
+   */
+  getInvitationByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<InvitationResource>;
+}
+
+/**
  * InvitationsApi - object-oriented interface
  * @export
  * @class InvitationsApi
  * @extends {BaseAPI}
  */
-export class InvitationsApi extends BaseAPI {
+export class InvitationsApi extends BaseAPI implements InvitationsApiInterface {
   /**
    * Invite a user to register.
    * @summary Create a InvitationResource

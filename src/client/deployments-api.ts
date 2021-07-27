@@ -924,12 +924,124 @@ export const DeploymentsApiFactory = function (
 };
 
 /**
+ * DeploymentsApi - interface
+ * @export
+ * @interface DeploymentsApi
+ */
+export interface DeploymentsApiInterface {
+  /**
+   * Creates a new deployment.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentsApiInterface
+   */
+  createDeploymentCreate(options?: any): AxiosPromise<DeploymentResource>;
+
+  /**
+   * Creates a new deployment.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentsApiInterface
+   */
+  createDeploymentCreateSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<DeploymentResource>;
+
+  /**
+   * Deletes a deployment.
+   * @summary Delete a DeploymentResource by ID
+   * @param {string} id ID of the DeploymentResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentsApiInterface
+   */
+  deleteDeployment(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes a deployment.
+   * @summary Delete a DeploymentResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the DeploymentResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentsApiInterface
+   */
+  deleteDeploymentSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Get a Deployment by ID
+   * @param {string} id ID of the Deployment to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentsApiInterface
+   */
+  getDeploymentById(
+    id: string,
+    options?: any
+  ): AxiosPromise<DeploymentResource>;
+
+  /**
+   *
+   * @summary Get a Deployment by ID
+   * @param {string} id ID of the Deployment to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentsApiInterface
+   */
+  getDeploymentByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<DeploymentResource>;
+
+  /**
+   * Lists all of the deployments in the supplied Octopus Deploy Space, from projects, releases and environments accessible by the current user. The results will be sorted from most recent to least recent deployment.
+   * @summary Get a list of DeploymentResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentsApiInterface
+   */
+  indexDeployments(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentResourceCollection>;
+
+  /**
+   * Lists all of the deployments in the supplied Octopus Deploy Space, from projects, releases and environments accessible by the current user. The results will be sorted from most recent to least recent deployment.
+   * @summary Get a list of DeploymentResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentsApiInterface
+   */
+  indexDeploymentsSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentResourceCollection>;
+}
+
+/**
  * DeploymentsApi - object-oriented interface
  * @export
  * @class DeploymentsApi
  * @extends {BaseAPI}
  */
-export class DeploymentsApi extends BaseAPI {
+export class DeploymentsApi extends BaseAPI implements DeploymentsApiInterface {
   /**
    * Creates a new deployment.
    * @param {*} [options] Override http request option.

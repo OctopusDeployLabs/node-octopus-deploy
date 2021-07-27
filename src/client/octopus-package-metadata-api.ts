@@ -478,12 +478,70 @@ export const OctopusPackageMetadataApiFactory = function (
 };
 
 /**
+ * OctopusPackageMetadataApi - interface
+ * @export
+ * @interface OctopusPackageMetadataApi
+ */
+export interface OctopusPackageMetadataApiInterface {
+  /**
+   * Creates package build information. Deprecated. Please use the \'build-information\' api instead.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof OctopusPackageMetadataApiInterface
+   */
+  createOctopusPackageMetadata(
+    options?: any
+  ): AxiosPromise<OctopusPackageMetadataMappedResource>;
+
+  /**
+   * Creates package build information. Deprecated. Please use the \'build-information\' api instead.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof OctopusPackageMetadataApiInterface
+   */
+  createOctopusPackageMetadataSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<OctopusPackageMetadataMappedResource>;
+
+  /**
+   * Returns package build information for the specified id. Deprecated. Please use the \'build-information\' api instead.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof OctopusPackageMetadataApiInterface
+   */
+  getOctopusPackageMetadata(
+    id: string,
+    options?: any
+  ): AxiosPromise<OctopusPackageMetadataMappedResource>;
+
+  /**
+   * Returns package build information for the specified id. Deprecated. Please use the \'build-information\' api instead.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof OctopusPackageMetadataApiInterface
+   */
+  getOctopusPackageMetadataSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<OctopusPackageMetadataMappedResource>;
+}
+
+/**
  * OctopusPackageMetadataApi - object-oriented interface
  * @export
  * @class OctopusPackageMetadataApi
  * @extends {BaseAPI}
  */
-export class OctopusPackageMetadataApi extends BaseAPI {
+export class OctopusPackageMetadataApi
+  extends BaseAPI
+  implements OctopusPackageMetadataApiInterface
+{
   /**
    * Creates package build information. Deprecated. Please use the \'build-information\' api instead.
    * @param {*} [options] Override http request option.

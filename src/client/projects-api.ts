@@ -2915,12 +2915,354 @@ export const ProjectsApiFactory = function (
 };
 
 /**
+ * ProjectsApi - interface
+ * @export
+ * @interface ProjectsApi
+ */
+export interface ProjectsApiInterface {
+  /**
+   * Converts an existing project to store its configuration in version control.
+   * @param {string} projectId ID of the project resource.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  createConvertProjectToVersionControlled(
+    projectId: string,
+    options?: any
+  ): AxiosPromise<ConvertProjectToVersionControlledResponse>;
+
+  /**
+   * Converts an existing project to store its configuration in version control.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} projectId ID of the project resource.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  createConvertProjectToVersionControlledSpaces(
+    baseSpaceId: string,
+    projectId: string,
+    options?: any
+  ): AxiosPromise<ConvertProjectToVersionControlledResponse>;
+
+  /**
+   * Creates a new project.
+   * @summary Create a ProjectResource
+   * @param {string} [clone] The projectId whose configuration is to be copied to the project being created.
+   * @param {ProjectResource} [body] The ProjectResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  createProject(
+    clone?: string,
+    body?: ProjectResource,
+    options?: any
+  ): AxiosPromise<ProjectResource>;
+
+  /**
+   * Updates the logo associated with the project.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  createProjectLogo(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Updates the logo associated with the project.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  createProjectLogoSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Creates a new project.
+   * @summary Create a ProjectResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} [clone] The projectId whose configuration is to be copied to the project being created.
+   * @param {ProjectResource} [body] The ProjectResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  createProjectSpaces(
+    baseSpaceId: string,
+    clone?: string,
+    body?: ProjectResource,
+    options?: any
+  ): AxiosPromise<ProjectResource>;
+
+  /**
+   * Tests the VCS settings to make sure we can connect
+   * @param {string} id ID of the project
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  createVersionControlSettingsConnectivityCheck(
+    id: string,
+    options?: any
+  ): AxiosPromise<ConnectivityCheckResponse>;
+
+  /**
+   * Tests the VCS settings to make sure we can connect
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the project
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  createVersionControlSettingsConnectivityCheckSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<ConnectivityCheckResponse>;
+
+  /**
+   * Deletes an existing project.
+   * @summary Delete a ProjectResource by ID
+   * @param {string} id ID of the ProjectResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  deleteProject(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing project.
+   * @summary Delete a ProjectResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ProjectResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  deleteProjectSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Gets a single project by ID or Slug.
+   * @param {string} id ID or slug of the ProjectResource to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  getProjectByIdOrSlug(
+    id: string,
+    options?: any
+  ): AxiosPromise<ProjectResource>;
+
+  /**
+   * Gets a single project by ID or Slug.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID or slug of the ProjectResource to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  getProjectByIdOrSlugSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<ProjectResource>;
+
+  /**
+   * Gets the logo associated with the project.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  getProjectLogo(id: string, options?: any): AxiosPromise<any>;
+
+  /**
+   * Gets the logo associated with the project.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  getProjectLogoSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<any>;
+
+  /**
+   * Gets the custom settings metadata from the extensions.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  getProjectSettingsMetadata(
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<ProjectSettingsMetadata>>;
+
+  /**
+   * Gets the custom settings metadata from the extensions.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  getProjectSettingsMetadataSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<ProjectSettingsMetadata>>;
+
+  /**
+   * Gets a summary of project-specific information.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  getProjectSummary(id: string, options?: any): AxiosPromise<ProjectSummary>;
+
+  /**
+   * Gets a summary of project-specific information.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  getProjectSummarySpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<ProjectSummary>;
+
+  /**
+   * Lists all of the projects in the supplied Octopus Deploy Space, from all project groups. The results will be sorted alphabetically by name.
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  indexProjects(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectResourceCollection>;
+
+  /**
+   * Lists all of the projects in the supplied Octopus Deploy Space, from all project groups. The results will be sorted alphabetically by name.
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  indexProjectsSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectResourceCollection>;
+
+  /**
+   * Lists the name and ID of all of the projects in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  listAllProjects(options?: any): AxiosPromise<Array<ProjectResource>>;
+
+  /**
+   * Lists the name and ID of all of the projects in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  listAllProjectsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<ProjectResource>>;
+
+  /**
+   * Modifies an existing project.
+   * @summary Modify a ProjectResource by ID
+   * @param {string} id ID of the ProjectResource to modify
+   * @param {ProjectResource} [body] The ProjectResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  updateProject(
+    id: string,
+    body?: ProjectResource,
+    options?: any
+  ): AxiosPromise<ProjectResource>;
+
+  /**
+   * Updates the logo associated with the project.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  updateProjectLogo(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Updates the logo associated with the project.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  updateProjectLogoSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Modifies an existing project.
+   * @summary Modify a ProjectResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ProjectResource to modify
+   * @param {ProjectResource} [body] The ProjectResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectsApiInterface
+   */
+  updateProjectSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: ProjectResource,
+    options?: any
+  ): AxiosPromise<ProjectResource>;
+}
+
+/**
  * ProjectsApi - object-oriented interface
  * @export
  * @class ProjectsApi
  * @extends {BaseAPI}
  */
-export class ProjectsApi extends BaseAPI {
+export class ProjectsApi extends BaseAPI implements ProjectsApiInterface {
   /**
    * Converts an existing project to store its configuration in version control.
    * @param {string} projectId ID of the project resource.

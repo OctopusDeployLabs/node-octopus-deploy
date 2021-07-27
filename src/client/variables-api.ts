@@ -1071,12 +1071,135 @@ export const VariablesApiFactory = function (
 };
 
 /**
+ * VariablesApi - interface
+ * @export
+ * @interface VariablesApi
+ */
+export interface VariablesApiInterface {
+  /**
+   * List the names of variables that can be used in deployment actions. If a project is specified, this will include variables in that project.  If a project environments filter is specified, project variables only scoped to the environment will be excluded.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  getVariableNamesList(options?: any): AxiosPromise<void>;
+
+  /**
+   * List the names of variables that can be used in deployment actions. If a project is specified, this will include variables in that project.  If a project environments filter is specified, project variables only scoped to the environment will be excluded.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  getVariableNamesListSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * List the evaluated variables for a deployment.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  getVariablePreviewList(options?: any): AxiosPromise<VariableSetResource>;
+
+  /**
+   * List the evaluated variables for a deployment.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  getVariablePreviewListSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<VariableSetResource>;
+
+  /**
+   * Gets a variable set by Id.
+   * @summary Get a VariableSetResource by ID
+   * @param {string} id ID of the VariableSetResource to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  getVariableSetById(
+    id: string,
+    options?: any
+  ): AxiosPromise<VariableSetResource>;
+
+  /**
+   * Gets a variable set by Id.
+   * @summary Get a VariableSetResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the VariableSetResource to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  getVariableSetByIdSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<VariableSetResource>;
+
+  /**
+   * Lists all the variable sets in the supplied Octopus Deploy Space.
+   * @summary Get a list of VariableSetResources
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  listAllVariableSets(options?: any): AxiosPromise<Array<VariableSetResource>>;
+
+  /**
+   * Lists all the variable sets in the supplied Octopus Deploy Space.
+   * @summary Get a list of VariableSetResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  listAllVariableSetsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<VariableSetResource>>;
+
+  /**
+   * Updates a variable set.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  updateVariableSet(
+    id: string,
+    options?: any
+  ): AxiosPromise<VariableSetResource>;
+
+  /**
+   * Updates a variable set.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof VariablesApiInterface
+   */
+  updateVariableSetSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<VariableSetResource>;
+}
+
+/**
  * VariablesApi - object-oriented interface
  * @export
  * @class VariablesApi
  * @extends {BaseAPI}
  */
-export class VariablesApi extends BaseAPI {
+export class VariablesApi extends BaseAPI implements VariablesApiInterface {
   /**
    * List the names of variables that can be used in deployment actions. If a project is specified, this will include variables in that project.  If a project environments filter is specified, project variables only scoped to the environment will be excluded.
    * @param {*} [options] Override http request option.

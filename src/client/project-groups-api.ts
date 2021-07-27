@@ -1675,12 +1675,227 @@ export const ProjectGroupsApiFactory = function (
 };
 
 /**
+ * ProjectGroupsApi - interface
+ * @export
+ * @interface ProjectGroupsApi
+ */
+export interface ProjectGroupsApiInterface {
+  /**
+   * Creates a new project group.
+   * @summary Create a ProjectGroupResource
+   * @param {ProjectGroupResource} [body] The ProjectGroupResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  createProjectGroup(
+    body?: ProjectGroupResource,
+    options?: any
+  ): AxiosPromise<ProjectGroupResource>;
+
+  /**
+   * Creates a new project group.
+   * @summary Create a ProjectGroupResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {ProjectGroupResource} [body] The ProjectGroupResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  createProjectGroupSpaces(
+    baseSpaceId: string,
+    body?: ProjectGroupResource,
+    options?: any
+  ): AxiosPromise<ProjectGroupResource>;
+
+  /**
+   * Deletes an existing project group.
+   * @summary Delete a ProjectGroupResource by ID
+   * @param {string} id ID of the ProjectGroupResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  deleteProjectGroup(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing project group.
+   * @summary Delete a ProjectGroupResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ProjectGroupResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  deleteProjectGroupSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Get a Project Group by ID
+   * @param {string} id ID of the ProjectGroup to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  getProjectGroupById(
+    id: string,
+    options?: any
+  ): AxiosPromise<ProjectGroupResource>;
+
+  /**
+   *
+   * @summary Get a Project Group by ID
+   * @param {string} id ID of the ProjectGroup to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  getProjectGroupByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<ProjectGroupResource>;
+
+  /**
+   *
+   * @summary Lists all of the Projects that belong to the given Project Group
+   * @param {string} id ID of the Project Group to load
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  indexProjectGroupProjects(
+    id: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectResourceCollection>;
+
+  /**
+   *
+   * @summary Lists all of the Projects that belong to the given Project Group
+   * @param {string} id ID of the Project Group to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  indexProjectGroupProjectsSpaces(
+    id: string,
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectResourceCollection>;
+
+  /**
+   * Lists all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of ProjectGroupResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  indexProjectGroups(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectGroupResourceCollection>;
+
+  /**
+   * Lists all of the project groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of ProjectGroupResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  indexProjectGroupsSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<ProjectGroupResourceCollection>;
+
+  /**
+   * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of Project Group
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  listAllProjectGroups(
+    options?: any
+  ): AxiosPromise<Array<ProjectGroupResource>>;
+
+  /**
+   * Lists the name and ID of all of the Project Groups in the supplied Octopus Deploy Space. The results will be sorted alphabetically by name.
+   * @summary Get a list of Project Group
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  listAllProjectGroupsSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<ProjectGroupResource>>;
+
+  /**
+   * Modifies an existing project group.
+   * @summary Modify a ProjectGroupResource by ID
+   * @param {string} id ID of the ProjectGroupResource to modify
+   * @param {ProjectGroupResource} [body] The ProjectGroupResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  updateProjectGroup(
+    id: string,
+    body?: ProjectGroupResource,
+    options?: any
+  ): AxiosPromise<ProjectGroupResource>;
+
+  /**
+   * Modifies an existing project group.
+   * @summary Modify a ProjectGroupResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ProjectGroupResource to modify
+   * @param {ProjectGroupResource} [body] The ProjectGroupResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ProjectGroupsApiInterface
+   */
+  updateProjectGroupSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: ProjectGroupResource,
+    options?: any
+  ): AxiosPromise<ProjectGroupResource>;
+}
+
+/**
  * ProjectGroupsApi - object-oriented interface
  * @export
  * @class ProjectGroupsApi
  * @extends {BaseAPI}
  */
-export class ProjectGroupsApi extends BaseAPI {
+export class ProjectGroupsApi
+  extends BaseAPI
+  implements ProjectGroupsApiInterface
+{
   /**
    * Creates a new project group.
    * @summary Create a ProjectGroupResource

@@ -950,12 +950,129 @@ export const ScopedUserRoleApiFactory = function (
 };
 
 /**
+ * ScopedUserRoleApi - interface
+ * @export
+ * @interface ScopedUserRoleApi
+ */
+export interface ScopedUserRoleApiInterface {
+  /**
+   * Creates a scoped user role.
+   * @summary Create a ScopedUserRoleResource
+   * @param {ScopedUserRoleResource} [body] The ScopedUserRoleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRoleApiInterface
+   */
+  createScopedUserRole(
+    body?: ScopedUserRoleResource,
+    options?: any
+  ): AxiosPromise<ScopedUserRoleResource>;
+
+  /**
+   * Creates a scoped user role.
+   * @summary Create a ScopedUserRoleResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {ScopedUserRoleResource} [body] The ScopedUserRoleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRoleApiInterface
+   */
+  createScopedUserRoleSpaces(
+    baseSpaceId: string,
+    body?: ScopedUserRoleResource,
+    options?: any
+  ): AxiosPromise<ScopedUserRoleResource>;
+
+  /**
+   * Deletes an existing scoped user role.
+   * @summary Delete a ScopedUserRoleResource by ID
+   * @param {string} id ID of the ScopedUserRoleResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRoleApiInterface
+   */
+  deleteScopedUserRole(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes an existing scoped user role.
+   * @summary Delete a ScopedUserRoleResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ScopedUserRoleResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRoleApiInterface
+   */
+  deleteScopedUserRoleSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Lists the name and ID of all of the scoped user roles in the supplied Octopus Deploy Space. The results will be sorted by name.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRoleApiInterface
+   */
+  getListScopedUserRole(
+    options?: any
+  ): AxiosPromise<ScopedUserRoleResourceCollection>;
+
+  /**
+   * Lists the name and ID of all of the scoped user roles in the supplied Octopus Deploy Space. The results will be sorted by name.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRoleApiInterface
+   */
+  getListScopedUserRoleSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<ScopedUserRoleResourceCollection>;
+
+  /**
+   * Modifies an existing scoped user role.
+   * @summary Modify a ScopedUserRoleResource by ID
+   * @param {string} id ID of the ScopedUserRoleResource to modify
+   * @param {ScopedUserRoleResource} [body] The ScopedUserRoleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRoleApiInterface
+   */
+  updateScopedUserRole(
+    id: string,
+    body?: ScopedUserRoleResource,
+    options?: any
+  ): AxiosPromise<ScopedUserRoleResource>;
+
+  /**
+   * Modifies an existing scoped user role.
+   * @summary Modify a ScopedUserRoleResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the ScopedUserRoleResource to modify
+   * @param {ScopedUserRoleResource} [body] The ScopedUserRoleResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRoleApiInterface
+   */
+  updateScopedUserRoleSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: ScopedUserRoleResource,
+    options?: any
+  ): AxiosPromise<ScopedUserRoleResource>;
+}
+
+/**
  * ScopedUserRoleApi - object-oriented interface
  * @export
  * @class ScopedUserRoleApi
  * @extends {BaseAPI}
  */
-export class ScopedUserRoleApi extends BaseAPI {
+export class ScopedUserRoleApi
+  extends BaseAPI
+  implements ScopedUserRoleApiInterface
+{
   /**
    * Creates a scoped user role.
    * @summary Create a ScopedUserRoleResource

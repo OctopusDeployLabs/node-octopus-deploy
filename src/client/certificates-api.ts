@@ -2673,12 +2673,336 @@ export const CertificatesApiFactory = function (
 };
 
 /**
+ * CertificatesApi - interface
+ * @export
+ * @interface CertificatesApi
+ */
+export interface CertificatesApiInterface {
+  /**
+   * Adds a new certificate
+   * @summary Create a CertificateResource
+   * @param {CertificateResource} [body] The CertificateResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificate(
+    body?: CertificateResource,
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+
+  /**
+   * Archives a certificate
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificateArchive(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Archives a certificate
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificateArchiveSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Creates a self signed certificate
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificateCreateSelfSigned(
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+
+  /**
+   * Creates a self signed certificate
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificateCreateSelfSignedSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+
+  /**
+   * Replaces a certificate with another
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificateReplace(
+    id: string,
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+
+  /**
+   * Replaces a certificate with another
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificateReplaceSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+
+  /**
+   * Adds a new certificate
+   * @summary Create a CertificateResource
+   * @param {string} baseSpaceId ID of the space
+   * @param {CertificateResource} [body] The CertificateResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificateSpaces(
+    baseSpaceId: string,
+    body?: CertificateResource,
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+
+  /**
+   * Un-archives a certificate
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificateUnArchive(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Un-archives a certificate
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  createCertificateUnArchiveSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Permanently deletes a certificate
+   * @summary Delete a CertificateResource by ID
+   * @param {string} id ID of the CertificateResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  deleteCertificate(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Permanently deletes a certificate
+   * @summary Delete a CertificateResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the CertificateResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  deleteCertificateSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Get a certificate by ID or thumbprint
+   * @param {string} id ID or thumbprint of certificate
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  getCertificateByIdOrThumbprint(
+    id: string,
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+
+  /**
+   * Get a certificate by ID or thumbprint
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID or thumbprint of certificate
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  getCertificateByIdOrThumbprintSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+
+  /**
+   * Exports the certificate
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  getCertificateExport(id: string, options?: any): AxiosPromise<any>;
+
+  /**
+   * Exports the certificate
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  getCertificateExportSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<any>;
+
+  /**
+   * Get the usages of a certificate
+   * @param {string} id ID of the certificate
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  getCertificateUsage(
+    id: string,
+    options?: any
+  ): AxiosPromise<CertificateUsageResource>;
+
+  /**
+   * Get the usages of a certificate
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the certificate
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  getCertificateUsageSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<CertificateUsageResource>;
+
+  /**
+   * Lists X.509 certificates managed by Octopus
+   * @summary Get a list of CertificateResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  indexCertificates(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<CertificateResourceCollection>;
+
+  /**
+   * Lists X.509 certificates managed by Octopus
+   * @summary Get a list of CertificateResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  indexCertificatesSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<CertificateResourceCollection>;
+
+  /**
+   * Lists X.509 certificates managed by Octopus.
+   * @summary Get a list of Certificates
+   * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  listAllCertificates(
+    ids?: Array<string>,
+    options?: any
+  ): AxiosPromise<Array<CertificateResource>>;
+
+  /**
+   * Lists X.509 certificates managed by Octopus.
+   * @summary Get a list of Certificates
+   * @param {string} baseSpaceId ID of the space
+   * @param {Array<string>} [ids] A set of Certificate IDs to retrieve Certificates for. Example: Certificate-101,Certificate-201
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  listAllCertificatesSpaces(
+    baseSpaceId: string,
+    ids?: Array<string>,
+    options?: any
+  ): AxiosPromise<Array<CertificateResource>>;
+
+  /**
+   * Modifies an existing certificate
+   * @summary Modify a CertificateResource by ID
+   * @param {string} id ID of the CertificateResource to modify
+   * @param {CertificateResource} [body] The CertificateResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  updateCertificate(
+    id: string,
+    body?: CertificateResource,
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+
+  /**
+   * Modifies an existing certificate
+   * @summary Modify a CertificateResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the CertificateResource to modify
+   * @param {CertificateResource} [body] The CertificateResource resource to create
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificatesApiInterface
+   */
+  updateCertificateSpaces(
+    baseSpaceId: string,
+    id: string,
+    body?: CertificateResource,
+    options?: any
+  ): AxiosPromise<CertificateResource>;
+}
+
+/**
  * CertificatesApi - object-oriented interface
  * @export
  * @class CertificatesApi
  * @extends {BaseAPI}
  */
-export class CertificatesApi extends BaseAPI {
+export class CertificatesApi
+  extends BaseAPI
+  implements CertificatesApiInterface
+{
   /**
    * Adds a new certificate
    * @summary Create a CertificateResource

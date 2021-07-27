@@ -245,12 +245,42 @@ export const FeaturesConfigurationApiFactory = function (
 };
 
 /**
+ * FeaturesConfigurationApi - interface
+ * @export
+ * @interface FeaturesConfigurationApi
+ */
+export interface FeaturesConfigurationApiInterface {
+  /**
+   * Gets information about the features configuration in use by the Octopus Server
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof FeaturesConfigurationApiInterface
+   */
+  getFeaturesConfiguration(
+    options?: any
+  ): AxiosPromise<FeaturesConfigurationResource>;
+
+  /**
+   * Updates the features configuration used by the Octopus Server
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof FeaturesConfigurationApiInterface
+   */
+  updateFeaturesConfiguration(
+    options?: any
+  ): AxiosPromise<FeaturesConfigurationResource>;
+}
+
+/**
  * FeaturesConfigurationApi - object-oriented interface
  * @export
  * @class FeaturesConfigurationApi
  * @extends {BaseAPI}
  */
-export class FeaturesConfigurationApi extends BaseAPI {
+export class FeaturesConfigurationApi
+  extends BaseAPI
+  implements FeaturesConfigurationApiInterface
+{
   /**
    * Gets information about the features configuration in use by the Octopus Server
    * @param {*} [options] Override http request option.

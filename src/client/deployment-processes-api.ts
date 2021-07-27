@@ -1100,12 +1100,154 @@ export const DeploymentProcessesApiFactory = function (
 };
 
 /**
+ * DeploymentProcessesApi - interface
+ * @export
+ * @interface DeploymentProcessesApi
+ */
+export interface DeploymentProcessesApiInterface {
+  /**
+   *
+   * @summary Get a Deployment Process by ID.
+   * @param {string} id ID of the DeploymentProcess to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentProcessesApiInterface
+   */
+  getDeploymentProcessById(
+    id: string,
+    options?: any
+  ): AxiosPromise<DeploymentProcessResource>;
+
+  /**
+   *
+   * @summary Get a Deployment Process by ID.
+   * @param {string} id ID of the DeploymentProcess to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentProcessesApiInterface
+   */
+  getDeploymentProcessByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<DeploymentProcessResource>;
+
+  /**
+   *
+   * @summary Gets all of the information necessary for creating or editing a release using this deployment process.
+   * @param {string} deploymentProcessId The ID of the deployment process to use. Example &#x60;deploymentprocess-projects-1&#x60;
+   * @param {string} [channel] The ID of the channel to use. Example &#x60;Channels-12&#x60;
+   * @param {string} [releaseId] The ID of the release to get variables from. Example &#x60;Releases-12&#x60;
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentProcessesApiInterface
+   */
+  getReleaseTemplate(
+    deploymentProcessId: string,
+    channel?: string,
+    releaseId?: string,
+    options?: any
+  ): AxiosPromise<ReleaseTemplateResource>;
+
+  /**
+   *
+   * @summary Gets all of the information necessary for creating or editing a release using this deployment process.
+   * @param {string} deploymentProcessId The ID of the deployment process to use. Example &#x60;deploymentprocess-projects-1&#x60;
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} [channel] The ID of the channel to use. Example &#x60;Channels-12&#x60;
+   * @param {string} [releaseId] The ID of the release to get variables from. Example &#x60;Releases-12&#x60;
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentProcessesApiInterface
+   */
+  getReleaseTemplateSpaces(
+    deploymentProcessId: string,
+    baseSpaceId: string,
+    channel?: string,
+    releaseId?: string,
+    options?: any
+  ): AxiosPromise<ReleaseTemplateResource>;
+
+  /**
+   * Lists all the deployment processes in the supplied Octopus Deploy Space, sorted by Id.
+   * @summary Lists all the deployment processes
+   * @param {Array<string>} [ids] A list of DeploymentProcess IDs, to limit the matching of DeploymentProcesses to those with a particular ID. Example: [\&quot;deploymentprocess-Projects-1\&quot;, \&quot;deploymentprocess-Projects-2\&quot;]
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentProcessesApiInterface
+   */
+  listDeploymentProcesses(
+    ids?: Array<string>,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentProcessResourceCollection>;
+
+  /**
+   * Lists all the deployment processes in the supplied Octopus Deploy Space, sorted by Id.
+   * @summary Lists all the deployment processes
+   * @param {string} baseSpaceId ID of the space
+   * @param {Array<string>} [ids] A list of DeploymentProcess IDs, to limit the matching of DeploymentProcesses to those with a particular ID. Example: [\&quot;deploymentprocess-Projects-1\&quot;, \&quot;deploymentprocess-Projects-2\&quot;]
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentProcessesApiInterface
+   */
+  listDeploymentProcessesSpaces(
+    baseSpaceId: string,
+    ids?: Array<string>,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<DeploymentProcessResourceCollection>;
+
+  /**
+   * Modifies a deployment process. Only allowed for deployment processes owned by a project (cannot be used to change the deployment process owned by a release).
+   * @summary Modifies a deployment process
+   * @param {string} id The ID of the deployment process to update. Example &#x60;deploymentprocess-Projects-1&#x60;
+   * @param {DeploymentProcessResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentProcessesApiInterface
+   */
+  updateDeploymentProcessById(
+    id: string,
+    body?: DeploymentProcessResource,
+    options?: any
+  ): AxiosPromise<DeploymentProcessResource>;
+
+  /**
+   * Modifies a deployment process. Only allowed for deployment processes owned by a project (cannot be used to change the deployment process owned by a release).
+   * @summary Modifies a deployment process
+   * @param {string} id The ID of the deployment process to update. Example &#x60;deploymentprocess-Projects-1&#x60;
+   * @param {string} baseSpaceId ID of the space
+   * @param {DeploymentProcessResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DeploymentProcessesApiInterface
+   */
+  updateDeploymentProcessByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    body?: DeploymentProcessResource,
+    options?: any
+  ): AxiosPromise<DeploymentProcessResource>;
+}
+
+/**
  * DeploymentProcessesApi - object-oriented interface
  * @export
  * @class DeploymentProcessesApi
  * @extends {BaseAPI}
  */
-export class DeploymentProcessesApi extends BaseAPI {
+export class DeploymentProcessesApi
+  extends BaseAPI
+  implements DeploymentProcessesApiInterface
+{
   /**
    *
    * @summary Get a Deployment Process by ID.

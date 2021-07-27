@@ -1418,12 +1418,159 @@ export const UsersApiFactory = function (
 };
 
 /**
+ * UsersApi - interface
+ * @export
+ * @interface UsersApi
+ */
+export interface UsersApiInterface {
+  /**
+   * Creates a new user.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  createUserCreate(options?: any): AxiosPromise<UserResource>;
+
+  /**
+   * Authenticates a user and returns a response with a cookie for the current user. This cookie can be submitted with future requests to avoid re-authentication.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  createUserLogin(options?: any): AxiosPromise<void>;
+
+  /**
+   * Revokes the authentication cookie from the current session.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  createUserLogout(options?: any): AxiosPromise<void>;
+
+  /**
+   * Registers a new user and responds with an authentication cookie. Unless the first administrator user is being registered, an invitation code must be provided.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  createUserRegister(options?: any): AxiosPromise<void>;
+
+  /**
+   * Delete an existing user.
+   * @summary Delete a UserResource by ID
+   * @param {string} id ID of the UserResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  deleteUser(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Provides the details of the enabled authentication providers and whether the current user can edit logins for the given user.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  getUserAuthentication(
+    options?: any
+  ): AxiosPromise<UserAuthenticationResource>;
+
+  /**
+   * Provides the details of the enabled authentication providers and whether the current user can edit logins for the given user.
+   * @param {string} userId ID of the resource being edited
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  getUserAuthentication1(
+    userId: string,
+    options?: any
+  ): AxiosPromise<UserAuthenticationResource>;
+
+  /**
+   *
+   * @summary Get a User by ID
+   * @param {string} id ID of the User to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  getUserById(id: string, options?: any): AxiosPromise<UserResource>;
+
+  /**
+   * Searches for users, using the authentication providers.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  getUserExternalSearch(options?: any): AxiosPromise<void>;
+
+  /**
+   * Gets information about the current user.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  getUserGetCurrent(options?: any): AxiosPromise<void>;
+
+  /**
+   * Gets a list of spaces available to the current authenticated user only.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  getUserGetSpaces(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Gets the metadata to describe the claims/fields used by authentication providers that support identities.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  getUserIdentityMetadata(options?: any): AxiosPromise<void>;
+
+  /**
+   * Lists all of the users in the current Octopus Deploy instance, from all teams. The results will be sorted alphabetically by username.
+   * @summary Get a list of UserResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  indexUsers(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<UserResourceCollection>;
+
+  /**
+   * Lists all the Users in the System. The results will be sorted alphabetically by `Username`
+   * @summary Get a list of Users
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  listAllUsers(options?: any): AxiosPromise<Array<UserResource>>;
+
+  /**
+   * Modifies an existing user.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UsersApiInterface
+   */
+  updateUser(id: string, options?: any): AxiosPromise<UserResource>;
+}
+
+/**
  * UsersApi - object-oriented interface
  * @export
  * @class UsersApi
  * @extends {BaseAPI}
  */
-export class UsersApi extends BaseAPI {
+export class UsersApi extends BaseAPI implements UsersApiInterface {
   /**
    * Creates a new user.
    * @param {*} [options] Override http request option.

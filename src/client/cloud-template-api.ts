@@ -168,12 +168,34 @@ export const CloudTemplateApiFactory = function (
 };
 
 /**
+ * CloudTemplateApi - interface
+ * @export
+ * @interface CloudTemplateApi
+ */
+export interface CloudTemplateApiInterface {
+  /**
+   * Provides parameter metadata for a cloud (AWS etc) resource template
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CloudTemplateApiInterface
+   */
+  createCloudTemplateMetadata(
+    id: string,
+    options?: any
+  ): AxiosPromise<CloudTemplateMetadata>;
+}
+
+/**
  * CloudTemplateApi - object-oriented interface
  * @export
  * @class CloudTemplateApi
  * @extends {BaseAPI}
  */
-export class CloudTemplateApi extends BaseAPI {
+export class CloudTemplateApi
+  extends BaseAPI
+  implements CloudTemplateApiInterface
+{
   /**
    * Provides parameter metadata for a cloud (AWS etc) resource template
    * @param {string} id ID of the resource

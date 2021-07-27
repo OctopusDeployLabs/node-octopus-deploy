@@ -924,12 +924,124 @@ export const RunbookRunsApiFactory = function (
 };
 
 /**
+ * RunbookRunsApi - interface
+ * @export
+ * @interface RunbookRunsApi
+ */
+export interface RunbookRunsApiInterface {
+  /**
+   * Creates a new runbookRun.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookRunsApiInterface
+   */
+  createRunbookRunCreate(options?: any): AxiosPromise<RunbookRunResource>;
+
+  /**
+   * Creates a new runbookRun.
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookRunsApiInterface
+   */
+  createRunbookRunCreateSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<RunbookRunResource>;
+
+  /**
+   * Deletes a runbookRun.
+   * @summary Delete a RunbookRunResource by ID
+   * @param {string} id ID of the RunbookRunResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookRunsApiInterface
+   */
+  deleteRunbookRun(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Deletes a runbookRun.
+   * @summary Delete a RunbookRunResource by ID
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the RunbookRunResource to delete
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookRunsApiInterface
+   */
+  deleteRunbookRunSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   *
+   * @summary Get a Runbook Run by ID
+   * @param {string} id ID of the RunbookRun to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookRunsApiInterface
+   */
+  getRunbookRunById(
+    id: string,
+    options?: any
+  ): AxiosPromise<RunbookRunResource>;
+
+  /**
+   *
+   * @summary Get a Runbook Run by ID
+   * @param {string} id ID of the RunbookRun to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookRunsApiInterface
+   */
+  getRunbookRunByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<RunbookRunResource>;
+
+  /**
+   * Lists all of the runbookRuns in the supplied Octopus Deploy Space, from projects, snapshots and environments accessible by the current user. The results will be sorted from most recent to least recent runbookRun.
+   * @summary Get a list of RunbookRunResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookRunsApiInterface
+   */
+  indexRunbookRuns(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookRunResourceCollection>;
+
+  /**
+   * Lists all of the runbookRuns in the supplied Octopus Deploy Space, from projects, snapshots and environments accessible by the current user. The results will be sorted from most recent to least recent runbookRun.
+   * @summary Get a list of RunbookRunResources
+   * @param {string} baseSpaceId ID of the space
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof RunbookRunsApiInterface
+   */
+  indexRunbookRunsSpaces(
+    baseSpaceId: string,
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<RunbookRunResourceCollection>;
+}
+
+/**
  * RunbookRunsApi - object-oriented interface
  * @export
  * @class RunbookRunsApi
  * @extends {BaseAPI}
  */
-export class RunbookRunsApi extends BaseAPI {
+export class RunbookRunsApi extends BaseAPI implements RunbookRunsApiInterface {
   /**
    * Creates a new runbookRun.
    * @param {*} [options] Override http request option.

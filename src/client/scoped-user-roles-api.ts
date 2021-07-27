@@ -286,12 +286,50 @@ export const ScopedUserRolesApiFactory = function (
 };
 
 /**
+ * ScopedUserRolesApi - interface
+ * @export
+ * @interface ScopedUserRolesApi
+ */
+export interface ScopedUserRolesApiInterface {
+  /**
+   *
+   * @summary Get a Scoped User Role by ID
+   * @param {string} id ID of the ScopedUserRole to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRolesApiInterface
+   */
+  getScopedUserRoleById(
+    id: string,
+    options?: any
+  ): AxiosPromise<ScopedUserRoleResource>;
+
+  /**
+   *
+   * @summary Get a Scoped User Role by ID
+   * @param {string} id ID of the ScopedUserRole to load
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ScopedUserRolesApiInterface
+   */
+  getScopedUserRoleByIdSpaces(
+    id: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<ScopedUserRoleResource>;
+}
+
+/**
  * ScopedUserRolesApi - object-oriented interface
  * @export
  * @class ScopedUserRolesApi
  * @extends {BaseAPI}
  */
-export class ScopedUserRolesApi extends BaseAPI {
+export class ScopedUserRolesApi
+  extends BaseAPI
+  implements ScopedUserRolesApiInterface
+{
   /**
    *
    * @summary Get a Scoped User Role by ID

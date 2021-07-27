@@ -152,12 +152,27 @@ export const PermissionsApiFactory = function (
 };
 
 /**
+ * PermissionsApi - interface
+ * @export
+ * @interface PermissionsApi
+ */
+export interface PermissionsApiInterface {
+  /**
+   * Gets a dictionary of available permissions and their descriptions and restrictions
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PermissionsApiInterface
+   */
+  getPermissionDefinitions(options?: any): AxiosPromise<InlineResponse200>;
+}
+
+/**
  * PermissionsApi - object-oriented interface
  * @export
  * @class PermissionsApi
  * @extends {BaseAPI}
  */
-export class PermissionsApi extends BaseAPI {
+export class PermissionsApi extends BaseAPI implements PermissionsApiInterface {
   /**
    * Gets a dictionary of available permissions and their descriptions and restrictions
    * @param {*} [options] Override http request option.

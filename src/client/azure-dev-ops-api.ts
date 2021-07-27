@@ -156,12 +156,29 @@ export const AzureDevOpsApiFactory = function (
 };
 
 /**
+ * AzureDevOpsApi - interface
+ * @export
+ * @interface AzureDevOpsApi
+ */
+export interface AzureDevOpsApiInterface {
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AzureDevOpsApiInterface
+   */
+  createAzureDevOpsConnectivityCheck(
+    options?: any
+  ): AxiosPromise<ConnectivityCheckResponse>;
+}
+
+/**
  * AzureDevOpsApi - object-oriented interface
  * @export
  * @class AzureDevOpsApi
  * @extends {BaseAPI}
  */
-export class AzureDevOpsApi extends BaseAPI {
+export class AzureDevOpsApi extends BaseAPI implements AzureDevOpsApiInterface {
   /**
    *
    * @param {*} [options] Override http request option.

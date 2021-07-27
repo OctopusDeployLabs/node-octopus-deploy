@@ -245,12 +245,42 @@ export const PerformanceConfigurationApiFactory = function (
 };
 
 /**
+ * PerformanceConfigurationApi - interface
+ * @export
+ * @interface PerformanceConfigurationApi
+ */
+export interface PerformanceConfigurationApiInterface {
+  /**
+   * Get performance settings for the Octopus Server
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PerformanceConfigurationApiInterface
+   */
+  getPerformanceConfiguration(
+    options?: any
+  ): AxiosPromise<PerformanceConfigurationResource>;
+
+  /**
+   * Updates the performance settings for the Octopus Server
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PerformanceConfigurationApiInterface
+   */
+  updatePerformanceConfiguration(
+    options?: any
+  ): AxiosPromise<PerformanceConfigurationResource>;
+}
+
+/**
  * PerformanceConfigurationApi - object-oriented interface
  * @export
  * @class PerformanceConfigurationApi
  * @extends {BaseAPI}
  */
-export class PerformanceConfigurationApi extends BaseAPI {
+export class PerformanceConfigurationApi
+  extends BaseAPI
+  implements PerformanceConfigurationApiInterface
+{
   /**
    * Get performance settings for the Octopus Server
    * @param {*} [options] Override http request option.

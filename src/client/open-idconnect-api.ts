@@ -235,12 +235,38 @@ export const OpenIDConnectApiFactory = function (
 };
 
 /**
+ * OpenIDConnectApi - interface
+ * @export
+ * @interface OpenIDConnectApi
+ */
+export interface OpenIDConnectApiInterface {
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof OpenIDConnectApiInterface
+   */
+  createOctopusIDUserAuthenticated(options?: any): AxiosPromise<void>;
+
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof OpenIDConnectApiInterface
+   */
+  createOctopusIDUserAuthentication(options?: any): AxiosPromise<void>;
+}
+
+/**
  * OpenIDConnectApi - object-oriented interface
  * @export
  * @class OpenIDConnectApi
  * @extends {BaseAPI}
  */
-export class OpenIDConnectApi extends BaseAPI {
+export class OpenIDConnectApi
+  extends BaseAPI
+  implements OpenIDConnectApiInterface
+{
   /**
    *
    * @param {*} [options] Override http request option.

@@ -278,12 +278,45 @@ export const UserTeamsApiFactory = function (
 };
 
 /**
+ * UserTeamsApi - interface
+ * @export
+ * @interface UserTeamsApi
+ */
+export interface UserTeamsApiInterface {
+  /**
+   * Gets a list of teams (id and name only) for the specified user, including any from external auth-provider security groups.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserTeamsApiInterface
+   */
+  getUserGetTeams(
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<ProjectedTeamReferenceDataItem>>;
+
+  /**
+   * Gets a list of teams (id and name only) for the specified user, including any from external auth-provider security groups.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserTeamsApiInterface
+   */
+  getUserGetTeamsSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<ProjectedTeamReferenceDataItem>>;
+}
+
+/**
  * UserTeamsApi - object-oriented interface
  * @export
  * @class UserTeamsApi
  * @extends {BaseAPI}
  */
-export class UserTeamsApi extends BaseAPI {
+export class UserTeamsApi extends BaseAPI implements UserTeamsApiInterface {
   /**
    * Gets a list of teams (id and name only) for the specified user, including any from external auth-provider security groups.
    * @param {string} id ID of the resource

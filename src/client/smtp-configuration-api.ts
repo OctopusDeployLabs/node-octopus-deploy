@@ -316,12 +316,46 @@ export const SmtpConfigurationApiFactory = function (
 };
 
 /**
+ * SmtpConfigurationApi - interface
+ * @export
+ * @interface SmtpConfigurationApi
+ */
+export interface SmtpConfigurationApiInterface {
+  /**
+   * Gets information about the SMTP (email) settings in use by the Octopus Server.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SmtpConfigurationApiInterface
+   */
+  getSmtpConfiguration(options?: any): AxiosPromise<void>;
+
+  /**
+   * A low privilege check to determine if SMTP is configured
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SmtpConfigurationApiInterface
+   */
+  getSmtpIsConfigured(options?: any): AxiosPromise<SmtpIsConfiguredResource>;
+
+  /**
+   * Updates the SMTP settings used by the Octopus Server.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof SmtpConfigurationApiInterface
+   */
+  updateSmtpConfiguration(options?: any): AxiosPromise<void>;
+}
+
+/**
  * SmtpConfigurationApi - object-oriented interface
  * @export
  * @class SmtpConfigurationApi
  * @extends {BaseAPI}
  */
-export class SmtpConfigurationApi extends BaseAPI {
+export class SmtpConfigurationApi
+  extends BaseAPI
+  implements SmtpConfigurationApiInterface
+{
   /**
    * Gets information about the SMTP (email) settings in use by the Octopus Server.
    * @param {*} [options] Override http request option.

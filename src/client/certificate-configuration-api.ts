@@ -483,12 +483,69 @@ export const CertificateConfigurationApiFactory = function (
 };
 
 /**
+ * CertificateConfigurationApi - interface
+ * @export
+ * @interface CertificateConfigurationApi
+ */
+export interface CertificateConfigurationApiInterface {
+  /**
+   *
+   * @summary Get a Certificate Configuration by ID
+   * @param {string} id ID of the CertificateConfiguration to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificateConfigurationApiInterface
+   */
+  getCertificateConfigurationById(
+    id: string,
+    options?: any
+  ): AxiosPromise<CertificateConfigurationResource>;
+
+  /**
+   * Returns the server thumbprint used to identify this Octopus Server to any Tentacles when executing a deployment. Deprecated.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificateConfigurationApiInterface
+   */
+  getCertificateConfigurationByIdLegacy(
+    options?: any
+  ): AxiosPromise<CertificateConfigurationResource>;
+
+  /**
+   * Downloads the public portion of the certificate in .cer format
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificateConfigurationApiInterface
+   */
+  getCertificatePublicCerDownload(id: string, options?: any): AxiosPromise<any>;
+
+  /**
+   * Lists all of the X509 certificates in the current Octopus Deploy installation.
+   * @summary Get a list of CertificateConfigurationResources
+   * @param {number} [skip] Number of items to skip
+   * @param {number} [take] Number of items to take
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CertificateConfigurationApiInterface
+   */
+  indexCertificateConfigurations(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<CertificateConfigurationResourceCollection>;
+}
+
+/**
  * CertificateConfigurationApi - object-oriented interface
  * @export
  * @class CertificateConfigurationApi
  * @extends {BaseAPI}
  */
-export class CertificateConfigurationApi extends BaseAPI {
+export class CertificateConfigurationApi
+  extends BaseAPI
+  implements CertificateConfigurationApiInterface
+{
   /**
    *
    * @summary Get a Certificate Configuration by ID

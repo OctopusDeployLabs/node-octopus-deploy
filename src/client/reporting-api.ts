@@ -444,12 +444,61 @@ export const ReportingApiFactory = function (
 };
 
 /**
+ * ReportingApi - interface
+ * @export
+ * @interface ReportingApi
+ */
+export interface ReportingApiInterface {
+  /**
+   * Provides a report summarizing the weekly deployments per project over the last 6 months
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReportingApiInterface
+   */
+  getDeploymentsByProjectReport(
+    options?: any
+  ): AxiosPromise<Array<ReportDeploymentCountOverTimeResource>>;
+
+  /**
+   * Provides a report summarizing the weekly deployments per project over the last 6 months
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReportingApiInterface
+   */
+  getDeploymentsByProjectReportSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<ReportDeploymentCountOverTimeResource>>;
+
+  /**
+   * Provides an XML report that contains all of the information about deployments
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReportingApiInterface
+   */
+  getDeploymentsXml(options?: any): AxiosPromise<void>;
+
+  /**
+   * Provides an XML report that contains all of the information about deployments
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof ReportingApiInterface
+   */
+  getDeploymentsXmlSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+}
+
+/**
  * ReportingApi - object-oriented interface
  * @export
  * @class ReportingApi
  * @extends {BaseAPI}
  */
-export class ReportingApi extends BaseAPI {
+export class ReportingApi extends BaseAPI implements ReportingApiInterface {
   /**
    * Provides a report summarizing the weekly deployments per project over the last 6 months
    * @param {*} [options] Override http request option.

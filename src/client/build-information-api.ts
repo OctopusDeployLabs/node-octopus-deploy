@@ -1102,12 +1102,144 @@ export const BuildInformationApiFactory = function (
 };
 
 /**
+ * BuildInformationApi - interface
+ * @export
+ * @interface BuildInformationApi
+ */
+export interface BuildInformationApiInterface {
+  /**
+   * Updates a specific build information record describing the vcs information for a given package
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  createBuildInformation(
+    options?: any
+  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>;
+
+  /**
+   * Updates a specific build information record describing the vcs information for a given package
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  createBuildInformationSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>;
+
+  /**
+   * Deletes a specific build information record
+   * @param {string} id ID of the build information resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  deleteBuildInformationDeleteById(
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Deletes a specific build information record
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the build information resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  deleteBuildInformationDeleteByIdSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Bulk deletes specific build information records
+   * @param {string} ids Comma separated list of IDs to be deleted
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  deleteBuildInformationDeleteByIds(
+    ids: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Bulk deletes specific build information records
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} ids Comma separated list of IDs to be deleted
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  deleteBuildInformationDeleteByIdsSpaces(
+    baseSpaceId: string,
+    ids: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Retrieves a specific build information record describing the vcs information for a given package
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  getBuildInformation(
+    id: string,
+    options?: any
+  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>;
+
+  /**
+   * Retrieves a list of build information records describing the vcs information for a given package
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  getBuildInformationList(
+    options?: any
+  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResourceCollection>;
+
+  /**
+   * Retrieves a list of build information records describing the vcs information for a given package
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  getBuildInformationListSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResourceCollection>;
+
+  /**
+   * Retrieves a specific build information record describing the vcs information for a given package
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BuildInformationApiInterface
+   */
+  getBuildInformationSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<OctopusPackageVersionBuildInformationMappedResource>;
+}
+
+/**
  * BuildInformationApi - object-oriented interface
  * @export
  * @class BuildInformationApi
  * @extends {BaseAPI}
  */
-export class BuildInformationApi extends BaseAPI {
+export class BuildInformationApi
+  extends BaseAPI
+  implements BuildInformationApiInterface
+{
   /**
    * Updates a specific build information record describing the vcs information for a given package
    * @param {*} [options] Override http request option.

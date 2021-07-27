@@ -2484,12 +2484,302 @@ export const PackagesApiFactory = function (
 };
 
 /**
+ * PackagesApi - interface
+ * @export
+ * @interface PackagesApi
+ */
+export interface PackagesApiInterface {
+  /**
+   * Uploads a delta patch for the given file. Used to optimize file upload.
+   * @param {string} baseVersion The version of the package that was used to create the signature
+   * @param {string} packageId Package ID of the package to be uploaded
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  createPackageRepositoryDeltaUpload(
+    baseVersion: string,
+    packageId: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Uploads a delta patch for the given file. Used to optimize file upload.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} baseVersion The version of the package that was used to create the signature
+   * @param {string} packageId Package ID of the package to be uploaded
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  createPackageRepositoryDeltaUploadSpaces(
+    baseSpaceId: string,
+    baseVersion: string,
+    packageId: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Uploads a new package
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  createPackageRepositoryUpload(options?: any): AxiosPromise<void>;
+
+  /**
+   * Uploads a new package
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  createPackageRepositoryUploadSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Deletes the specified package
+   * @param {string} id ID of the package
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  deletePackageRepositoryDeleteById(
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Deletes the specified package
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the package
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  deletePackageRepositoryDeleteByIdSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Bulk deletes packages
+   * @param {string} ids Comma separated list of IDs to be deleted
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  deletePackageRepositoryDeleteByIds(
+    ids: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Bulk deletes packages
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} ids Comma separated list of IDs to be deleted
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  deletePackageRepositoryDeleteByIdsSpaces(
+    baseSpaceId: string,
+    ids: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Returns a list of release notes for the specified packages
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageListNotes(options?: any): AxiosPromise<PackageNoteListResource>;
+
+  /**
+   * Returns a list of release notes for the specified packages
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageListNotesSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<PackageNoteListResource>;
+
+  /**
+   * Returns the release notes for the specified package
+   * @param {string} id ID of the feed
+   * @param {string} [packageId] Package Id
+   * @param {string} [version] Package Version
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageNotes(
+    id: string,
+    packageId?: string,
+    version?: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Returns the release notes for the specified package
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the feed
+   * @param {string} [packageId] Package Id
+   * @param {string} [version] Package Version
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageNotesSpaces(
+    baseSpaceId: string,
+    id: string,
+    packageId?: string,
+    version?: string,
+    options?: any
+  ): AxiosPromise<void>;
+
+  /**
+   * Returns package information for the specified package id
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageRepository(
+    id: string,
+    options?: any
+  ): AxiosPromise<PackageFromBuiltInFeedResource>;
+
+  /**
+   * Returns the delta-signature for a given package. Used to optimize file upload.
+   * @param {string} packageId Package ID of the package to be uploaded
+   * @param {string} version The version of the package to be uploaded
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageRepositoryDeltaSignature(
+    packageId: string,
+    version: string,
+    options?: any
+  ): AxiosPromise<PackageSignatureResource>;
+
+  /**
+   * Returns the delta-signature for a given package. Used to optimize file upload.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} packageId Package ID of the package to be uploaded
+   * @param {string} version The version of the package to be uploaded
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageRepositoryDeltaSignatureSpaces(
+    baseSpaceId: string,
+    packageId: string,
+    version: string,
+    options?: any
+  ): AxiosPromise<PackageSignatureResource>;
+
+  /**
+   * Downloads the specified package
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageRepositoryGetRaw(id: string, options?: any): AxiosPromise<any>;
+
+  /**
+   * Downloads the specified package
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageRepositoryGetRawSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<any>;
+
+  /**
+   * Returns a list of packages matching the specified criteria
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageRepositoryList(
+    options?: any
+  ): AxiosPromise<PackageResourceCollection>;
+
+  /**
+   * Returns a list of packages matching the specified criteria
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageRepositoryListSpaces(
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<PackageResourceCollection>;
+
+  /**
+   * Returns package information for the specified package id
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageRepositorySpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<PackageFromBuiltInFeedResource>;
+
+  /**
+   * Searches the specified feed for packages. Legacy. Please use the /feeds{id}/packages/search endpoint instead.
+   * @param {string} id ID of the feed
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageSearchActionOld(
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<PackageResource>>;
+
+  /**
+   * Searches the specified feed for packages. Legacy. Please use the /feeds{id}/packages/search endpoint instead.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the feed
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PackagesApiInterface
+   */
+  getPackageSearchActionOldSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<Array<PackageResource>>;
+}
+
+/**
  * PackagesApi - object-oriented interface
  * @export
  * @class PackagesApi
  * @extends {BaseAPI}
  */
-export class PackagesApi extends BaseAPI {
+export class PackagesApi extends BaseAPI implements PackagesApiInterface {
   /**
    * Uploads a delta patch for the given file. Used to optimize file upload.
    * @param {string} baseVersion The version of the package that was used to create the signature

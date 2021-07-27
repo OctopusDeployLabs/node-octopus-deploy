@@ -340,12 +340,52 @@ export const DynamicExtensionsApiFactory = function (
 };
 
 /**
+ * DynamicExtensionsApi - interface
+ * @export
+ * @interface DynamicExtensionsApi
+ */
+export interface DynamicExtensionsApiInterface {
+  /**
+   * Retrieves the current dynamic extensions feature metadata.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DynamicExtensionsApiInterface
+   */
+  getDynamicExtensionsFeaturesMetadata(
+    options?: any
+  ): AxiosPromise<DynamicExtensionsFeaturesMetadataResource>;
+
+  /**
+   * Retrieves the current dynamic extensions feature values.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DynamicExtensionsApiInterface
+   */
+  getDynamicExtensionsFeaturesValues(
+    options?: any
+  ): AxiosPromise<DynamicExtensionsFeaturesValuesResource>;
+
+  /**
+   * Modifies the current dynamic extensions feature values.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DynamicExtensionsApiInterface
+   */
+  updateDynamicExtensionsFeaturesValues(
+    options?: any
+  ): AxiosPromise<DynamicExtensionsFeaturesValuesResource>;
+}
+
+/**
  * DynamicExtensionsApi - object-oriented interface
  * @export
  * @class DynamicExtensionsApi
  * @extends {BaseAPI}
  */
-export class DynamicExtensionsApi extends BaseAPI {
+export class DynamicExtensionsApi
+  extends BaseAPI
+  implements DynamicExtensionsApiInterface
+{
   /**
    * Retrieves the current dynamic extensions feature metadata.
    * @param {*} [options] Override http request option.

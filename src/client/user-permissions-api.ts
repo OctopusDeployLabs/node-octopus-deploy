@@ -704,12 +704,97 @@ export const UserPermissionsApiFactory = function (
 };
 
 /**
+ * UserPermissionsApi - interface
+ * @export
+ * @interface UserPermissionsApi
+ */
+export interface UserPermissionsApiInterface {
+  /**
+   * Gets summarized permission information. Available for the current authenticated user only.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserPermissionsApiInterface
+   */
+  getUserGetPermissions(
+    id: string,
+    options?: any
+  ): AxiosPromise<UserPermissionSetResource>;
+
+  /**
+   * Gets a summary of the configuration of the user\'s permissions information. Available for the current authenticated user only.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserPermissionsApiInterface
+   */
+  getUserGetPermissionsConfiguration(
+    id: string,
+    options?: any
+  ): AxiosPromise<UserPermissionSetResource>;
+
+  /**
+   * Gets a summary of the configuration of the user\'s permissions information. Available for the current authenticated user only.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserPermissionsApiInterface
+   */
+  getUserGetPermissionsConfigurationSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<UserPermissionSetResource>;
+
+  /**
+   * Gets summarized permission information. Available for the current authenticated user only.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserPermissionsApiInterface
+   */
+  getUserGetPermissionsSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<UserPermissionSetResource>;
+
+  /**
+   * Gets list of permissions as a csv file. Available for the current authenticated user only.
+   * @param {string} id ID of the user
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserPermissionsApiInterface
+   */
+  getUserPermissionsExport(id: string, options?: any): AxiosPromise<void>;
+
+  /**
+   * Gets list of permissions as a csv file. Available for the current authenticated user only.
+   * @param {string} baseSpaceId ID of the space
+   * @param {string} id ID of the user
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof UserPermissionsApiInterface
+   */
+  getUserPermissionsExportSpaces(
+    baseSpaceId: string,
+    id: string,
+    options?: any
+  ): AxiosPromise<void>;
+}
+
+/**
  * UserPermissionsApi - object-oriented interface
  * @export
  * @class UserPermissionsApi
  * @extends {BaseAPI}
  */
-export class UserPermissionsApi extends BaseAPI {
+export class UserPermissionsApi
+  extends BaseAPI
+  implements UserPermissionsApiInterface
+{
   /**
    * Gets summarized permission information. Available for the current authenticated user only.
    * @param {string} id ID of the resource

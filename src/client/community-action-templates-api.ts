@@ -1069,12 +1069,137 @@ export const CommunityActionTemplatesApiFactory = function (
 };
 
 /**
+ * CommunityActionTemplatesApi - interface
+ * @export
+ * @interface CommunityActionTemplatesApi
+ */
+export interface CommunityActionTemplatesApiInterface {
+  /**
+   * Installs community step template.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CommunityActionTemplatesApiInterface
+   */
+  createCommunityActionTemplateInstallation(
+    id: string,
+    options?: any
+  ): AxiosPromise<ActionTemplateResource>;
+
+  /**
+   * Installs community step template.
+   * @param {string} id ID of the resource
+   * @param {string} spaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CommunityActionTemplatesApiInterface
+   */
+  createCommunityActionTemplateInstallation1(
+    id: string,
+    spaceId: string,
+    options?: any
+  ): AxiosPromise<ActionTemplateResource>;
+
+  /**
+   * Gets installed version of the template.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CommunityActionTemplatesApiInterface
+   */
+  getActionTemplateBasedOnCommunityActionTemplate(
+    id: string,
+    options?: any
+  ): AxiosPromise<ActionTemplateResource>;
+
+  /**
+   * Gets installed version of the template.
+   * @param {string} id ID of the resource
+   * @param {string} spaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CommunityActionTemplatesApiInterface
+   */
+  getActionTemplateBasedOnCommunityActionTemplate1(
+    id: string,
+    spaceId: string,
+    options?: any
+  ): AxiosPromise<ActionTemplateResource>;
+
+  /**
+   *
+   * @summary Get a Community Action Template by ID
+   * @param {string} id ID of the CommunityActionTemplate to load
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CommunityActionTemplatesApiInterface
+   */
+  getCommunityActionTemplateById(
+    id: string,
+    options?: any
+  ): AxiosPromise<CommunityActionTemplateResource>;
+
+  /**
+   * Gets the logo associated with the community step template.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CommunityActionTemplatesApiInterface
+   */
+  getCommunityActionTemplateLogo(id: string, options?: any): AxiosPromise<any>;
+
+  /**
+   *
+   * @summary Get a list of Community Action Templates
+   * @param {number} [skip] Number of items to skip. Defaults to zero
+   * @param {number} [take] Number of items to take. Defaults to 30
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CommunityActionTemplatesApiInterface
+   */
+  indexCommunityActionTemplates(
+    skip?: number,
+    take?: number,
+    options?: any
+  ): AxiosPromise<CommunityActionTemplateResourceCollection>;
+
+  /**
+   * Updates installed community step template to the latest version.
+   * @param {string} id ID of the resource
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CommunityActionTemplatesApiInterface
+   */
+  updateCommunityActionTemplateInstallationPut(
+    id: string,
+    options?: any
+  ): AxiosPromise<ActionTemplateResource>;
+
+  /**
+   * Updates installed community step template to the latest version.
+   * @param {string} id ID of the resource
+   * @param {string} spaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof CommunityActionTemplatesApiInterface
+   */
+  updateCommunityActionTemplateInstallationPut1(
+    id: string,
+    spaceId: string,
+    options?: any
+  ): AxiosPromise<ActionTemplateResource>;
+}
+
+/**
  * CommunityActionTemplatesApi - object-oriented interface
  * @export
  * @class CommunityActionTemplatesApi
  * @extends {BaseAPI}
  */
-export class CommunityActionTemplatesApi extends BaseAPI {
+export class CommunityActionTemplatesApi
+  extends BaseAPI
+  implements CommunityActionTemplatesApiInterface
+{
   /**
    * Installs community step template.
    * @param {string} id ID of the resource

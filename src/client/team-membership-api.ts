@@ -522,12 +522,78 @@ export const TeamMembershipApiFactory = function (
 };
 
 /**
+ * TeamMembershipApi - interface
+ * @export
+ * @interface TeamMembershipApi
+ */
+export interface TeamMembershipApiInterface {
+  /**
+   * Lists all the Users that would belong to the specified Team, including information about whether they are directly assigned and/or indirectly assigned via external security groups.
+   * @summary Preview Users that would belong to the specified Team
+   * @param {TeamResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TeamMembershipApiInterface
+   */
+  createTeamMembershipPreview(
+    body?: TeamResource,
+    options?: any
+  ): AxiosPromise<Array<TeamMembership>>;
+
+  /**
+   * Lists all the Users that would belong to the specified Team, including information about whether they are directly assigned and/or indirectly assigned via external security groups.
+   * @summary Preview Users that would belong to the specified Team
+   * @param {string} baseSpaceId ID of the space
+   * @param {TeamResource} [body]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TeamMembershipApiInterface
+   */
+  createTeamMembershipPreviewSpaces(
+    baseSpaceId: string,
+    body?: TeamResource,
+    options?: any
+  ): AxiosPromise<Array<TeamMembership>>;
+
+  /**
+   * Lists all teams a user is a member of, including any from external auth-provider security groups. Memberships are filtered by userId.
+   * @summary Gets a list of team memberships for a user
+   * @param {string} userId ID of the user
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TeamMembershipApiInterface
+   */
+  getTeamMembership(
+    userId: string,
+    options?: any
+  ): AxiosPromise<Array<TeamMembership>>;
+
+  /**
+   * Lists all teams a user is a member of, including any from external auth-provider security groups. Memberships are filtered by userId.
+   * @summary Gets a list of team memberships for a user
+   * @param {string} userId ID of the user
+   * @param {string} baseSpaceId ID of the space
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof TeamMembershipApiInterface
+   */
+  getTeamMembershipSpaces(
+    userId: string,
+    baseSpaceId: string,
+    options?: any
+  ): AxiosPromise<Array<TeamMembership>>;
+}
+
+/**
  * TeamMembershipApi - object-oriented interface
  * @export
  * @class TeamMembershipApi
  * @extends {BaseAPI}
  */
-export class TeamMembershipApi extends BaseAPI {
+export class TeamMembershipApi
+  extends BaseAPI
+  implements TeamMembershipApiInterface
+{
   /**
    * Lists all the Users that would belong to the specified Team, including information about whether they are directly assigned and/or indirectly assigned via external security groups.
    * @summary Preview Users that would belong to the specified Team

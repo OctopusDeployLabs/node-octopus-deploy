@@ -237,12 +237,38 @@ export const AuthenticationApiFactory = function (
 };
 
 /**
+ * AuthenticationApi - interface
+ * @export
+ * @interface AuthenticationApi
+ */
+export interface AuthenticationApiInterface {
+  /**
+   * Given a URL query string, determines whether an external server (.e.g Okta) has initiated login and if so the provider\'s name
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthenticationApiInterface
+   */
+  createLoginInitiated(options?: any): AxiosPromise<LoginInitiatedResource>;
+
+  /**
+   * Provides the details of the enabled authentication providers.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthenticationApiInterface
+   */
+  getAuthentication(options?: any): AxiosPromise<AuthenticationResource>;
+}
+
+/**
  * AuthenticationApi - object-oriented interface
  * @export
  * @class AuthenticationApi
  * @extends {BaseAPI}
  */
-export class AuthenticationApi extends BaseAPI {
+export class AuthenticationApi
+  extends BaseAPI
+  implements AuthenticationApiInterface
+{
   /**
    * Given a URL query string, determines whether an external server (.e.g Okta) has initiated login and if so the provider\'s name
    * @param {*} [options] Override http request option.
